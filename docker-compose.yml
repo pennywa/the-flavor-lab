@@ -1,0 +1,52 @@
+services:
+  # Python Service for Data Processing and Streamlit App
+  processor:
+    build:
+      context: .
+      dockerfile: Dockerfile.processor
+    container_name: flavor_lab_processor
+    # Mount the entire current directory into the container
+    volumes:
+      - .:/app
+    # Expose the Streamlit port
+    ports:
+      - "8501:8501" 
+    # Ensure the script runs *after* databases are ready
+    depends_on:
+      - neo4j
+      - mongodb
+    environment:
+      # These variables are read by app.py and process_data.py
+      NEO4J_URI: "bolt://neo4j:7687"
+      NEO4J_USER: "neo4j"
+      NEO4J_PASSWORD: "testpassword"
+      MONGO_URI: "mongodb://mongodb:27017"
+      MONGO_DATABASE: "flavor_lab"
+
+  # Neo4j Graph Database Service
+  neo4j:
+    image: neo4j:latest
+    container_name: flavor_lab_neo4j
+    hostname: neo4j
+    ports:
+      - "7474:7474" # Browser interface
+      - "7687:7687" # Bolt protocol (for Python driver)
+    environment:
+      NEO4J_AUTH: neo4j/testpassword
+      NEO4J_PLUGINS: '["apoc"]'
+    volumes:
+      - neo4j_data:/data # Persistent storage
+
+  # MongoDB Document Database Service
+  mongodb:
+    image: mongo:latest
+    container_name: flavor_lab_mongodb
+    hostname: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db # Persistent storage
+
+volumes:
+  neo4j_data:
+  mongo_data:
