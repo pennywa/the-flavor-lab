@@ -53,35 +53,29 @@ def connect_to_mongodb():
         print(f"🔴 Failed to connect to MongoDB: {e}")
         return None
 
-# --- Filtering Logic (Hyper Aggressive Heuristic) ---
+# --- Filtering Logic (Minimally Restrictive Heuristic) ---
 
 def is_food_ingredient(name):
-    """A highly aggressive heuristic to filter out chemical compounds based on common features."""
+    """A minimally restrictive heuristic to filter out only clear chemical compounds."""
     name = name.lower()
     
-    # 1. Chemical Indicators: Check for numbers, dashes, and complex punctuation
+    # 1. Chemical Indicators: Check for numbers, brackets, and specific chemical punctuation
     # This filters out structures like '2-methyl-butanol' or 'l-(+)-eriodictyol'
-    if any(char.isdigit() or char in '()[]/\\-' for char in name):
+    if any(char.isdigit() or char in '()[]' for char in name):
         return False
 
-    # 2. Aggressive exclusion list for common chemical prefixes and suffixes
-    # Removed some common words that might start with these (e.g., 'diet') but kept highly specific ones.
-    chemical_starters = ['di', 'tri', 'tetra', 'mono', 'iso', 'trans', 'cis', 'cyclo', 'methyl', 'ethyl', 'propy', 'amino', 'oxo', 'hydro']
-    chemical_enders = ['ol', 'one', 'ate', 'al', 'oate', 'ide', 'yl', 'amine', 'ester', 'diol', 'thiol', 'oxide', 'furan', 'pyran', 'zole', 'alkene', 'alkane']
+    # 2. Highly specific chemical prefixes and suffixes (keep short list)
+    chemical_starters = ['methyl', 'ethyl', 'amino', 'oxo', 'hydro']
+    chemical_enders = ['ol', 'one', 'ate', 'al', 'oate', 'amine', 'diol']
     
-    # Check if the name either starts or ends with a chemical marker
+    # Check if the name starts or ends with a highly specific chemical marker 
+    # This filter is intentionally loose to avoid cutting real ingredients.
     if any(name.startswith(p) and len(name) > len(p) for p in chemical_starters) or \
        any(name.endswith(s) and len(name) > len(s) for s in chemical_enders):
         return False
-        
-    # 3. Short, non-specific terms often used for chemical components
-    if len(name) < 4:
-        # Allow common exceptions like "wine"
-        if name not in ['wine', 'cuba', 'beef', 'pork']:
-            return False
-
-    # 4. Final check for common non-food terms that might have slipped through
-    if name in ['compound', 'mixture', 'component', 'alcohol', 'ether', 'ketone', 'aldehyde', 'carboxylic', 'phenol', 'acid', 'fat', 'wax']:
+    
+    # 3. Final check for common non-food terms
+    if name in ['compound', 'mixture', 'component', 'acid', 'fat', 'wax', 'alcohol']:
         return False
         
     return True
@@ -169,8 +163,13 @@ def process_and_load_data():
     # Prepare data for MongoDB (only need name for lookup/dropdowns)
     mongo_data = [{"name": name} for name in filtered_data.keys()]
     
-    mongo_collection.insert_many(mongo_data)
-    print(f"✅ MongoDB loading complete. Inserted {len(mongo_data)} documents.")
+    # Check if the list is not empty before inserting (to avoid the last error)
+    if mongo_data:
+        mongo_collection.insert_many(mongo_data)
+        print(f"✅ MongoDB loading complete. Inserted {len(mongo_data)} documents.")
+    else:
+        print("⚠️ MongoDB insertion skipped: No food ingredients found after filtering.")
+        
     mongo_client.close()
 
 if __name__ == "__main__":
