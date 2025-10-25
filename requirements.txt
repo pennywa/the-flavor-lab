@@ -2,3 +2,5 @@ pandas
 pymongo
 neo4j
 streamlit
+tqdm
+numpy
