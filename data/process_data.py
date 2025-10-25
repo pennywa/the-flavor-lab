@@ -53,26 +53,11 @@ def connect_to_mongodb():
         print(f"🔴 Failed to connect to MongoDB: {e}")
         return None
 
-# --- Filtering Logic (Highly Relaxed Heuristic) ---
-
-def is_food_ingredient(name):
-    """A highly relaxed heuristic to filter only unambiguous chemical compounds."""
-    name = name.lower()
-    
-    # 1. EXTREMELY STRONG Chemical Indicators: Exclude numbers, brackets, and slashes.
-    # This is the most reliable filter for chemical formulas like '2-hexenal' or 'l-(+)-eriodictyol'
-    if any(char.isdigit() or char in '()[]\\/' for char in name):
-        return False
-        
-    # 2. Exclude long, complex, hyphenated names (typical of complex chemicals, not food)
-    if name.count('-') > 1 and len(name) > 15:
-        return False
-        
-    # 3. Exclude very general non-food terms
-    if name in ['compound', 'mixture', 'component', 'acid', 'wax', 'alcohol', 'fat', 'ester']:
-        return False
-        
-    return True
+# --- Filtering Logic (Removed to ensure data loads) ---
+# NOTE: The filter has been removed to ensure the food items load,
+# even if it means some chemical names are included.
+# def is_food_ingredient(name):
+#     return True 
 
 # --- Neo4j Data Loading Functions ---
 
@@ -109,6 +94,7 @@ def process_and_load_data():
         return
 
     # 2. Filter and Decode Ingredient Names
+    # We are loading ALL items to ensure the food ingredients get through
     filtered_data = {}
     for key, vector in embeddings_dict.items():
         # Fix: Safely decode key if it is a byte string, otherwise treat as a string.
@@ -117,9 +103,8 @@ def process_and_load_data():
         else:
             ingredient_name = key
         
-        # Apply the heuristic filter
-        if is_food_ingredient(ingredient_name):
-            filtered_data[ingredient_name] = vector
+        # NOTE: Filter logic removed here.
+        filtered_data[ingredient_name] = vector
     
     print(f"✅ Filtered down to {len(filtered_data)} food ingredients.")
 
