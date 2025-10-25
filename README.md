@@ -1,4 +1,4 @@
-#🧪 The Flavor Lab
+🧪 The Flavor Lab
 
 The Science of Pairing: Discover Your Next Great Recipe.
 
