@@ -29,7 +29,8 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 - **Python** (pandas, numpy, scikit-learn)
 
 ### Data Storage
-- **MongoDB** (NoSQL) - Flexible storage for ingredient relationships and flavor compound data
+- **MongoDB** (NoSQL) 
+- **Neo4j** (Graph Database)
 
 ### Web Application
 - **Streamlit** - Interactive web interface for input/output
