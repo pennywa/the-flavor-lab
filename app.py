@@ -141,23 +141,7 @@ else:
                 
                 df = pd.DataFrame(results_data)
                 
-                # Display results using st-aggrid for a professional, searchable table
-                from st_aggrid import AgGrid, GridOptionsBuilder
-
-                gb = GridOptionsBuilder.from_dataframe(df)
-                gb.configure_column("score", headerName="Flavor Match Score (Cosine Similarity)", precision=4)
-                gb.configure_column("ingredient", headerName="Pairing Ingredient")
-                gridOptions = gb.build()
-
-                AgGrid(df, 
-                       gridOptions=gridOptions, 
-                       data_return_mode='AS_INPUT', 
-                       update_mode='MODEL_CHANGED', 
-                       fit_columns_on_grid_load=True, 
-                       allow_unsafe_jscode=True, 
-                       enable_enterprise_modules=False,
-                       height=300, 
-                       width='100%')
+                st.dataframe(df, use_container_width=True)
 
                 st.info("The scores shown are currently placeholders. The next step is to implement the real vector calculation in Neo4j.")
 

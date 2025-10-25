@@ -2,4 +2,3 @@ pandas
 pymongo
 neo4j
 streamlit
-st-aggrid
