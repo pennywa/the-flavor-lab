@@ -53,29 +53,23 @@ def connect_to_mongodb():
         print(f"🔴 Failed to connect to MongoDB: {e}")
         return None
 
-# --- Filtering Logic (Minimally Restrictive Heuristic) ---
+# --- Filtering Logic (Highly Relaxed Heuristic) ---
 
 def is_food_ingredient(name):
-    """A minimally restrictive heuristic to filter out only clear chemical compounds."""
+    """A highly relaxed heuristic to filter only unambiguous chemical compounds."""
     name = name.lower()
     
-    # 1. Chemical Indicators: Check for numbers, brackets, and specific chemical punctuation
-    # This filters out structures like '2-methyl-butanol' or 'l-(+)-eriodictyol'
-    if any(char.isdigit() or char in '()[]' for char in name):
+    # 1. EXTREMELY STRONG Chemical Indicators: Exclude numbers, brackets, and slashes.
+    # This is the most reliable filter for chemical formulas like '2-hexenal' or 'l-(+)-eriodictyol'
+    if any(char.isdigit() or char in '()[]\\/' for char in name):
         return False
-
-    # 2. Highly specific chemical prefixes and suffixes (keep short list)
-    chemical_starters = ['methyl', 'ethyl', 'amino', 'oxo', 'hydro']
-    chemical_enders = ['ol', 'one', 'ate', 'al', 'oate', 'amine', 'diol']
-    
-    # Check if the name starts or ends with a highly specific chemical marker 
-    # This filter is intentionally loose to avoid cutting real ingredients.
-    if any(name.startswith(p) and len(name) > len(p) for p in chemical_starters) or \
-       any(name.endswith(s) and len(name) > len(s) for s in chemical_enders):
+        
+    # 2. Exclude long, complex, hyphenated names (typical of complex chemicals, not food)
+    if name.count('-') > 1 and len(name) > 15:
         return False
-    
-    # 3. Final check for common non-food terms
-    if name in ['compound', 'mixture', 'component', 'acid', 'fat', 'wax', 'alcohol']:
+        
+    # 3. Exclude very general non-food terms
+    if name in ['compound', 'mixture', 'component', 'acid', 'wax', 'alcohol', 'fat', 'ester']:
         return False
         
     return True
