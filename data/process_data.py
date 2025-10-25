@@ -123,8 +123,11 @@ def process_and_load_data():
     # 2. Filter and Decode Ingredient Names
     filtered_data = {}
     for key, vector in embeddings_dict.items():
-        # Decode key from bytes to string, which is necessary for Neo4j/Mongo storage
-        ingredient_name = key.decode('utf-8')
+        # Fix: Safely decode key if it is a byte string, otherwise treat as a string.
+        if isinstance(key, bytes):
+            ingredient_name = key.decode('utf-8')
+        else:
+            ingredient_name = key
         
         # Apply the heuristic filter
         if is_food_ingredient(ingredient_name):
