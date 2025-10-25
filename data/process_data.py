@@ -57,7 +57,7 @@ def connect_to_mongodb():
 
 def create_constraint(tx):
     """Ensures ingredient names are unique in Neo4j."""
-    query = "CREATE CONSTRAINT IF NOT EXISTS ON (i:Ingredient) ASSERT i.name IS UNIQUE"
+    query = "CREATE CONSTRAINT IF NOT EXISTS FOR (i:Ingredient) REQUIRE i.name IS UNIQUE"
     tx.run(query)
 
 def load_ingredient_node(tx, ingredient_name, vector):
