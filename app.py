@@ -97,7 +97,7 @@ st.markdown("""
 ## The Science of Deliciousness
 """)
 
-if not neo4j_driver or not mongo_db:
+if neo4j_driver is None or mongo_db is None:
     st.warning("Database connections failed. Please check your Docker services.")
 else:
     # 1. Get List of Ingredients for the Selector (from MongoDB for speed)
