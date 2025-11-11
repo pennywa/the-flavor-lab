@@ -1,0 +1,17 @@
+# Core data manipulation
+pandas>=2.3.3
+numpy>=1.26.0
+
+# Visualization
+matplotlib>=3.10.7
+seaborn>=0.13.0
+
+# Graph analysis
+networkx>=3.5
+
+# Interactive / Notebook
+jupyterlab>=4.0.0
+ipykernel>=6.29.0
+
+# Optional utilities
+tqdm>=4.66.0      # progress bars (useful for larger datasets)
