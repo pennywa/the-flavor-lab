@@ -312,7 +312,7 @@
         // Load network data
         async function loadNetworkData() {
             try {
-                const response = await fetch('network_data.json');
+                const response = await fetch('network_data_hub.json');
                 networkData = await response.json();
                 console.log('Network data loaded:', networkData.ingredients.length, 'ingredients');
                 
