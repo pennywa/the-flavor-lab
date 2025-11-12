@@ -338,6 +338,13 @@
                     return;
                 }
 
+                // Check if networkData is loaded
+                if (!networkData || !networkData.ingredients) {
+                    console.error('Network data not loaded yet');
+                    suggestions.style.display = 'none';
+                    return;
+                }
+
                 // Filter ingredients
                 const matches = networkData.ingredients
                     .filter(ing => ing.toLowerCase().includes(query))
