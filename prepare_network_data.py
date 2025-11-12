@@ -88,8 +88,8 @@ network_data = {
 deploy_dir = "deploy"
 os.makedirs(deploy_dir, exist_ok=True)
 
-# Save to JSON file in deploy folder
-output_file = os.path.join(deploy_dir, "network_data.json")
+# Save to JSON file in deploy folder (matching what HTML expects)
+output_file = os.path.join(deploy_dir, "network_data_hub.json")
 with open(output_file, "w") as f:
     json.dump(network_data, f, indent=2)
 
@@ -108,7 +108,7 @@ print(f"✓ File size: {file_size_kb:.1f} KB")
 print(f"✓ Updated: {timestamp}")
 print(f"{'='*60}")
 
-# Copy interactive_network.html to deploy folder
+'''# Copy interactive_network.html to deploy folder
 html_source = "interactive_network.html"
 html_dest = os.path.join(deploy_dir, "interactive_network.html")
 html_index_dest = os.path.join(deploy_dir, "index.html")
@@ -137,6 +137,6 @@ else:
 print(f"{'='*60}")
 print(f"\nDeploy folder ready for GitHub push and Netlify deployment!")
 print(f"Sample hub ingredients: {all_ingredients[:10]}")
-print(f"{'='*60}\n")
+print(f"{'='*60}\n")'''
 
 
