@@ -312,7 +312,7 @@
         // Load network data
         async function loadNetworkData() {
             try {
-                const response = await fetch('network_data.json');
+                const response = await fetch('network_data_hub.json');
                 networkData = await response.json();
                 console.log('Network data loaded:', networkData.ingredients.length, 'ingredients');
                 
@@ -321,7 +321,7 @@
             } catch (error) {
                 console.error('Error loading network data:', error);
                 document.getElementById('network').innerHTML = 
-                    '<div class="no-results">Error loading network data. Please make sure network_data.json exists.</div>';
+                    '<div class="no-results">Error loading network data. Please make sure network_data_hub.json exists.</div>';
             }
         }
 
