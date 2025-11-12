@@ -19,8 +19,8 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 def main():
-    # Change to the script's directory
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    deploy_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "deploy")
+    os.chdir(deploy_path)
     
     Handler = MyHTTPRequestHandler
     
