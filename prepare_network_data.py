@@ -2,10 +2,15 @@
 Prepare ingredient pairing data for interactive network visualization.
 Creates a JSON file with ingredient relationships, limited to top 3 pairings per ingredient.
 Only includes hub ingredients (filters to ingredients where is_hub == 'hub').
+
+All output files are saved to the deploy/ folder for easy deployment.
 """
 
 import pandas as pd
 import json
+import os
+import shutil
+from datetime import datetime
 
 # Load the data
 print("Loading data...")
@@ -79,15 +84,59 @@ network_data = {
     "graph": filtered_graph
 }
 
-# Save to JSON file
-output_file = "network_data.json"
+# Ensure deploy directory exists
+deploy_dir = "deploy"
+os.makedirs(deploy_dir, exist_ok=True)
+
+# Save to JSON file in deploy folder
+output_file = os.path.join(deploy_dir, "network_data.json")
 with open(output_file, "w") as f:
     json.dump(network_data, f, indent=2)
 
-print(f"\nData prepared successfully!")
+# Get file size and timestamp
+file_size = os.path.getsize(output_file)
+file_size_kb = file_size / 1024
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+print(f"\n{'='*60}")
+print(f"Data prepared successfully!")
+print(f"{'='*60}")
 print(f"✓ Filtered to hub ingredients only")
 print(f"✓ Total hub ingredients in network: {len(all_ingredients)}")
-print(f"✓ Data saved to: {output_file}")
-print(f"\nSample hub ingredients: {all_ingredients[:10]}")
+print(f"✓ File saved to: {output_file}")
+print(f"✓ File size: {file_size_kb:.1f} KB")
+print(f"✓ Updated: {timestamp}")
+print(f"{'='*60}")
+
+# Copy interactive_network.html to deploy folder
+html_source = "interactive_network.html"
+html_dest = os.path.join(deploy_dir, "interactive_network.html")
+html_index_dest = os.path.join(deploy_dir, "index.html")
+
+# Try to copy from root, or use existing deploy version if root doesn't exist
+if os.path.exists(html_source):
+    shutil.copy2(html_source, html_dest)
+    shutil.copy2(html_source, html_index_dest)
+    html_size = os.path.getsize(html_dest) / 1024
+    print(f"✓ Copied {html_source} to deploy folder")
+    print(f"  → {html_dest} ({html_size:.1f} KB)")
+    print(f"  → {html_index_dest} ({html_size:.1f} KB)")
+    print(f"  → Updated: {timestamp}")
+elif os.path.exists(html_dest):
+    # If root doesn't exist but deploy version does, update index.html to match
+    shutil.copy2(html_dest, html_index_dest)
+    html_size = os.path.getsize(html_dest) / 1024
+    print(f"✓ Using existing HTML in deploy folder")
+    print(f"  → {html_dest} ({html_size:.1f} KB)")
+    print(f"  → {html_index_dest} ({html_size:.1f} KB) - synced")
+    print(f"  → Updated: {timestamp}")
+else:
+    print(f"⚠ {html_source} not found in root or deploy directory")
+    print(f"  (Please ensure HTML file exists for deployment)")
+
+print(f"{'='*60}")
+print(f"\nDeploy folder ready for GitHub push and Netlify deployment!")
+print(f"Sample hub ingredients: {all_ingredients[:10]}")
+print(f"{'='*60}\n")
 
 
