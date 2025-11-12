@@ -1,6 +1,7 @@
 """
 Prepare ingredient pairing data for interactive network visualization.
 Creates a JSON file with ingredient relationships, limited to top 3 pairings per ingredient.
+Only includes hub ingredients (filters to ingredients where is_hub == 'hub').
 """
 
 import pandas as pd
@@ -25,10 +26,15 @@ merged = (
     .drop(columns=["node_id", "id"])
 )
 
-# Clean data
+# Clean data and filter to only hub ingredients
 merged_clean = merged.dropna(subset=["name_1", "name_2"]).reset_index(drop=True)
 
-print(f"Total ingredient pairs: {len(merged_clean)}")
+# Filter to only include edges where both ingredients are hubs
+merged_clean = merged_clean[
+    (merged_clean["is_hub_1"] == "hub") & (merged_clean["is_hub_2"] == "hub")
+].reset_index(drop=True)
+
+print(f"Total ingredient pairs (hub ingredients only): {len(merged_clean)}")
 
 # Create a dictionary to store top 3 pairings for each ingredient
 # We'll store both directions (ingredient A -> B and B -> A)
@@ -78,8 +84,9 @@ output_file = "network_data.json"
 with open(output_file, "w") as f:
     json.dump(network_data, f, indent=2)
 
-print(f"Data prepared successfully!")
-print(f"Total ingredients: {len(all_ingredients)}")
-print(f"Data saved to: {output_file}")
-print(f"\nSample ingredients: {all_ingredients[:10]}")
+print(f"\nData prepared successfully!")
+print(f"✓ Filtered to hub ingredients only")
+print(f"✓ Total hub ingredients in network: {len(all_ingredients)}")
+print(f"✓ Data saved to: {output_file}")
+print(f"\nSample hub ingredients: {all_ingredients[:10]}")
 
