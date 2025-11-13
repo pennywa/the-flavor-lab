@@ -1,0 +1,7952 @@
+{
+  "ingredients": [
+    "abalone",
+    "acorn",
+    "adzuki_bean",
+    "agar",
+    "agave",
+    "albacore_tuna",
+    "allspice",
+    "almond",
+    "amaranth",
+    "anchovy",
+    "angelica",
+    "anise",
+    "apple",
+    "apple_brandy",
+    "apple_cider_vinegar",
+    "apricot",
+    "arrowroot",
+    "artichoke",
+    "asparagus",
+    "avocado",
+    "bagel",
+    "bamboo_shoot",
+    "banana",
+    "barley",
+    "bartlett_pear",
+    "basil",
+    "basmati_rice",
+    "bean",
+    "beef",
+    "beer",
+    "beetroot",
+    "berry",
+    "biscuit",
+    "black_currant",
+    "black_eyed_pea",
+    "black_raspberry",
+    "black_tea",
+    "black_walnut",
+    "blackberry",
+    "blue_cheese",
+    "blueberry",
+    "bluefish",
+    "boysenberry",
+    "brandy",
+    "brazil_nut",
+    "bread",
+    "breadfruit",
+    "breakfast_cereal",
+    "broad_bean",
+    "broccoli",
+    "brussels_sprout",
+    "buffalo",
+    "bulgur",
+    "burrito",
+    "butter",
+    "buttermilk",
+    "butternut_squash",
+    "cabbage",
+    "cake",
+    "camembert_cheese",
+    "candy_bar",
+    "canola_oil",
+    "caper",
+    "capsicum",
+    "cardamom",
+    "cardoon",
+    "carom_seed",
+    "carrot",
+    "cashew_nut",
+    "cassava",
+    "cassia",
+    "catfish",
+    "cauliflower",
+    "caviar",
+    "celery",
+    "champagne",
+    "chayote",
+    "cheddar_cheese",
+    "cheese",
+    "cherry",
+    "cherry_brandy",
+    "cherry_pepper",
+    "cherry_tomato",
+    "chervil",
+    "chestnut",
+    "chicken",
+    "chickpea",
+    "chili",
+    "chinese_cabbage",
+    "chinese_mustard",
+    "chive",
+    "chocolate",
+    "chocolate_spread",
+    "cider",
+    "cinnamon",
+    "citrus_fruit",
+    "clam",
+    "clementine",
+    "clove",
+    "cocoa",
+    "cocoa_butter",
+    "cocoa_powder",
+    "coconut",
+    "coffee",
+    "comte_cheese",
+    "conch",
+    "condensed_milk",
+    "cooking_oil",
+    "coriander",
+    "corn",
+    "corn_chip",
+    "corn_oil",
+    "cornbread",
+    "cottage_cheese",
+    "couscous",
+    "crab",
+    "cranberry",
+    "crayfish",
+    "cream",
+    "cream_cheese",
+    "cucumber",
+    "cumin",
+    "currant",
+    "curry_leaf",
+    "cuttlefish",
+    "date",
+    "deer",
+    "dill",
+    "dulce_de_leche",
+    "dumpling",
+    "egg",
+    "eggplant",
+    "endive",
+    "epazote",
+    "evaporated_milk",
+    "fennel",
+    "feta_cheese",
+    "fig",
+    "filbert",
+    "fish",
+    "flour",
+    "fruit_juice",
+    "fruit_preserve",
+    "fruit_salad",
+    "fudge",
+    "garlic",
+    "gelatin",
+    "ghee",
+    "gin",
+    "ginger",
+    "ginkgo_nut",
+    "goat_cheese",
+    "gooseberry",
+    "grape",
+    "grapefruit",
+    "green_bean",
+    "green_bell_pepper",
+    "green_tea",
+    "green_zucchini",
+    "grouper",
+    "gruyere_cheese",
+    "guava",
+    "haddock",
+    "ham",
+    "hamburger",
+    "hazelnut",
+    "honey",
+    "hop",
+    "horseradish",
+    "hot_dog",
+    "hummus",
+    "ice_cream",
+    "ice_cream_cone",
+    "icing",
+    "irish_moss",
+    "jalapeno",
+    "jerusalem_artichoke",
+    "jicama",
+    "kale",
+    "kefir",
+    "kelp",
+    "ketchup",
+    "kidney_bean",
+    "kiwi",
+    "kohlrabi",
+    "kombu",
+    "kumquat",
+    "lamb",
+    "leek",
+    "lemon",
+    "lemon_balm",
+    "lemon_verbena",
+    "lentil",
+    "lettuce",
+    "lima_bean",
+    "lime",
+    "lingonberry",
+    "lobster",
+    "lovage",
+    "macadamia_nut",
+    "macaroni",
+    "mace",
+    "madeira_wine",
+    "mandarin_orange",
+    "mango",
+    "margarine",
+    "marjoram",
+    "marshmallow",
+    "marzipan",
+    "meat",
+    "meatball",
+    "meatloaf",
+    "melon",
+    "meringue",
+    "mexican_oregano",
+    "milk",
+    "millet",
+    "mint",
+    "miso",
+    "mixed_nut",
+    "molasses",
+    "mozzarella_cheese",
+    "mulberry",
+    "multigrain_bread",
+    "mung_bean",
+    "mushroom",
+    "mustard",
+    "mustard_oil",
+    "mutton",
+    "nigella_seed",
+    "nut",
+    "nutmeg",
+    "oat",
+    "okra",
+    "olive",
+    "onion",
+    "orange",
+    "orange_bell_pepper",
+    "orange_oil",
+    "orange_roughy",
+    "oregano",
+    "oyster",
+    "oyster_mushroom",
+    "pancake",
+    "papaya",
+    "parmesan_cheese",
+    "parsley",
+    "parsnip",
+    "passion_fruit",
+    "pasta",
+    "pate",
+    "pawpaw",
+    "pea",
+    "peach",
+    "peanut",
+    "peanut_butter",
+    "peanut_oil",
+    "pear",
+    "pear_brandy",
+    "pecan",
+    "pectin",
+    "pepper",
+    "peppermint",
+    "persimmon",
+    "pheasant",
+    "phyllo_dough",
+    "pie_crust",
+    "pigeon_pea",
+    "pineapple",
+    "pink_salmon",
+    "pistachio",
+    "pita_bread",
+    "plum",
+    "plum_brandy",
+    "plum_wine",
+    "pomegranate",
+    "popcorn",
+    "poppy_seed",
+    "pork",
+    "port_wine",
+    "potato",
+    "potato_bread",
+    "prawn",
+    "prickly_pear",
+    "provolone_cheese",
+    "pudding",
+    "pumpkin",
+    "purslane",
+    "quail",
+    "quince",
+    "quinoa",
+    "rabbit",
+    "radish",
+    "rainbow_trout",
+    "raisin",
+    "raisin_bread",
+    "rapini",
+    "raspberry",
+    "ravioli",
+    "red_bell_pepper",
+    "red_currant",
+    "red_raspberry",
+    "red_rice",
+    "red_wine",
+    "relish",
+    "rhubarb",
+    "rice",
+    "rice_cake",
+    "ricotta_cheese",
+    "romano_cheese",
+    "roquefort_cheese",
+    "rose_wine",
+    "rosemary",
+    "rum",
+    "rutabaga",
+    "rye_bread",
+    "saffron",
+    "sage",
+    "sake",
+    "salad_dressing",
+    "salmon",
+    "salt",
+    "sausage",
+    "scallop",
+    "scotch_whisky",
+    "semolina",
+    "sesame",
+    "shallot",
+    "shortening",
+    "shrimp",
+    "smelt",
+    "snail",
+    "sockeye_salmon",
+    "sorghum",
+    "sorrel",
+    "soup",
+    "sour_cherry",
+    "soy_yogurt",
+    "soybean",
+    "soybean_oil",
+    "sparkling_wine",
+    "spearmint",
+    "spelt",
+    "spinach",
+    "spirulina",
+    "squab",
+    "squid",
+    "squirrel",
+    "star_anise",
+    "star_fruit",
+    "strawberry",
+    "strawberry_jam",
+    "striped_bass",
+    "sugar",
+    "summer_savory",
+    "swede",
+    "sweet_basil",
+    "sweet_cherry",
+    "sweet_marjoram",
+    "sweet_potato",
+    "sweetcorn",
+    "swiss_cheese",
+    "swordfish",
+    "syrup",
+    "tamale",
+    "tangerine",
+    "tarragon",
+    "tea",
+    "teff",
+    "thyme",
+    "tofu",
+    "tomato",
+    "tortilla",
+    "tortilla_chip",
+    "tostada",
+    "trail_mix",
+    "truffle",
+    "turbot",
+    "turkey",
+    "turmeric",
+    "turnip",
+    "vanilla",
+    "vegetable_juice",
+    "vermouth",
+    "vinegar",
+    "vodka",
+    "waffle",
+    "walleye",
+    "walnut",
+    "wasabi",
+    "water",
+    "water_chestnut",
+    "watercress",
+    "wheat",
+    "whey",
+    "white_bread",
+    "white_cabbage",
+    "white_pepper",
+    "white_wine",
+    "wild_rice",
+    "wine",
+    "winter_savory",
+    "winter_squash",
+    "wonton_wrapper",
+    "yam",
+    "yellow_bell_pepper",
+    "yellow_zucchini",
+    "yogurt"
+  ],
+  "graph": {
+    "prawn": [
+      {
+        "name": "squid",
+        "score": 0.3377419564519216
+      },
+      {
+        "name": "chili",
+        "score": 0.2994499394303361
+      },
+      {
+        "name": "scallop",
+        "score": 0.296517754761351
+      }
+    ],
+    "squid": [
+      {
+        "name": "clam",
+        "score": 0.3590027012481927
+      },
+      {
+        "name": "scallop",
+        "score": 0.3451565246213775
+      },
+      {
+        "name": "prawn",
+        "score": 0.3377419564519216
+      }
+    ],
+    "black_tea": [
+      {
+        "name": "cardamom",
+        "score": 0.2968911226795204
+      },
+      {
+        "name": "star_anise",
+        "score": 0.2789219728025408
+      },
+      {
+        "name": "clove",
+        "score": 0.2491488604513612
+      }
+    ],
+    "ginger": [
+      {
+        "name": "sake",
+        "score": 0.3816359610963924
+      },
+      {
+        "name": "clove",
+        "score": 0.3635938279324164
+      },
+      {
+        "name": "turmeric",
+        "score": 0.2920257335828589
+      }
+    ],
+    "berry": [
+      {
+        "name": "fruit_juice",
+        "score": 0.2659298205596132
+      },
+      {
+        "name": "yogurt",
+        "score": 0.1975758934511229
+      },
+      {
+        "name": "raspberry",
+        "score": 0.1782045209794613
+      }
+    ],
+    "blackberry": [
+      {
+        "name": "raspberry",
+        "score": 0.503231356229646
+      },
+      {
+        "name": "blueberry",
+        "score": 0.4237001699599701
+      },
+      {
+        "name": "red_currant",
+        "score": 0.3815769539292895
+      }
+    ],
+    "clove": [
+      {
+        "name": "allspice",
+        "score": 0.4433167480992077
+      },
+      {
+        "name": "cinnamon",
+        "score": 0.4101937357841915
+      },
+      {
+        "name": "cardamom",
+        "score": 0.4018492465126789
+      }
+    ],
+    "fig": [
+      {
+        "name": "date",
+        "score": 0.2771722686164383
+      },
+      {
+        "name": "currant",
+        "score": 0.2639685901660538
+      },
+      {
+        "name": "port_wine",
+        "score": 0.2602352245871241
+      }
+    ],
+    "lemon_balm": [
+      {
+        "name": "mint",
+        "score": 0.2552024790824392
+      },
+      {
+        "name": "lime",
+        "score": 0.123822067747383
+      },
+      {
+        "name": "lemon",
+        "score": 0.1136815076958309
+      }
+    ],
+    "lime": [
+      {
+        "name": "avocado",
+        "score": 0.3461476283053703
+      },
+      {
+        "name": "jalapeno",
+        "score": 0.3374836418170649
+      },
+      {
+        "name": "mango",
+        "score": 0.3003308694005237
+      }
+    ],
+    "parsley": [
+      {
+        "name": "thyme",
+        "score": 0.269968221084148
+      },
+      {
+        "name": "basil",
+        "score": 0.2533848474168849
+      },
+      {
+        "name": "tarragon",
+        "score": 0.2420465010760716
+      }
+    ],
+    "snail": [
+      {
+        "name": "shallot",
+        "score": 0.2492911329128687
+      },
+      {
+        "name": "parsley",
+        "score": 0.1999218287032425
+      },
+      {
+        "name": "chive",
+        "score": 0.1884937001012855
+      }
+    ],
+    "camembert_cheese": [
+      {
+        "name": "white_wine",
+        "score": 0.1248764993056862
+      },
+      {
+        "name": "shallot",
+        "score": 0.1230851932298165
+      },
+      {
+        "name": "bread",
+        "score": 0.1213807286245084
+      }
+    ],
+    "cream": [
+      {
+        "name": "gelatin",
+        "score": 0.2290036029365262
+      },
+      {
+        "name": "meringue",
+        "score": 0.2023808696311043
+      },
+      {
+        "name": "ravioli",
+        "score": 0.186964368354515
+      }
+    ],
+    "blueberry": [
+      {
+        "name": "raspberry",
+        "score": 0.4741659815085455
+      },
+      {
+        "name": "blackberry",
+        "score": 0.4237001699599701
+      },
+      {
+        "name": "strawberry",
+        "score": 0.4024570191051412
+      }
+    ],
+    "pectin": [
+      {
+        "name": "plum",
+        "score": 0.2578230485919615
+      },
+      {
+        "name": "strawberry",
+        "score": 0.2403542929566673
+      },
+      {
+        "name": "raspberry",
+        "score": 0.2325540248441862
+      }
+    ],
+    "cheese": [
+      {
+        "name": "tortilla",
+        "score": 0.2720384844253469
+      },
+      {
+        "name": "lettuce",
+        "score": 0.2353022510659003
+      },
+      {
+        "name": "burrito",
+        "score": 0.2164519361622397
+      }
+    ],
+    "macaroni": [
+      {
+        "name": "cheddar_cheese",
+        "score": 0.2270551651523384
+      },
+      {
+        "name": "hamburger",
+        "score": 0.2146710905032749
+      },
+      {
+        "name": "salad_dressing",
+        "score": 0.2114945595215378
+      }
+    ],
+    "apple_brandy": [
+      {
+        "name": "apple",
+        "score": 0.2504273384676526
+      },
+      {
+        "name": "gin",
+        "score": 0.2457106257250001
+      },
+      {
+        "name": "orange",
+        "score": 0.1162332631779021
+      }
+    ],
+    "lemon": [
+      {
+        "name": "artichoke",
+        "score": 0.3014535726798755
+      },
+      {
+        "name": "orange",
+        "score": 0.2649402268222279
+      },
+      {
+        "name": "cardoon",
+        "score": 0.2537613064340566
+      }
+    ],
+    "butter": [
+      {
+        "name": "flour",
+        "score": 0.2424124245430012
+      },
+      {
+        "name": "vanilla",
+        "score": 0.1918501405845256
+      },
+      {
+        "name": "egg",
+        "score": 0.1772777820900417
+      }
+    ],
+    "egg": [
+      {
+        "name": "vanilla",
+        "score": 0.2915197281277608
+      },
+      {
+        "name": "flour",
+        "score": 0.2673561569786525
+      },
+      {
+        "name": "milk",
+        "score": 0.2466498459361724
+      }
+    ],
+    "striped_bass": [
+      {
+        "name": "peanut_oil",
+        "score": 0.1917916238112011
+      },
+      {
+        "name": "caper",
+        "score": 0.1678525555515928
+      },
+      {
+        "name": "lemon",
+        "score": 0.1657717052743848
+      }
+    ],
+    "cake": [
+      {
+        "name": "icing",
+        "score": 0.3469486434534717
+      },
+      {
+        "name": "marzipan",
+        "score": 0.3109445637633688
+      },
+      {
+        "name": "meringue",
+        "score": 0.3049441040485067
+      }
+    ],
+    "strawberry": [
+      {
+        "name": "blueberry",
+        "score": 0.4024570191051412
+      },
+      {
+        "name": "raspberry",
+        "score": 0.3859432466607367
+      },
+      {
+        "name": "kiwi",
+        "score": 0.3836374143787189
+      }
+    ],
+    "flour": [
+      {
+        "name": "vanilla",
+        "score": 0.2936030274288122
+      },
+      {
+        "name": "shortening",
+        "score": 0.2718558173155196
+      },
+      {
+        "name": "egg",
+        "score": 0.2673561569786525
+      }
+    ],
+    "margarine": [
+      {
+        "name": "nut",
+        "score": 0.2039207325123684
+      },
+      {
+        "name": "vanilla",
+        "score": 0.1966368847337798
+      },
+      {
+        "name": "cocoa",
+        "score": 0.1855405469263885
+      }
+    ],
+    "lingonberry": [
+      {
+        "name": "shallot",
+        "score": 0.115844931034686
+      },
+      {
+        "name": "sugar",
+        "score": 0.1018530666665027
+      },
+      {
+        "name": "milk",
+        "score": 0.1015715753877117
+      }
+    ],
+    "milk": [
+      {
+        "name": "egg",
+        "score": 0.2466498459361724
+      },
+      {
+        "name": "flour",
+        "score": 0.2147038248646583
+      },
+      {
+        "name": "butter",
+        "score": 0.1758476169255177
+      }
+    ],
+    "cinnamon": [
+      {
+        "name": "nutmeg",
+        "score": 0.4716558981571911
+      },
+      {
+        "name": "clove",
+        "score": 0.4101937357841915
+      },
+      {
+        "name": "allspice",
+        "score": 0.4031405358584605
+      }
+    ],
+    "trail_mix": [
+      {
+        "name": "margarine",
+        "score": 0.118574814917383
+      },
+      {
+        "name": "vanilla",
+        "score": 0.0806375006538185
+      },
+      {
+        "name": "cinnamon",
+        "score": 0.0666093906496579
+      }
+    ],
+    "marjoram": [
+      {
+        "name": "thyme",
+        "score": 0.4434217762304179
+      },
+      {
+        "name": "sage",
+        "score": 0.4008647789664121
+      },
+      {
+        "name": "summer_savory",
+        "score": 0.3913021260680697
+      }
+    ],
+    "summer_savory": [
+      {
+        "name": "marjoram",
+        "score": 0.3913021260680697
+      },
+      {
+        "name": "rosemary",
+        "score": 0.2412955717562477
+      },
+      {
+        "name": "thyme",
+        "score": 0.2372956521029146
+      }
+    ],
+    "mozzarella_cheese": [
+      {
+        "name": "ricotta_cheese",
+        "score": 0.4714680109703409
+      },
+      {
+        "name": "parmesan_cheese",
+        "score": 0.3876812860491905
+      },
+      {
+        "name": "cottage_cheese",
+        "score": 0.3041184532903138
+      }
+    ],
+    "provolone_cheese": [
+      {
+        "name": "cherry_pepper",
+        "score": 0.3510341247244819
+      },
+      {
+        "name": "mozzarella_cheese",
+        "score": 0.2735811860122463
+      },
+      {
+        "name": "ham",
+        "score": 0.2550208492676179
+      }
+    ],
+    "pigeon_pea": [
+      {
+        "name": "rice",
+        "score": 0.3117858790265795
+      },
+      {
+        "name": "thyme",
+        "score": 0.195561684495482
+      },
+      {
+        "name": "caper",
+        "score": 0.1874647619661334
+      }
+    ],
+    "water": [
+      {
+        "name": "pigeon_pea",
+        "score": 0.139518516875288
+      },
+      {
+        "name": "red_rice",
+        "score": 0.1130376460868649
+      },
+      {
+        "name": "mung_bean",
+        "score": 0.1126384303267646
+      }
+    ],
+    "allspice": [
+      {
+        "name": "clove",
+        "score": 0.4433167480992077
+      },
+      {
+        "name": "cinnamon",
+        "score": 0.4031405358584605
+      },
+      {
+        "name": "nutmeg",
+        "score": 0.3750984010771176
+      }
+    ],
+    "okra": [
+      {
+        "name": "lima_bean",
+        "score": 0.3123474211939114
+      },
+      {
+        "name": "oyster",
+        "score": 0.2786965997195689
+      },
+      {
+        "name": "shrimp",
+        "score": 0.2592215448805506
+      }
+    ],
+    "rice": [
+      {
+        "name": "pigeon_pea",
+        "score": 0.3117858790265795
+      },
+      {
+        "name": "saffron",
+        "score": 0.2549150879742301
+      },
+      {
+        "name": "pea",
+        "score": 0.2236703702599302
+      }
+    ],
+    "conch": [
+      {
+        "name": "green_bell_pepper",
+        "score": 0.2338483067277793
+      },
+      {
+        "name": "jalapeno",
+        "score": 0.198352784162416
+      },
+      {
+        "name": "potato",
+        "score": 0.1935928968353297
+      }
+    ],
+    "jalapeno": [
+      {
+        "name": "lime",
+        "score": 0.3374836418170649
+      },
+      {
+        "name": "cumin",
+        "score": 0.2951727149766512
+      },
+      {
+        "name": "avocado",
+        "score": 0.2900462514143458
+      }
+    ],
+    "carrot": [
+      {
+        "name": "celery",
+        "score": 0.4300838618518185
+      },
+      {
+        "name": "parsnip",
+        "score": 0.3551910903218661
+      },
+      {
+        "name": "turnip",
+        "score": 0.3493283486181949
+      }
+    ],
+    "leek": [
+      {
+        "name": "turnip",
+        "score": 0.3305363153621425
+      },
+      {
+        "name": "parsnip",
+        "score": 0.322325109409143
+      },
+      {
+        "name": "swede",
+        "score": 0.3127060124874213
+      }
+    ],
+    "grouper": [
+      {
+        "name": "shrimp",
+        "score": 0.1907413875259607
+      },
+      {
+        "name": "tomato",
+        "score": 0.1555133910106557
+      },
+      {
+        "name": "green_bell_pepper",
+        "score": 0.1312012536914719
+      }
+    ],
+    "honey": [
+      {
+        "name": "fig",
+        "score": 0.1873618987326486
+      },
+      {
+        "name": "teff",
+        "score": 0.1592240412793655
+      },
+      {
+        "name": "kefir",
+        "score": 0.1475355350861551
+      }
+    ],
+    "whey": [
+      {
+        "name": "banana",
+        "score": 0.1468824677800247
+      },
+      {
+        "name": "honey",
+        "score": 0.0840312915291092
+      },
+      {
+        "name": "cinnamon",
+        "score": 0.0775092905775112
+      }
+    ],
+    "apple": [
+      {
+        "name": "cinnamon",
+        "score": 0.3460101269931409
+      },
+      {
+        "name": "grape",
+        "score": 0.2860625207750978
+      },
+      {
+        "name": "raisin",
+        "score": 0.2779846668863838
+      }
+    ],
+    "kohlrabi": [
+      {
+        "name": "parsnip",
+        "score": 0.3125109709121868
+      },
+      {
+        "name": "turnip",
+        "score": 0.2889301857259492
+      },
+      {
+        "name": "radish",
+        "score": 0.2785743031469413
+      }
+    ],
+    "buttermilk": [
+      {
+        "name": "shortening",
+        "score": 0.2230298624545323
+      },
+      {
+        "name": "egg",
+        "score": 0.2174144508011972
+      },
+      {
+        "name": "flour",
+        "score": 0.1674091684109913
+      }
+    ],
+    "waffle": [
+      {
+        "name": "syrup",
+        "score": 0.2759882237547128
+      },
+      {
+        "name": "blueberry",
+        "score": 0.1692926639227013
+      },
+      {
+        "name": "banana",
+        "score": 0.1485602391983105
+      }
+    ],
+    "amaranth": [
+      {
+        "name": "millet",
+        "score": 0.5036263913655572
+      },
+      {
+        "name": "quinoa",
+        "score": 0.3341391359740933
+      },
+      {
+        "name": "almond",
+        "score": 0.1733345672378893
+      }
+    ],
+    "garlic": [
+      {
+        "name": "ginger",
+        "score": 0.1863221445672334
+      },
+      {
+        "name": "snail",
+        "score": 0.1529332441209237
+      },
+      {
+        "name": "plum_wine",
+        "score": 0.1173664781848324
+      }
+    ],
+    "rapini": [
+      {
+        "name": "garlic",
+        "score": 0.1041240741945755
+      },
+      {
+        "name": "parmesan_cheese",
+        "score": 0.0761910827495624
+      },
+      {
+        "name": "onion",
+        "score": 0.039326023175589
+      }
+    ],
+    "green_bell_pepper": [
+      {
+        "name": "red_bell_pepper",
+        "score": 0.4390839432664757
+      },
+      {
+        "name": "yellow_bell_pepper",
+        "score": 0.3712186407193494
+      },
+      {
+        "name": "black_eyed_pea",
+        "score": 0.2482544224679956
+      }
+    ],
+    "yellow_bell_pepper": [
+      {
+        "name": "red_bell_pepper",
+        "score": 0.5318623688024399
+      },
+      {
+        "name": "orange_bell_pepper",
+        "score": 0.4989781421506056
+      },
+      {
+        "name": "green_bell_pepper",
+        "score": 0.3712186407193494
+      }
+    ],
+    "basil": [
+      {
+        "name": "oregano",
+        "score": 0.5150907888031839
+      },
+      {
+        "name": "thyme",
+        "score": 0.34979540746021
+      },
+      {
+        "name": "marjoram",
+        "score": 0.324345675679828
+      }
+    ],
+    "oregano": [
+      {
+        "name": "basil",
+        "score": 0.5150907888031839
+      },
+      {
+        "name": "thyme",
+        "score": 0.3531988560252617
+      },
+      {
+        "name": "cumin",
+        "score": 0.3365870878328766
+      }
+    ],
+    "raisin": [
+      {
+        "name": "cinnamon",
+        "score": 0.339272888071164
+      },
+      {
+        "name": "walnut",
+        "score": 0.2963640989892894
+      },
+      {
+        "name": "currant",
+        "score": 0.2844953897493546
+      }
+    ],
+    "sorghum": [
+      {
+        "name": "apple_cider_vinegar",
+        "score": 0.2203960520958746
+      },
+      {
+        "name": "clove",
+        "score": 0.1922348831468883
+      },
+      {
+        "name": "ginger",
+        "score": 0.164961919831118
+      }
+    ],
+    "pancake": [
+      {
+        "name": "strawberry",
+        "score": 0.137507184596631
+      },
+      {
+        "name": "banana",
+        "score": 0.1089083375610411
+      },
+      {
+        "name": "apple",
+        "score": 0.0823649731500642
+      }
+    ],
+    "anise": [
+      {
+        "name": "clove",
+        "score": 0.2617200393926253
+      },
+      {
+        "name": "allspice",
+        "score": 0.2034283588674381
+      },
+      {
+        "name": "coriander",
+        "score": 0.2005491545101426
+      }
+    ],
+    "sugar": [
+      {
+        "name": "vanilla",
+        "score": 0.2566143896555711
+      },
+      {
+        "name": "flour",
+        "score": 0.1967226631206912
+      },
+      {
+        "name": "egg",
+        "score": 0.1905764452377814
+      }
+    ],
+    "basmati_rice": [
+      {
+        "name": "ghee",
+        "score": 0.4290899938121608
+      },
+      {
+        "name": "saffron",
+        "score": 0.394868519671356
+      },
+      {
+        "name": "mutton",
+        "score": 0.3772677565524974
+      }
+    ],
+    "saffron": [
+      {
+        "name": "basmati_rice",
+        "score": 0.394868519671356
+      },
+      {
+        "name": "ghee",
+        "score": 0.3554282533522589
+      },
+      {
+        "name": "mutton",
+        "score": 0.3393878892868938
+      }
+    ],
+    "cherry_brandy": [
+      {
+        "name": "gin",
+        "score": 0.4355949722667918
+      },
+      {
+        "name": "sour_cherry",
+        "score": 0.409386141347949
+      },
+      {
+        "name": "cherry",
+        "score": 0.2632082747148252
+      }
+    ],
+    "cocoa_powder": [
+      {
+        "name": "chocolate",
+        "score": 0.3173042296405769
+      },
+      {
+        "name": "coffee",
+        "score": 0.2621949796228684
+      },
+      {
+        "name": "agave",
+        "score": 0.187635334746708
+      }
+    ],
+    "raisin_bread": [
+      {
+        "name": "apple",
+        "score": 0.1997775267051421
+      },
+      {
+        "name": "nutmeg",
+        "score": 0.1731998888933
+      },
+      {
+        "name": "cinnamon",
+        "score": 0.1713633832787306
+      }
+    ],
+    "dumpling": [
+      {
+        "name": "turnip",
+        "score": 0.2478230284155557
+      },
+      {
+        "name": "pea",
+        "score": 0.2294726070170942
+      },
+      {
+        "name": "chicken",
+        "score": 0.2042232206953092
+      }
+    ],
+    "nut": [
+      {
+        "name": "vanilla",
+        "score": 0.311989707338958
+      },
+      {
+        "name": "date",
+        "score": 0.291588966749593
+      },
+      {
+        "name": "coconut",
+        "score": 0.289950341020303
+      }
+    ],
+    "star_anise": [
+      {
+        "name": "clove",
+        "score": 0.3117054448802516
+      },
+      {
+        "name": "black_tea",
+        "score": 0.2789219728025408
+      },
+      {
+        "name": "ginger",
+        "score": 0.2651293289798713
+      }
+    ],
+    "yellow_zucchini": [
+      {
+        "name": "green_zucchini",
+        "score": 0.8027581028982995
+      },
+      {
+        "name": "eggplant",
+        "score": 0.2474552302220203
+      },
+      {
+        "name": "yellow_bell_pepper",
+        "score": 0.2259342958919342
+      }
+    ],
+    "goat_cheese": [
+      {
+        "name": "fig",
+        "score": 0.2279327090534463
+      },
+      {
+        "name": "phyllo_dough",
+        "score": 0.1756581409740941
+      }
+    ],
+    "phyllo_dough": [
+      {
+        "name": "feta_cheese",
+        "score": 0.3244127267297919
+      },
+      {
+        "name": "pistachio",
+        "score": 0.2580880458714402
+      },
+      {
+        "name": "ricotta_cheese",
+        "score": 0.1844674054370876
+      }
+    ],
+    "squab": [
+      {
+        "name": "red_wine",
+        "score": 0.2574483535813643
+      },
+      {
+        "name": "shallot",
+        "score": 0.243289659514947
+      },
+      {
+        "name": "carrot",
+        "score": 0.1263870447218093
+      }
+    ],
+    "fruit_juice": [
+      {
+        "name": "berry",
+        "score": 0.2659298205596132
+      },
+      {
+        "name": "currant",
+        "score": 0.2150783529280469
+      },
+      {
+        "name": "gelatin",
+        "score": 0.2029280580188286
+      }
+    ],
+    "mango": [
+      {
+        "name": "papaya",
+        "score": 0.471177482073265
+      },
+      {
+        "name": "pineapple",
+        "score": 0.3696923425516685
+      },
+      {
+        "name": "passion_fruit",
+        "score": 0.3608224034215881
+      }
+    ],
+    "shrimp": [
+      {
+        "name": "scallop",
+        "score": 0.39896510750593
+      },
+      {
+        "name": "clam",
+        "score": 0.3054891446054307
+      },
+      {
+        "name": "squid",
+        "score": 0.2945959860756931
+      }
+    ],
+    "white_wine": [
+      {
+        "name": "clam",
+        "score": 0.2831961123950576
+      },
+      {
+        "name": "scallop",
+        "score": 0.2589397568464521
+      },
+      {
+        "name": "lobster",
+        "score": 0.2476097037794387
+      }
+    ],
+    "ice_cream": [
+      {
+        "name": "candy_bar",
+        "score": 0.3174703915111903
+      },
+      {
+        "name": "meringue",
+        "score": 0.2715095733595325
+      },
+      {
+        "name": "cake",
+        "score": 0.1870875175135051
+      }
+    ],
+    "meat": [
+      {
+        "name": "sake",
+        "score": 0.2843610375217313
+      },
+      {
+        "name": "cheese",
+        "score": 0.1915525400575314
+      },
+      {
+        "name": "bamboo_shoot",
+        "score": 0.1744783610855664
+      }
+    ],
+    "pear": [
+      {
+        "name": "pear_brandy",
+        "score": 0.3994579449242419
+      },
+      {
+        "name": "grape",
+        "score": 0.2838675103930373
+      },
+      {
+        "name": "roquefort_cheese",
+        "score": 0.2573566248835282
+      }
+    ],
+    "pomegranate": [
+      {
+        "name": "beetroot",
+        "score": 0.3172237576191852
+      },
+      {
+        "name": "grapefruit",
+        "score": 0.2790276344069572
+      },
+      {
+        "name": "grape",
+        "score": 0.2283434688504471
+      }
+    ],
+    "cardamom": [
+      {
+        "name": "clove",
+        "score": 0.4018492465126789
+      },
+      {
+        "name": "ghee",
+        "score": 0.3899342987773348
+      },
+      {
+        "name": "mutton",
+        "score": 0.3436533714250295
+      }
+    ],
+    "mutton": [
+      {
+        "name": "ghee",
+        "score": 0.4293184103652072
+      },
+      {
+        "name": "curry_leaf",
+        "score": 0.393897294331918
+      },
+      {
+        "name": "basmati_rice",
+        "score": 0.3772677565524974
+      }
+    ],
+    "melon": [
+      {
+        "name": "grape",
+        "score": 0.3650759184072999
+      },
+      {
+        "name": "papaya",
+        "score": 0.3422913916891304
+      },
+      {
+        "name": "pineapple",
+        "score": 0.2917155652164646
+      }
+    ],
+    "smelt": [
+      {
+        "name": "flour",
+        "score": 0.0638249002773148
+      }
+    ],
+    "arrowroot": [
+      {
+        "name": "agar",
+        "score": 0.3885196982682723
+      },
+      {
+        "name": "madeira_wine",
+        "score": 0.2641653458411067
+      },
+      {
+        "name": "millet",
+        "score": 0.236552638093107
+      }
+    ],
+    "madeira_wine": [
+      {
+        "name": "truffle",
+        "score": 0.3864481494553441
+      },
+      {
+        "name": "arrowroot",
+        "score": 0.2641653458411067
+      },
+      {
+        "name": "shallot",
+        "score": 0.2603909766800616
+      }
+    ],
+    "shortening": [
+      {
+        "name": "flour",
+        "score": 0.2718558173155196
+      },
+      {
+        "name": "molasses",
+        "score": 0.2602932631418449
+      },
+      {
+        "name": "vanilla",
+        "score": 0.2583642967665789
+      }
+    ],
+    "broad_bean": [
+      {
+        "name": "pea",
+        "score": 0.3147275640686301
+      },
+      {
+        "name": "couscous",
+        "score": 0.2516485365336776
+      },
+      {
+        "name": "green_bean",
+        "score": 0.2379951782027809
+      }
+    ],
+    "dill": [
+      {
+        "name": "salmon",
+        "score": 0.2628598457628992
+      },
+      {
+        "name": "mint",
+        "score": 0.2447296623771639
+      },
+      {
+        "name": "cucumber",
+        "score": 0.2351746236474549
+      }
+    ],
+    "curry_leaf": [
+      {
+        "name": "turmeric",
+        "score": 0.4486080012536809
+      },
+      {
+        "name": "cassia",
+        "score": 0.4474927274675856
+      },
+      {
+        "name": "ghee",
+        "score": 0.4068654341445438
+      }
+    ],
+    "comte_cheese": [
+      {
+        "name": "nutmeg",
+        "score": 0.1952111433685723
+      },
+      {
+        "name": "parmesan_cheese",
+        "score": 0.0608469195720353
+      },
+      {
+        "name": "pepper",
+        "score": 0.0435272137386007
+      }
+    ],
+    "pepper": [
+      {
+        "name": "salt",
+        "score": 0.2549977019128604
+      },
+      {
+        "name": "onion",
+        "score": 0.2115924113793564
+      },
+      {
+        "name": "oregano",
+        "score": 0.1849802370485217
+      }
+    ],
+    "feta_cheese": [
+      {
+        "name": "hummus",
+        "score": 0.3402895390564564
+      },
+      {
+        "name": "phyllo_dough",
+        "score": 0.3244127267297919
+      },
+      {
+        "name": "cucumber",
+        "score": 0.3065820001905187
+      }
+    ],
+    "quinoa": [
+      {
+        "name": "amaranth",
+        "score": 0.3341391359740933
+      },
+      {
+        "name": "millet",
+        "score": 0.2698008285320821
+      },
+      {
+        "name": "kale",
+        "score": 0.263349562942417
+      }
+    ],
+    "onion": [
+      {
+        "name": "celery",
+        "score": 0.3034172565706851
+      },
+      {
+        "name": "carrot",
+        "score": 0.2749780829081952
+      },
+      {
+        "name": "potato",
+        "score": 0.2586340376589807
+      }
+    ],
+    "swede": [
+      {
+        "name": "parsnip",
+        "score": 0.4306889971443138
+      },
+      {
+        "name": "turnip",
+        "score": 0.3814459810255672
+      },
+      {
+        "name": "leek",
+        "score": 0.3127060124874213
+      }
+    ],
+    "orange_oil": [
+      {
+        "name": "orange",
+        "score": 0.2608963668488961
+      },
+      {
+        "name": "sugar",
+        "score": 0.0515102236381641
+      },
+      {
+        "name": "egg",
+        "score": 0.0502622539751332
+      }
+    ],
+    "lovage": [
+      {
+        "name": "chive",
+        "score": 0.2162061616993952
+      },
+      {
+        "name": "turmeric",
+        "score": 0.193881779293074
+      },
+      {
+        "name": "leek",
+        "score": 0.1601840051172133
+      }
+    ],
+    "rosemary": [
+      {
+        "name": "thyme",
+        "score": 0.453376719472159
+      },
+      {
+        "name": "sage",
+        "score": 0.4099886724409035
+      },
+      {
+        "name": "marjoram",
+        "score": 0.3526395288172897
+      }
+    ],
+    "wine": [
+      {
+        "name": "rabbit",
+        "score": 0.2235544113955614
+      },
+      {
+        "name": "beef",
+        "score": 0.2052855873496943
+      },
+      {
+        "name": "bamboo_shoot",
+        "score": 0.1817794269354098
+      }
+    ],
+    "raspberry": [
+      {
+        "name": "blackberry",
+        "score": 0.503231356229646
+      },
+      {
+        "name": "blueberry",
+        "score": 0.4741659815085455
+      },
+      {
+        "name": "red_currant",
+        "score": 0.4131400738017011
+      }
+    ],
+    "corn": [
+      {
+        "name": "lima_bean",
+        "score": 0.2963231987136348
+      },
+      {
+        "name": "pea",
+        "score": 0.2797428004805334
+      },
+      {
+        "name": "kidney_bean",
+        "score": 0.2497653268751504
+      }
+    ],
+    "cumin": [
+      {
+        "name": "coriander",
+        "score": 0.4484939059333886
+      },
+      {
+        "name": "oregano",
+        "score": 0.3365870878328766
+      },
+      {
+        "name": "mexican_oregano",
+        "score": 0.3348857779687633
+      }
+    ],
+    "catfish": [
+      {
+        "name": "cooking_oil",
+        "score": 0.1969909831739832
+      },
+      {
+        "name": "peanut_oil",
+        "score": 0.1833964406077937
+      },
+      {
+        "name": "beer",
+        "score": 0.1706239624427351
+      }
+    ],
+    "cherry_tomato": [
+      {
+        "name": "feta_cheese",
+        "score": 0.2668112704537531
+      },
+      {
+        "name": "cucumber",
+        "score": 0.2407074144184703
+      },
+      {
+        "name": "orange_bell_pepper",
+        "score": 0.1919621485167264
+      }
+    ],
+    "green_zucchini": [
+      {
+        "name": "yellow_zucchini",
+        "score": 0.8027581028982995
+      },
+      {
+        "name": "eggplant",
+        "score": 0.2298156827190195
+      },
+      {
+        "name": "yellow_bell_pepper",
+        "score": 0.2091661027261497
+      }
+    ],
+    "grape": [
+      {
+        "name": "melon",
+        "score": 0.3650759184072999
+      },
+      {
+        "name": "kiwi",
+        "score": 0.3044900963256445
+      },
+      {
+        "name": "apple",
+        "score": 0.2860625207750978
+      }
+    ],
+    "kombu": [
+      {
+        "name": "sake",
+        "score": 0.4387456069535109
+      },
+      {
+        "name": "miso",
+        "score": 0.3447906952331739
+      },
+      {
+        "name": "wasabi",
+        "score": 0.2945268852190856
+      }
+    ],
+    "tofu": [
+      {
+        "name": "miso",
+        "score": 0.3473519989277586
+      },
+      {
+        "name": "chinese_cabbage",
+        "score": 0.2874831429193276
+      },
+      {
+        "name": "bamboo_shoot",
+        "score": 0.2786948950220143
+      }
+    ],
+    "parsnip": [
+      {
+        "name": "rutabaga",
+        "score": 0.5254364095700295
+      },
+      {
+        "name": "turnip",
+        "score": 0.5239758053484879
+      },
+      {
+        "name": "swede",
+        "score": 0.4306889971443138
+      }
+    ],
+    "sake": [
+      {
+        "name": "miso",
+        "score": 0.5068079910340996
+      },
+      {
+        "name": "kombu",
+        "score": 0.4387456069535109
+      },
+      {
+        "name": "pork",
+        "score": 0.3825919312057244
+      }
+    ],
+    "crab": [
+      {
+        "name": "clam",
+        "score": 0.2816391076118286
+      },
+      {
+        "name": "lobster",
+        "score": 0.2655929056813061
+      },
+      {
+        "name": "shrimp",
+        "score": 0.2528047626530537
+      }
+    ],
+    "almond": [
+      {
+        "name": "date",
+        "score": 0.2614555130911155
+      },
+      {
+        "name": "pistachio",
+        "score": 0.2402531402576036
+      },
+      {
+        "name": "ghee",
+        "score": 0.2260983117488707
+      }
+    ],
+    "brazil_nut": [
+      {
+        "name": "date",
+        "score": 0.3442462609313769
+      },
+      {
+        "name": "hazelnut",
+        "score": 0.2875978319099223
+      },
+      {
+        "name": "almond",
+        "score": 0.1881845050932091
+      }
+    ],
+    "mexican_oregano": [
+      {
+        "name": "cumin",
+        "score": 0.3348857779687633
+      },
+      {
+        "name": "jalapeno",
+        "score": 0.2882252515125984
+      },
+      {
+        "name": "beer",
+        "score": 0.20722758194421
+      }
+    ],
+    "kiwi": [
+      {
+        "name": "star_fruit",
+        "score": 0.4106505052347008
+      },
+      {
+        "name": "strawberry",
+        "score": 0.3836374143787189
+      },
+      {
+        "name": "papaya",
+        "score": 0.3474458804257309
+      }
+    ],
+    "fruit_preserve": [
+      {
+        "name": "raspberry",
+        "score": 0.2304696873706057
+      },
+      {
+        "name": "strawberry",
+        "score": 0.14607123511709
+      },
+      {
+        "name": "shortening",
+        "score": 0.1352039400814289
+      }
+    ],
+    "vanilla": [
+      {
+        "name": "cocoa",
+        "score": 0.3597489344034851
+      },
+      {
+        "name": "nut",
+        "score": 0.311989707338958
+      },
+      {
+        "name": "flour",
+        "score": 0.2936030274288122
+      }
+    ],
+    "banana": [
+      {
+        "name": "kiwi",
+        "score": 0.2737754687706875
+      },
+      {
+        "name": "strawberry",
+        "score": 0.265325981432564
+      },
+      {
+        "name": "kefir",
+        "score": 0.2214386076213759
+      }
+    ],
+    "guava": [
+      {
+        "name": "papaya",
+        "score": 0.3333722230222774
+      },
+      {
+        "name": "pineapple",
+        "score": 0.2460427659628963
+      },
+      {
+        "name": "mango",
+        "score": 0.2312305754262596
+      }
+    ],
+    "tortilla_chip": [
+      {
+        "name": "avocado",
+        "score": 0.3174978005966501
+      },
+      {
+        "name": "lettuce",
+        "score": 0.3094280487630107
+      },
+      {
+        "name": "jalapeno",
+        "score": 0.2600578407420197
+      }
+    ],
+    "bamboo_shoot": [
+      {
+        "name": "water_chestnut",
+        "score": 0.5324512809603776
+      },
+      {
+        "name": "ginkgo_nut",
+        "score": 0.5141625862731717
+      },
+      {
+        "name": "chinese_cabbage",
+        "score": 0.3617515191606593
+      }
+    ],
+    "pork": [
+      {
+        "name": "sake",
+        "score": 0.3825919312057244
+      },
+      {
+        "name": "chinese_cabbage",
+        "score": 0.3256994131479116
+      },
+      {
+        "name": "miso",
+        "score": 0.3201966564520139
+      }
+    ],
+    "clam": [
+      {
+        "name": "scallop",
+        "score": 0.3848983196809704
+      },
+      {
+        "name": "lobster",
+        "score": 0.3629077228591552
+      },
+      {
+        "name": "squid",
+        "score": 0.3590027012481927
+      }
+    ],
+    "fish": [
+      {
+        "name": "clam",
+        "score": 0.2783106918713423
+      },
+      {
+        "name": "scallop",
+        "score": 0.2576275978909221
+      },
+      {
+        "name": "saffron",
+        "score": 0.2568220409140098
+      }
+    ],
+    "mint": [
+      {
+        "name": "bulgur",
+        "score": 0.2575086021875256
+      },
+      {
+        "name": "lemon_balm",
+        "score": 0.2552024790824392
+      },
+      {
+        "name": "coriander",
+        "score": 0.2528025858166801
+      }
+    ],
+    "potato": [
+      {
+        "name": "carrot",
+        "score": 0.312628845927253
+      },
+      {
+        "name": "swede",
+        "score": 0.2824036660027648
+      },
+      {
+        "name": "onion",
+        "score": 0.2586340376589807
+      }
+    ],
+    "gruyere_cheese": [
+      {
+        "name": "multigrain_bread",
+        "score": 0.2309998753817924
+      },
+      {
+        "name": "nutmeg",
+        "score": 0.2190902997056978
+      },
+      {
+        "name": "endive",
+        "score": 0.2125167655859013
+      }
+    ],
+    "multigrain_bread": [
+      {
+        "name": "gruyere_cheese",
+        "score": 0.2309998753817924
+      },
+      {
+        "name": "provolone_cheese",
+        "score": 0.2208953102457905
+      },
+      {
+        "name": "swiss_cheese",
+        "score": 0.1764723192036273
+      }
+    ],
+    "buffalo": [
+      {
+        "name": "blue_cheese",
+        "score": 0.326299657613521
+      },
+      {
+        "name": "lettuce",
+        "score": 0.1702887330511308
+      },
+      {
+        "name": "cheddar_cheese",
+        "score": 0.1434722798881067
+      }
+    ],
+    "celery": [
+      {
+        "name": "carrot",
+        "score": 0.4300838618518185
+      },
+      {
+        "name": "onion",
+        "score": 0.3034172565706851
+      },
+      {
+        "name": "cornbread",
+        "score": 0.2949524967093247
+      }
+    ],
+    "mushroom": [
+      {
+        "name": "bamboo_shoot",
+        "score": 0.2436369902053846
+      },
+      {
+        "name": "ginkgo_nut",
+        "score": 0.2174139810020168
+      },
+      {
+        "name": "wild_rice",
+        "score": 0.2068726267862072
+      }
+    ],
+    "rose_wine": [
+      {
+        "name": "peach",
+        "score": 0.2545003676791639
+      },
+      {
+        "name": "orange",
+        "score": 0.2059932078378856
+      },
+      {
+        "name": "brandy",
+        "score": 0.1754254266257756
+      }
+    ],
+    "hamburger": [
+      {
+        "name": "kidney_bean",
+        "score": 0.2590818584831259
+      },
+      {
+        "name": "mustard",
+        "score": 0.2274993173925923
+      },
+      {
+        "name": "ketchup",
+        "score": 0.2262229970728876
+      }
+    ],
+    "mustard": [
+      {
+        "name": "ketchup",
+        "score": 0.3615353110100568
+      },
+      {
+        "name": "relish",
+        "score": 0.330703346946445
+      },
+      {
+        "name": "hot_dog",
+        "score": 0.2960263369295042
+      }
+    ],
+    "cauliflower": [
+      {
+        "name": "broccoli",
+        "score": 0.4110520472837606
+      },
+      {
+        "name": "turmeric",
+        "score": 0.2574207572413455
+      },
+      {
+        "name": "nigella_seed",
+        "score": 0.1945857138097789
+      }
+    ],
+    "green_bean": [
+      {
+        "name": "lima_bean",
+        "score": 0.2965844207197545
+      },
+      {
+        "name": "broad_bean",
+        "score": 0.2379951782027809
+      },
+      {
+        "name": "pea",
+        "score": 0.2209473564242695
+      }
+    ],
+    "date": [
+      {
+        "name": "brazil_nut",
+        "score": 0.3442462609313769
+      },
+      {
+        "name": "walnut",
+        "score": 0.2969194669305814
+      },
+      {
+        "name": "nut",
+        "score": 0.291588966749593
+      }
+    ],
+    "clementine": [
+      {
+        "name": "grapefruit",
+        "score": 0.311067336536594
+      },
+      {
+        "name": "star_anise",
+        "score": 0.2096882238531193
+      },
+      {
+        "name": "vodka",
+        "score": 0.1888059625284052
+      }
+    ],
+    "grapefruit": [
+      {
+        "name": "tangerine",
+        "score": 0.3703783398823604
+      },
+      {
+        "name": "orange",
+        "score": 0.3579118044262808
+      },
+      {
+        "name": "clementine",
+        "score": 0.311067336536594
+      }
+    ],
+    "chinese_cabbage": [
+      {
+        "name": "sake",
+        "score": 0.3716055457179804
+      },
+      {
+        "name": "miso",
+        "score": 0.3675601887889007
+      },
+      {
+        "name": "bamboo_shoot",
+        "score": 0.3617515191606593
+      }
+    ],
+    "kumquat": [
+      {
+        "name": "tangerine",
+        "score": 0.3583578248960155
+      },
+      {
+        "name": "star_anise",
+        "score": 0.208209278549972
+      },
+      {
+        "name": "pineapple",
+        "score": 0.1849834825089244
+      }
+    ],
+    "water_chestnut": [
+      {
+        "name": "bamboo_shoot",
+        "score": 0.5324512809603776
+      },
+      {
+        "name": "wonton_wrapper",
+        "score": 0.3369974710836928
+      },
+      {
+        "name": "chinese_mustard",
+        "score": 0.3125736153439216
+      }
+    ],
+    "thyme": [
+      {
+        "name": "rosemary",
+        "score": 0.453376719472159
+      },
+      {
+        "name": "marjoram",
+        "score": 0.4434217762304179
+      },
+      {
+        "name": "sage",
+        "score": 0.4387425319107818
+      }
+    ],
+    "cottage_cheese": [
+      {
+        "name": "mozzarella_cheese",
+        "score": 0.3041184532903138
+      },
+      {
+        "name": "phyllo_dough",
+        "score": 0.1817714427443718
+      }
+    ],
+    "molasses": [
+      {
+        "name": "clove",
+        "score": 0.2937079434059256
+      },
+      {
+        "name": "ketchup",
+        "score": 0.2916760714379619
+      },
+      {
+        "name": "ginger",
+        "score": 0.2706403330523721
+      }
+    ],
+    "soybean": [
+      {
+        "name": "miso",
+        "score": 0.2462965515162065
+      },
+      {
+        "name": "lentil",
+        "score": 0.2291628567673308
+      },
+      {
+        "name": "sake",
+        "score": 0.1662615941890636
+      }
+    ],
+    "ham": [
+      {
+        "name": "swiss_cheese",
+        "score": 0.3505520941580728
+      },
+      {
+        "name": "provolone_cheese",
+        "score": 0.2550208492676179
+      },
+      {
+        "name": "cheese",
+        "score": 0.2115585087021734
+      }
+    ],
+    "candy_bar": [
+      {
+        "name": "ice_cream",
+        "score": 0.3174703915111903
+      },
+      {
+        "name": "marshmallow",
+        "score": 0.2485255982759366
+      },
+      {
+        "name": "peanut_butter",
+        "score": 0.1983443110634976
+      }
+    ],
+    "tomato": [
+      {
+        "name": "lettuce",
+        "score": 0.3385610122112122
+      },
+      {
+        "name": "avocado",
+        "score": 0.2760672553624265
+      },
+      {
+        "name": "cucumber",
+        "score": 0.2623353683715198
+      }
+    ],
+    "rice_cake": [
+      {
+        "name": "sake",
+        "score": 0.2142178382338638
+      },
+      {
+        "name": "leek",
+        "score": 0.1715195212841437
+      },
+      {
+        "name": "carrot",
+        "score": 0.0510949067857423
+      }
+    ],
+    "soybean_oil": [
+      {
+        "name": "white_pepper",
+        "score": 0.1330143141766431
+      },
+      {
+        "name": "ginger",
+        "score": 0.1002198124455252
+      },
+      {
+        "name": "garlic",
+        "score": 0.0701854831575939
+      }
+    ],
+    "white_pepper": [
+      {
+        "name": "bamboo_shoot",
+        "score": 0.2614343923667677
+      },
+      {
+        "name": "truffle",
+        "score": 0.1649661225297381
+      },
+      {
+        "name": "white_cabbage",
+        "score": 0.1521155969611906
+      }
+    ],
+    "hot_dog": [
+      {
+        "name": "relish",
+        "score": 0.3387745660864228
+      },
+      {
+        "name": "mustard",
+        "score": 0.2960263369295042
+      },
+      {
+        "name": "chili",
+        "score": 0.2712850755586201
+      }
+    ],
+    "ketchup": [
+      {
+        "name": "mustard",
+        "score": 0.3615353110100568
+      },
+      {
+        "name": "molasses",
+        "score": 0.2916760714379619
+      },
+      {
+        "name": "apple_cider_vinegar",
+        "score": 0.2866497432500717
+      }
+    ],
+    "chive": [
+      {
+        "name": "caviar",
+        "score": 0.3608384609810917
+      },
+      {
+        "name": "chervil",
+        "score": 0.3571339663779592
+      },
+      {
+        "name": "tarragon",
+        "score": 0.3298844845353174
+      }
+    ],
+    "shallot": [
+      {
+        "name": "chervil",
+        "score": 0.2690621541075465
+      },
+      {
+        "name": "madeira_wine",
+        "score": 0.2603909766800616
+      },
+      {
+        "name": "tarragon",
+        "score": 0.2554710302638032
+      }
+    ],
+    "poppy_seed": [
+      {
+        "name": "swiss_cheese",
+        "score": 0.2179861339134237
+      },
+      {
+        "name": "mandarin_orange",
+        "score": 0.2178878334333902
+      },
+      {
+        "name": "sesame",
+        "score": 0.2109578306633906
+      }
+    ],
+    "swiss_cheese": [
+      {
+        "name": "rye_bread",
+        "score": 0.4422172111569502
+      },
+      {
+        "name": "ham",
+        "score": 0.3505520941580728
+      },
+      {
+        "name": "poppy_seed",
+        "score": 0.2179861339134237
+      }
+    ],
+    "cassia": [
+      {
+        "name": "curry_leaf",
+        "score": 0.4474927274675856
+      },
+      {
+        "name": "clove",
+        "score": 0.3621496232302593
+      },
+      {
+        "name": "turmeric",
+        "score": 0.3291785772755694
+      }
+    ],
+    "red_raspberry": [
+      {
+        "name": "blackberry",
+        "score": 0.3219989228978595
+      },
+      {
+        "name": "blueberry",
+        "score": 0.2367722062381982
+      },
+      {
+        "name": "peach",
+        "score": 0.1902646347523988
+      }
+    ],
+    "papaya": [
+      {
+        "name": "mango",
+        "score": 0.471177482073265
+      },
+      {
+        "name": "star_fruit",
+        "score": 0.4145263881454404
+      },
+      {
+        "name": "pineapple",
+        "score": 0.4065422327240722
+      }
+    ],
+    "pineapple": [
+      {
+        "name": "papaya",
+        "score": 0.4065422327240722
+      },
+      {
+        "name": "mango",
+        "score": 0.3696923425516685
+      },
+      {
+        "name": "kiwi",
+        "score": 0.3357604134108312
+      }
+    ],
+    "rhubarb": [
+      {
+        "name": "strawberry",
+        "score": 0.3387866617098916
+      },
+      {
+        "name": "pie_crust",
+        "score": 0.2009780186112084
+      },
+      {
+        "name": "raspberry",
+        "score": 0.1918120114520233
+      }
+    ],
+    "artichoke": [
+      {
+        "name": "lemon",
+        "score": 0.3014535726798755
+      },
+      {
+        "name": "tarragon",
+        "score": 0.1952055884435653
+      },
+      {
+        "name": "white_wine",
+        "score": 0.1951965093551971
+      }
+    ],
+    "apple_cider_vinegar": [
+      {
+        "name": "ketchup",
+        "score": 0.2866497432500717
+      },
+      {
+        "name": "sorghum",
+        "score": 0.2203960520958746
+      },
+      {
+        "name": "kohlrabi",
+        "score": 0.1905770942691612
+      }
+    ],
+    "quince": [
+      {
+        "name": "star_anise",
+        "score": 0.248934569509327
+      },
+      {
+        "name": "saffron",
+        "score": 0.2487453933541136
+      },
+      {
+        "name": "couscous",
+        "score": 0.2049120821500734
+      }
+    ],
+    "cucumber": [
+      {
+        "name": "radish",
+        "score": 0.3372819664462085
+      },
+      {
+        "name": "hummus",
+        "score": 0.3246877841016867
+      },
+      {
+        "name": "pita_bread",
+        "score": 0.3201877015117984
+      }
+    ],
+    "purslane": [
+      {
+        "name": "cucumber",
+        "score": 0.1701514602090135
+      },
+      {
+        "name": "tomato",
+        "score": 0.1408100047648839
+      },
+      {
+        "name": "salt",
+        "score": 0.0223944110901679
+      }
+    ],
+    "pumpkin": [
+      {
+        "name": "cinnamon",
+        "score": 0.2979425391265673
+      },
+      {
+        "name": "nutmeg",
+        "score": 0.2950712410313437
+      },
+      {
+        "name": "evaporated_milk",
+        "score": 0.2806648632509701
+      }
+    ],
+    "pistachio": [
+      {
+        "name": "ghee",
+        "score": 0.3018709899227659
+      },
+      {
+        "name": "semolina",
+        "score": 0.2900949565615621
+      },
+      {
+        "name": "saffron",
+        "score": 0.2662394255423816
+      }
+    ],
+    "persimmon": [
+      {
+        "name": "walnut",
+        "score": 0.1987733049925584
+      },
+      {
+        "name": "clove",
+        "score": 0.1781166123814281
+      },
+      {
+        "name": "raisin",
+        "score": 0.1744870268077364
+      }
+    ],
+    "sorrel": [
+      {
+        "name": "chervil",
+        "score": 0.3232672535527435
+      },
+      {
+        "name": "watercress",
+        "score": 0.2590336012840485
+      },
+      {
+        "name": "chive",
+        "score": 0.2429742825833065
+      }
+    ],
+    "epazote": [
+      {
+        "name": "corn_oil",
+        "score": 0.2994427470051991
+      },
+      {
+        "name": "tortilla",
+        "score": 0.2617287926052063
+      },
+      {
+        "name": "avocado",
+        "score": 0.2271054192533525
+      }
+    ],
+    "tortilla": [
+      {
+        "name": "lettuce",
+        "score": 0.2729433144726989
+      },
+      {
+        "name": "cheese",
+        "score": 0.2720384844253469
+      },
+      {
+        "name": "epazote",
+        "score": 0.2617287926052063
+      }
+    ],
+    "sockeye_salmon": [
+      {
+        "name": "pepper",
+        "score": 0.0404540240870306
+      }
+    ],
+    "avocado": [
+      {
+        "name": "tostada",
+        "score": 0.3499937660696081
+      },
+      {
+        "name": "lime",
+        "score": 0.3461476283053703
+      },
+      {
+        "name": "tortilla_chip",
+        "score": 0.3174978005966501
+      }
+    ],
+    "roquefort_cheese": [
+      {
+        "name": "endive",
+        "score": 0.3676728456402145
+      },
+      {
+        "name": "watercress",
+        "score": 0.3384219211805345
+      },
+      {
+        "name": "bartlett_pear",
+        "score": 0.3341843053332933
+      }
+    ],
+    "sparkling_wine": [
+      {
+        "name": "vodka",
+        "score": 0.2479026075533145
+      },
+      {
+        "name": "brandy",
+        "score": 0.2036419689652436
+      },
+      {
+        "name": "gin",
+        "score": 0.2017825520450342
+      }
+    ],
+    "pate": [
+      {
+        "name": "brandy",
+        "score": 0.1886144152422826
+      },
+      {
+        "name": "cream",
+        "score": 0.1699473072482453
+      },
+      {
+        "name": "mushroom",
+        "score": 0.1478059638930139
+      }
+    ],
+    "white_cabbage": [
+      {
+        "name": "bamboo_shoot",
+        "score": 0.2419121405526365
+      },
+      {
+        "name": "carrot",
+        "score": 0.2183794061538604
+      },
+      {
+        "name": "dill",
+        "score": 0.2015611564062127
+      }
+    ],
+    "scallop": [
+      {
+        "name": "shrimp",
+        "score": 0.39896510750593
+      },
+      {
+        "name": "clam",
+        "score": 0.3848983196809704
+      },
+      {
+        "name": "squid",
+        "score": 0.3451565246213775
+      }
+    ],
+    "bulgur": [
+      {
+        "name": "chickpea",
+        "score": 0.2783674585958296
+      },
+      {
+        "name": "mint",
+        "score": 0.2575086021875256
+      },
+      {
+        "name": "lentil",
+        "score": 0.2338962412247935
+      }
+    ],
+    "chickpea": [
+      {
+        "name": "couscous",
+        "score": 0.3527004135770736
+      },
+      {
+        "name": "pita_bread",
+        "score": 0.2812400776073993
+      },
+      {
+        "name": "bulgur",
+        "score": 0.2783674585958296
+      }
+    ],
+    "nigella_seed": [
+      {
+        "name": "curry_leaf",
+        "score": 0.291286899938632
+      },
+      {
+        "name": "ghee",
+        "score": 0.2622818736672057
+      },
+      {
+        "name": "turmeric",
+        "score": 0.2188674857740663
+      }
+    ],
+    "squirrel": [
+      {
+        "name": "potato",
+        "score": 0.2051000671948557
+      },
+      {
+        "name": "celery",
+        "score": 0.1255713374282332
+      },
+      {
+        "name": "onion",
+        "score": 0.0981358332106179
+      }
+    ],
+    "lamb": [
+      {
+        "name": "ghee",
+        "score": 0.3209156025328425
+      },
+      {
+        "name": "saffron",
+        "score": 0.2580422013884134
+      },
+      {
+        "name": "turnip",
+        "score": 0.2577144687907043
+      }
+    ],
+    "turmeric": [
+      {
+        "name": "curry_leaf",
+        "score": 0.4486080012536809
+      },
+      {
+        "name": "coriander",
+        "score": 0.4184727061760506
+      },
+      {
+        "name": "ghee",
+        "score": 0.4016938521926772
+      }
+    ],
+    "orange_roughy": [
+      {
+        "name": "lemon",
+        "score": 0.1194782570489574
+      },
+      {
+        "name": "garlic",
+        "score": 0.0701538626310408
+      },
+      {
+        "name": "parmesan_cheese",
+        "score": 0.0684754412185051
+      }
+    ],
+    "ravioli": [
+      {
+        "name": "parmesan_cheese",
+        "score": 0.226513049776089
+      },
+      {
+        "name": "cream",
+        "score": 0.186964368354515
+      },
+      {
+        "name": "mozzarella_cheese",
+        "score": 0.1765127406300506
+      }
+    ],
+    "nutmeg": [
+      {
+        "name": "cinnamon",
+        "score": 0.4716558981571911
+      },
+      {
+        "name": "clove",
+        "score": 0.3765053989075995
+      },
+      {
+        "name": "allspice",
+        "score": 0.3750984010771176
+      }
+    ],
+    "caper": [
+      {
+        "name": "anchovy",
+        "score": 0.4153500565661724
+      },
+      {
+        "name": "olive",
+        "score": 0.2851714397605969
+      },
+      {
+        "name": "swordfish",
+        "score": 0.2306408709376509
+      }
+    ],
+    "olive": [
+      {
+        "name": "caper",
+        "score": 0.2851714397605969
+      },
+      {
+        "name": "anchovy",
+        "score": 0.2701921746311407
+      },
+      {
+        "name": "vermouth",
+        "score": 0.1086611443778595
+      }
+    ],
+    "black_walnut": [
+      {
+        "name": "shortening",
+        "score": 0.2109899745240507
+      },
+      {
+        "name": "vanilla",
+        "score": 0.1772262615025925
+      },
+      {
+        "name": "raisin",
+        "score": 0.1516875554083773
+      }
+    ],
+    "plum": [
+      {
+        "name": "plum_brandy",
+        "score": 0.4641903149074734
+      },
+      {
+        "name": "plum_wine",
+        "score": 0.4222213088173998
+      },
+      {
+        "name": "peach",
+        "score": 0.3166467603531138
+      }
+    ],
+    "chicken": [
+      {
+        "name": "dumpling",
+        "score": 0.2042232206953092
+      },
+      {
+        "name": "rice",
+        "score": 0.1893489231353162
+      },
+      {
+        "name": "saffron",
+        "score": 0.1685500655989192
+      }
+    ],
+    "cabbage": [
+      {
+        "name": "carrot",
+        "score": 0.3036647708242778
+      },
+      {
+        "name": "capsicum",
+        "score": 0.2368163663889409
+      },
+      {
+        "name": "cassava",
+        "score": 0.2356220295786513
+      }
+    ],
+    "rutabaga": [
+      {
+        "name": "parsnip",
+        "score": 0.5254364095700295
+      },
+      {
+        "name": "turnip",
+        "score": 0.5177392690672785
+      },
+      {
+        "name": "carrot",
+        "score": 0.2952667329028343
+      }
+    ],
+    "plum_brandy": [
+      {
+        "name": "plum",
+        "score": 0.4641903149074734
+      },
+      {
+        "name": "sugar",
+        "score": 0.0587095581424475
+      }
+    ],
+    "dulce_de_leche": [
+      {
+        "name": "gelatin",
+        "score": 0.1699907441558583
+      },
+      {
+        "name": "banana",
+        "score": 0.1626387661375291
+      },
+      {
+        "name": "cocoa_powder",
+        "score": 0.1368880187185728
+      }
+    ],
+    "winter_squash": [
+      {
+        "name": "turnip",
+        "score": 0.3006229079381161
+      },
+      {
+        "name": "leek",
+        "score": 0.1933930133131583
+      },
+      {
+        "name": "parsnip",
+        "score": 0.1869616894638107
+      }
+    ],
+    "beef": [
+      {
+        "name": "sake",
+        "score": 0.2512550400707599
+      },
+      {
+        "name": "red_wine",
+        "score": 0.2468080762853973
+      },
+      {
+        "name": "pork",
+        "score": 0.245858267901782
+      }
+    ],
+    "coconut": [
+      {
+        "name": "curry_leaf",
+        "score": 0.3027110752262498
+      },
+      {
+        "name": "nut",
+        "score": 0.289950341020303
+      },
+      {
+        "name": "macadamia_nut",
+        "score": 0.2456928134224477
+      }
+    ],
+    "jerusalem_artichoke": [
+      {
+        "name": "parsnip",
+        "score": 0.2521562510710049
+      },
+      {
+        "name": "leek",
+        "score": 0.2303746036722415
+      },
+      {
+        "name": "turnip",
+        "score": 0.2284407904270863
+      }
+    ],
+    "turnip": [
+      {
+        "name": "parsnip",
+        "score": 0.5239758053484879
+      },
+      {
+        "name": "rutabaga",
+        "score": 0.5177392690672785
+      },
+      {
+        "name": "swede",
+        "score": 0.3814459810255672
+      }
+    ],
+    "star_fruit": [
+      {
+        "name": "papaya",
+        "score": 0.4145263881454404
+      },
+      {
+        "name": "kiwi",
+        "score": 0.4106505052347008
+      },
+      {
+        "name": "mango",
+        "score": 0.3473115699602237
+      }
+    ],
+    "eggplant": [
+      {
+        "name": "yellow_zucchini",
+        "score": 0.2474552302220203
+      },
+      {
+        "name": "green_zucchini",
+        "score": 0.2298156827190195
+      },
+      {
+        "name": "tomato",
+        "score": 0.2277480387790042
+      }
+    ],
+    "red_bell_pepper": [
+      {
+        "name": "yellow_bell_pepper",
+        "score": 0.5318623688024399
+      },
+      {
+        "name": "green_bell_pepper",
+        "score": 0.4390839432664757
+      },
+      {
+        "name": "orange_bell_pepper",
+        "score": 0.349355525473937
+      }
+    ],
+    "kidney_bean": [
+      {
+        "name": "lima_bean",
+        "score": 0.4407698765208807
+      },
+      {
+        "name": "cumin",
+        "score": 0.2819297417837828
+      },
+      {
+        "name": "corn_chip",
+        "score": 0.2666836525800612
+      }
+    ],
+    "mace": [
+      {
+        "name": "currant",
+        "score": 0.3990159924301721
+      },
+      {
+        "name": "clove",
+        "score": 0.3891561024434792
+      },
+      {
+        "name": "allspice",
+        "score": 0.3642612243319195
+      }
+    ],
+    "brandy": [
+      {
+        "name": "currant",
+        "score": 0.3031648149132193
+      },
+      {
+        "name": "mace",
+        "score": 0.2533907807304674
+      },
+      {
+        "name": "orange",
+        "score": 0.2261038101179785
+      }
+    ],
+    "kelp": [
+      {
+        "name": "carrot",
+        "score": 0.0876325838697531
+      },
+      {
+        "name": "water",
+        "score": 0.0646580514391173
+      },
+      {
+        "name": "onion",
+        "score": 0.0048583463926528
+      }
+    ],
+    "brussels_sprout": [
+      {
+        "name": "chestnut",
+        "score": 0.3330812593366846
+      },
+      {
+        "name": "parsnip",
+        "score": 0.246250989606369
+      },
+      {
+        "name": "pomegranate",
+        "score": 0.2091383912665048
+      }
+    ],
+    "chestnut": [
+      {
+        "name": "brussels_sprout",
+        "score": 0.3330812593366846
+      },
+      {
+        "name": "oyster_mushroom",
+        "score": 0.2509875547920697
+      },
+      {
+        "name": "wild_rice",
+        "score": 0.2412148968413197
+      }
+    ],
+    "cranberry": [
+      {
+        "name": "orange",
+        "score": 0.2781988007746121
+      },
+      {
+        "name": "apple",
+        "score": 0.2409294919219057
+      },
+      {
+        "name": "tangerine",
+        "score": 0.2222127046653046
+      }
+    ],
+    "walnut": [
+      {
+        "name": "date",
+        "score": 0.2969194669305814
+      },
+      {
+        "name": "raisin",
+        "score": 0.2963640989892894
+      },
+      {
+        "name": "cinnamon",
+        "score": 0.2277417252165866
+      }
+    ],
+    "fudge": [
+      {
+        "name": "vanilla",
+        "score": 0.1045225907799606
+      },
+      {
+        "name": "egg",
+        "score": 0.0437856705716376
+      },
+      {
+        "name": "butter",
+        "score": 0.0183352517306631
+      }
+    ],
+    "cherry_pepper": [
+      {
+        "name": "provolone_cheese",
+        "score": 0.3510341247244819
+      },
+      {
+        "name": "caper",
+        "score": 0.1808993946569452
+      },
+      {
+        "name": "sausage",
+        "score": 0.1712497874560375
+      }
+    ],
+    "peanut_butter": [
+      {
+        "name": "peanut",
+        "score": 0.3777567424520568
+      },
+      {
+        "name": "oat",
+        "score": 0.2468197133047933
+      },
+      {
+        "name": "candy_bar",
+        "score": 0.1983443110634976
+      }
+    ],
+    "beetroot": [
+      {
+        "name": "pomegranate",
+        "score": 0.3172237576191852
+      },
+      {
+        "name": "parsnip",
+        "score": 0.2172662941489708
+      },
+      {
+        "name": "dill",
+        "score": 0.1981397740753037
+      }
+    ],
+    "lettuce": [
+      {
+        "name": "tostada",
+        "score": 0.3653473091519237
+      },
+      {
+        "name": "tomato",
+        "score": 0.3385610122112122
+      },
+      {
+        "name": "corn_chip",
+        "score": 0.3136447459322308
+      }
+    ],
+    "crayfish": [
+      {
+        "name": "celery",
+        "score": 0.1565797925961301
+      },
+      {
+        "name": "lemon",
+        "score": 0.1474824417839577
+      },
+      {
+        "name": "carrot",
+        "score": 0.1119044446241786
+      }
+    ],
+    "cocoa": [
+      {
+        "name": "vanilla",
+        "score": 0.3597489344034851
+      },
+      {
+        "name": "nut",
+        "score": 0.2647549709881792
+      },
+      {
+        "name": "coffee",
+        "score": 0.2297649055815666
+      }
+    ],
+    "coffee": [
+      {
+        "name": "cocoa_powder",
+        "score": 0.2621949796228684
+      },
+      {
+        "name": "chocolate",
+        "score": 0.2536908947313748
+      },
+      {
+        "name": "cocoa",
+        "score": 0.2297649055815666
+      }
+    ],
+    "lima_bean": [
+      {
+        "name": "kidney_bean",
+        "score": 0.4407698765208807
+      },
+      {
+        "name": "black_eyed_pea",
+        "score": 0.3379297166167337
+      },
+      {
+        "name": "okra",
+        "score": 0.3123474211939114
+      }
+    ],
+    "sweet_basil": [
+      {
+        "name": "oregano",
+        "score": 0.3156552422352392
+      },
+      {
+        "name": "bamboo_shoot",
+        "score": 0.216609683659871
+      },
+      {
+        "name": "thyme",
+        "score": 0.2120906572133583
+      }
+    ],
+    "ricotta_cheese": [
+      {
+        "name": "mozzarella_cheese",
+        "score": 0.4714680109703409
+      },
+      {
+        "name": "parmesan_cheese",
+        "score": 0.3295863451938849
+      },
+      {
+        "name": "romano_cheese",
+        "score": 0.2785828863624321
+      }
+    ],
+    "spinach": [
+      {
+        "name": "ricotta_cheese",
+        "score": 0.2378297966087776
+      },
+      {
+        "name": "feta_cheese",
+        "score": 0.2227593005633452
+      },
+      {
+        "name": "tofu",
+        "score": 0.1919529269074747
+      }
+    ],
+    "filbert": [
+      {
+        "name": "butter",
+        "score": 0.064991426800084
+      },
+      {
+        "name": "sugar",
+        "score": 0.0550826702740884
+      },
+      {
+        "name": "egg",
+        "score": 0.023340650263332
+      }
+    ],
+    "rum": [
+      {
+        "name": "marzipan",
+        "score": 0.2296901645870771
+      },
+      {
+        "name": "chestnut",
+        "score": 0.2133848604130166
+      },
+      {
+        "name": "cherry_brandy",
+        "score": 0.1843244673659389
+      }
+    ],
+    "lobster": [
+      {
+        "name": "clam",
+        "score": 0.3629077228591552
+      },
+      {
+        "name": "haddock",
+        "score": 0.316015631241905
+      },
+      {
+        "name": "chervil",
+        "score": 0.3021670650836183
+      }
+    ],
+    "sweet_potato": [
+      {
+        "name": "parsnip",
+        "score": 0.2968652498187649
+      },
+      {
+        "name": "rutabaga",
+        "score": 0.2405538250174573
+      },
+      {
+        "name": "turnip",
+        "score": 0.2228921890522812
+      }
+    ],
+    "caviar": [
+      {
+        "name": "chervil",
+        "score": 0.3836529939209597
+      },
+      {
+        "name": "chive",
+        "score": 0.3608384609810917
+      },
+      {
+        "name": "lobster",
+        "score": 0.2804482743049356
+      }
+    ],
+    "salmon": [
+      {
+        "name": "wasabi",
+        "score": 0.2737493410877872
+      },
+      {
+        "name": "dill",
+        "score": 0.2628598457628992
+      },
+      {
+        "name": "caviar",
+        "score": 0.234516068463565
+      }
+    ],
+    "pheasant": [
+      {
+        "name": "wild_rice",
+        "score": 0.2797797969107449
+      },
+      {
+        "name": "red_wine",
+        "score": 0.1822015243985816
+      },
+      {
+        "name": "thyme",
+        "score": 0.1524065123105186
+      }
+    ],
+    "kefir": [
+      {
+        "name": "banana",
+        "score": 0.2214386076213759
+      },
+      {
+        "name": "strawberry",
+        "score": 0.1769325168159659
+      },
+      {
+        "name": "honey",
+        "score": 0.1475355350861551
+      }
+    ],
+    "cream_cheese": [
+      {
+        "name": "bagel",
+        "score": 0.2021863809946913
+      },
+      {
+        "name": "fruit_preserve",
+        "score": 0.1165822114014303
+      },
+      {
+        "name": "buffalo",
+        "score": 0.104529291101791
+      }
+    ],
+    "vermouth": [
+      {
+        "name": "gin",
+        "score": 0.3628120366294335
+      },
+      {
+        "name": "scallop",
+        "score": 0.205155295335489
+      },
+      {
+        "name": "vodka",
+        "score": 0.184305497942037
+      }
+    ],
+    "truffle": [
+      {
+        "name": "madeira_wine",
+        "score": 0.3864481494553441
+      },
+      {
+        "name": "port_wine",
+        "score": 0.2637120817052293
+      },
+      {
+        "name": "shallot",
+        "score": 0.227417618930837
+      }
+    ],
+    "apricot": [
+      {
+        "name": "plum",
+        "score": 0.3166152201413961
+      },
+      {
+        "name": "cherry",
+        "score": 0.2898841295597577
+      },
+      {
+        "name": "fig",
+        "score": 0.2511951456093826
+      }
+    ],
+    "bagel": [
+      {
+        "name": "hummus",
+        "score": 0.2767485222405542
+      },
+      {
+        "name": "cream_cheese",
+        "score": 0.2021863809946913
+      },
+      {
+        "name": "caper",
+        "score": 0.1863353290275912
+      }
+    ],
+    "swordfish": [
+      {
+        "name": "fennel",
+        "score": 0.2803357364972433
+      },
+      {
+        "name": "caper",
+        "score": 0.2306408709376509
+      },
+      {
+        "name": "shrimp",
+        "score": 0.2066611052220415
+      }
+    ],
+    "agave": [
+      {
+        "name": "oat",
+        "score": 0.2195372757738019
+      },
+      {
+        "name": "cocoa_powder",
+        "score": 0.187635334746708
+      },
+      {
+        "name": "date",
+        "score": 0.1872008978302792
+      }
+    ],
+    "cheddar_cheese": [
+      {
+        "name": "corn_chip",
+        "score": 0.2520530393390055
+      },
+      {
+        "name": "tortilla_chip",
+        "score": 0.2511984687252229
+      },
+      {
+        "name": "macaroni",
+        "score": 0.2270551651523384
+      }
+    ],
+    "red_currant": [
+      {
+        "name": "black_currant",
+        "score": 0.5642030187276381
+      },
+      {
+        "name": "raspberry",
+        "score": 0.4131400738017011
+      },
+      {
+        "name": "blackberry",
+        "score": 0.3815769539292895
+      }
+    ],
+    "ice_cream_cone": [
+      {
+        "name": "marshmallow",
+        "score": 0.2484090824373724
+      },
+      {
+        "name": "strawberry",
+        "score": 0.1116813864830256
+      },
+      {
+        "name": "raisin",
+        "score": 0.10297775919148
+      }
+    ],
+    "prickly_pear": [
+      {
+        "name": "lime",
+        "score": 0.1970309284108238
+      },
+      {
+        "name": "sugar",
+        "score": 0.0670305922345027
+      }
+    ],
+    "macadamia_nut": [
+      {
+        "name": "coconut",
+        "score": 0.2456928134224477
+      },
+      {
+        "name": "mango",
+        "score": 0.2393389315100819
+      },
+      {
+        "name": "papaya",
+        "score": 0.2352725896032619
+      }
+    ],
+    "ghee": [
+      {
+        "name": "mutton",
+        "score": 0.4293184103652072
+      },
+      {
+        "name": "basmati_rice",
+        "score": 0.4290899938121608
+      },
+      {
+        "name": "curry_leaf",
+        "score": 0.4068654341445438
+      }
+    ],
+    "millet": [
+      {
+        "name": "amaranth",
+        "score": 0.5036263913655572
+      },
+      {
+        "name": "barley",
+        "score": 0.3448478971582375
+      },
+      {
+        "name": "wheat",
+        "score": 0.304283672583142
+      }
+    ],
+    "oat": [
+      {
+        "name": "cinnamon",
+        "score": 0.2621899011730273
+      },
+      {
+        "name": "raisin",
+        "score": 0.252276426827877
+      },
+      {
+        "name": "peanut_butter",
+        "score": 0.2468197133047933
+      }
+    ],
+    "chinese_mustard": [
+      {
+        "name": "water_chestnut",
+        "score": 0.3125736153439216
+      },
+      {
+        "name": "peanut_oil",
+        "score": 0.2786045161030868
+      },
+      {
+        "name": "ginger",
+        "score": 0.1689570165042959
+      }
+    ],
+    "cuttlefish": [
+      {
+        "name": "parsley",
+        "score": 0.1574221043085114
+      }
+    ],
+    "wild_rice": [
+      {
+        "name": "pheasant",
+        "score": 0.2797797969107449
+      },
+      {
+        "name": "chestnut",
+        "score": 0.2412148968413197
+      },
+      {
+        "name": "barley",
+        "score": 0.2326053994979517
+      }
+    ],
+    "parmesan_cheese": [
+      {
+        "name": "mozzarella_cheese",
+        "score": 0.3876812860491905
+      },
+      {
+        "name": "ricotta_cheese",
+        "score": 0.3295863451938849
+      },
+      {
+        "name": "pasta",
+        "score": 0.2476119665681228
+      }
+    ],
+    "vodka": [
+      {
+        "name": "gin",
+        "score": 0.3303414422679765
+      },
+      {
+        "name": "champagne",
+        "score": 0.2653681463642871
+      },
+      {
+        "name": "sparkling_wine",
+        "score": 0.2479026075533145
+      }
+    ],
+    "canola_oil": [
+      {
+        "name": "soy_yogurt",
+        "score": 0.1429919520406008
+      },
+      {
+        "name": "chinese_mustard",
+        "score": 0.1314036317955808
+      },
+      {
+        "name": "striped_bass",
+        "score": 0.1270104802815623
+      }
+    ],
+    "pink_salmon": [
+      {
+        "name": "caper",
+        "score": 0.155168871499608
+      },
+      {
+        "name": "celery",
+        "score": 0.101262379594131
+      },
+      {
+        "name": "egg",
+        "score": 0.0900506574610113
+      }
+    ],
+    "passion_fruit": [
+      {
+        "name": "mango",
+        "score": 0.3608224034215881
+      },
+      {
+        "name": "papaya",
+        "score": 0.3000107572192937
+      },
+      {
+        "name": "pineapple",
+        "score": 0.2777414121819915
+      }
+    ],
+    "couscous": [
+      {
+        "name": "chickpea",
+        "score": 0.3527004135770736
+      },
+      {
+        "name": "currant",
+        "score": 0.2716422625509053
+      },
+      {
+        "name": "broad_bean",
+        "score": 0.2516485365336776
+      }
+    ],
+    "tangerine": [
+      {
+        "name": "grapefruit",
+        "score": 0.3703783398823604
+      },
+      {
+        "name": "kumquat",
+        "score": 0.3583578248960155
+      },
+      {
+        "name": "cranberry",
+        "score": 0.2222127046653046
+      }
+    ],
+    "wasabi": [
+      {
+        "name": "kombu",
+        "score": 0.2945268852190856
+      },
+      {
+        "name": "sake",
+        "score": 0.2922688703168307
+      },
+      {
+        "name": "avocado",
+        "score": 0.2878334209529202
+      }
+    ],
+    "pudding": [
+      {
+        "name": "cake",
+        "score": 0.2636013004958853
+      },
+      {
+        "name": "banana",
+        "score": 0.2124675040681942
+      },
+      {
+        "name": "strawberry",
+        "score": 0.1611212355518795
+      }
+    ],
+    "radish": [
+      {
+        "name": "cucumber",
+        "score": 0.3372819664462085
+      },
+      {
+        "name": "tostada",
+        "score": 0.3060049107024139
+      },
+      {
+        "name": "kohlrabi",
+        "score": 0.2785743031469413
+      }
+    ],
+    "mung_bean": [
+      {
+        "name": "ghee",
+        "score": 0.3904904422843895
+      },
+      {
+        "name": "turmeric",
+        "score": 0.3480960554623932
+      },
+      {
+        "name": "basmati_rice",
+        "score": 0.2622728165023239
+      }
+    ],
+    "cornbread": [
+      {
+        "name": "sage",
+        "score": 0.4239291886931514
+      },
+      {
+        "name": "biscuit",
+        "score": 0.3557289137467756
+      },
+      {
+        "name": "celery",
+        "score": 0.2949524967093247
+      }
+    ],
+    "icing": [
+      {
+        "name": "marzipan",
+        "score": 0.3531158861546669
+      },
+      {
+        "name": "cake",
+        "score": 0.3469486434534717
+      },
+      {
+        "name": "marshmallow",
+        "score": 0.2505667304221223
+      }
+    ],
+    "marzipan": [
+      {
+        "name": "icing",
+        "score": 0.3531158861546669
+      },
+      {
+        "name": "cake",
+        "score": 0.3109445637633688
+      },
+      {
+        "name": "rum",
+        "score": 0.2296901645870771
+      }
+    ],
+    "chili": [
+      {
+        "name": "coriander",
+        "score": 0.3296341948217398
+      },
+      {
+        "name": "capsicum",
+        "score": 0.3166547587848549
+      },
+      {
+        "name": "tamale",
+        "score": 0.3102533281213468
+      }
+    ],
+    "lentil": [
+      {
+        "name": "barley",
+        "score": 0.2864206687099212
+      },
+      {
+        "name": "turmeric",
+        "score": 0.2771254692775539
+      },
+      {
+        "name": "carrot",
+        "score": 0.2521757217099094
+      }
+    ],
+    "salt": [
+      {
+        "name": "pepper",
+        "score": 0.2549977019128604
+      },
+      {
+        "name": "flour",
+        "score": 0.1676173464289258
+      },
+      {
+        "name": "egg",
+        "score": 0.1602082883763528
+      }
+    ],
+    "pasta": [
+      {
+        "name": "parmesan_cheese",
+        "score": 0.2476119665681228
+      },
+      {
+        "name": "basil",
+        "score": 0.2086301252586541
+      },
+      {
+        "name": "sweetcorn",
+        "score": 0.1898350848626631
+      }
+    ],
+    "peanut_oil": [
+      {
+        "name": "bamboo_shoot",
+        "score": 0.3094953103047599
+      },
+      {
+        "name": "chinese_mustard",
+        "score": 0.2786045161030868
+      },
+      {
+        "name": "plum_wine",
+        "score": 0.2608051577693928
+      }
+    ],
+    "hummus": [
+      {
+        "name": "pita_bread",
+        "score": 0.4282288660288495
+      },
+      {
+        "name": "feta_cheese",
+        "score": 0.3402895390564564
+      },
+      {
+        "name": "cucumber",
+        "score": 0.3246877841016867
+      }
+    ],
+    "vinegar": [
+      {
+        "name": "mustard",
+        "score": 0.2804125549841683
+      },
+      {
+        "name": "ketchup",
+        "score": 0.2717697040713702
+      },
+      {
+        "name": "cucumber",
+        "score": 0.2156732981296772
+      }
+    ],
+    "gelatin": [
+      {
+        "name": "meringue",
+        "score": 0.2680065026872503
+      },
+      {
+        "name": "biscuit",
+        "score": 0.2436791184355585
+      },
+      {
+        "name": "passion_fruit",
+        "score": 0.2359694380462037
+      }
+    ],
+    "barley": [
+      {
+        "name": "hop",
+        "score": 0.413899153364018
+      },
+      {
+        "name": "millet",
+        "score": 0.3448478971582375
+      },
+      {
+        "name": "lima_bean",
+        "score": 0.287893482136522
+      }
+    ],
+    "bean": [
+      {
+        "name": "barley",
+        "score": 0.1911766334269252
+      },
+      {
+        "name": "lima_bean",
+        "score": 0.1911199533498968
+      },
+      {
+        "name": "cumin",
+        "score": 0.1867162879152589
+      }
+    ],
+    "winter_savory": [
+      {
+        "name": "thyme",
+        "score": 0.2285162826997697
+      },
+      {
+        "name": "carrot",
+        "score": 0.1119168182530198
+      }
+    ],
+    "currant": [
+      {
+        "name": "mace",
+        "score": 0.3990159924301721
+      },
+      {
+        "name": "cider",
+        "score": 0.3060313461656222
+      },
+      {
+        "name": "brandy",
+        "score": 0.3031648149132193
+      }
+    ],
+    "gooseberry": [
+      {
+        "name": "sugar",
+        "score": 0.0841562480952198
+      },
+      {
+        "name": "nutmeg",
+        "score": 0.0754792717692808
+      },
+      {
+        "name": "lemon",
+        "score": 0.0613718406787026
+      }
+    ],
+    "sage": [
+      {
+        "name": "thyme",
+        "score": 0.4387425319107818
+      },
+      {
+        "name": "cornbread",
+        "score": 0.4239291886931514
+      },
+      {
+        "name": "rosemary",
+        "score": 0.4099886724409035
+      }
+    ],
+    "turkey": [
+      {
+        "name": "sage",
+        "score": 0.2657757187672091
+      },
+      {
+        "name": "cornbread",
+        "score": 0.2629728116708933
+      },
+      {
+        "name": "chestnut",
+        "score": 0.1927980369473638
+      }
+    ],
+    "adzuki_bean": [
+      {
+        "name": "leek",
+        "score": 0.1529400397999568
+      },
+      {
+        "name": "sweet_potato",
+        "score": 0.1334511076151291
+      },
+      {
+        "name": "water",
+        "score": 0.1018684196190867
+      }
+    ],
+    "syrup": [
+      {
+        "name": "waffle",
+        "score": 0.2759882237547128
+      },
+      {
+        "name": "gin",
+        "score": 0.2386054662853407
+      },
+      {
+        "name": "chestnut",
+        "score": 0.2363021320296731
+      }
+    ],
+    "cashew_nut": [
+      {
+        "name": "ghee",
+        "score": 0.3799128397357653
+      },
+      {
+        "name": "basmati_rice",
+        "score": 0.3000312611660511
+      },
+      {
+        "name": "curry_leaf",
+        "score": 0.2779638677166197
+      }
+    ],
+    "deer": [
+      {
+        "name": "red_wine",
+        "score": 0.2640892276590342
+      },
+      {
+        "name": "onion",
+        "score": 0.1007801882879994
+      },
+      {
+        "name": "pepper",
+        "score": 0.0895511308785502
+      }
+    ],
+    "red_rice": [
+      {
+        "name": "ginger",
+        "score": 0.1921326515913594
+      },
+      {
+        "name": "water",
+        "score": 0.1130376460868649
+      },
+      {
+        "name": "onion",
+        "score": 0.0346747781258789
+      }
+    ],
+    "mustard_oil": [
+      {
+        "name": "turmeric",
+        "score": 0.3196525701218187
+      },
+      {
+        "name": "yogurt",
+        "score": 0.3002930175162333
+      },
+      {
+        "name": "curry_leaf",
+        "score": 0.2869821897627647
+      }
+    ],
+    "soy_yogurt": [
+      {
+        "name": "chickpea",
+        "score": 0.1893256962535021
+      },
+      {
+        "name": "banana",
+        "score": 0.1870923821775096
+      },
+      {
+        "name": "blueberry",
+        "score": 0.1532226262536649
+      }
+    ],
+    "cider": [
+      {
+        "name": "currant",
+        "score": 0.3060313461656222
+      },
+      {
+        "name": "mace",
+        "score": 0.3008865666435174
+      },
+      {
+        "name": "apple",
+        "score": 0.2402376564122881
+      }
+    ],
+    "sweet_marjoram": [
+      {
+        "name": "thyme",
+        "score": 0.2560421302489686
+      },
+      {
+        "name": "oregano",
+        "score": 0.2286440167611535
+      },
+      {
+        "name": "celery",
+        "score": 0.1422203096878659
+      }
+    ],
+    "vegetable_juice": [
+      {
+        "name": "vodka",
+        "score": 0.2147732861134109
+      },
+      {
+        "name": "kidney_bean",
+        "score": 0.1886330688560866
+      }
+    ],
+    "albacore_tuna": [
+      {
+        "name": "caper",
+        "score": 0.223164836080336
+      },
+      {
+        "name": "celery",
+        "score": 0.1957795243577553
+      },
+      {
+        "name": "cherry_tomato",
+        "score": 0.1616992363106529
+      }
+    ],
+    "salad_dressing": [
+      {
+        "name": "lettuce",
+        "score": 0.225327954517508
+      },
+      {
+        "name": "macaroni",
+        "score": 0.2114945595215378
+      },
+      {
+        "name": "roquefort_cheese",
+        "score": 0.1787723610274185
+      }
+    ],
+    "capsicum": [
+      {
+        "name": "chili",
+        "score": 0.3166547587848549
+      },
+      {
+        "name": "cabbage",
+        "score": 0.2368163663889409
+      },
+      {
+        "name": "coriander",
+        "score": 0.1936893597964105
+      }
+    ],
+    "marshmallow": [
+      {
+        "name": "icing",
+        "score": 0.2505667304221223
+      },
+      {
+        "name": "candy_bar",
+        "score": 0.2485255982759366
+      },
+      {
+        "name": "ice_cream_cone",
+        "score": 0.2484090824373724
+      }
+    ],
+    "endive": [
+      {
+        "name": "roquefort_cheese",
+        "score": 0.3676728456402145
+      },
+      {
+        "name": "watercress",
+        "score": 0.330572853681923
+      },
+      {
+        "name": "blue_cheese",
+        "score": 0.2410518045444416
+      }
+    ],
+    "kale": [
+      {
+        "name": "quinoa",
+        "score": 0.263349562942417
+      },
+      {
+        "name": "butternut_squash",
+        "score": 0.229383737896977
+      },
+      {
+        "name": "brussels_sprout",
+        "score": 0.1772422150205137
+      }
+    ],
+    "biscuit": [
+      {
+        "name": "cornbread",
+        "score": 0.3557289137467756
+      },
+      {
+        "name": "condensed_milk",
+        "score": 0.2564680288349337
+      },
+      {
+        "name": "gelatin",
+        "score": 0.2436791184355585
+      }
+    ],
+    "chocolate": [
+      {
+        "name": "cocoa_powder",
+        "score": 0.3173042296405769
+      },
+      {
+        "name": "cocoa_butter",
+        "score": 0.2867739512113776
+      },
+      {
+        "name": "hop",
+        "score": 0.2751727946973243
+      }
+    ],
+    "quail": [
+      {
+        "name": "port_wine",
+        "score": 0.2545037782765872
+      },
+      {
+        "name": "shallot",
+        "score": 0.1982123411019619
+      },
+      {
+        "name": "sage",
+        "score": 0.1483474319799958
+      }
+    ],
+    "cherry": [
+      {
+        "name": "red_currant",
+        "score": 0.3622968968020567
+      },
+      {
+        "name": "apricot",
+        "score": 0.2898841295597577
+      },
+      {
+        "name": "plum",
+        "score": 0.2803681853227897
+      }
+    ],
+    "breakfast_cereal": [
+      {
+        "name": "egg",
+        "score": 0.0322061591698815
+      }
+    ],
+    "black_currant": [
+      {
+        "name": "red_currant",
+        "score": 0.5642030187276381
+      },
+      {
+        "name": "raspberry",
+        "score": 0.3105933285443047
+      },
+      {
+        "name": "blackberry",
+        "score": 0.2911280764788347
+      }
+    ],
+    "bartlett_pear": [
+      {
+        "name": "pear_brandy",
+        "score": 0.4372938989223017
+      },
+      {
+        "name": "roquefort_cheese",
+        "score": 0.3341843053332933
+      },
+      {
+        "name": "hazelnut",
+        "score": 0.2421213817079605
+      }
+    ],
+    "scotch_whisky": [
+      {
+        "name": "raspberry",
+        "score": 0.2031204343633534
+      },
+      {
+        "name": "orange",
+        "score": 0.1203017832188408
+      },
+      {
+        "name": "honey",
+        "score": 0.0910402524701715
+      }
+    ],
+    "agar": [
+      {
+        "name": "arrowroot",
+        "score": 0.3885196982682723
+      },
+      {
+        "name": "water",
+        "score": 0.0792378973534577
+      },
+      {
+        "name": "sugar",
+        "score": 0.0565847072470678
+      }
+    ],
+    "pea": [
+      {
+        "name": "broad_bean",
+        "score": 0.3147275640686301
+      },
+      {
+        "name": "corn",
+        "score": 0.2797428004805334
+      },
+      {
+        "name": "carrot",
+        "score": 0.2392776554855633
+      }
+    ],
+    "haddock": [
+      {
+        "name": "scallop",
+        "score": 0.3434716804730149
+      },
+      {
+        "name": "lobster",
+        "score": 0.316015631241905
+      },
+      {
+        "name": "clam",
+        "score": 0.2564087110837917
+      }
+    ],
+    "tamale": [
+      {
+        "name": "corn_chip",
+        "score": 0.4102720796758734
+      },
+      {
+        "name": "chili",
+        "score": 0.3102533281213468
+      },
+      {
+        "name": "cheddar_cheese",
+        "score": 0.1415830962051159
+      }
+    ],
+    "rainbow_trout": [
+      {
+        "name": "lemon",
+        "score": 0.2031823148012816
+      },
+      {
+        "name": "caper",
+        "score": 0.1742666770889319
+      },
+      {
+        "name": "chive",
+        "score": 0.1619110140373059
+      }
+    ],
+    "port_wine": [
+      {
+        "name": "truffle",
+        "score": 0.2637120817052293
+      },
+      {
+        "name": "fig",
+        "score": 0.2602352245871241
+      },
+      {
+        "name": "quail",
+        "score": 0.2545037782765872
+      }
+    ],
+    "soup": [
+      {
+        "name": "meatball",
+        "score": 0.2743953824792013
+      },
+      {
+        "name": "miso",
+        "score": 0.1892613170142054
+      },
+      {
+        "name": "beef",
+        "score": 0.1825009324301105
+      }
+    ],
+    "tarragon": [
+      {
+        "name": "chervil",
+        "score": 0.4303650658124492
+      },
+      {
+        "name": "chive",
+        "score": 0.3298844845353174
+      },
+      {
+        "name": "lobster",
+        "score": 0.2828104374114708
+      }
+    ],
+    "relish": [
+      {
+        "name": "hot_dog",
+        "score": 0.3387745660864228
+      },
+      {
+        "name": "mustard",
+        "score": 0.330703346946445
+      },
+      {
+        "name": "rye_bread",
+        "score": 0.2282111515125973
+      }
+    ],
+    "rye_bread": [
+      {
+        "name": "swiss_cheese",
+        "score": 0.4422172111569502
+      },
+      {
+        "name": "horseradish",
+        "score": 0.2344601406447318
+      },
+      {
+        "name": "relish",
+        "score": 0.2282111515125973
+      }
+    ],
+    "meringue": [
+      {
+        "name": "cake",
+        "score": 0.3049441040485067
+      },
+      {
+        "name": "ice_cream",
+        "score": 0.2715095733595325
+      },
+      {
+        "name": "gelatin",
+        "score": 0.2680065026872503
+      }
+    ],
+    "condensed_milk": [
+      {
+        "name": "biscuit",
+        "score": 0.2564680288349337
+      },
+      {
+        "name": "coconut",
+        "score": 0.2413853945615913
+      },
+      {
+        "name": "gelatin",
+        "score": 0.2355089753760945
+      }
+    ],
+    "evaporated_milk": [
+      {
+        "name": "pumpkin",
+        "score": 0.2806648632509701
+      },
+      {
+        "name": "condensed_milk",
+        "score": 0.2350535867132455
+      },
+      {
+        "name": "cassava",
+        "score": 0.209571619552424
+      }
+    ],
+    "sweetcorn": [
+      {
+        "name": "coriander",
+        "score": 0.2681069002727422
+      },
+      {
+        "name": "chili",
+        "score": 0.2382262709921264
+      },
+      {
+        "name": "pea",
+        "score": 0.2356800582771488
+      }
+    ],
+    "yam": [
+      {
+        "name": "rutabaga",
+        "score": 0.2778716656883343
+      },
+      {
+        "name": "parsnip",
+        "score": 0.2297594120072226
+      },
+      {
+        "name": "marshmallow",
+        "score": 0.2148808863796952
+      }
+    ],
+    "yogurt": [
+      {
+        "name": "mustard_oil",
+        "score": 0.3002930175162333
+      },
+      {
+        "name": "mutton",
+        "score": 0.2724175899536171
+      },
+      {
+        "name": "ghee",
+        "score": 0.2679741491028552
+      }
+    ],
+    "plum_wine": [
+      {
+        "name": "plum",
+        "score": 0.4222213088173998
+      },
+      {
+        "name": "peanut_oil",
+        "score": 0.2608051577693928
+      },
+      {
+        "name": "sake",
+        "score": 0.2377890118154326
+      }
+    ],
+    "orange": [
+      {
+        "name": "grapefruit",
+        "score": 0.3579118044262808
+      },
+      {
+        "name": "cranberry",
+        "score": 0.2781988007746121
+      },
+      {
+        "name": "lemon",
+        "score": 0.2649402268222279
+      }
+    ],
+    "pecan": [
+      {
+        "name": "vanilla",
+        "score": 0.2384983937389097
+      },
+      {
+        "name": "egg",
+        "score": 0.1669095021604525
+      },
+      {
+        "name": "sweet_potato",
+        "score": 0.1646212866233988
+      }
+    ],
+    "butternut_squash": [
+      {
+        "name": "parsnip",
+        "score": 0.3021966285334096
+      },
+      {
+        "name": "rutabaga",
+        "score": 0.2422030531497667
+      },
+      {
+        "name": "kale",
+        "score": 0.229383737896977
+      }
+    ],
+    "bluefish": [
+      {
+        "name": "tomato",
+        "score": 0.1142311134423177
+      }
+    ],
+    "chayote": [
+      {
+        "name": "green_bean",
+        "score": 0.2082460096990986
+      },
+      {
+        "name": "jalapeno",
+        "score": 0.173000135122891
+      },
+      {
+        "name": "carrot",
+        "score": 0.1548756906984099
+      }
+    ],
+    "watercress": [
+      {
+        "name": "roquefort_cheese",
+        "score": 0.3384219211805345
+      },
+      {
+        "name": "endive",
+        "score": 0.330572853681923
+      },
+      {
+        "name": "radish",
+        "score": 0.2730440368846829
+      }
+    ],
+    "wonton_wrapper": [
+      {
+        "name": "water_chestnut",
+        "score": 0.3369974710836928
+      },
+      {
+        "name": "sesame",
+        "score": 0.2014039753624932
+      }
+    ],
+    "black_eyed_pea": [
+      {
+        "name": "lima_bean",
+        "score": 0.3379297166167337
+      },
+      {
+        "name": "green_bell_pepper",
+        "score": 0.2482544224679956
+      },
+      {
+        "name": "kidney_bean",
+        "score": 0.2220063415582632
+      }
+    ],
+    "spelt": [
+      {
+        "name": "walnut",
+        "score": 0.1236452913023346
+      },
+      {
+        "name": "honey",
+        "score": 0.0986998125657655
+      },
+      {
+        "name": "water",
+        "score": 0.0494863804008823
+      }
+    ],
+    "peanut": [
+      {
+        "name": "peanut_butter",
+        "score": 0.3777567424520568
+      },
+      {
+        "name": "popcorn",
+        "score": 0.2225992476868569
+      },
+      {
+        "name": "candy_bar",
+        "score": 0.1940998175995993
+      }
+    ],
+    "cassava": [
+      {
+        "name": "cabbage",
+        "score": 0.2356220295786513
+      },
+      {
+        "name": "evaporated_milk",
+        "score": 0.209571619552424
+      },
+      {
+        "name": "potato",
+        "score": 0.1133095921233293
+      }
+    ],
+    "chervil": [
+      {
+        "name": "tarragon",
+        "score": 0.4303650658124492
+      },
+      {
+        "name": "caviar",
+        "score": 0.3836529939209597
+      },
+      {
+        "name": "chive",
+        "score": 0.3571339663779592
+      }
+    ],
+    "miso": [
+      {
+        "name": "sake",
+        "score": 0.5068079910340996
+      },
+      {
+        "name": "chinese_cabbage",
+        "score": 0.3675601887889007
+      },
+      {
+        "name": "tofu",
+        "score": 0.3473519989277586
+      }
+    ],
+    "sweet_cherry": [
+      {
+        "name": "apricot",
+        "score": 0.2335721751702129
+      },
+      {
+        "name": "brandy",
+        "score": 0.1752781490188922
+      },
+      {
+        "name": "peach",
+        "score": 0.1368684250309884
+      }
+    ],
+    "spearmint": [
+      {
+        "name": "cucumber",
+        "score": 0.1400127717998463
+      },
+      {
+        "name": "parsley",
+        "score": 0.1340436435746436
+      },
+      {
+        "name": "lime",
+        "score": 0.1156548261990863
+      }
+    ],
+    "meatloaf": [
+      {
+        "name": "bread",
+        "score": 0.2034591453590228
+      },
+      {
+        "name": "ketchup",
+        "score": 0.1805024203816724
+      },
+      {
+        "name": "cheese",
+        "score": 0.1524005647239026
+      }
+    ],
+    "sesame": [
+      {
+        "name": "miso",
+        "score": 0.247101050747785
+      },
+      {
+        "name": "poppy_seed",
+        "score": 0.2109578306633906
+      },
+      {
+        "name": "wonton_wrapper",
+        "score": 0.2014039753624932
+      }
+    ],
+    "orange_bell_pepper": [
+      {
+        "name": "yellow_bell_pepper",
+        "score": 0.4989781421506056
+      },
+      {
+        "name": "red_bell_pepper",
+        "score": 0.349355525473937
+      },
+      {
+        "name": "green_bell_pepper",
+        "score": 0.2240596128082562
+      }
+    ],
+    "horseradish": [
+      {
+        "name": "mustard",
+        "score": 0.24440564830125
+      },
+      {
+        "name": "rye_bread",
+        "score": 0.2344601406447318
+      },
+      {
+        "name": "salmon",
+        "score": 0.1866201628886812
+      }
+    ],
+    "mulberry": [
+      {
+        "name": "sugar",
+        "score": 0.1031889915588243
+      }
+    ],
+    "coriander": [
+      {
+        "name": "cumin",
+        "score": 0.4484939059333886
+      },
+      {
+        "name": "turmeric",
+        "score": 0.4184727061760506
+      },
+      {
+        "name": "cardamom",
+        "score": 0.3312433446005256
+      }
+    ],
+    "cocoa_butter": [
+      {
+        "name": "chocolate",
+        "score": 0.2867739512113776
+      },
+      {
+        "name": "cocoa_powder",
+        "score": 0.1768367500966243
+      }
+    ],
+    "red_wine": [
+      {
+        "name": "deer",
+        "score": 0.2640892276590342
+      },
+      {
+        "name": "squab",
+        "score": 0.2574483535813643
+      },
+      {
+        "name": "beef",
+        "score": 0.2468080762853973
+      }
+    ],
+    "fennel": [
+      {
+        "name": "swordfish",
+        "score": 0.2803357364972433
+      },
+      {
+        "name": "saffron",
+        "score": 0.2580495872881695
+      },
+      {
+        "name": "lobster",
+        "score": 0.2535349886658773
+      }
+    ],
+    "champagne": [
+      {
+        "name": "pear_brandy",
+        "score": 0.3500250859793645
+      },
+      {
+        "name": "gin",
+        "score": 0.287857926403835
+      },
+      {
+        "name": "vodka",
+        "score": 0.2653681463642871
+      }
+    ],
+    "carom_seed": [
+      {
+        "name": "potato",
+        "score": 0.142321322848619
+      },
+      {
+        "name": "salt",
+        "score": 0.0840718460232532
+      }
+    ],
+    "fruit_salad": [
+      {
+        "name": "sugar",
+        "score": 0.0166458878891065
+      }
+    ],
+    "bread": [
+      {
+        "name": "meatloaf",
+        "score": 0.2034591453590228
+      },
+      {
+        "name": "ham",
+        "score": 0.1916309265062253
+      },
+      {
+        "name": "cheese",
+        "score": 0.1873945641195388
+      }
+    ],
+    "sausage": [
+      {
+        "name": "hamburger",
+        "score": 0.2086289992476458
+      },
+      {
+        "name": "cheese",
+        "score": 0.2021034664887966
+      },
+      {
+        "name": "cornbread",
+        "score": 0.1949529765907404
+      }
+    ],
+    "strawberry_jam": [
+      {
+        "name": "strawberry",
+        "score": 0.3113304331628
+      },
+      {
+        "name": "icing",
+        "score": 0.2115980457665506
+      }
+    ],
+    "gin": [
+      {
+        "name": "cherry_brandy",
+        "score": 0.4355949722667918
+      },
+      {
+        "name": "vermouth",
+        "score": 0.3628120366294335
+      },
+      {
+        "name": "vodka",
+        "score": 0.3303414422679765
+      }
+    ],
+    "cooking_oil": [
+      {
+        "name": "curry_leaf",
+        "score": 0.2347380439276419
+      },
+      {
+        "name": "catfish",
+        "score": 0.1969909831739832
+      },
+      {
+        "name": "capsicum",
+        "score": 0.1600416434412889
+      }
+    ],
+    "boysenberry": [
+      {
+        "name": "raspberry",
+        "score": 0.1873964467807646
+      },
+      {
+        "name": "blueberry",
+        "score": 0.1781904205610155
+      },
+      {
+        "name": "gelatin",
+        "score": 0.1729919330315733
+      }
+    ],
+    "citrus_fruit": [
+      {
+        "name": "sugar",
+        "score": 0.0110700473010087
+      }
+    ],
+    "sour_cherry": [
+      {
+        "name": "cherry_brandy",
+        "score": 0.409386141347949
+      },
+      {
+        "name": "chocolate",
+        "score": 0.185273881613768
+      },
+      {
+        "name": "cocoa",
+        "score": 0.128719129644223
+      }
+    ],
+    "romano_cheese": [
+      {
+        "name": "ricotta_cheese",
+        "score": 0.2785828863624321
+      },
+      {
+        "name": "mozzarella_cheese",
+        "score": 0.259749849508131
+      },
+      {
+        "name": "provolone_cheese",
+        "score": 0.2412699055316026
+      }
+    ],
+    "green_tea": [
+      {
+        "name": "strawberry",
+        "score": 0.150415565653052
+      },
+      {
+        "name": "mango",
+        "score": 0.1411219523876332
+      },
+      {
+        "name": "honey",
+        "score": 0.1300890843185471
+      }
+    ],
+    "white_bread": [
+      {
+        "name": "red_currant",
+        "score": 0.231365122474616
+      },
+      {
+        "name": "cornbread",
+        "score": 0.2253099930133326
+      }
+    ],
+    "potato_bread": [
+      {
+        "name": "celery",
+        "score": 0.116093394150347
+      },
+      {
+        "name": "tomato",
+        "score": 0.0753877683580502
+      },
+      {
+        "name": "egg",
+        "score": 0.0421453919810583
+      }
+    ],
+    "anchovy": [
+      {
+        "name": "caper",
+        "score": 0.4153500565661724
+      },
+      {
+        "name": "olive",
+        "score": 0.2701921746311407
+      }
+    ],
+    "breadfruit": [
+      {
+        "name": "onion",
+        "score": 0.079927494415603
+      }
+    ],
+    "jicama": [
+      {
+        "name": "mango",
+        "score": 0.3000366664876602
+      },
+      {
+        "name": "radish",
+        "score": 0.2693363996033661
+      },
+      {
+        "name": "tangerine",
+        "score": 0.2182313093435615
+      }
+    ],
+    "rabbit": [
+      {
+        "name": "rosemary",
+        "score": 0.3074009334928034
+      },
+      {
+        "name": "wine",
+        "score": 0.2235544113955614
+      },
+      {
+        "name": "red_wine",
+        "score": 0.2202964779660276
+      }
+    ],
+    "pita_bread": [
+      {
+        "name": "hummus",
+        "score": 0.4282288660288495
+      },
+      {
+        "name": "cucumber",
+        "score": 0.3201877015117984
+      },
+      {
+        "name": "feta_cheese",
+        "score": 0.2998032309981928
+      }
+    ],
+    "tea": [
+      {
+        "name": "star_anise",
+        "score": 0.19485818767018
+      },
+      {
+        "name": "sake",
+        "score": 0.1806070603083336
+      },
+      {
+        "name": "coffee",
+        "score": 0.1617554453231673
+      }
+    ],
+    "popcorn": [
+      {
+        "name": "mixed_nut",
+        "score": 0.2367132142030229
+      },
+      {
+        "name": "peanut",
+        "score": 0.2225992476868569
+      },
+      {
+        "name": "marshmallow",
+        "score": 0.1858587709530996
+      }
+    ],
+    "mandarin_orange": [
+      {
+        "name": "kiwi",
+        "score": 0.2889374246257289
+      },
+      {
+        "name": "grape",
+        "score": 0.2826673889494651
+      },
+      {
+        "name": "poppy_seed",
+        "score": 0.2178878334333902
+      }
+    ],
+    "broccoli": [
+      {
+        "name": "cauliflower",
+        "score": 0.4110520472837606
+      },
+      {
+        "name": "capsicum",
+        "score": 0.1915171139587568
+      },
+      {
+        "name": "sweetcorn",
+        "score": 0.1568643589147858
+      }
+    ],
+    "corn_oil": [
+      {
+        "name": "epazote",
+        "score": 0.2994427470051991
+      },
+      {
+        "name": "popcorn",
+        "score": 0.1857487186309985
+      }
+    ],
+    "meatball": [
+      {
+        "name": "soup",
+        "score": 0.2743953824792013
+      }
+    ],
+    "beer": [
+      {
+        "name": "mexican_oregano",
+        "score": 0.20722758194421
+      },
+      {
+        "name": "catfish",
+        "score": 0.1706239624427351
+      }
+    ],
+    "peach": [
+      {
+        "name": "plum",
+        "score": 0.3166467603531138
+      },
+      {
+        "name": "raspberry",
+        "score": 0.2748229500509637
+      },
+      {
+        "name": "rose_wine",
+        "score": 0.2545003676791639
+      }
+    ],
+    "semolina": [
+      {
+        "name": "ghee",
+        "score": 0.3742536712325515
+      },
+      {
+        "name": "pistachio",
+        "score": 0.2900949565615621
+      },
+      {
+        "name": "curry_leaf",
+        "score": 0.2798083137656121
+      }
+    ],
+    "tostada": [
+      {
+        "name": "lettuce",
+        "score": 0.3653473091519237
+      },
+      {
+        "name": "avocado",
+        "score": 0.3499937660696081
+      },
+      {
+        "name": "radish",
+        "score": 0.3060049107024139
+      }
+    ],
+    "pie_crust": [
+      {
+        "name": "rhubarb",
+        "score": 0.2009780186112084
+      },
+      {
+        "name": "meringue",
+        "score": 0.1908346745818852
+      },
+      {
+        "name": "pudding",
+        "score": 0.1338332230948561
+      }
+    ],
+    "hop": [
+      {
+        "name": "irish_moss",
+        "score": 0.7511439894238789
+      },
+      {
+        "name": "barley",
+        "score": 0.413899153364018
+      },
+      {
+        "name": "chocolate",
+        "score": 0.2751727946973243
+      }
+    ],
+    "irish_moss": [
+      {
+        "name": "hop",
+        "score": 0.7511439894238789
+      }
+    ],
+    "chocolate_spread": [
+      {
+        "name": "egg",
+        "score": 0.0576206658657936
+      }
+    ],
+    "corn_chip": [
+      {
+        "name": "tamale",
+        "score": 0.4102720796758734
+      },
+      {
+        "name": "lettuce",
+        "score": 0.3136447459322308
+      },
+      {
+        "name": "kidney_bean",
+        "score": 0.2666836525800612
+      }
+    ],
+    "lemon_verbena": [
+      {
+        "name": "peach",
+        "score": 0.2428142911343904
+      },
+      {
+        "name": "lemon",
+        "score": 0.1157132243774412
+      },
+      {
+        "name": "water",
+        "score": 0.0686718304945753
+      }
+    ],
+    "burrito": [
+      {
+        "name": "cheese",
+        "score": 0.2164519361622397
+      }
+    ],
+    "teff": [
+      {
+        "name": "honey",
+        "score": 0.1592240412793655
+      },
+      {
+        "name": "egg",
+        "score": 0.0207723125127735
+      }
+    ],
+    "cardoon": [
+      {
+        "name": "lemon",
+        "score": 0.2537613064340566
+      }
+    ],
+    "blue_cheese": [
+      {
+        "name": "buffalo",
+        "score": 0.326299657613521
+      },
+      {
+        "name": "pear",
+        "score": 0.2475205381386862
+      },
+      {
+        "name": "endive",
+        "score": 0.2410518045444416
+      }
+    ],
+    "angelica": [
+      {
+        "name": "clove",
+        "score": 0.2742407986189085
+      },
+      {
+        "name": "honey",
+        "score": 0.1145053155677176
+      },
+      {
+        "name": "butter",
+        "score": 0.016071696273139
+      }
+    ],
+    "oyster_mushroom": [
+      {
+        "name": "chestnut",
+        "score": 0.2509875547920697
+      },
+      {
+        "name": "madeira_wine",
+        "score": 0.2443881887489868
+      },
+      {
+        "name": "shallot",
+        "score": 0.2352647301773145
+      }
+    ],
+    "peppermint": [
+      {
+        "name": "sugar",
+        "score": 0.0287586613060262
+      },
+      {
+        "name": "honey",
+        "score": 0.0256943941328026
+      },
+      {
+        "name": "milk",
+        "score": 0.0100067713600717
+      }
+    ],
+    "oyster": [
+      {
+        "name": "cornbread",
+        "score": 0.2887217121131321
+      },
+      {
+        "name": "okra",
+        "score": 0.2786965997195689
+      },
+      {
+        "name": "caviar",
+        "score": 0.2730629993791911
+      }
+    ],
+    "pawpaw": [
+      {
+        "name": "milk",
+        "score": 0.0479531747831037
+      }
+    ],
+    "asparagus": [
+      {
+        "name": "broad_bean",
+        "score": 0.2100697622887165
+      },
+      {
+        "name": "ravioli",
+        "score": 0.1601650279529032
+      },
+      {
+        "name": "vermouth",
+        "score": 0.1055614785768683
+      }
+    ],
+    "pear_brandy": [
+      {
+        "name": "bartlett_pear",
+        "score": 0.4372938989223017
+      },
+      {
+        "name": "pear",
+        "score": 0.3994579449242419
+      },
+      {
+        "name": "champagne",
+        "score": 0.3500250859793645
+      }
+    ],
+    "wheat": [
+      {
+        "name": "millet",
+        "score": 0.304283672583142
+      },
+      {
+        "name": "rye_bread",
+        "score": 0.2001621164111881
+      },
+      {
+        "name": "barley",
+        "score": 0.1848330957237335
+      }
+    ],
+    "turbot": [
+      {
+        "name": "shallot",
+        "score": 0.2117706071317985
+      }
+    ],
+    "black_raspberry": [
+      {
+        "name": "sugar",
+        "score": 0.0864464415637346
+      }
+    ],
+    "spirulina": [
+      {
+        "name": "banana",
+        "score": 0.214618962835094
+      }
+    ],
+    "hazelnut": [
+      {
+        "name": "brazil_nut",
+        "score": 0.2875978319099223
+      },
+      {
+        "name": "bartlett_pear",
+        "score": 0.2421213817079605
+      },
+      {
+        "name": "beetroot",
+        "score": 0.1453846425242492
+      }
+    ],
+    "ginkgo_nut": [
+      {
+        "name": "bamboo_shoot",
+        "score": 0.5141625862731717
+      },
+      {
+        "name": "mushroom",
+        "score": 0.2174139810020168
+      },
+      {
+        "name": "carrot",
+        "score": 0.1543764897472353
+      }
+    ],
+    "mixed_nut": [
+      {
+        "name": "popcorn",
+        "score": 0.2367132142030229
+      }
+    ],
+    "acorn": [
+      {
+        "name": "onion",
+        "score": 0.0255465007958483
+      }
+    ],
+    "abalone": [
+      {
+        "name": "water",
+        "score": 0.0525668632881551
+      }
+    ],
+    "walleye": [
+      {
+        "name": "butter",
+        "score": 0.0798265584567848
+      }
+    ]
+  },
+  "categories": {
+    "abalone": {
+      "category": "Seafood",
+      "confidence": 0.33112528920173645,
+      "color": "#FFD93D"
+    },
+    "acorn": {
+      "category": "Seafood",
+      "confidence": 0.20254118740558624,
+      "color": "#FFD93D"
+    },
+    "adzuki_bean": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.20489536225795746,
+      "color": "#FFE66D"
+    },
+    "agar": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.19745302200317383,
+      "color": "#FFE66D"
+    },
+    "agave": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.22544336318969727,
+      "color": "#FFE66D"
+    },
+    "albacore_tuna": {
+      "category": "Seafood",
+      "confidence": 0.4424765408039093,
+      "color": "#FFD93D"
+    },
+    "allspice": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.23658734560012817,
+      "color": "#FF6B6B"
+    },
+    "almond": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.4768856465816498,
+      "color": "#FFE66D"
+    },
+    "amaranth": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.24335448443889618,
+      "color": "#FFE66D"
+    },
+    "anchovy": {
+      "category": "Seafood",
+      "confidence": 0.33511820435523987,
+      "color": "#FFD93D"
+    },
+    "angelica": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.2063012272119522,
+      "color": "#4ECDC4"
+    },
+    "anise": {
+      "category": "Fruit",
+      "confidence": 0.1579180657863617,
+      "color": "#F38181"
+    },
+    "apple": {
+      "category": "Fruit",
+      "confidence": 0.3507142961025238,
+      "color": "#F38181"
+    },
+    "apple_brandy": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.553865373134613,
+      "color": "#4ECDC4"
+    },
+    "apple_cider_vinegar": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.31194499135017395,
+      "color": "#4ECDC4"
+    },
+    "apricot": {
+      "category": "Fruit",
+      "confidence": 0.3999710977077484,
+      "color": "#F38181"
+    },
+    "arrowroot": {
+      "category": "Fruit",
+      "confidence": 0.13165929913520813,
+      "color": "#F38181"
+    },
+    "artichoke": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3207662105560303,
+      "color": "#A8E6CF"
+    },
+    "asparagus": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.45609334111213684,
+      "color": "#A8E6CF"
+    },
+    "avocado": {
+      "category": "Fruit",
+      "confidence": 0.44581058621406555,
+      "color": "#F38181"
+    },
+    "bagel": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3112403452396393,
+      "color": "#FFE66D"
+    },
+    "bamboo_shoot": {
+      "category": "Fruit",
+      "confidence": 0.19977544248104095,
+      "color": "#F38181"
+    },
+    "banana": {
+      "category": "Fruit",
+      "confidence": 0.4930516183376312,
+      "color": "#F38181"
+    },
+    "barley": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.5331966280937195,
+      "color": "#FFE66D"
+    },
+    "bartlett_pear": {
+      "category": "Fruit",
+      "confidence": 0.41915643215179443,
+      "color": "#F38181"
+    },
+    "basil": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3330686390399933,
+      "color": "#A8E6CF"
+    },
+    "basmati_rice": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.43010449409484863,
+      "color": "#FFE66D"
+    },
+    "bean": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.43945276737213135,
+      "color": "#FFE66D"
+    },
+    "beef": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.5728750228881836,
+      "color": "#AA96DA"
+    },
+    "beer": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.39621585607528687,
+      "color": "#4ECDC4"
+    },
+    "beetroot": {
+      "category": "Fruit",
+      "confidence": 0.3011201024055481,
+      "color": "#F38181"
+    },
+    "berry": {
+      "category": "Fruit",
+      "confidence": 0.3277338147163391,
+      "color": "#F38181"
+    },
+    "biscuit": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.473011314868927,
+      "color": "#FF6B6B"
+    },
+    "black_currant": {
+      "category": "Fruit",
+      "confidence": 0.36662811040878296,
+      "color": "#F38181"
+    },
+    "black_eyed_pea": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3882715106010437,
+      "color": "#FFE66D"
+    },
+    "black_raspberry": {
+      "category": "Fruit",
+      "confidence": 0.28394651412963867,
+      "color": "#F38181"
+    },
+    "black_tea": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.3066394627094269,
+      "color": "#4ECDC4"
+    },
+    "black_walnut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.4751392900943756,
+      "color": "#FFE66D"
+    },
+    "blackberry": {
+      "category": "Fruit",
+      "confidence": 0.2921241223812103,
+      "color": "#F38181"
+    },
+    "blue_cheese": {
+      "category": "Dairy",
+      "confidence": 0.4354109764099121,
+      "color": "#95E1D3"
+    },
+    "blueberry": {
+      "category": "Fruit",
+      "confidence": 0.3815310001373291,
+      "color": "#F38181"
+    },
+    "bluefish": {
+      "category": "Seafood",
+      "confidence": 0.5094336867332458,
+      "color": "#FFD93D"
+    },
+    "boysenberry": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.2732582092285156,
+      "color": "#A8E6CF"
+    },
+    "brandy": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.4943162202835083,
+      "color": "#4ECDC4"
+    },
+    "brazil_nut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.40686535835266113,
+      "color": "#FFE66D"
+    },
+    "bread": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.5311442017555237,
+      "color": "#FF6B6B"
+    },
+    "breadfruit": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.5322867035865784,
+      "color": "#FF6B6B"
+    },
+    "breakfast_cereal": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.5142533779144287,
+      "color": "#FF6B6B"
+    },
+    "broad_bean": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3877130448818207,
+      "color": "#FFE66D"
+    },
+    "broccoli": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.5679330825805664,
+      "color": "#A8E6CF"
+    },
+    "brussels_sprout": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.36764296889305115,
+      "color": "#A8E6CF"
+    },
+    "buffalo": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.34931328892707825,
+      "color": "#AA96DA"
+    },
+    "bulgur": {
+      "category": "Dairy",
+      "confidence": 0.31064000725746155,
+      "color": "#95E1D3"
+    },
+    "burrito": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.29109346866607666,
+      "color": "#FF6B6B"
+    },
+    "butter": {
+      "category": "Dairy",
+      "confidence": 0.4273732602596283,
+      "color": "#95E1D3"
+    },
+    "buttermilk": {
+      "category": "Dairy",
+      "confidence": 0.43771764636039734,
+      "color": "#95E1D3"
+    },
+    "butternut_squash": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.4087880253791809,
+      "color": "#A8E6CF"
+    },
+    "cabbage": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.49056577682495117,
+      "color": "#A8E6CF"
+    },
+    "cake": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.316072016954422,
+      "color": "#FF6B6B"
+    },
+    "camembert_cheese": {
+      "category": "Dairy",
+      "confidence": 0.4848518967628479,
+      "color": "#95E1D3"
+    },
+    "candy_bar": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.40802285075187683,
+      "color": "#FF6B6B"
+    },
+    "canola_oil": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.26611384749412537,
+      "color": "#A8E6CF"
+    },
+    "caper": {
+      "category": "Seafood",
+      "confidence": 0.13851307332515717,
+      "color": "#FFD93D"
+    },
+    "capsicum": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.431814581155777,
+      "color": "#A8E6CF"
+    },
+    "cardamom": {
+      "category": "Fruit",
+      "confidence": 0.24332495033740997,
+      "color": "#F38181"
+    },
+    "cardoon": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.2504006326198578,
+      "color": "#FF6B6B"
+    },
+    "carom_seed": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.34331560134887695,
+      "color": "#A8E6CF"
+    },
+    "carrot": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.40158578753471375,
+      "color": "#A8E6CF"
+    },
+    "cashew_nut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.41463223099708557,
+      "color": "#FFE66D"
+    },
+    "cassava": {
+      "category": "Fruit",
+      "confidence": 0.42116332054138184,
+      "color": "#F38181"
+    },
+    "cassia": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.2110590785741806,
+      "color": "#FFE66D"
+    },
+    "catfish": {
+      "category": "Seafood",
+      "confidence": 0.41440582275390625,
+      "color": "#FFD93D"
+    },
+    "cauliflower": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.44755032658576965,
+      "color": "#A8E6CF"
+    },
+    "caviar": {
+      "category": "Seafood",
+      "confidence": 0.26913198828697205,
+      "color": "#FFD93D"
+    },
+    "celery": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.2976359724998474,
+      "color": "#A8E6CF"
+    },
+    "champagne": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.4057181477546692,
+      "color": "#4ECDC4"
+    },
+    "chayote": {
+      "category": "Dairy",
+      "confidence": 0.3343413770198822,
+      "color": "#95E1D3"
+    },
+    "cheddar_cheese": {
+      "category": "Dairy",
+      "confidence": 0.5442073345184326,
+      "color": "#95E1D3"
+    },
+    "cheese": {
+      "category": "Dairy",
+      "confidence": 0.5593758821487427,
+      "color": "#95E1D3"
+    },
+    "cherry": {
+      "category": "Fruit",
+      "confidence": 0.3111819624900818,
+      "color": "#F38181"
+    },
+    "cherry_brandy": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.5176600813865662,
+      "color": "#4ECDC4"
+    },
+    "cherry_pepper": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.4428940713405609,
+      "color": "#A8E6CF"
+    },
+    "cherry_tomato": {
+      "category": "Fruit",
+      "confidence": 0.3878292143344879,
+      "color": "#F38181"
+    },
+    "chervil": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.23839984834194183,
+      "color": "#FF6B6B"
+    },
+    "chestnut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.285491406917572,
+      "color": "#FFE66D"
+    },
+    "chicken": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.46319475769996643,
+      "color": "#AA96DA"
+    },
+    "chickpea": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.38269728422164917,
+      "color": "#FFE66D"
+    },
+    "chili": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3898831605911255,
+      "color": "#A8E6CF"
+    },
+    "chinese_cabbage": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.5174801349639893,
+      "color": "#A8E6CF"
+    },
+    "chinese_mustard": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.36051708459854126,
+      "color": "#A8E6CF"
+    },
+    "chive": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.27228182554244995,
+      "color": "#AA96DA"
+    },
+    "chocolate": {
+      "category": "Fruit",
+      "confidence": 0.3788166344165802,
+      "color": "#F38181"
+    },
+    "chocolate_spread": {
+      "category": "Dairy",
+      "confidence": 0.3055162727832794,
+      "color": "#95E1D3"
+    },
+    "cider": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.3895973265171051,
+      "color": "#4ECDC4"
+    },
+    "cinnamon": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.3834334909915924,
+      "color": "#FF6B6B"
+    },
+    "citrus_fruit": {
+      "category": "Fruit",
+      "confidence": 0.6362088918685913,
+      "color": "#F38181"
+    },
+    "clam": {
+      "category": "Seafood",
+      "confidence": 0.23411355912685394,
+      "color": "#FFD93D"
+    },
+    "clementine": {
+      "category": "Fruit",
+      "confidence": 0.4020105004310608,
+      "color": "#F38181"
+    },
+    "clove": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.2821260392665863,
+      "color": "#A8E6CF"
+    },
+    "cocoa": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.37829312682151794,
+      "color": "#FF6B6B"
+    },
+    "cocoa_butter": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.42590007185935974,
+      "color": "#FF6B6B"
+    },
+    "cocoa_powder": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.36899715662002563,
+      "color": "#FF6B6B"
+    },
+    "coconut": {
+      "category": "Fruit",
+      "confidence": 0.49936798214912415,
+      "color": "#F38181"
+    },
+    "coffee": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.2925408184528351,
+      "color": "#4ECDC4"
+    },
+    "comte_cheese": {
+      "category": "Dairy",
+      "confidence": 0.48609688878059387,
+      "color": "#95E1D3"
+    },
+    "conch": {
+      "category": "Seafood",
+      "confidence": 0.2734454572200775,
+      "color": "#FFD93D"
+    },
+    "condensed_milk": {
+      "category": "Dairy",
+      "confidence": 0.4266538619995117,
+      "color": "#95E1D3"
+    },
+    "cooking_oil": {
+      "category": "Dairy",
+      "confidence": 0.20726926624774933,
+      "color": "#95E1D3"
+    },
+    "coriander": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.44850966334342957,
+      "color": "#A8E6CF"
+    },
+    "corn": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.5095213055610657,
+      "color": "#FFE66D"
+    },
+    "corn_chip": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.4058378040790558,
+      "color": "#FF6B6B"
+    },
+    "corn_oil": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3542885482311249,
+      "color": "#FFE66D"
+    },
+    "cornbread": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.6239091753959656,
+      "color": "#FF6B6B"
+    },
+    "cottage_cheese": {
+      "category": "Dairy",
+      "confidence": 0.5195866227149963,
+      "color": "#95E1D3"
+    },
+    "couscous": {
+      "category": "Dairy",
+      "confidence": 0.3446461856365204,
+      "color": "#95E1D3"
+    },
+    "crab": {
+      "category": "Seafood",
+      "confidence": 0.5238091349601746,
+      "color": "#FFD93D"
+    },
+    "cranberry": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3784390687942505,
+      "color": "#A8E6CF"
+    },
+    "crayfish": {
+      "category": "Seafood",
+      "confidence": 0.5154120922088623,
+      "color": "#FFD93D"
+    },
+    "cream": {
+      "category": "Dairy",
+      "confidence": 0.44105759263038635,
+      "color": "#95E1D3"
+    },
+    "cream_cheese": {
+      "category": "Dairy",
+      "confidence": 0.6480000615119934,
+      "color": "#95E1D3"
+    },
+    "cucumber": {
+      "category": "Fruit",
+      "confidence": 0.40630394220352173,
+      "color": "#F38181"
+    },
+    "cumin": {
+      "category": "Dairy",
+      "confidence": 0.17379294335842133,
+      "color": "#95E1D3"
+    },
+    "currant": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.25682830810546875,
+      "color": "#4ECDC4"
+    },
+    "curry_leaf": {
+      "category": "Fruit",
+      "confidence": 0.424739807844162,
+      "color": "#F38181"
+    },
+    "cuttlefish": {
+      "category": "Seafood",
+      "confidence": 0.42662957310676575,
+      "color": "#FFD93D"
+    },
+    "date": {
+      "category": "Fruit",
+      "confidence": 0.08048375695943832,
+      "color": "#F38181"
+    },
+    "deer": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.34371936321258545,
+      "color": "#AA96DA"
+    },
+    "dill": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.12054899334907532,
+      "color": "#AA96DA"
+    },
+    "dulce_de_leche": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.18887630105018616,
+      "color": "#FF6B6B"
+    },
+    "dumpling": {
+      "category": "Seafood",
+      "confidence": 0.09360945969820023,
+      "color": "#FFD93D"
+    },
+    "egg": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.31742459535598755,
+      "color": "#FF6B6B"
+    },
+    "eggplant": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.34896722435951233,
+      "color": "#A8E6CF"
+    },
+    "endive": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.22495801746845245,
+      "color": "#4ECDC4"
+    },
+    "epazote": {
+      "category": "Dairy",
+      "confidence": 0.1694851666688919,
+      "color": "#95E1D3"
+    },
+    "evaporated_milk": {
+      "category": "Dairy",
+      "confidence": 0.4928574562072754,
+      "color": "#95E1D3"
+    },
+    "fennel": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.2559165060520172,
+      "color": "#FF6B6B"
+    },
+    "feta_cheese": {
+      "category": "Dairy",
+      "confidence": 0.47729989886283875,
+      "color": "#95E1D3"
+    },
+    "fig": {
+      "category": "Fruit",
+      "confidence": 0.31453680992126465,
+      "color": "#F38181"
+    },
+    "filbert": {
+      "category": "Dairy",
+      "confidence": 0.1367412656545639,
+      "color": "#95E1D3"
+    },
+    "fish": {
+      "category": "Seafood",
+      "confidence": 0.4783848226070404,
+      "color": "#FFD93D"
+    },
+    "flour": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.4167938828468323,
+      "color": "#FF6B6B"
+    },
+    "fruit_juice": {
+      "category": "Fruit",
+      "confidence": 0.594916820526123,
+      "color": "#F38181"
+    },
+    "fruit_preserve": {
+      "category": "Fruit",
+      "confidence": 0.48488813638687134,
+      "color": "#F38181"
+    },
+    "fruit_salad": {
+      "category": "Fruit",
+      "confidence": 0.5289984345436096,
+      "color": "#F38181"
+    },
+    "fudge": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.4439522325992584,
+      "color": "#FF6B6B"
+    },
+    "garlic": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.48072749376296997,
+      "color": "#A8E6CF"
+    },
+    "gelatin": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.36644062399864197,
+      "color": "#FF6B6B"
+    },
+    "ghee": {
+      "category": "Seafood",
+      "confidence": 0.1357620656490326,
+      "color": "#FFD93D"
+    },
+    "gin": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.3897738456726074,
+      "color": "#4ECDC4"
+    },
+    "ginger": {
+      "category": "Fruit",
+      "confidence": 0.28081440925598145,
+      "color": "#F38181"
+    },
+    "ginkgo_nut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3817455470561981,
+      "color": "#FFE66D"
+    },
+    "goat_cheese": {
+      "category": "Dairy",
+      "confidence": 0.5331586003303528,
+      "color": "#95E1D3"
+    },
+    "gooseberry": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.38235563039779663,
+      "color": "#A8E6CF"
+    },
+    "grape": {
+      "category": "Fruit",
+      "confidence": 0.4699184000492096,
+      "color": "#F38181"
+    },
+    "grapefruit": {
+      "category": "Fruit",
+      "confidence": 0.5148721933364868,
+      "color": "#F38181"
+    },
+    "green_bean": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.44567662477493286,
+      "color": "#FFE66D"
+    },
+    "green_bell_pepper": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.39205411076545715,
+      "color": "#A8E6CF"
+    },
+    "green_tea": {
+      "category": "Fruit",
+      "confidence": 0.38467520475387573,
+      "color": "#F38181"
+    },
+    "green_zucchini": {
+      "category": "Fruit",
+      "confidence": 0.42986083030700684,
+      "color": "#F38181"
+    },
+    "grouper": {
+      "category": "Seafood",
+      "confidence": 0.28970322012901306,
+      "color": "#FFD93D"
+    },
+    "gruyere_cheese": {
+      "category": "Dairy",
+      "confidence": 0.6748473644256592,
+      "color": "#95E1D3"
+    },
+    "guava": {
+      "category": "Fruit",
+      "confidence": 0.43024158477783203,
+      "color": "#F38181"
+    },
+    "haddock": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.13667260110378265,
+      "color": "#4ECDC4"
+    },
+    "ham": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.4429926574230194,
+      "color": "#AA96DA"
+    },
+    "hamburger": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.371675580739975,
+      "color": "#AA96DA"
+    },
+    "hazelnut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.4541130065917969,
+      "color": "#FFE66D"
+    },
+    "honey": {
+      "category": "Fruit",
+      "confidence": 0.21448534727096558,
+      "color": "#F38181"
+    },
+    "hop": {
+      "category": "Fruit",
+      "confidence": 0.18928438425064087,
+      "color": "#F38181"
+    },
+    "horseradish": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.25855591893196106,
+      "color": "#AA96DA"
+    },
+    "hot_dog": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.26235947012901306,
+      "color": "#AA96DA"
+    },
+    "hummus": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.4482419192790985,
+      "color": "#AA96DA"
+    },
+    "ice_cream": {
+      "category": "Dairy",
+      "confidence": 0.4535849988460541,
+      "color": "#95E1D3"
+    },
+    "ice_cream_cone": {
+      "category": "Dairy",
+      "confidence": 0.4226253628730774,
+      "color": "#95E1D3"
+    },
+    "icing": {
+      "category": "Dairy",
+      "confidence": 0.2549205720424652,
+      "color": "#95E1D3"
+    },
+    "irish_moss": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.27494633197784424,
+      "color": "#4ECDC4"
+    },
+    "jalapeno": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.4392837882041931,
+      "color": "#A8E6CF"
+    },
+    "jerusalem_artichoke": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.22603678703308105,
+      "color": "#A8E6CF"
+    },
+    "jicama": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.19206908345222473,
+      "color": "#AA96DA"
+    },
+    "kale": {
+      "category": "Fruit",
+      "confidence": 0.19669249653816223,
+      "color": "#F38181"
+    },
+    "kefir": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.24917171895503998,
+      "color": "#4ECDC4"
+    },
+    "kelp": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.23587200045585632,
+      "color": "#4ECDC4"
+    },
+    "ketchup": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.36779066920280457,
+      "color": "#FF6B6B"
+    },
+    "kidney_bean": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3967410624027252,
+      "color": "#FFE66D"
+    },
+    "kiwi": {
+      "category": "Fruit",
+      "confidence": 0.40037113428115845,
+      "color": "#F38181"
+    },
+    "kohlrabi": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.2046756148338318,
+      "color": "#A8E6CF"
+    },
+    "kombu": {
+      "category": "Fruit",
+      "confidence": 0.1317806839942932,
+      "color": "#F38181"
+    },
+    "kumquat": {
+      "category": "Fruit",
+      "confidence": 0.1708541363477707,
+      "color": "#F38181"
+    },
+    "lamb": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.47039809823036194,
+      "color": "#AA96DA"
+    },
+    "leek": {
+      "category": "Seafood",
+      "confidence": 0.18446339666843414,
+      "color": "#FFD93D"
+    },
+    "lemon": {
+      "category": "Fruit",
+      "confidence": 0.3829800486564636,
+      "color": "#F38181"
+    },
+    "lemon_balm": {
+      "category": "Fruit",
+      "confidence": 0.3481941521167755,
+      "color": "#F38181"
+    },
+    "lemon_verbena": {
+      "category": "Fruit",
+      "confidence": 0.35239407420158386,
+      "color": "#F38181"
+    },
+    "lentil": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.2942654490470886,
+      "color": "#FFE66D"
+    },
+    "lettuce": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.36072471737861633,
+      "color": "#A8E6CF"
+    },
+    "lima_bean": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.4207887351512909,
+      "color": "#FFE66D"
+    },
+    "lime": {
+      "category": "Fruit",
+      "confidence": 0.41443878412246704,
+      "color": "#F38181"
+    },
+    "lingonberry": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.35398685932159424,
+      "color": "#A8E6CF"
+    },
+    "lobster": {
+      "category": "Seafood",
+      "confidence": 0.5130605101585388,
+      "color": "#FFD93D"
+    },
+    "lovage": {
+      "category": "Dairy",
+      "confidence": 0.2014390230178833,
+      "color": "#95E1D3"
+    },
+    "macadamia_nut": {
+      "category": "Fruit",
+      "confidence": 0.41148868203163147,
+      "color": "#F38181"
+    },
+    "macaroni": {
+      "category": "Dairy",
+      "confidence": 0.31647753715515137,
+      "color": "#95E1D3"
+    },
+    "mace": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.23223543167114258,
+      "color": "#4ECDC4"
+    },
+    "madeira_wine": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.4393923282623291,
+      "color": "#4ECDC4"
+    },
+    "mandarin_orange": {
+      "category": "Fruit",
+      "confidence": 0.5405009984970093,
+      "color": "#F38181"
+    },
+    "mango": {
+      "category": "Fruit",
+      "confidence": 0.5212315320968628,
+      "color": "#F38181"
+    },
+    "margarine": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.3265412449836731,
+      "color": "#FF6B6B"
+    },
+    "marjoram": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.14879512786865234,
+      "color": "#A8E6CF"
+    },
+    "marshmallow": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.48078349232673645,
+      "color": "#FF6B6B"
+    },
+    "marzipan": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.16394737362861633,
+      "color": "#A8E6CF"
+    },
+    "meat": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.6100389361381531,
+      "color": "#AA96DA"
+    },
+    "meatball": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.49785035848617554,
+      "color": "#AA96DA"
+    },
+    "meatloaf": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.4090426564216614,
+      "color": "#AA96DA"
+    },
+    "melon": {
+      "category": "Fruit",
+      "confidence": 0.35653185844421387,
+      "color": "#F38181"
+    },
+    "meringue": {
+      "category": "Seafood",
+      "confidence": 0.17893171310424805,
+      "color": "#FFD93D"
+    },
+    "mexican_oregano": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3253888189792633,
+      "color": "#A8E6CF"
+    },
+    "milk": {
+      "category": "Dairy",
+      "confidence": 0.4757702350616455,
+      "color": "#95E1D3"
+    },
+    "millet": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3669116497039795,
+      "color": "#FFE66D"
+    },
+    "mint": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.23022881150245667,
+      "color": "#A8E6CF"
+    },
+    "miso": {
+      "category": "Fruit",
+      "confidence": 0.13454583287239075,
+      "color": "#F38181"
+    },
+    "mixed_nut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3799862861633301,
+      "color": "#FFE66D"
+    },
+    "molasses": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.31579118967056274,
+      "color": "#4ECDC4"
+    },
+    "mozzarella_cheese": {
+      "category": "Dairy",
+      "confidence": 0.5431079268455505,
+      "color": "#95E1D3"
+    },
+    "mulberry": {
+      "category": "Fruit",
+      "confidence": 0.38678473234176636,
+      "color": "#F38181"
+    },
+    "multigrain_bread": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.37530115246772766,
+      "color": "#FF6B6B"
+    },
+    "mung_bean": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.4133528470993042,
+      "color": "#FFE66D"
+    },
+    "mushroom": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.31691670417785645,
+      "color": "#A8E6CF"
+    },
+    "mustard": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3072350025177002,
+      "color": "#A8E6CF"
+    },
+    "mustard_oil": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.33815738558769226,
+      "color": "#A8E6CF"
+    },
+    "mutton": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.25581613183021545,
+      "color": "#AA96DA"
+    },
+    "nigella_seed": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.37086546421051025,
+      "color": "#FFE66D"
+    },
+    "nut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.35287827253341675,
+      "color": "#FFE66D"
+    },
+    "nutmeg": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.33782845735549927,
+      "color": "#FFE66D"
+    },
+    "oat": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.3225383162498474,
+      "color": "#AA96DA"
+    },
+    "okra": {
+      "category": "Fruit",
+      "confidence": 0.17209096252918243,
+      "color": "#F38181"
+    },
+    "olive": {
+      "category": "Fruit",
+      "confidence": 0.32970061898231506,
+      "color": "#F38181"
+    },
+    "onion": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.37158316373825073,
+      "color": "#A8E6CF"
+    },
+    "orange": {
+      "category": "Fruit",
+      "confidence": 0.46108412742614746,
+      "color": "#F38181"
+    },
+    "orange_bell_pepper": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.44119712710380554,
+      "color": "#A8E6CF"
+    },
+    "orange_oil": {
+      "category": "Fruit",
+      "confidence": 0.3756999373435974,
+      "color": "#F38181"
+    },
+    "orange_roughy": {
+      "category": "Fruit",
+      "confidence": 0.3861328065395355,
+      "color": "#F38181"
+    },
+    "oregano": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3474477529525757,
+      "color": "#A8E6CF"
+    },
+    "oyster": {
+      "category": "Seafood",
+      "confidence": 0.502615749835968,
+      "color": "#FFD93D"
+    },
+    "oyster_mushroom": {
+      "category": "Seafood",
+      "confidence": 0.4753981828689575,
+      "color": "#FFD93D"
+    },
+    "pancake": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.41147568821907043,
+      "color": "#FF6B6B"
+    },
+    "papaya": {
+      "category": "Fruit",
+      "confidence": 0.3609066605567932,
+      "color": "#F38181"
+    },
+    "parmesan_cheese": {
+      "category": "Dairy",
+      "confidence": 0.5046895146369934,
+      "color": "#95E1D3"
+    },
+    "parsley": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.5449864268302917,
+      "color": "#A8E6CF"
+    },
+    "parsnip": {
+      "category": "Dairy",
+      "confidence": 0.20122042298316956,
+      "color": "#95E1D3"
+    },
+    "passion_fruit": {
+      "category": "Fruit",
+      "confidence": 0.502153217792511,
+      "color": "#F38181"
+    },
+    "pasta": {
+      "category": "Dairy",
+      "confidence": 0.3719801604747772,
+      "color": "#95E1D3"
+    },
+    "pate": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.16710707545280457,
+      "color": "#4ECDC4"
+    },
+    "pawpaw": {
+      "category": "Fruit",
+      "confidence": 0.19125771522521973,
+      "color": "#F38181"
+    },
+    "pea": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.37311887741088867,
+      "color": "#FFE66D"
+    },
+    "peach": {
+      "category": "Fruit",
+      "confidence": 0.46006879210472107,
+      "color": "#F38181"
+    },
+    "peanut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3600451350212097,
+      "color": "#FFE66D"
+    },
+    "peanut_butter": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.4151546359062195,
+      "color": "#FF6B6B"
+    },
+    "peanut_oil": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3491246700286865,
+      "color": "#FFE66D"
+    },
+    "pear": {
+      "category": "Fruit",
+      "confidence": 0.5294583439826965,
+      "color": "#F38181"
+    },
+    "pear_brandy": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.495906800031662,
+      "color": "#4ECDC4"
+    },
+    "pecan": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.34850263595581055,
+      "color": "#FFE66D"
+    },
+    "pectin": {
+      "category": "Fruit",
+      "confidence": 0.3653932809829712,
+      "color": "#F38181"
+    },
+    "pepper": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.4450012445449829,
+      "color": "#A8E6CF"
+    },
+    "peppermint": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.432102233171463,
+      "color": "#A8E6CF"
+    },
+    "persimmon": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.3088618218898773,
+      "color": "#FFE66D"
+    },
+    "pheasant": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.27423450350761414,
+      "color": "#AA96DA"
+    },
+    "phyllo_dough": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.35770300030708313,
+      "color": "#FF6B6B"
+    },
+    "pie_crust": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.3753548860549927,
+      "color": "#FF6B6B"
+    },
+    "pigeon_pea": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.40498021245002747,
+      "color": "#FFE66D"
+    },
+    "pineapple": {
+      "category": "Fruit",
+      "confidence": 0.551142692565918,
+      "color": "#F38181"
+    },
+    "pink_salmon": {
+      "category": "Seafood",
+      "confidence": 0.4478806257247925,
+      "color": "#FFD93D"
+    },
+    "pistachio": {
+      "category": "Fruit",
+      "confidence": 0.3269343674182892,
+      "color": "#F38181"
+    },
+    "pita_bread": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.42314037680625916,
+      "color": "#FF6B6B"
+    },
+    "plum": {
+      "category": "Fruit",
+      "confidence": 0.3440983295440674,
+      "color": "#F38181"
+    },
+    "plum_brandy": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.5359337329864502,
+      "color": "#4ECDC4"
+    },
+    "plum_wine": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.4932255744934082,
+      "color": "#4ECDC4"
+    },
+    "pomegranate": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.2945668697357178,
+      "color": "#A8E6CF"
+    },
+    "popcorn": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.46008795499801636,
+      "color": "#FF6B6B"
+    },
+    "poppy_seed": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.3552338182926178,
+      "color": "#FF6B6B"
+    },
+    "pork": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.5190731287002563,
+      "color": "#AA96DA"
+    },
+    "port_wine": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.49104270339012146,
+      "color": "#4ECDC4"
+    },
+    "potato": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.35050395131111145,
+      "color": "#A8E6CF"
+    },
+    "potato_bread": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.5496237874031067,
+      "color": "#FF6B6B"
+    },
+    "prawn": {
+      "category": "Seafood",
+      "confidence": 0.35097843408584595,
+      "color": "#FFD93D"
+    },
+    "prickly_pear": {
+      "category": "Fruit",
+      "confidence": 0.46150320768356323,
+      "color": "#F38181"
+    },
+    "provolone_cheese": {
+      "category": "Dairy",
+      "confidence": 0.49480289220809937,
+      "color": "#95E1D3"
+    },
+    "pudding": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.44230425357818604,
+      "color": "#FF6B6B"
+    },
+    "pumpkin": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.3687496483325958,
+      "color": "#FF6B6B"
+    },
+    "purslane": {
+      "category": "Fruit",
+      "confidence": 0.10792778432369232,
+      "color": "#F38181"
+    },
+    "quail": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.31255772709846497,
+      "color": "#AA96DA"
+    },
+    "quince": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.19205178320407867,
+      "color": "#FFE66D"
+    },
+    "quinoa": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.26005303859710693,
+      "color": "#FFE66D"
+    },
+    "rabbit": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.3379824161529541,
+      "color": "#AA96DA"
+    },
+    "radish": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.18008314073085785,
+      "color": "#A8E6CF"
+    },
+    "rainbow_trout": {
+      "category": "Seafood",
+      "confidence": 0.3437748849391937,
+      "color": "#FFD93D"
+    },
+    "raisin": {
+      "category": "Fruit",
+      "confidence": 0.39935240149497986,
+      "color": "#F38181"
+    },
+    "raisin_bread": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.4690459966659546,
+      "color": "#FF6B6B"
+    },
+    "rapini": {
+      "category": "Fruit",
+      "confidence": 0.19687369465827942,
+      "color": "#F38181"
+    },
+    "raspberry": {
+      "category": "Fruit",
+      "confidence": 0.28859442472457886,
+      "color": "#F38181"
+    },
+    "ravioli": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.2357855886220932,
+      "color": "#A8E6CF"
+    },
+    "red_bell_pepper": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.40545931458473206,
+      "color": "#A8E6CF"
+    },
+    "red_currant": {
+      "category": "Fruit",
+      "confidence": 0.3561381697654724,
+      "color": "#F38181"
+    },
+    "red_raspberry": {
+      "category": "Fruit",
+      "confidence": 0.33477312326431274,
+      "color": "#F38181"
+    },
+    "red_rice": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.41650131344795227,
+      "color": "#FFE66D"
+    },
+    "red_wine": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.4963024854660034,
+      "color": "#4ECDC4"
+    },
+    "relish": {
+      "category": "Seafood",
+      "confidence": 0.2130139172077179,
+      "color": "#FFD93D"
+    },
+    "rhubarb": {
+      "category": "Seafood",
+      "confidence": 0.26141873002052307,
+      "color": "#FFD93D"
+    },
+    "rice": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.4734649658203125,
+      "color": "#FFE66D"
+    },
+    "rice_cake": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.38752344250679016,
+      "color": "#FF6B6B"
+    },
+    "ricotta_cheese": {
+      "category": "Dairy",
+      "confidence": 0.485029011964798,
+      "color": "#95E1D3"
+    },
+    "romano_cheese": {
+      "category": "Dairy",
+      "confidence": 0.4599830210208893,
+      "color": "#95E1D3"
+    },
+    "roquefort_cheese": {
+      "category": "Dairy",
+      "confidence": 0.4769575595855713,
+      "color": "#95E1D3"
+    },
+    "rose_wine": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.47660502791404724,
+      "color": "#4ECDC4"
+    },
+    "rosemary": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.44004711508750916,
+      "color": "#A8E6CF"
+    },
+    "rum": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.4349117577075958,
+      "color": "#4ECDC4"
+    },
+    "rutabaga": {
+      "category": "Fruit",
+      "confidence": 0.11428070813417435,
+      "color": "#F38181"
+    },
+    "rye_bread": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.5001192092895508,
+      "color": "#FF6B6B"
+    },
+    "saffron": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.24488672614097595,
+      "color": "#A8E6CF"
+    },
+    "sage": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.14761245250701904,
+      "color": "#4ECDC4"
+    },
+    "sake": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.22499579191207886,
+      "color": "#4ECDC4"
+    },
+    "salad_dressing": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.4017309248447418,
+      "color": "#A8E6CF"
+    },
+    "salmon": {
+      "category": "Seafood",
+      "confidence": 0.4557403028011322,
+      "color": "#FFD93D"
+    },
+    "salt": {
+      "category": "Fruit",
+      "confidence": 0.22597447037696838,
+      "color": "#F38181"
+    },
+    "sausage": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.5296225547790527,
+      "color": "#AA96DA"
+    },
+    "scallop": {
+      "category": "Seafood",
+      "confidence": 0.31406858563423157,
+      "color": "#FFD93D"
+    },
+    "scotch_whisky": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.5550035834312439,
+      "color": "#4ECDC4"
+    },
+    "semolina": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.2196219265460968,
+      "color": "#A8E6CF"
+    },
+    "sesame": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.42495667934417725,
+      "color": "#FFE66D"
+    },
+    "shallot": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.11651956290006638,
+      "color": "#A8E6CF"
+    },
+    "shortening": {
+      "category": "Dairy",
+      "confidence": 0.08880651742219925,
+      "color": "#95E1D3"
+    },
+    "shrimp": {
+      "category": "Seafood",
+      "confidence": 0.5425408482551575,
+      "color": "#FFD93D"
+    },
+    "smelt": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.22875820100307465,
+      "color": "#FF6B6B"
+    },
+    "snail": {
+      "category": "Seafood",
+      "confidence": 0.3268708288669586,
+      "color": "#FFD93D"
+    },
+    "sockeye_salmon": {
+      "category": "Seafood",
+      "confidence": 0.3875328302383423,
+      "color": "#FFD93D"
+    },
+    "sorghum": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.4818038046360016,
+      "color": "#FFE66D"
+    },
+    "sorrel": {
+      "category": "Dairy",
+      "confidence": 0.16580648720264435,
+      "color": "#95E1D3"
+    },
+    "soup": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.2859213352203369,
+      "color": "#AA96DA"
+    },
+    "sour_cherry": {
+      "category": "Fruit",
+      "confidence": 0.3850089907646179,
+      "color": "#F38181"
+    },
+    "soy_yogurt": {
+      "category": "Dairy",
+      "confidence": 0.5357705950737,
+      "color": "#95E1D3"
+    },
+    "soybean": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.5164902210235596,
+      "color": "#FFE66D"
+    },
+    "soybean_oil": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.34871959686279297,
+      "color": "#FFE66D"
+    },
+    "sparkling_wine": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.5475949048995972,
+      "color": "#4ECDC4"
+    },
+    "spearmint": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.2117069661617279,
+      "color": "#A8E6CF"
+    },
+    "spelt": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.20644396543502808,
+      "color": "#FF6B6B"
+    },
+    "spinach": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.45486533641815186,
+      "color": "#A8E6CF"
+    },
+    "spirulina": {
+      "category": "Dairy",
+      "confidence": 0.31236618757247925,
+      "color": "#95E1D3"
+    },
+    "squab": {
+      "category": "Fruit",
+      "confidence": 0.24725498259067535,
+      "color": "#F38181"
+    },
+    "squid": {
+      "category": "Seafood",
+      "confidence": 0.3443916141986847,
+      "color": "#FFD93D"
+    },
+    "squirrel": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.28228649497032166,
+      "color": "#AA96DA"
+    },
+    "star_anise": {
+      "category": "Fruit",
+      "confidence": 0.15357030928134918,
+      "color": "#F38181"
+    },
+    "star_fruit": {
+      "category": "Fruit",
+      "confidence": 0.5530305504798889,
+      "color": "#F38181"
+    },
+    "strawberry": {
+      "category": "Fruit",
+      "confidence": 0.5278635621070862,
+      "color": "#F38181"
+    },
+    "strawberry_jam": {
+      "category": "Fruit",
+      "confidence": 0.4047209620475769,
+      "color": "#F38181"
+    },
+    "striped_bass": {
+      "category": "Seafood",
+      "confidence": 0.2561196982860565,
+      "color": "#FFD93D"
+    },
+    "sugar": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.38628342747688293,
+      "color": "#FF6B6B"
+    },
+    "summer_savory": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.2596392035484314,
+      "color": "#AA96DA"
+    },
+    "swede": {
+      "category": "Dairy",
+      "confidence": 0.18665052950382233,
+      "color": "#95E1D3"
+    },
+    "sweet_basil": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3338915705680847,
+      "color": "#A8E6CF"
+    },
+    "sweet_cherry": {
+      "category": "Fruit",
+      "confidence": 0.33938270807266235,
+      "color": "#F38181"
+    },
+    "sweet_marjoram": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.19468699395656586,
+      "color": "#FF6B6B"
+    },
+    "sweet_potato": {
+      "category": "Fruit",
+      "confidence": 0.39618951082229614,
+      "color": "#F38181"
+    },
+    "sweetcorn": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.3326158821582794,
+      "color": "#4ECDC4"
+    },
+    "swiss_cheese": {
+      "category": "Dairy",
+      "confidence": 0.5558976531028748,
+      "color": "#95E1D3"
+    },
+    "swordfish": {
+      "category": "Seafood",
+      "confidence": 0.42155277729034424,
+      "color": "#FFD93D"
+    },
+    "syrup": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.3681015968322754,
+      "color": "#4ECDC4"
+    },
+    "tamale": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.17313098907470703,
+      "color": "#4ECDC4"
+    },
+    "tangerine": {
+      "category": "Fruit",
+      "confidence": 0.3569776713848114,
+      "color": "#F38181"
+    },
+    "tarragon": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.14757591485977173,
+      "color": "#4ECDC4"
+    },
+    "tea": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.292312890291214,
+      "color": "#4ECDC4"
+    },
+    "teff": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.1468881070613861,
+      "color": "#4ECDC4"
+    },
+    "thyme": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.16535593569278717,
+      "color": "#FFE66D"
+    },
+    "tofu": {
+      "category": "Dairy",
+      "confidence": 0.22368572652339935,
+      "color": "#95E1D3"
+    },
+    "tomato": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.3878856301307678,
+      "color": "#A8E6CF"
+    },
+    "tortilla": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.32796603441238403,
+      "color": "#FFE66D"
+    },
+    "tortilla_chip": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.326257586479187,
+      "color": "#FF6B6B"
+    },
+    "tostada": {
+      "category": "Dairy",
+      "confidence": 0.10752788931131363,
+      "color": "#95E1D3"
+    },
+    "trail_mix": {
+      "category": "Fruit",
+      "confidence": 0.1982763260602951,
+      "color": "#F38181"
+    },
+    "truffle": {
+      "category": "Dairy",
+      "confidence": 0.2473158836364746,
+      "color": "#95E1D3"
+    },
+    "turbot": {
+      "category": "Seafood",
+      "confidence": 0.20975279808044434,
+      "color": "#FFD93D"
+    },
+    "turkey": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.4513871967792511,
+      "color": "#AA96DA"
+    },
+    "turmeric": {
+      "category": "Fruit",
+      "confidence": 0.29678136110305786,
+      "color": "#F38181"
+    },
+    "turnip": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.11760122328996658,
+      "color": "#4ECDC4"
+    },
+    "vanilla": {
+      "category": "Dairy",
+      "confidence": 0.2906440496444702,
+      "color": "#95E1D3"
+    },
+    "vegetable_juice": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.5245756506919861,
+      "color": "#A8E6CF"
+    },
+    "vermouth": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.49925896525382996,
+      "color": "#4ECDC4"
+    },
+    "vinegar": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.3046192228794098,
+      "color": "#4ECDC4"
+    },
+    "vodka": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.4859057068824768,
+      "color": "#4ECDC4"
+    },
+    "waffle": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.3443096876144409,
+      "color": "#FF6B6B"
+    },
+    "walleye": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.19245308637619019,
+      "color": "#AA96DA"
+    },
+    "walnut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.45661839842796326,
+      "color": "#FFE66D"
+    },
+    "wasabi": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.19050051271915436,
+      "color": "#FFE66D"
+    },
+    "water": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.2409532070159912,
+      "color": "#4ECDC4"
+    },
+    "water_chestnut": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.276207834482193,
+      "color": "#FFE66D"
+    },
+    "watercress": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.2406391203403473,
+      "color": "#4ECDC4"
+    },
+    "wheat": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.5796992778778076,
+      "color": "#FFE66D"
+    },
+    "whey": {
+      "category": "Dairy",
+      "confidence": 0.41010013222694397,
+      "color": "#95E1D3"
+    },
+    "white_bread": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.5325928926467896,
+      "color": "#FF6B6B"
+    },
+    "white_cabbage": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.5118104219436646,
+      "color": "#A8E6CF"
+    },
+    "white_pepper": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.4342837929725647,
+      "color": "#A8E6CF"
+    },
+    "white_wine": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.47146865725517273,
+      "color": "#4ECDC4"
+    },
+    "wild_rice": {
+      "category": "Cereal/Crop/Bean",
+      "confidence": 0.46845942735671997,
+      "color": "#FFE66D"
+    },
+    "wine": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.5429031848907471,
+      "color": "#4ECDC4"
+    },
+    "winter_savory": {
+      "category": "Meat/Animal Product",
+      "confidence": 0.28706255555152893,
+      "color": "#AA96DA"
+    },
+    "winter_squash": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.34298673272132874,
+      "color": "#A8E6CF"
+    },
+    "wonton_wrapper": {
+      "category": "Bakery/Dessert/Snack",
+      "confidence": 0.16394981741905212,
+      "color": "#FF6B6B"
+    },
+    "yam": {
+      "category": "Beverage Alcoholic",
+      "confidence": 0.18799082934856415,
+      "color": "#4ECDC4"
+    },
+    "yellow_bell_pepper": {
+      "category": "Plant/Vegetable",
+      "confidence": 0.37457919120788574,
+      "color": "#A8E6CF"
+    },
+    "yellow_zucchini": {
+      "category": "Fruit",
+      "confidence": 0.37663373351097107,
+      "color": "#F38181"
+    },
+    "yogurt": {
+      "category": "Dairy",
+      "confidence": 0.5010092854499817,
+      "color": "#95E1D3"
+    }
+  },
+  "category_list": [
+    "Bakery/Dessert/Snack",
+    "Beverage Alcoholic",
+    "Cereal/Crop/Bean",
+    "Dairy",
+    "Fruit",
+    "Meat/Animal Product",
+    "Plant/Vegetable",
+    "Seafood"
+  ],
+  "category_colors": {
+    "Bakery/Dessert/Snack": "#FF6B6B",
+    "Beverage Alcoholic": "#4ECDC4",
+    "Cereal/Crop/Bean": "#FFE66D",
+    "Dairy": "#95E1D3",
+    "Fruit": "#F38181",
+    "Meat/Animal Product": "#AA96DA",
+    "Plant/Vegetable": "#A8E6CF",
+    "Seafood": "#FFD93D"
+  }
+}

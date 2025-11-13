@@ -1,0 +1,20 @@
+# Core data manipulation
+pandas>=2.3.3
+numpy<2.0  # Pin to NumPy 1.x for compatibility with sentence-transformers and torch
+
+# Visualization
+matplotlib>=3.10.7
+seaborn>=0.13.0
+
+# Graph analysis
+networkx>=3.5
+
+# Interactive / Notebook
+jupyterlab>=4.0.0
+ipykernel>=6.29.0
+
+# Optional utilities
+tqdm>=4.66.0      # progress bars (useful for larger datasets)
+
+# ML Classification
+sentence-transformers>=2.2.0  # for ingredient category classification
