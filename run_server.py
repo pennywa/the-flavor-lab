@@ -1,6 +1,6 @@
 """
 Simple HTTP server to run the interactive network visualization.
-Run this script and open http://localhost:8000/interactive_network.html in your browser.
+Run this script and open http://localhost:8000/index.html in your browser.
 """
 
 import http.server
@@ -19,19 +19,19 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 def main():
-    # Change to the script's directory
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    deploy_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "deploy")
+    os.chdir(deploy_path)
     
     Handler = MyHTTPRequestHandler
     
     with socketserver.TCPServer(("", PORT), Handler) as httpd:
         print(f"Server running at http://localhost:{PORT}/")
-        print(f"Open http://localhost:{PORT}/interactive_network.html in your browser")
+        print(f"Open http://localhost:{PORT}/index.html in your browser")
         print("Press Ctrl+C to stop the server")
         
         # Try to open browser automatically
         try:
-            webbrowser.open(f'http://localhost:{PORT}/interactive_network.html')
+            webbrowser.open(f'http://localhost:{PORT}/index.html')
         except:
             pass
         

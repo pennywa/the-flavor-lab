@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Ingredient Network</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 20px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .header p {
+            margin: 0;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .search-container {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .filter-container {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .category-filter-wrapper {
+            position: relative;
+            display: inline-block;
+            pointer-events: auto;
+            z-index: 1001;
+        }
+
+        .category-filter {
+            padding: 8px 35px 8px 15px;
+            font-size: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.3s;
+            min-width: 200px;
+            appearance: none;
+            user-select: none;
+            pointer-events: auto;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+
+        .category-filter:focus {
+            border-color: #667eea;
+        }
+
+        .category-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            min-width: 250px;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            pointer-events: auto;
+        }
+
+        .category-dropdown.show {
+            display: block;
+        }
+
+        .category-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.2s;
+            pointer-events: auto;
+            user-select: none;
+        }
+
+        .category-option:last-child {
+            border-bottom: none;
+        }
+
+        .category-option:hover {
+            background-color: #f8f9fa;
+        }
+
+        .category-option.selected {
+            background-color: #e7f3ff;
+        }
+
+        .category-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #667eea;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .category-checkbox.checked {
+            background-color: #667eea;
+        }
+
+        .category-checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-left: auto;
+        }
+
+        .back-button:hover {
+            background: #764ba2;
+        }
+
+        .back-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box:focus {
+            border-color: #667eea;
+        }
+
+        .suggestions {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-top: none;
+            background: white;
+            display: none;
+            position: absolute;
+            top: 75px;
+            left: 20px;
+            right: 20px;
+            z-index: 1000;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .suggestion-item {
+            padding: 12px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s;
+        }
+
+        .suggestion-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+            min-height: 600px;
+            align-items: stretch;
+        }
+
+        .network-container {
+            flex: 1;
+            min-height: 600px;
+            height: 600px;
+            border-right: 2px solid #e9ecef;
+            position: relative;
+            background-color: #fafafa;
+            overflow: visible;
+        }
+
+        #network {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .clicked-ingredients {
+            width: 300px;
+            background: #f8f9fa;
+            padding: 15px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
+        }
+
+        .clicked-ingredients h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .clicked-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .clicked-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            cursor: default;
+        }
+
+        .clicked-item-text {
+            flex: 1;
+        }
+
+        .remove-btn {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin-left: 10px;
+            transition: background 0.2s;
+        }
+
+        .remove-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .no-ingredients {
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .toast-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-60%);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+            z-index: 10000;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .toast-notification.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍽️ Interactive Ingredient Network</h1>
+            <p>Discover flavor pairings and explore ingredient relationships</p>
+        </div>
+
+        <div class="search-container">
+            <div style="display: flex; gap: 10px;">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-box" 
+                    placeholder="Search for an ingredient (e.g., garlic, tomato, cheese)..."
+                    autocomplete="off"
+                    style="flex: 1;"
+                >
+                <button 
+                    id="clearButton" 
+                    style="padding: 15px 25px; background: #dc3545; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold;"
+                    onmouseover="this.style.background='#c82333'" 
+                    onmouseout="this.style.background='#dc3545'"
+                >
+                    Clear
+                </button>
+            </div>
+            <div class="filter-container">
+                <span class="filter-label">Filter by Category:</span>
+                <div class="category-filter-wrapper">
+                    <div id="categoryFilter" class="category-filter">All Categories</div>
+                    <div id="categoryDropdown" class="category-dropdown"></div>
+                </div>
+                <button id="backButton" class="back-button" disabled>← Back</button>
+            </div>
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+
+        <div class="main-content">
+            <div class="network-container">
+                <div id="network"></div>
+            </div>
+
+            <div class="clicked-ingredients">
+                <h2>Explored Ingredients (max 10):</h2>
+                <div id="clickedList" class="clicked-list">
+                    <div class="no-ingredients">No ingredients explored yet. Search and click to start!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification container -->
+    <div id="toastNotification" class="toast-notification"></div>
+
+    <script>
+        // Global variables
+        let networkData = null;
+        let network = null;
+        let nodes = new vis.DataSet([]);
+        let edges = new vis.DataSet([]);
+        let clickedIngredients = [];
+        let currentNodes = new Set(); // Track currently visible nodes
+        let nodeFadeTimers = {}; // Track fade timers for nodes
+        let nodeGeneration = {}; // Track which "generation" each node belongs to
+        let currentGeneration = 0;
+        let toastTimer = null;
+        let selectedCategories = ['all']; // Track selected category filter (multi-select)
+        let networkHistory = []; // Track network state history for back button
+
+        // Helper function to brighten a color for glow effect
+        function brightenColor(color, amount = 0.3) {
+            // Convert hex to RGB
+            const hex = color.replace('#', '');
+            const r = parseInt(hex.substr(0, 2), 16);
+            const g = parseInt(hex.substr(2, 2), 16);
+            const b = parseInt(hex.substr(4, 2), 16);
+            
+            // Brighten by increasing RGB values
+            const newR = Math.min(255, Math.floor(r + (255 - r) * amount));
+            const newG = Math.min(255, Math.floor(g + (255 - g) * amount));
+            const newB = Math.min(255, Math.floor(b + (255 - b) * amount));
+            
+            // Convert back to hex
+            return '#' + [newR, newG, newB].map(x => {
+                const hex = x.toString(16);
+                return hex.length === 1 ? '0' + hex : hex;
+            }).join('');
+        }
+
+        // Helper function to create a dense, saturated glow color with high opacity
+        function createDenseGlowColor(color, opacity = 0.95) {
+            // First brighten significantly, then add saturation for density
+            const hex = color.replace('#', '');
+            const r = parseInt(hex.substr(0, 2), 16);
+            const g = parseInt(hex.substr(2, 2), 16);
+            const b = parseInt(hex.substr(4, 2), 16);
+            
+            // Brighten to near-white but maintain color character for density
+            const brightness = 0.0; // Very bright
+            const saturation = 30; // Add some saturation back for density
+            
+            const newR = Math.min(255, Math.floor(r + (255 - r) * brightness));
+            const newG = Math.min(255, Math.floor(g + (255 - g) * brightness));
+            const newB = Math.min(255, Math.floor(b + (255 - b) * brightness));
+            
+            // Add saturation by mixing with original color
+            const finalR = Math.min(255, Math.floor(newR * (1 - saturation) + r * saturation));
+            const finalG = Math.min(255, Math.floor(newG * (1 - saturation) + g * saturation));
+            const finalB = Math.min(255, Math.floor(newB * (1 - saturation) + b * saturation));
+            
+            // Return RGBA format with high opacity for more visible shadow
+            return `rgba(${finalR}, ${finalG}, ${finalB}, ${opacity})`;
+        }
+
+        // Show toast notification
+        function showToast(message, duration = 3000) {
+            const toast = document.getElementById('toastNotification');
+            toast.textContent = message;
+            
+            // Clear any existing timer
+            if (toastTimer) {
+                clearTimeout(toastTimer);
+            }
+            
+            // Remove show class to reset animation
+            toast.classList.remove('show');
+            
+            // Force reflow to restart animation
+            void toast.offsetWidth;
+            
+            // Add show class to trigger animation
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 10);
+            
+            // Hide after duration
+            toastTimer = setTimeout(() => {
+                toast.classList.remove('show');
+            }, duration);
+        }
+
+        // Load network data
+        async function loadNetworkData() {
+            try {
+                const response = await fetch('network_data_hub.json');
+                networkData = await response.json();
+                console.log('Network data loaded:', networkData.ingredients.length, 'ingredients');
+                
+                // Populate category filter dropdown
+                setupCategoryFilter();
+                
+                // Initialize autocomplete
+                setupAutocomplete();
+            } catch (error) {
+                console.error('Error loading network data:', error);
+                document.getElementById('network').innerHTML = 
+                    '<div class="no-results">Error loading network data. Please make sure network_data_hub.json exists.</div>';
+            }
+        }
+
+        // Setup category filter dropdown
+        function setupCategoryFilter() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const categoryDropdown = document.getElementById('categoryDropdown');
+            if (!networkData || !networkData.category_list) return;
+            
+            // Add "All Categories" option
+            const allOption = document.createElement('div');
+            allOption.className = 'category-option selected';
+            allOption.dataset.category = 'all';
+            allOption.innerHTML = `
+                <span class="category-checkbox checked"></span>
+                <span>All Categories</span>
+            `;
+            allOption.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Toggling category: all');
+                toggleCategory('all');
+            });
+            categoryDropdown.appendChild(allOption);
+            
+            // Add category options
+            networkData.category_list.forEach(category => {
+                const option = document.createElement('div');
+                option.className = 'category-option';
+                option.dataset.category = category;
+                option.innerHTML = `
+                    <span class="category-checkbox"></span>
+                    <span>${category}</span>
+                `;
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Toggling category:', category);
+                    toggleCategory(category);
+                });
+                categoryDropdown.appendChild(option);
+            });
+            
+            // Toggle dropdown on filter click - make it properly clickable
+            categoryFilter.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = categoryDropdown.classList.contains('show');
+                // Close all other dropdowns first
+                document.querySelectorAll('.category-dropdown.show').forEach(dd => {
+                    if (dd !== categoryDropdown) dd.classList.remove('show');
+                });
+                categoryDropdown.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking outside (but allow clicks on options)
+            document.addEventListener('click', function(e) {
+                const categoryFilterWrapper = document.querySelector('.category-filter-wrapper');
+                // Only close if clicking outside the filter button, wrapper, and dropdown
+                if (!categoryFilter.contains(e.target) && 
+                    !categoryDropdown.contains(e.target) &&
+                    (!categoryFilterWrapper || !categoryFilterWrapper.contains(e.target))) {
+                    categoryDropdown.classList.remove('show');
+                }
+            });
+            
+            // Setup back button
+            document.getElementById('backButton').addEventListener('click', function() {
+                goBack();
+            });
+        }
+
+        // Toggle category selection
+        function toggleCategory(category) {
+            console.log('toggleCategory called with:', category, 'Current selection:', selectedCategories);
+            if (category === 'all') {
+                // If "all" is clicked, toggle it and clear others
+                if (selectedCategories.includes('all')) {
+                    selectedCategories = [];
+                } else {
+                    selectedCategories = ['all'];
+                }
+            } else {
+                // Toggle specific category
+                const index = selectedCategories.indexOf(category);
+                if (index > -1) {
+                    selectedCategories.splice(index, 1);
+                } else {
+                    selectedCategories.push(category);
+                    // Remove "all" if a specific category is selected
+                    const allIndex = selectedCategories.indexOf('all');
+                    if (allIndex > -1) {
+                        selectedCategories.splice(allIndex, 1);
+                    }
+                }
+            }
+            console.log('New selection:', selectedCategories);
+            updateCategoryFilterUI();
+            applyCategoryFilter();
+        }
+
+        // Update category filter UI to reflect selections
+        function updateCategoryFilterUI() {
+            const categoryDropdown = document.getElementById('categoryDropdown');
+            const categoryFilter = document.getElementById('categoryFilter');
+            
+            // Update checkboxes
+            categoryDropdown.querySelectorAll('.category-option').forEach(option => {
+                const category = option.dataset.category;
+                const checkbox = option.querySelector('.category-checkbox');
+                const isSelected = selectedCategories.includes(category);
+                
+                if (isSelected) {
+                    option.classList.add('selected');
+                    checkbox.classList.add('checked');
+                } else {
+                    option.classList.remove('selected');
+                    checkbox.classList.remove('checked');
+                }
+            });
+            
+            // Update filter display text
+            if (selectedCategories.length === 0) {
+                categoryFilter.textContent = 'No categories selected';
+            } else if (selectedCategories.includes('all') || selectedCategories.length === networkData.category_list.length) {
+                categoryFilter.textContent = 'All Categories';
+            } else if (selectedCategories.length === 1) {
+                categoryFilter.textContent = selectedCategories[0];
+            } else {
+                categoryFilter.textContent = `${selectedCategories.length} categories selected`;
+            }
+        }
+
+        // Apply category filter to visible nodes
+        function applyCategoryFilter() {
+            if (!networkData || !networkData.categories) return;
+            
+            const allNodes = nodes.get();
+            allNodes.forEach(node => {
+                const ingredientName = node.id;
+                const categoryInfo = networkData.categories[ingredientName];
+                
+                if (!categoryInfo) return;
+                
+                // Check if node matches any selected category
+                const matchesFilter = selectedCategories.includes("all") || 
+                                     selectedCategories.includes(categoryInfo.category);
+                
+                if (matchesFilter) {
+                    // Show node with category color - preserve category color
+                    const categoryColor = categoryInfo.color || '#95a5a6';
+                    const isHighlighted = clickedIngredients.includes(ingredientName);
+                    const updateData = {
+                        id: ingredientName,
+                        color: {
+                            background: categoryColor, // Always preserve category color
+                            border: categoryColor,
+                            highlight: { 
+                                background: categoryColor, 
+                                border: categoryColor 
+                            }
+                        },
+                        shadow: isHighlighted ? {
+                            enabled: true,
+                            color: createDenseGlowColor(categoryColor), // Dense, saturated glow color
+                            size: node.size > 30 ? 110 : 80, // Extra large shadow for maximum density
+                            x: 0,
+                            y: 0
+                        } : false,
+                        borderWidth: isHighlighted ? (node.size > 30 ? 8 : 7) : 2, // Very thick border for dense glow effect
+                        size: isHighlighted ? (node.size > 30 ? 32 : 22) : node.size // Smaller when clicked to emphasize shadow
+                    };
+                    // Preserve font stroke if it exists
+                    if (node.font) {
+                        updateData.font = {
+                            ...node.font,
+                            strokeWidth: node.font.strokeWidth || 3,
+                            strokeColor: node.font.strokeColor || '#000000'
+                        };
+                    }
+                    nodes.update(updateData);
+                } else {
+                    // Hide node by making it very transparent
+                    nodes.update({
+                        id: ingredientName,
+                        color: {
+                            background: '#e0e0e0',
+                            border: '#e0e0e0',
+                            highlight: { 
+                                background: '#e0e0e0', 
+                                border: '#e0e0e0' 
+                            },
+                            opacity: 0.1
+                        },
+                        shadow: false
+                    });
+                }
+            });
+        }
+
+        // Save current network state to history
+        function saveNetworkState() {
+            const state = {
+                nodes: nodes.get().map(n => ({...n})),
+                edges: edges.get().map(e => ({...e})),
+                clickedIngredients: [...clickedIngredients],
+                currentNodes: Array.from(currentNodes), // Convert Set to Array for serialization
+                currentGeneration: currentGeneration
+            };
+            networkHistory.push(state);
+            
+            // Enable back button if we have history
+            const backButton = document.getElementById('backButton');
+            if (networkHistory.length > 0) {
+                backButton.disabled = false;
+            }
+            
+            // Limit history to last 10 states
+            if (networkHistory.length > 10) {
+                networkHistory.shift();
+            }
+        }
+
+        // Go back to previous network state
+        function goBack() {
+            if (networkHistory.length === 0) return;
+            
+            const previousState = networkHistory.pop();
+            
+            // Clear all fade timers
+            Object.values(nodeFadeTimers).forEach(timer => clearTimeout(timer));
+            nodeFadeTimers = {};
+            
+            // Restore clicked ingredients first (needed for shadow calculation)
+            const previousClickedIngredients = previousState.clickedIngredients ? [...previousState.clickedIngredients] : [];
+            
+            // Restore nodes
+            nodes.clear();
+            if (previousState.nodes && previousState.nodes.length > 0) {
+                // Restore nodes with proper styling (text stroke, shadows, etc.)
+                const restoredNodes = previousState.nodes.map(node => {
+                    const ingredientName = node.id;
+                    const categoryInfo = networkData.categories && networkData.categories[ingredientName];
+                    const categoryColor = categoryInfo ? categoryInfo.color : '#667eea';
+                    const isHighlighted = previousClickedIngredients.includes(ingredientName);
+                    
+                    return {
+                        ...node,
+                        color: {
+                            background: categoryColor,
+                            border: categoryColor,
+                            highlight: { 
+                                background: categoryColor, 
+                                border: categoryColor 
+                            }
+                        },
+                        font: {
+                            ...node.font,
+                            strokeWidth: 3,
+                            strokeColor: '#000000'
+                        },
+                        shadow: isHighlighted ? {
+                            enabled: true,
+                            color: createDenseGlowColor(categoryColor), // Dense, saturated glow color
+                            size: node.size > 30 ? 110 : 80, // Extra large shadow for maximum density
+                            x: 0,
+                            y: 0
+                        } : false,
+                        borderWidth: isHighlighted ? (node.size > 30 ? 8 : 7) : 2, // Very thick border for dense glow effect
+                        size: isHighlighted ? (node.size > 30 ? 32 : 22) : (node.size || (node.size > 30 ? 35 : 25)) // Smaller when clicked to emphasize shadow
+                    };
+                });
+                nodes.add(restoredNodes);
+            }
+            
+            // Restore edges
+            edges.clear();
+            if (previousState.edges && previousState.edges.length > 0) {
+                edges.add(previousState.edges);
+            }
+            
+            // Restore clicked ingredients
+            clickedIngredients = previousClickedIngredients;
+            updateClickedList();
+            
+            // Restore current nodes set
+            currentNodes = previousState.currentNodes ? new Set(previousState.currentNodes) : new Set();
+            
+            // Restore generation
+            currentGeneration = previousState.currentGeneration || 0;
+            
+            // Restore node generation tracking
+            nodeGeneration = {};
+            nodes.get().forEach(node => {
+                nodeGeneration[node.id] = currentGeneration;
+            });
+            
+            // Apply category filter
+            applyCategoryFilter();
+            
+            // Redraw network
+            if (network) {
+                setTimeout(() => {
+                    network.redraw();
+                    network.fit();
+                }, 100);
+            }
+            
+            // Update back button state
+            const backButton = document.getElementById('backButton');
+            backButton.disabled = networkHistory.length === 0;
+        }
+
+        // Setup autocomplete for search
+        function setupAutocomplete() {
+            const searchInput = document.getElementById('searchInput');
+            const suggestions = document.getElementById('suggestions');
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase().trim();
+                
+                if (query.length < 2) {
+                    suggestions.style.display = 'none';
+                    return;
+                }
+
+                // Check if networkData is loaded
+                if (!networkData || !networkData.ingredients) {
+                    console.error('Network data not loaded yet');
+                    suggestions.style.display = 'none';
+                    return;
+                }
+
+                // Filter ingredients
+                const matches = networkData.ingredients
+                    .filter(ing => ing.toLowerCase().includes(query))
+                    .slice(0, 10);
+
+                if (matches.length > 0) {
+                    suggestions.innerHTML = matches.map(ing => 
+                        `<div class="suggestion-item" onclick="selectIngredient('${ing.replace(/'/g, "\\'")}')">${ing}</div>`
+                    ).join('');
+                    suggestions.style.display = 'block';
+                } else {
+                    suggestions.style.display = 'none';
+                }
+            });
+
+            // Hide suggestions when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!searchInput.contains(e.target) && 
+                    !suggestions.contains(e.target) && 
+                    !document.getElementById('clearButton').contains(e.target)) {
+                    suggestions.style.display = 'none';
+                }
+            });
+        }
+
+        // Select ingredient from search
+        function selectIngredient(ingredientName) {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('suggestions').style.display = 'none';
+            
+            // Reset network and start fresh exploration
+            resetNetwork(true);
+            
+            // Ensure network container is visible
+            const networkContainer = document.querySelector('.network-container');
+            if (networkContainer) {
+                networkContainer.style.display = 'flex';
+                networkContainer.style.visibility = 'visible';
+            }
+            
+            // Initialize network if needed, then show ingredient
+            if (!network) {
+                initializeNetwork();
+            }
+            
+            // Small delay to ensure network is ready
+            setTimeout(() => {
+                showIngredient(ingredientName);
+            }, 50);
+        }
+
+        // Reset network
+        function resetNetwork(clearClickedList = false) {
+            nodes.clear();
+            edges.clear();
+            currentNodes.clear();
+            currentGeneration = 0;
+            nodeGeneration = {};
+            
+            // Clear all fade timers
+            Object.values(nodeFadeTimers).forEach(timer => clearTimeout(timer));
+            nodeFadeTimers = {};
+            
+            // Clear clicked ingredients list if starting fresh
+            if (clearClickedList) {
+                clickedIngredients = [];
+                updateClickedList();
+            }
+        }
+
+        // Show ingredient and its pairings
+        function showIngredient(ingredientName) {
+            console.log('showIngredient called with:', ingredientName);
+            
+            // Ensure network container is visible
+            const networkContainer = document.querySelector('.network-container');
+            const networkDiv = document.getElementById('network');
+            if (networkContainer) {
+                networkContainer.style.display = 'flex';
+                networkContainer.style.visibility = 'visible';
+            }
+            if (networkDiv) {
+                networkDiv.style.display = 'block';
+                networkDiv.style.visibility = 'visible';
+            }
+            
+            // Ensure network is initialized
+            if (!network) {
+                console.log('Network not initialized, initializing now...');
+                initializeNetwork();
+            }
+            
+            if (!networkData || !networkData.graph || !networkData.graph[ingredientName]) {
+                showToast('Ingredient not found in the database.');
+                return;
+            }
+
+            // Add clicked ingredient to list if not already there
+            // Limit to 10 ingredients - prevent adding if limit reached
+            if (!clickedIngredients.includes(ingredientName)) {
+                if (clickedIngredients.length >= 10) {
+                    showToast('Maximum of 10 ingredients can be explored at once. Please remove an ingredient first.');
+                    return;
+                }
+                clickedIngredients.push(ingredientName);
+                updateClickedList();
+            }
+
+            currentGeneration++;
+            const pairings = networkData.graph[ingredientName];
+
+            // Cancel any pending fade timer for this node
+            if (nodeFadeTimers[ingredientName]) {
+                clearTimeout(nodeFadeTimers[ingredientName]);
+                delete nodeFadeTimers[ingredientName];
+            }
+
+            // Get category color for this ingredient
+            const categoryInfo = networkData.categories && networkData.categories[ingredientName];
+            const categoryColor = categoryInfo ? categoryInfo.color : '#667eea';
+            const isHighlighted = clickedIngredients.includes(ingredientName);
+            
+            // Save state before adding new nodes (for back button) - always save when clicking to add connections
+            saveNetworkState();
+            
+            // Add main ingredient node
+            if (!currentNodes.has(ingredientName)) {
+                const newNode = {
+                    id: ingredientName,
+                    label: ingredientName.replace(/_/g, ' '),
+                    color: {
+                        background: categoryColor, // Always preserve category color
+                        border: categoryColor,
+                        highlight: { 
+                            background: categoryColor, 
+                            border: categoryColor 
+                        }
+                    },
+                    font: { 
+                        size: 12, 
+                        color: 'white', 
+                        face: 'Arial', 
+                        bold: true,
+                        strokeWidth: 3,
+                        strokeColor: '#000000'
+                    },
+                    shadow: isHighlighted ? {
+                        enabled: true,
+                        color: createDenseGlowColor(categoryColor), // Dense, saturated glow color
+                        size: 110, // Extra large shadow for maximum density
+                        x: 0,
+                        y: 0
+                    } : false,
+                    borderWidth: isHighlighted ? 8 : 2, // Very thick border for dense glow effect
+                    shape: 'dot',
+                    size: isHighlighted ? 32 : 35 // Smaller when clicked to emphasize shadow
+                };
+                nodes.add(newNode);
+                console.log('Added node:', ingredientName, 'Total nodes:', nodes.length);
+                currentNodes.add(ingredientName);
+                nodeGeneration[ingredientName] = currentGeneration;
+                
+                // Ensure network is initialized and visible
+                if (!network) {
+                    console.log('Network not found, initializing...');
+                    initializeNetwork();
+                }
+            } else {
+                // Update existing node - preserve category color and add halo if clicked
+                nodes.update({
+                    id: ingredientName,
+                    color: {
+                        background: categoryColor, // Always preserve category color
+                        border: categoryColor,
+                        highlight: { 
+                            background: categoryColor, 
+                            border: categoryColor 
+                        }
+                    },
+                    shadow: isHighlighted ? {
+                        enabled: true,
+                        color: createDenseGlowColor(categoryColor), // Dense, saturated glow color
+                        size: 110, // Extra large shadow for maximum density
+                        x: 0,
+                        y: 0
+                    } : false,
+                    borderWidth: isHighlighted ? 8 : 2, // Very thick border for dense glow effect
+                    size: isHighlighted ? 32 : 35 // Smaller when clicked to emphasize shadow
+                });
+                nodeGeneration[ingredientName] = currentGeneration;
+            }
+
+            // Add pairing nodes (max 3)
+            pairings.forEach((pairing, index) => {
+                const pairName = pairing.name;
+                
+                // Cancel any pending fade timer for this node
+                if (nodeFadeTimers[pairName]) {
+                    clearTimeout(nodeFadeTimers[pairName]);
+                    delete nodeFadeTimers[pairName];
+                }
+                
+                // Get category color for pairing node
+                const pairCategoryInfo = networkData.categories && networkData.categories[pairName];
+                const pairCategoryColor = pairCategoryInfo ? pairCategoryInfo.color : '#95a5a6';
+                const isPairHighlighted = clickedIngredients.includes(pairName);
+                
+                if (!currentNodes.has(pairName)) {
+                    nodes.add({
+                        id: pairName,
+                        label: pairName.replace(/_/g, ' '),
+                        color: {
+                            background: pairCategoryColor, // Always preserve category color
+                            border: pairCategoryColor,
+                            highlight: { 
+                                background: pairCategoryColor, 
+                                border: pairCategoryColor 
+                            }
+                        },
+                        font: { 
+                            size: 12, 
+                            color: 'white', 
+                            face: 'Arial',
+                            strokeWidth: 3,
+                            strokeColor: '#000000'
+                        },
+                        shadow: isPairHighlighted ? {
+                            enabled: true,
+                            color: createDenseGlowColor(pairCategoryColor), // Dense, saturated glow color
+                            size: 80, // Extra large shadow for maximum density
+                            x: 0,
+                            y: 0
+                        } : false,
+                        borderWidth: isPairHighlighted ? 7 : 2, // Very thick border for dense glow effect
+                        shape: 'dot',
+                        size: isPairHighlighted ? 22 : 25 // Smaller when clicked to emphasize shadow
+                    });
+                    currentNodes.add(pairName);
+                    nodeGeneration[pairName] = currentGeneration;
+                } else {
+                    // Update existing node - preserve category color and add halo if clicked
+                    nodeGeneration[pairName] = currentGeneration;
+                    nodes.update({
+                        id: pairName,
+                        color: {
+                            background: pairCategoryColor, // Always preserve category color
+                            border: pairCategoryColor,
+                            highlight: { 
+                                background: pairCategoryColor, 
+                                border: pairCategoryColor 
+                            }
+                        },
+                        shadow: isPairHighlighted ? {
+                            enabled: true,
+                            color: createDenseGlowColor(pairCategoryColor), // Dense, saturated glow color
+                            size: 80, // Extra large shadow for maximum density
+                            x: 0,
+                            y: 0
+                        } : false,
+                        borderWidth: isPairHighlighted ? 7 : 2, // Very thick border for dense glow effect
+                        size: isPairHighlighted ? 22 : 25 // Smaller when clicked to emphasize shadow
+                    });
+                }
+
+                // Add edge
+                const edgeId = `${ingredientName}-${pairName}`;
+                const reverseEdgeId = `${pairName}-${ingredientName}`;
+                
+                if (!edges.get().some(e => e.id === edgeId || e.id === reverseEdgeId)) {
+                    edges.add({
+                        id: edgeId,
+                        from: ingredientName,
+                        to: pairName,
+                        label: pairing.score.toFixed(3),
+                        color: { color: '#95a5a6', highlight: '#3498db' },
+                        width: 2,
+                        font: { size: 10, align: 'middle' }
+                    });
+                }
+            });
+
+            // Schedule fade for nodes from previous generations (except clicked ones)
+            scheduleNodeFade();
+            
+            // Apply category filter after adding nodes
+            applyCategoryFilter();
+            
+            // Ensure network is visible and redrawn
+            if (network) {
+                // Force network to be visible
+                const networkDiv = document.getElementById('network');
+                if (networkDiv) {
+                    networkDiv.style.display = 'block';
+                    networkDiv.style.visibility = 'visible';
+                    networkDiv.style.opacity = '1';
+                }
+                
+                setTimeout(() => {
+                    network.redraw();
+                    network.fit(); // Fit network to view
+                    console.log('Network redrawn after adding nodes');
+                }, 100);
+            } else {
+                // If network still doesn't exist, initialize it
+                console.log('Network still not initialized, forcing initialization...');
+                initializeNetwork();
+                setTimeout(() => {
+                    if (network) {
+                        network.redraw();
+                        network.fit();
+                    }
+                }, 200);
+            }
+        }
+
+        // Schedule fading of nodes from previous generations
+        function scheduleNodeFade() {
+            const currentGen = currentGeneration;
+
+            // Find nodes from ALL previous generations that aren't in clicked ingredients
+            // and aren't part of the current generation
+            const nodesToFade = [];
+            nodes.get().forEach(node => {
+                const nodeGen = nodeGeneration[node.id];
+                // Fade nodes from previous generations that weren't clicked
+                if (nodeGen < currentGen && 
+                    !clickedIngredients.includes(node.id) &&
+                    currentNodes.has(node.id)) {
+                    nodesToFade.push(node.id);
+                }
+            });
+
+            // Fade them after a delay
+            nodesToFade.forEach(nodeId => {
+                // Clear existing timer for this node
+                if (nodeFadeTimers[nodeId]) {
+                    clearTimeout(nodeFadeTimers[nodeId]);
+                }
+
+                // Schedule fade (longer delay for older generations)
+                const nodeGen = nodeGeneration[nodeId];
+                const delay = 2000 + (currentGen - nodeGen - 1) * 500; // Staggered fading
+                nodeFadeTimers[nodeId] = setTimeout(() => {
+                    fadeNode(nodeId);
+                }, delay);
+            });
+        }
+
+        // Fade out a node and its edges
+        function fadeNode(nodeId) {
+            const node = nodes.get(nodeId);
+            if (!node) return;
+
+            // Remove edges connected to this node
+            const connectedEdges = edges.get({
+                filter: edge => edge.from === nodeId || edge.to === nodeId
+            });
+            
+            connectedEdges.forEach(edge => {
+                // Only remove if the other node is also not a clicked ingredient
+                const otherNode = edge.from === nodeId ? edge.to : edge.from;
+                if (!clickedIngredients.includes(otherNode)) {
+                    edges.remove(edge.id);
+                }
+            });
+
+            // Remove node if it's not a clicked ingredient
+            if (!clickedIngredients.includes(nodeId)) {
+                nodes.remove(nodeId);
+                currentNodes.delete(nodeId);
+                delete nodeGeneration[nodeId];
+                delete nodeFadeTimers[nodeId];
+            }
+        }
+
+        // Remove ingredient from network and clicked list
+        function removeIngredientFromNetwork(ingredientName) {
+            // Remove from clicked ingredients array
+            const index = clickedIngredients.indexOf(ingredientName);
+            if (index > -1) {
+                clickedIngredients.splice(index, 1);
+            }
+
+            // Get all edges connected to this ingredient BEFORE removing them
+            const connectedEdges = edges.get({
+                filter: edge => edge.from === ingredientName || edge.to === ingredientName
+            });
+            
+            // Find all connected nodes (downstream connections)
+            const connectedNodeIds = new Set();
+            connectedEdges.forEach(edge => {
+                if (edge.from === ingredientName) {
+                    connectedNodeIds.add(edge.to);
+                } else {
+                    connectedNodeIds.add(edge.from);
+                }
+            });
+
+            // For each connected node, check if it will still be connected to other clicked ingredients
+            // AFTER we remove the edges to ingredientName
+            const nodesToRemove = new Set();
+            
+            connectedNodeIds.forEach(nodeId => {
+                // Skip if it's a clicked ingredient - we keep those
+                if (clickedIngredients.includes(nodeId)) {
+                    return;
+                }
+
+                // Get all edges for this node BEFORE we remove any
+                const allNodeEdges = edges.get({
+                    filter: edge => edge.from === nodeId || edge.to === nodeId
+                });
+                
+                // Filter out edges that connect to ingredientName (the one we're removing)
+                const remainingEdges = allNodeEdges.filter(edge => {
+                    return edge.from !== ingredientName && edge.to !== ingredientName;
+                });
+                
+                // Check if any remaining edges connect to a clicked ingredient
+                const isConnectedToClickedIngredient = remainingEdges.some(edge => {
+                    const otherNode = edge.from === nodeId ? edge.to : edge.from;
+                    return clickedIngredients.includes(otherNode);
+                });
+
+                // If not connected to any clicked ingredient after removal, mark for removal
+                if (!isConnectedToClickedIngredient) {
+                    nodesToRemove.add(nodeId);
+                }
+            });
+
+            // Remove the main ingredient node and all its edges
+            if (nodes.get(ingredientName)) {
+                // Remove all edges connected to this node
+                connectedEdges.forEach(edge => {
+                    edges.remove(edge.id);
+                });
+
+                // Remove the node
+                nodes.remove(ingredientName);
+                currentNodes.delete(ingredientName);
+                delete nodeGeneration[ingredientName];
+                
+                // Clear any fade timer for this node
+                if (nodeFadeTimers[ingredientName]) {
+                    clearTimeout(nodeFadeTimers[ingredientName]);
+                    delete nodeFadeTimers[ingredientName];
+                }
+            }
+
+            // Remove all downstream nodes that are no longer connected to clicked ingredients
+            nodesToRemove.forEach(nodeId => {
+                // Get all edges for this node (might be empty now, but get them anyway)
+                const nodeEdges = edges.get({
+                    filter: edge => edge.from === nodeId || edge.to === nodeId
+                });
+                
+                // Remove all edges connected to this node
+                nodeEdges.forEach(edge => {
+                    edges.remove(edge.id);
+                });
+
+                // Remove the node
+                if (nodes.get(nodeId)) {
+                    nodes.remove(nodeId);
+                    currentNodes.delete(nodeId);
+                    delete nodeGeneration[nodeId];
+                    
+                    // Clear any fade timer for this node
+                    if (nodeFadeTimers[nodeId]) {
+                        clearTimeout(nodeFadeTimers[nodeId]);
+                        delete nodeFadeTimers[nodeId];
+                    }
+                }
+            });
+
+            // Update the clicked list display
+            updateClickedList();
+            
+            // Apply category filter to update shadows for remaining nodes
+            applyCategoryFilter();
+        }
+
+        // Update clicked ingredients list
+        function updateClickedList() {
+            const clickedList = document.getElementById('clickedList');
+            if (clickedIngredients.length === 0) {
+                clickedList.innerHTML = '<div class="no-ingredients">No ingredients explored yet. Search and click to start!</div>';
+            } else {
+                clickedList.innerHTML = clickedIngredients.map((ing) => 
+                    `<div class="clicked-item">
+                        <span class="clicked-item-text">${ing.replace(/_/g, ' ')}</span>
+                        <button class="remove-btn" onclick="removeIngredient('${ing.replace(/'/g, "\\'")}')" title="Remove ingredient">×</button>
+                    </div>`
+                ).join('');
+            }
+        }
+
+        // Initialize network
+        function initializeNetwork() {
+            const container = document.getElementById('network');
+            if (!container) {
+                console.error('Network container not found!');
+                return;
+            }
+            
+            // Ensure container is visible
+            container.style.display = 'block';
+            container.style.visibility = 'visible';
+            container.style.opacity = '1';
+            
+            // Ensure parent container is visible
+            const networkContainer = document.querySelector('.network-container');
+            if (networkContainer) {
+                networkContainer.style.display = 'flex';
+                networkContainer.style.visibility = 'visible';
+            }
+            
+            const data = { nodes: nodes, edges: edges };
+            console.log('Initializing network with', nodes.length, 'nodes and', edges.length, 'edges');
+            console.log('Container element:', container);
+            console.log('Container dimensions:', container.offsetWidth, 'x', container.offsetHeight);
+            
+            const options = {
+                nodes: {
+                    borderWidth: 2,
+                    shadow: true,
+                    font: {
+                        size: 12,
+                        face: 'Arial',
+                        align: 'center',
+                        bold: true
+                    },
+                    shapeProperties: {
+                        useBorderWithImage: true
+                    }
+                },
+                edges: {
+                    width: 2,
+                    shadow: true,
+                    smooth: {
+                        type: 'continuous',
+                        roundness: 0.5
+                    },
+                    arrows: {
+                        to: { enabled: false }
+                    }
+                },
+                physics: {
+                    enabled: true,
+                    stabilization: { iterations: 100 },
+                    barnesHut: {
+                        gravitationalConstant: -2000,
+                        centralGravity: 0.3,
+                        springLength: 200,
+                        springConstant: 0.04,
+                        damping: 0.09
+                    }
+                },
+                interaction: {
+                    hover: true,
+                    tooltipDelay: 200,
+                    zoomView: true,
+                    dragView: true
+                }
+            };
+
+            // Create or update network
+            if (!network) {
+                network = new vis.Network(container, data, options);
+                console.log('Network created');
+                
+                // Ensure network is visible after creation
+                setTimeout(() => {
+                    if (network) {
+                        network.redraw();
+                        network.fit();
+                    }
+                }, 100);
+
+                // Handle node clicks
+                network.on('click', function(params) {
+                    if (params.nodes.length > 0) {
+                        const nodeId = params.nodes[0];
+                        const nodeData = nodes.get(nodeId);
+                        if (nodeData) {
+                            showIngredient(nodeId);
+                        }
+                    }
+                });
+
+                // Handle double click to remove node
+                network.on('doubleClick', function(params) {
+                    if (params.nodes.length > 0) {
+                        const nodeId = params.nodes[0];
+                        // Remove the node from network and clicked ingredients if present
+                        removeIngredientFromNetwork(nodeId);
+                    }
+                });
+            } else {
+                // Network exists, just update the data
+                network.setData(data);
+                console.log('Network data updated');
+                // Force redraw to ensure visibility
+                setTimeout(() => {
+                    if (network) {
+                        network.redraw();
+                        console.log('Network redrawn');
+                    }
+                }, 100);
+            }
+        }
+
+        // Clear button handler
+        function setupClearButton() {
+            document.getElementById('clearButton').addEventListener('click', function() {
+                resetNetwork(true);
+                document.getElementById('searchInput').value = '';
+            });
+        }
+
+        // Initialize when page loads
+        window.addEventListener('load', function() {
+            loadNetworkData().then(() => {
+                initializeNetwork();
+                setupClearButton();
+            });
+        });
+
+        // Make functions available globally
+        window.selectIngredient = selectIngredient;
+        window.removeIngredient = removeIngredientFromNetwork;
+    </script>
+</body>
+</html>
+
+<!-- 'comment to trigger deploy' -->
