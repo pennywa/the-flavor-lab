@@ -11,6 +11,8 @@ import json
 import os
 import shutil
 from datetime import datetime
+from sentence_transformers import SentenceTransformer
+import numpy as np
 
 # Load the data
 print("Loading data...")
@@ -78,10 +80,81 @@ for ingredient, pairings in ingredient_graph.items():
 # Create a list of all unique ingredients for search
 all_ingredients = sorted(list(filtered_graph.keys()))
 
+# Load category classification data
+print("\nLoading category classification data...")
+category_df = pd.read_csv("input/node_classification_hub.csv")
+
+# Extract categories (column headers) and example ingredients
+categories = list(category_df.columns)
+category_examples = {}
+for category in categories:
+    examples = category_df[category].dropna().tolist()
+    category_examples[category] = examples
+    print(f"  {category}: {len(examples)} examples")
+
+# Initialize sentence transformer model
+print("\nLoading sentence transformer model...")
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Create category embeddings using example ingredients
+print("Creating category embeddings...")
+category_embeddings = {}
+for category, examples in category_examples.items():
+    # Create a representative text for the category
+    category_text = f"{category}: {', '.join(examples[:10])}"  # Use first 10 examples
+    category_embeddings[category] = model.encode(category_text, convert_to_numpy=True)
+
+# Classify each ingredient
+print(f"Classifying {len(all_ingredients)} ingredients...")
+ingredient_categories = {}
+category_colors = {
+    "Bakery/Dessert/Snack": "#FF6B6B",      # Red
+    "Beverage Alcoholic": "#4ECDC4",          # Teal
+    "Cereal/Crop/Bean": "#FFE66D",          # Yellow
+    "Dairy": "#95E1D3",                      # Light teal
+    "Fruit": "#F38181",                      # Pink
+    "Meat/Animal Product": "#AA96DA",       # Purple
+    "Plant/Vegetable": "#A8E6CF",            # Green
+    "Seafood": "#FFD93D"                     # Gold
+}
+
+for ingredient in all_ingredients:
+    # Create embedding for ingredient (replace underscores with spaces for better matching)
+    ingredient_text = ingredient.replace('_', ' ')
+    ingredient_embedding = model.encode(ingredient_text, convert_to_numpy=True)
+    
+    # Find most similar category
+    similarities = {}
+    for category, cat_embedding in category_embeddings.items():
+        similarity = np.dot(ingredient_embedding, cat_embedding) / (
+            np.linalg.norm(ingredient_embedding) * np.linalg.norm(cat_embedding)
+        )
+        similarities[category] = float(similarity)
+    
+    # Get category with highest similarity
+    best_category = max(similarities, key=similarities.get)
+    ingredient_categories[ingredient] = {
+        "category": best_category,
+        "confidence": similarities[best_category],
+        "color": category_colors.get(best_category, "#95a5a6")  # Default gray
+    }
+
+# Print classification summary
+print("\nClassification summary:")
+category_counts = {}
+for ing, cat_info in ingredient_categories.items():
+    cat = cat_info["category"]
+    category_counts[cat] = category_counts.get(cat, 0) + 1
+for cat, count in sorted(category_counts.items()):
+    print(f"  {cat}: {count} ingredients")
+
 # Create the final data structure
 network_data = {
     "ingredients": all_ingredients,
-    "graph": filtered_graph
+    "graph": filtered_graph,
+    "categories": ingredient_categories,
+    "category_list": categories,
+    "category_colors": category_colors
 }
 
 # Ensure deploy directory exists

@@ -31,7 +31,7 @@ def main():
         
         # Try to open browser automatically
         try:
-            webbrowser.open(f'http://localhost:{PORT}/indedx.html')
+            webbrowser.open(f'http://localhost:{PORT}/index.html')
         except:
             pass
         
