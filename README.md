@@ -97,3 +97,5 @@ streamlit run app.py
 ---
 
 **Ready to revolutionize your cooking? Start experimenting with flavors! 🧪👨‍🍳**
+Webapp: https://theflavorlab.netlify.app/
+To run locally: python run_server.py
