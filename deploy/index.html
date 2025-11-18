@@ -5,365 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Ingredient Network</title>
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 10px;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 1600px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            display: flex;
-            flex-direction: column;
-            min-height: calc(100vh - 20px);
-        }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 30px;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .header p {
-            margin: 0;
-        }
-
-        .header h1 {
-            font-size: 2em;
-            margin-bottom: 5px;
-        }
-
-        .search-container {
-            padding: 15px 20px;
-            background: #f8f9fa;
-            border-bottom: 2px solid #e9ecef;
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .filter-container {
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .filter-label {
-            font-weight: 600;
-            color: #333;
-            font-size: 14px;
-        }
-
-        .category-filter-wrapper {
-            position: relative;
-            display: inline-block;
-            pointer-events: auto;
-            z-index: 1001;
-        }
-
-        .category-filter {
-            padding: 8px 35px 8px 15px;
-            font-size: 14px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-            outline: none;
-            transition: border-color 0.3s;
-            min-width: 200px;
-            appearance: none;
-            user-select: none;
-            pointer-events: auto;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-        }
-
-        .category-filter:focus {
-            border-color: #667eea;
-        }
-
-        .category-dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            margin-top: 5px;
-            background: white;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 1000;
-            min-width: 250px;
-            max-height: 300px;
-            overflow-y: auto;
-            display: none;
-            pointer-events: auto;
-        }
-
-        .category-dropdown.show {
-            display: block;
-        }
-
-        .category-option {
-            padding: 10px 15px;
-            cursor: pointer;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: background-color 0.2s;
-            pointer-events: auto;
-            user-select: none;
-        }
-
-        .category-option:last-child {
-            border-bottom: none;
-        }
-
-        .category-option:hover {
-            background-color: #f8f9fa;
-        }
-
-        .category-option.selected {
-            background-color: #e7f3ff;
-        }
-
-        .category-checkbox {
-            width: 18px;
-            height: 18px;
-            border: 2px solid #667eea;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .category-checkbox.checked {
-            background-color: #667eea;
-        }
-
-        .category-checkbox.checked::after {
-            content: '✓';
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .back-button {
-            padding: 10px 20px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background 0.3s;
-            margin-left: auto;
-        }
-
-        .back-button:hover {
-            background: #764ba2;
-        }
-
-        .back-button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 15px;
-            font-size: 16px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .search-box:focus {
-            border-color: #667eea;
-        }
-
-        .suggestions {
-            max-height: 200px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            border-top: none;
-            background: white;
-            display: none;
-            position: absolute;
-            top: 75px;
-            left: 20px;
-            right: 20px;
-            z-index: 1000;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .suggestion-item {
-            padding: 12px 15px;
-            cursor: pointer;
-            border-bottom: 1px solid #f0f0f0;
-            transition: background-color 0.2s;
-        }
-
-        .suggestion-item:hover {
-            background-color: #f8f9fa;
-        }
-
-        .suggestion-item:last-child {
-            border-bottom: none;
-        }
-
-        .main-content {
-            display: flex;
-            flex: 1;
-            min-height: 600px;
-            align-items: stretch;
-        }
-
-        .network-container {
-            flex: 1;
-            min-height: 600px;
-            height: 600px;
-            border-right: 2px solid #e9ecef;
-            position: relative;
-            background-color: #fafafa;
-            overflow: visible;
-        }
-
-        #network {
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            position: relative;
-        }
-
-        .clicked-ingredients {
-            width: 300px;
-            background: #f8f9fa;
-            padding: 15px;
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 600px;
-        }
-
-        .clicked-ingredients h2 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        .clicked-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            overflow-y: auto;
-            flex: 1;
-        }
-
-        .clicked-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            cursor: default;
-        }
-
-        .clicked-item-text {
-            flex: 1;
-        }
-
-        .remove-btn {
-            background: rgba(255, 255, 255, 0.3);
-            border: none;
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            margin-left: 10px;
-            transition: background 0.2s;
-        }
-
-        .remove-btn:hover {
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        .no-ingredients {
-            color: #666;
-            font-style: italic;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            font-size: 18px;
-        }
-
-        .toast-notification {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-60%);
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            font-size: 16px;
-            z-index: 10000;
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-            pointer-events: none;
-        }
-
-        .toast-notification.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🍽️ Interactive Ingredient Network</h1>
+            <div class="loader">
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+            </div>
+            <div style="flex: 0 0 auto;">
+                <h1>The Flavor Lab</h1>
             <p>Discover flavor pairings and explore ingredient relationships</p>
+            </div>
+            <div class="loader">
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+                <div class="mr-freeze"></div>
+            </div>
         </div>
 
         <div class="search-container">
@@ -399,19 +72,149 @@
         <div class="main-content">
             <div class="network-container">
                 <div id="network"></div>
+                <button class="network-center-btn" onclick="centerNetwork()" title="Center and reset view">
+                    <i class="fas fa-crosshairs"></i>
+                </button>
             </div>
 
             <div class="clicked-ingredients">
-                <h2>Explored Ingredients (max 10):</h2>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <h2 style="margin: 0;">Explored Ingredients (max 10):</h2>
+                </div>
                 <div id="clickedList" class="clicked-list">
                     <div class="no-ingredients">No ingredients explored yet. Search and click to start!</div>
                 </div>
+            </div>
+
+            <div class="recipe-section" id="recipePanel">
+                <h2>Recipe Generator</h2>
+                <div class="recipe-controls">
+                    <div class="flavor-sliders">
+                        <div class="flavor-slider-group">
+                            <label>Umami</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="umamiSlider" data-value="3">
+                                    <div class="range-slider-track" id="umamiTrack"></div>
+                                    <div class="range-slider-handle" id="umamiHandle"></div>
+                                </div>
+                                <div class="labels" id="umamiLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
+                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
+                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
+                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
+                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flavor-slider-group">
+                            <label>Sweet</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="sweetSlider" data-value="3">
+                                    <div class="range-slider-track" id="sweetTrack"></div>
+                                    <div class="range-slider-handle" id="sweetHandle"></div>
+                                </div>
+                                <div class="labels" id="sweetLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flavor-slider-group">
+                            <label>Spice</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="spiceSlider" data-value="3">
+                                    <div class="range-slider-track" id="spiceTrack"></div>
+                                    <div class="range-slider-handle" id="spiceHandle"></div>
+                                </div>
+                                <div class="labels" id="spiceLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flavor-slider-group">
+                            <label>Sour</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="sourSlider" data-value="3">
+                                    <div class="range-slider-track" id="sourTrack"></div>
+                                    <div class="range-slider-handle" id="sourHandle"></div>
+                                </div>
+                                <div class="labels" id="sourLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flavor-slider-group">
+                            <label>Salty</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="saltySlider" data-value="3">
+                                    <div class="range-slider-track" id="saltyTrack"></div>
+                                    <div class="range-slider-handle" id="saltyHandle"></div>
+                                </div>
+                                <div class="labels" id="saltyLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
+                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
+                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
+                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
+                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="dietarySelect" style="font-size: 13px; font-weight: 600; color: #555; display: block; margin-bottom: 5px;">
+                            Dietary Restrictions:
+                        </label>
+                        <select id="dietarySelect" class="dietary-select" multiple size="5">
+                            <option value="pescatarian">Pescatarian</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="halal">Halal</option>
+                            <option value="gluten_free">Gluten Free</option>
+                        </select>
+                        <small style="font-size: 11px; color: #666; display: block; margin-top: 5px;">
+                            Click to select/deselect options
+                        </small>
+                    </div>
+
+                    <button class="generate-recipe-btn" onclick="window.recipeGenerator.generateAndDisplayRecipes()">
+                        Generate Recipes
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Results Section at Bottom -->
+        <div id="recipeResults" class="recipe-results-bottom">
+            <h2>Generated Recipes</h2>
+            <div class="no-recipes">
+                <p>Select ingredients and click "Generate Recipes" to get started!</p>
             </div>
         </div>
     </div>
 
     <!-- Toast notification container -->
     <div id="toastNotification" class="toast-notification"></div>
+
+    <!-- Configuration (gitignored, safe for API keys) -->
+    <script src="config.js"></script>
+    
+    <!-- Recipe Generator Script -->
+    <script src="recipe-generator.js"></script>
+    
+    <!-- Flavor Sliders UI Controller -->
+    <script src="flavor-sliders.js"></script>
 
     <script>
         // Global variables
@@ -759,7 +562,7 @@
                 const restoredNodes = previousState.nodes.map(node => {
                     const ingredientName = node.id;
                     const categoryInfo = networkData.categories && networkData.categories[ingredientName];
-                    const categoryColor = categoryInfo ? categoryInfo.color : '#667eea';
+                    const categoryColor = categoryInfo ? categoryInfo.color : '#d4b8b8';
                     const isHighlighted = previousClickedIngredients.includes(ingredientName);
                     
                     return {
@@ -1337,12 +1140,16 @@
             if (clickedIngredients.length === 0) {
                 clickedList.innerHTML = '<div class="no-ingredients">No ingredients explored yet. Search and click to start!</div>';
             } else {
-                clickedList.innerHTML = clickedIngredients.map((ing) => 
-                    `<div class="clicked-item">
+                clickedList.innerHTML = clickedIngredients.map((ing) => {
+                    // Get category color for this ingredient
+                    const categoryInfo = networkData && networkData.categories && networkData.categories[ing];
+                    const categoryColor = categoryInfo ? categoryInfo.color : '#d4b8b8'; // Fallback to default color
+                    
+                    return `<div class="clicked-item" style="background: ${categoryColor};">
                         <span class="clicked-item-text">${ing.replace(/_/g, ' ')}</span>
                         <button class="remove-btn" onclick="removeIngredient('${ing.replace(/'/g, "\\'")}')" title="Remove ingredient">×</button>
-                    </div>`
-                ).join('');
+                    </div>`;
+                }).join('');
             }
         }
 
@@ -1469,17 +1276,54 @@
             });
         }
 
+        // Setup dietary restrictions toggle behavior
+        function setupDietaryRestrictions() {
+            const dietarySelect = document.getElementById('dietarySelect');
+            if (dietarySelect) {
+                dietarySelect.addEventListener('mousedown', function(e) {
+                    const option = e.target;
+                    if (option.tagName === 'OPTION') {
+                        e.preventDefault();
+                        option.selected = !option.selected;
+                        // Trigger change event
+                        dietarySelect.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                });
+            }
+        }
+
         // Initialize when page loads
         window.addEventListener('load', function() {
             loadNetworkData().then(() => {
                 initializeNetwork();
                 setupClearButton();
+                setupDietaryRestrictions();
             });
         });
+
+        // Center network view
+        function centerNetwork() {
+            if (network) {
+                network.fit({
+                    animation: {
+                        duration: 500,
+                        easingFunction: 'easeInOutQuad'
+                    }
+                });
+            }
+        }
 
         // Make functions available globally
         window.selectIngredient = selectIngredient;
         window.removeIngredient = removeIngredientFromNetwork;
+        window.centerNetwork = centerNetwork;
+        
+        // Make clickedIngredients available globally for recipe generator
+        // This ensures the recipe generator can access the selected ingredients
+        Object.defineProperty(window, 'clickedIngredients', {
+            get: function() { return clickedIngredients; },
+            configurable: true
+        });
     </script>
 </body>
 </html>
