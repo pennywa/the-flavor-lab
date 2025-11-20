@@ -306,9 +306,11 @@
         // Load network data
         async function loadNetworkData() {
             try {
-                const response = await fetch('network_data_hub.json');
+                // Add cache busting to ensure fresh data
+                const response = await fetch('network_data_hub.json?v=' + new Date().getTime());
                 networkData = await response.json();
                 console.log('Network data loaded:', networkData.ingredients.length, 'ingredients');
+                console.log('Category list from JSON:', networkData.category_list);
                 
                 // Populate category filter dropdown
                 setupCategoryFilter();
@@ -326,7 +328,16 @@
         function setupCategoryFilter() {
             const categoryFilter = document.getElementById('categoryFilter');
             const categoryDropdown = document.getElementById('categoryDropdown');
-            if (!networkData || !networkData.category_list) return;
+            if (!networkData || !networkData.category_list) {
+                console.error('Network data or category_list not found');
+                return;
+            }
+            
+            // Clear existing options first
+            categoryDropdown.innerHTML = '';
+            
+            // Log categories for debugging
+            console.log('Setting up category filter with categories:', networkData.category_list);
             
             // Add "All Categories" option
             const allOption = document.createElement('div');
@@ -344,8 +355,9 @@
             });
             categoryDropdown.appendChild(allOption);
             
-            // Add category options
-            networkData.category_list.forEach(category => {
+            // Add category options - ensure we use the correct categories from JSON
+            const categories = networkData.category_list || [];
+            categories.forEach(category => {
                 const option = document.createElement('div');
                 option.className = 'category-option';
                 option.dataset.category = category;
@@ -659,7 +671,7 @@
 
                 if (matches.length > 0) {
                     suggestions.innerHTML = matches.map(ing => 
-                        `<div class="suggestion-item" onclick="selectIngredient('${ing.replace(/'/g, "\\'")}')">${ing}</div>`
+                        `<div class="suggestion-item" onclick="selectIngredient('${ing.replace(/'/g, "\\'")}')">${ing.replace(/_/g, ' ')}</div>`
                     ).join('');
                     suggestions.style.display = 'block';
                 } else {
