@@ -1,617 +1,323 @@
 ingredient,category
+buttermilk,Dairy
+cheese,Dairy
+cream,Dairy
+tortilla,Grains and Legumes
+milk,Dairy
+corn,Grains and Legumes
+beef,Meat and Poultry
+chicken,Meat and Poultry
+mushroom,Vegetables and Herbs
+pie crust,Snacks and Dessert
 abalone,Seafood
-acorn,Nut/Seed
-active_dry_yeast,Fungus
-adzuki_bean,Cereal/Crop/Bean
-agar,Plant/Vegetable
-agave,Plant/Vegetable
-albacore_tuna,Seafood
-alfalfa,Plant/Vegetable
-all_purpose_flour,Cereal/Crop/Bean
-allspice,Spice
-almond,Nut/Seed
-almond_extract,Nut/Seed
-amaranth,Flower
+acorn,Grains and Legumes
+adzuki bean,Grains and Legumes
+agar,Seafood
+agave,Vegetables and Herbs
+albacore tuna,Seafood
+alfalfa,Conditments and Seasonings
+allspice,Conditments and Seasonings
+almond,Grains and Legumes
+amaranth,Conditments and Seasonings
 anchovy,Seafood
-angelica,Plant/Vegetable
-anise,Spice
+coconut,Fruit
+angelica,Conditments and Seasonings
+anise,Conditments and Seasonings
 apple,Fruit
-apple_brandy,Beverage Alcoholic
-apple_cider_vinegar,Sauce/Powder/Dressing
+brandy,Alcoholic Drinks
+butter,Dairy
+vinegar,Snacks and Dessert
 apricot,Fruit
-arrowroot,Sauce/Powder/Dressing
-artichoke,Plant/Vegetable
-asparagus,Plant/Vegetable
+arrowroot,Conditments and Seasonings
+artichoke,Vegetables and Herbs
+asparagus,Vegetables and Herbs
 avocado,Fruit
-bacon,Meat/Animal Product
-bagel,Bakery/Dessert/Snack
-baking_powder,Sauce/Powder/Dressing
-baking_soda,Sauce/Powder/Dressing
-balsamic_vinegar,Sauce/Powder/Dressing
-bamboo_shoot,Plant/Vegetable
+carrot,Vegetables and Herbs
+eggplant,Vegetables and Herbs
+lettuce,Vegetables and Herbs
+onion,Vegetables and Herbs
+potato,Vegetables and Herbs
+shrimp,Seafood
+spinach,Vegetables and Herbs
+tomato,Vegetables and Herbs
+turnip,Conditments and Seasonings
+bagel,Snacks and Dessert
+bean,Grains and Legumes
+tofu,Grains and Legumes
+chocolate,Snacks and Dessert
+bamboo shoot,Vegetables and Herbs
 banana,Fruit
-barbecue_sauce,Sauce/Powder/Dressing
-barley,Cereal/Crop/Bean
-bartlett_pear,Fruit
-basil,Plant/Vegetable
-basil_leaf,Plant/Vegetable
-basmati_rice,Cereal/Crop/Bean
-bay_leaf,Plant/Vegetable
-bean,Cereal/Crop/Bean
-beef,Meat/Animal Product
-beef_broth,Meat/Animal Product
-beer,Beverage Alcoholic
-beetroot,Plant/Vegetable
-bell_pepper,Plant/Vegetable
+barley,Grains and Legumes
+bartlett pear,Fruit
+basil,Vegetables and Herbs
+basmati rice,Grains and Legumes
+scallop,Seafood
+kidney bean,Grains and Legumes
+sausage,Meat and Poultry
+beer,Alcoholic Drinks
+sugar,Snacks and Dessert
+beetroot,Vegetables and Herbs
+pepper,Vegetables and Herbs
 berry,Fruit
-biscuit,Bakery/Dessert/Snack
-bittersweet_chocolate,Bakery/Dessert/Snack
-black_bean,Cereal/Crop/Bean
-black_currant,Fruit
-black_eyed_pea,Cereal/Crop/Bean
-black_olive,Essential Oil/Fat
-black_pepper,Plant/Vegetable
-black_raspberry,Fruit
-black_tea,Plant/Vegetable
-black_walnut,Cereal/Crop/Bean
+cherry,Fruit
+biscuit,Snacks and Dessert
+black tea,Vegetables and Herbs
+garlic,Conditments and Seasonings
+cardamom,Conditments and Seasonings
+caviar,Seafood
+coffee,Snacks and Dessert
+currant,Vegetables and Herbs
+lentil,Grains and Legumes
+mustard,Snacks and Dessert
+pudding,Snacks and Dessert
+raspberry,Fruit
+sesame,Grains and Legumes
+soybean,Grains and Legumes
+truffle,Vegetables and Herbs
+walnut,Grains and Legumes
 blackberry,Fruit
-blackberry_brandy,Beverage Alcoholic
-blue_cheese,Dairy
+salad dressing,Snacks and Dessert
+orange,Fruit
 blueberry,Fruit
 bluefish,Seafood
-boiling_water,Beverage
-boneless_skinless_chicken_breast,Meat/Animal Product
-boneless_skinless_chicken_breast_half,Meat/Animal Product
+ham,Meat and Poultry
+pasta,Grains and Legumes
 boysenberry,Fruit
-brandy,Beverage Alcoholic
-brazil_nut,Nut/Seed
-bread,Bakery/Dessert/Snack
-bread_flour,Bakery/Dessert/Snack
-breadcrumb,Bakery/Dessert/Snack
-breadfruit,Plant/Vegetable
-breakfast_cereal,Cereal/Crop/Bean
-broad_bean,Cereal/Crop/Bean
-broccoli,Plant/Vegetable
-broccoli_floret,Plant/Vegetable
-brown_sugar,Sauce/Powder/Dressing
-brussels_sprout,Plant/Vegetable
-buffalo,Meat/Animal Product
-bulgur,Dish/End Product
-burrito,Dish/End Product
-butter,Dairy
-buttermilk,Dairy
-butternut_squash,Plant/Vegetable
-cabbage,Plant/Vegetable
-cake,Bakery/Dessert/Snack
-cake_flour,Cereal/Crop/Bean
-camembert_cheese,Dairy
-candy_bar,Bakery/Dessert/Snack
-canola_oil,Essential Oil/Fat
-caper,Cereal/Crop/Bean
-capsicum,Spice
-cardamom,Spice
-cardoon,Plant/Vegetable
-carom_seed,Plant/Vegetable
-carrot,Plant/Vegetable
-cashew_nut,Cereal/Crop/Bean
-cassava,Plant/Vegetable
-cassia,Plant/Vegetable
-caster_sugar,Sauce/Powder/Dressing
+brazil nut,Grains and Legumes
+bread,Snacks and Dessert
+flour,Grains and Legumes
+breadfruit,Fruit
+breakfast cereal,Grains and Legumes
+broad bean,Grains and Legumes
+broccoli,Vegetables and Herbs
+brussels sprout,Vegetables and Herbs
+champagne,Alcoholic Drinks
+buffalo,Meat and Poultry
+shallot,Vegetables and Herbs
+bulgur,Grains and Legumes
+burrito,Vegetables and Herbs
+shortening,Dairy
+butternut squash,Vegetables and Herbs
+cabbage,Vegetables and Herbs
+cake,Snacks and Dessert
+camembert cheese,Dairy
+pineapple,Fruit
+syrup,Snacks and Dessert
+jalapeno,Vegetables and Herbs
+mandarin orange,Fruit
+pumpkin,Vegetables and Herbs
+canola oil,Conditments and Seasonings
+cooking oil,Snacks and Dessert
+caper,Grains and Legumes
+capsicum,Conditments and Seasonings
+cardoon,Vegetables and Herbs
+carom seed,Vegetables and Herbs
+cassava,Vegetables and Herbs
+cassia,Vegetables and Herbs
 catfish,Seafood
-cauliflower,Flower
-caviar,Seafood
-cayenne,Plant/Vegetable
-cayenne_pepper,Plant/Vegetable
-celery,Plant/Vegetable
-celery_rib,Plant/Vegetable
-champagne,Beverage Alcoholic
-chayote,Plant/Vegetable
-cheddar_cheese,Dairy
-cheese,Dairy
-cherry,Fruit
-cherry_brandy,Beverage Alcoholic
-cherry_pepper,Plant/Vegetable
-cherry_tomato,Plant/Vegetable
-chervil,Plant/Vegetable
-chestnut,Nut/Seed
-chicken,Meat/Animal Product
-chicken_breast,Meat/Animal Product
-chicken_broth,Meat/Animal Product
-chicken_stock,Sauce/Powder/Dressing
-chickpea,Cereal/Crop/Bean
-chili,Spice
-chili_powder,Sauce/Powder/Dressing
-chinese_cabbage,Plant/Vegetable
-chinese_mustard,Sauce/Powder/Dressing
-chive,Plant/Vegetable
-chocolate,Bakery/Dessert/Snack
-chocolate_chip,Bakery/Dessert/Snack
-chocolate_spread,Bakery/Dessert/Snack
-cider,Beverage
-cider_vinegar,Sauce/Powder/Dressing
-cilantro,Plant/Vegetable
-cinnamon,Spice
-cinnamon_stick,Plant/Vegetable
-citrus_fruit,Fruit
+cauliflower,Vegetables and Herbs
+celery,Vegetables and Herbs
+chayote,Vegetables and Herbs
+soup,Vegetables and Herbs
+ravioli,Vegetables and Herbs
+gelatin,Snacks and Dessert
+chervil,Conditments and Seasonings
+chestnut,Grains and Legumes
+chickpea,Grains and Legumes
+chili,Conditments and Seasonings
+chive,Vegetables and Herbs
+cider,Conditments and Seasonings
+cinnamon,Conditments and Seasonings
 clam,Seafood
-clementine,Plant/Vegetable
-clove,Spice
-coarse_salt,Sauce/Powder/Dressing
-cocoa,Plant/Vegetable
-cocoa_butter,Dairy
-cocoa_powder,Sauce/Powder/Dressing
-coconut,Fruit
-coconut_milk,Dairy
-coffee,Beverage
-cold_water,Beverage
-comte_cheese,Dairy
+clementine,Fruit
+clove,Conditments and Seasonings
+cocoa,Vegetables and Herbs
+water,Vegetables and Herbs
+marshmallow,Snacks and Dessert
+comte cheese,Dairy
 conch,Seafood
-condensed_milk,Dairy
-confectioners'_sugar,Sauce/Powder/Dressing
-cooked_chicken,Meat/Animal Product
-cooked_rice,Cereal/Crop/Bean
-cooking_oil,Essential Oil/Fat
-cooking_spray,ETC
-coriander,Plant/Vegetable
-corn,Cereal/Crop/Bean
-corn_chip,Bakery/Dessert/Snack
-corn_oil,Essential Oil/Fat
-corn_tortilla,Cereal/Crop/Bean
-cornbread,Bakery/Dessert/Snack
-cornmeal,Cereal/Crop/Bean
-cornstarch,Cereal/Crop/Bean
-cottage_cheese,Dairy
-couscous,Dish/End Product
+couscous,Seafood
+macaroni,Grains and Legumes
+lobster,Seafood
+coriander,Conditments and Seasonings
+margarine,Alcoholic Drinks
+cornbread,Snacks and Dessert
 crab,Seafood
-cracked_black_pepper,Spice
 cranberry,Fruit
 crayfish,Seafood
-cream,Dairy
-cream_cheese,Dairy
-cream_of_mushroom_soup,Dish/End Product
-cream_of_tartar,Dairy
-crushed_pineapple,Fruit
-crushed_red_pepper_flake,Spice
-cucumber,Plant/Vegetable
-cumin,Spice
-cumin_seed,Nut/Seed
-currant,Plant/Vegetable
-curry_leaf,Plant/Vegetable
-curry_powder,Sauce/Powder/Dressing
+wheat,Grains and Legumes
+horseradish,Vegetables and Herbs
+cucumber,Vegetables and Herbs
+cumin,Conditments and Seasonings
 cuttlefish,Seafood
-dark_brown_sugar,Sauce/Powder/Dressing
+molasses,Snacks and Dessert
+raisin,Fruit
+turkey,Meat and Poultry
 date,Fruit
-deer,Meat/Animal Product
-diced_tomato,Plant/Vegetable
-dijon_mustard,Sauce/Powder/Dressing
-dill,Plant/Vegetable
-dried_basil,Plant/Vegetable
-dried_cranberry,Fruit
-dried_oregano,Plant/Vegetable
-dried_parsley,Plant/Vegetable
-dried_thyme,Plant/Vegetable
-dry_mustard,Cereal/Crop/Bean
-dry_white_wine,Beverage Alcoholic
-dulce_de_leche,Bakery/Dessert/Snack
-dumpling,Dish/End Product
-egg,Meat/Animal Product
-egg_white,Meat/Animal Product
-egg_yolk,Meat/Animal Product
-eggplant,Plant/Vegetable
+deer,Meat and Poultry
+ginger,Vegetables and Herbs
+dill,Conditments and Seasonings
+relish,Snacks and Dessert
+fennel,Conditments and Seasonings
+oregano,Conditments and Seasonings
+marjoram,Vegetables and Herbs
+rosemary,Conditments and Seasonings
+strawberry,Fruit
+summer savory,Conditments and Seasonings
+tarragon,Conditments and Seasonings
+parsley,Vegetables and Herbs
+pectin,Snacks and Dessert
+wine,Alcoholic Drinks
+thyme,Vegetables and Herbs
+vermouth,Alcoholic Drinks
+dulce de leche,Snacks and Dessert
+dumpling,Seafood
+egg,Meat and Poultry
 elderberry,Fruit
-endive,Plant/Vegetable
-epazote,Plant/Vegetable
-evaporated_milk,Dairy
-extra_virgin_olive_oil,Essential Oil/Fat
-fennel,Plant/Vegetable
-feta_cheese,Dairy
-fig,Plant/Vegetable
-filbert,Nut/Seed
+endive,Vegetables and Herbs
+epazote,Conditments and Seasonings
+yogurt,Dairy
+fig,Fruit
+filbert,Grains and Legumes
+semolina,Grains and Legumes
+peach,Fruit
 fish,Seafood
-fish_sauce,Sauce/Powder/Dressing
-flat_leaf_parsley,Plant/Vegetable
-flour,Cereal/Crop/Bean
-flour_tortilla,Cereal/Crop/Bean
-fresh_basil,Plant/Vegetable
-fresh_basil_leaf,Plant/Vegetable
-fresh_chive,Plant/Vegetable
-fresh_cilantro,Plant/Vegetable
-fresh_dill,Plant/Vegetable
-fresh_ginger,Plant/Vegetable
-fresh_ground_black_pepper,Spice
-fresh_ground_pepper,Spice
-fresh_lemon_juice,Beverage
-fresh_lime_juice,Beverage
-fresh_mushroom,Fungus
-fresh_parsley,Plant/Vegetable
-fresh_parsley_leaf,Plant/Vegetable
-fresh_rosemary,Plant/Vegetable
-fresh_thyme,Plant/Vegetable
-frozen_pea,Cereal/Crop/Bean
-fruit_juice,Beverage
-fruit_preserve,Sauce/Powder/Dressing
-fruit_salad,Fruit
-fudge,Bakery/Dessert/Snack
-garlic,Plant/Vegetable
-garlic_clove,Plant/Vegetable
-garlic_powder,Sauce/Powder/Dressing
-garlic_salt,Sauce/Powder/Dressing
-gelatin,Sauce/Powder/Dressing
-ghee,Essential Oil/Fat
-gin,Beverage Alcoholic
-ginger,Plant/Vegetable
-ginkgo_nut,Nut/Seed
-goat_cheese,Dairy
+vanilla,Conditments and Seasonings
+nutmeg,Grains and Legumes
+rhubarb,Vegetables and Herbs
+salmon,Seafood
+sorrel,Conditments and Seasonings
+spearmint,Conditments and Seasonings
+turmeric,Conditments and Seasonings
+meatball,Meat and Poultry
+fudge,Snacks and Dessert
+persimmon,Fruit
+ghee,Conditments and Seasonings
+gin,Alcoholic Drinks
+ginkgo nut,Grains and Legumes
+meat,Meat and Poultry
 gooseberry,Fruit
-graham_cracker_crumb,Bakery/Dessert/Snack
-granny_smith_apple,Fruit
-granulated_sugar,Sauce/Powder/Dressing
 grape,Fruit
 grapefruit,Fruit
-greek_yogurt,Dairy
-green_bean,Cereal/Crop/Bean
-green_bell_pepper,Plant/Vegetable
-green_chilies,Plant/Vegetable
-green_onion,Plant/Vegetable
-green_pepper,Plant/Vegetable
-green_tea,Beverage
-green_zucchini,Plant/Vegetable
-ground_allspice,Spice
-ground_beef,Meat/Animal Product
-ground_black_pepper,Spice
-ground_cinnamon,Spice
-ground_clove,Spice
-ground_coriander,Spice
-ground_cumin,Spice
-ground_ginger,Plant/Vegetable
-ground_nutmeg,Nut/Seed
+hazelnut,Grains and Legumes
+lamb,Meat and Poultry
+pork,Meat and Poultry
+mace,Grains and Legumes
+mixed nut,Grains and Legumes
+nut,Grains and Legumes
+oat,Grains and Legumes
+pecan,Grains and Legumes
+sage,Vegetables and Herbs
 grouper,Seafood
-gruyere_cheese,Dairy
 guava,Fruit
 haddock,Seafood
-half_and_half,Dish/End Product
-ham,Meat/Animal Product
-hamburger,Dish/End Product
-hazelnut,Nut/Seed
-heavy_cream,Sauce/Powder/Dressing
-heavy_whipping_cream,Sauce/Powder/Dressing
-honey,Sauce/Powder/Dressing
-hop,Plant/Vegetable
-horseradish,Plant/Vegetable
-hot_dog,Dish/End Product
-hot_pepper_sauce,Sauce/Powder/Dressing
-hot_sauce,Sauce/Powder/Dressing
-hot_water,Beverage
-hummus,Dish/End Product
-ice,ETC
-ice_cream,Bakery/Dessert/Snack
-ice_cream_cone,Bakery/Dessert/Snack
-ice_cube,ETC
-icing,Bakery/Dessert/Snack
-icing_sugar,Sauce/Powder/Dressing
-irish_moss,Seafood
-italian_seasoning,Sauce/Powder/Dressing
+hamburger,Seafood
+ketchup,Snacks and Dessert
+honey,Snacks and Dessert
+hop,Vegetables and Herbs
+hot dog,Conditments and Seasonings
+hummus,Vegetables and Herbs
+ice cream cone,Snacks and Dessert
+icing,Snacks and Dessert
+pistachio,Grains and Legumes
+irish moss,Seafood
 jackfruit,Fruit
-jalapeno,Plant/Vegetable
-jalapeno_pepper,Plant/Vegetable
-jerusalem_artichoke,Plant/Vegetable
-jicama,Cereal/Crop/Bean
-kale,Plant/Vegetable
-kefir,Beverage Alcoholic
+jerusalem artichoke,Vegetables and Herbs
+jicama,Grains and Legumes
+kale,Vegetables and Herbs
+kefir,Alcoholic Drinks
 kelp,Seafood
-ketchup,Sauce/Powder/Dressing
-kidney_bean,Cereal/Crop/Bean
-kiwi,Fruit
-kohlrabi,Plant/Vegetable
-kombu,Seafood
-kosher_salt,Sauce/Powder/Dressing
-kumquat,Fruit
-lamb,Meat/Animal Product
-lean_ground_beef,Meat/Animal Product
-leek,Plant/Vegetable
-lemon,Fruit
-lemon_balm,Plant/Vegetable
-lemon_juice,Beverage
-lemon_verbena,Plant/Vegetable
-lemon_zest,Fruit
-lentil,Cereal/Crop/Bean
-lettuce,Plant/Vegetable
-light_brown_sugar,Sauce/Powder/Dressing
-light_corn_syrup,Sauce/Powder/Dressing
-lima_bean,Cereal/Crop/Bean
 lime,Fruit
-lime_juice,Beverage
-lingonberry,Fruit
-lobster,Seafood
-lovage,Plant/Vegetable
-low_fat_milk,Dairy
-low_sodium_chicken_broth,Dish/End Product
-macadamia_nut,Nut/Seed
-macaroni,Cereal/Crop/Bean
-mace,Nut/Seed
-madeira_wine,Beverage Alcoholic
-mandarin_orange,Fruit
-mango,Fruit
-maple_syrup,Sauce/Powder/Dressing
-margarine,Beverage Alcoholic
-marjoram,Plant/Vegetable
-marshmallow,Bakery/Dessert/Snack
-marzipan,Bakery/Dessert/Snack
-mayonnaise,Sauce/Powder/Dressing
-meat,Meat/Animal Product
-meatball,Meat/Animal Product
-meatloaf,Dish/End Product
-melon,Fruit
-meringue,Sauce/Powder/Dressing
-mexican_oregano,Dairy
-milk,Dairy
-millet,Cereal/Crop/Bean
-mint,Bakery/Dessert/Snack
-miso,Sauce/Powder/Dressing
-mixed_nut,Nut/Seed
-molasses,Cereal/Crop/Bean
-monterey_jack_cheese,Dairy
-mozzarella_cheese,Dairy
-mulberry,Fruit
-multigrain_bread,Bakery/Dessert/Snack
-mung_bean,Cereal/Crop/Bean
-mushroom,Fungus
-mustard,Sauce/Powder/Dressing
-mustard_oil,Essential Oil/Fat
-mutton,Meat/Animal Product
-nigella_seed,Nut/Seed
-nut,Nut/Seed
-nutmeg,Nut/Seed
-oat,Cereal/Crop/Bean
-of_fresh_mint,Bakery/Dessert/Snack
-oil,Essential Oil/Fat
-okra,Plant/Vegetable
-olive,Plant/Vegetable
-olive_oil,Essential Oil/Fat
-onion,Plant/Vegetable
-onion_powder,Sauce/Powder/Dressing
-orange,Fruit
-orange_bell_pepper,Plant/Vegetable
-orange_juice,Beverage
-orange_oil,Essential Oil/Fat
-orange_roughy,Seafood
-orange_zest,Fruit
-oregano,Spice
-oyster,Seafood
-oyster_mushroom,Fungus
-pancake,Bakery/Dessert/Snack
-panko_breadcrumb,Bakery/Dessert/Snack
-papaya,Fruit
-paprika,Plant/Vegetable
-parmesan_cheese,Dairy
-parmigiano_reggiano_cheese,Dairy
-parsley,Plant/Vegetable
-parsnip,Plant/Vegetable
-passion_fruit,Fruit
-pasta,Cereal/Crop/Bean
-pate,Dish/End Product
-pawpaw,Plant/Vegetable
-pea,Plant/Vegetable
-peach,Fruit
-peanut,Nut/Seed
-peanut_butter,Sauce/Powder/Dressing
-peanut_oil,Essential Oil/Fat
-pear,Fruit
-pear_brandy,Beverage Alcoholic
-pecan,Nut/Seed
-pectin,ETC
-pepper,Spice
-peppermint,Plant/Vegetable
-persimmon,Fruit
-pheasant,Meat/Animal Product
-philadelphia_cream_cheese,Dairy
-phyllo_dough,Cereal/Crop/Bean
-pie_crust,Cereal/Crop/Bean
-pigeon_pea,Cereal/Crop/Bean
-pine_nut,Nut/Seed
-pineapple,Fruit
-pineapple_juice,Beverage
-pink_salmon,Seafood
-pistachio,Nut/Seed
-pita_bread,Bakery/Dessert/Snack
-plain_flour,Cereal/Crop/Bean
-plain_yogurt,Dairy
-plum,Fruit
-plum_brandy,Beverage Alcoholic
-plum_tomato,Fruit
-plum_wine,Beverage Alcoholic
-pollock,Meat/Animal Product
-pomegranate,Fruit
-popcorn,Bakery/Dessert/Snack
-poppy_seed,Nut/Seed
-pork,Meat/Animal Product
-port_wine,Beverage Alcoholic
-potato,Plant/Vegetable
-potato_bread,Bakery/Dessert/Snack
-potato_chip,Bakery/Dessert/Snack
-powdered_sugar,Sauce/Powder/Dressing
 prawn,Seafood
-prickly_pear,Fruit
-provolone_cheese,Dairy
-pudding,Bakery/Dessert/Snack
-pumpkin,Plant/Vegetable
-pure_vanilla_extract,Sauce/Powder/Dressing
-purslane,Plant/Vegetable
-quail,Meat/Animal Product
+kiwi,Fruit
+kohlrabi,Vegetables and Herbs
+kombu,Seafood
+kumquat,Fruit
+salt,Snacks and Dessert
+leek,Vegetables and Herbs
+lemon,Fruit
+lemon verbena,Conditments and Seasonings
+lima bean,Grains and Legumes
+lingonberry,Fruit
+olive,Vegetables and Herbs
+pate,Conditments and Seasonings
+lovage,Conditments and Seasonings
+madeira wine,Alcoholic Drinks
+mango,Fruit
+marzipan,Snacks and Dessert
+meatloaf,Meat and Poultry
+melon,Fruit
+meringue,Snacks and Dessert
+millet,Grains and Legumes
+mint,Snacks and Dessert
+miso,Grains and Legumes
+mulberry,Fruit
+multigrain bread,Snacks and Dessert
+mutton,Meat and Poultry
+nigella seed,Grains and Legumes
+peanut,Grains and Legumes
+okra,Vegetables and Herbs
+oyster,Seafood
+pancake,Snacks and Dessert
+papaya,Fruit
+parsnip,Vegetables and Herbs
+passion fruit,Fruit
+pawpaw,Vegetables and Herbs
+pea,Vegetables and Herbs
+pear,Fruit
+vodka,Alcoholic Drinks
+peppermint,Conditments and Seasonings
+pheasant,Meat and Poultry
+phyllo dough,Snacks and Dessert
+plum,Fruit
+pomegranate,Fruit
+popcorn,Snacks and Dessert
+poppy seed,Grains and Legumes
+port wine,Alcoholic Drinks
+prickly pear,Fruit
+provolone cheese,Dairy
+purslane,Conditments and Seasonings
+quail,Meat and Poultry
 quince,Fruit
-quinoa,Cereal/Crop/Bean
-rabbit,Meat/Animal Product
-radish,Plant/Vegetable
-rainbow_trout,Seafood
-raisin,Fruit
-raisin_bread,Bakery/Dessert/Snack
-rapini,Plant/Vegetable
-raspberry,Fruit
-ravioli,Dish/End Product
-red_bell_pepper,Plant/Vegetable
-red_currant,Fruit
-red_onion,Plant/Vegetable
-red_pepper,Plant/Vegetable
-red_pepper_flake,Spice
-red_potato,Plant/Vegetable
-red_raspberry,Fruit
-red_rice,Cereal/Crop/Bean
-red_wine,Beverage Alcoholic
-red_wine_vinegar,Beverage Alcoholic
-relish,Plant/Vegetable
-rhubarb,Plant/Vegetable
-rice,Cereal/Crop/Bean
-rice_cake,Bakery/Dessert/Snack
-rice_vinegar,Sauce/Powder/Dressing
-ricotta_cheese,Dairy
-rolled_oat,Cereal/Crop/Bean
-romaine_lettuce,Plant/Vegetable
-romano_cheese,Dairy
-roquefort_cheese,Dairy
-rose,Flower
-rose_wine,Beverage Alcoholic
-rosemary,Flower
-rum,Beverage Alcoholic
-russet_potato,Plant/Vegetable
+quinoa,Grains and Legumes
+rabbit,Meat and Poultry
+radish,Vegetables and Herbs
+rainbow trout,Seafood
+rapini,Vegetables and Herbs
+rice,Grains and Legumes
+wild rice,Grains and Legumes
+roquefort cheese,Dairy
+rose,Vegetables and Herbs
+rum,Alcoholic Drinks
 rutabaga,Dairy
-rye_bread,Bakery/Dessert/Snack
-saffron,Cereal/Crop/Bean
-sage,Plant/Vegetable
-sake,Beverage Alcoholic
-salad_dressing,Sauce/Powder/Dressing
-salmon,Seafood
-salmon_fillet,Seafood
-salsa,Sauce/Powder/Dressing
-salt,Sauce/Powder/Dressing
-salt_&_freshly_ground_black_pepper,Spice
-salt_&_pepper,Spice
-salt_and_black_pepper,Sauce/Powder/Dressing
-salt_and_pepper,Sauce/Powder/Dressing
-saskatoon_berry,Fruit
-sausage,Meat/Animal Product
-scallion,Plant/Vegetable
-scallop,Seafood
-scotch_whisky,Beverage Alcoholic
-sea_salt,Sauce/Powder/Dressing
-seasoning_salt,Sauce/Powder/Dressing
-semi_sweet_chocolate_chip,Bakery/Dessert/Snack
-semisweet_chocolate,Bakery/Dessert/Snack
-semolina,Plant/Vegetable
-sesame,Nut/Seed
-sesame_oil,Essential Oil/Fat
-sesame_seed,Nut/Seed
-shallot,Plant/Vegetable
-sharp_cheddar_cheese,Dairy
-shortening,Dairy
-shredded_cheddar_cheese,Dairy
-shrimp,Seafood
-skim_milk,Dairy
-sliced_almond,Nut/Seed
-sliced_mushroom,Fungus
-slivered_almond,Nut/Seed
+saffron,Grains and Legumes
+sake,Alcoholic Drinks
+saskatoon berry,Fruit
 smelt,Seafood
 snail,Seafood
-sockeye_salmon,Seafood
-sorghum,Cereal/Crop/Bean
-sorrel,Plant/Vegetable
-soup,Dish/End Product
-sour_cherry,Plant/Vegetable
-sour_cream,Dairy
-soy_sauce,Sauce/Powder/Dressing
-soy_yogurt,Dairy
-soybean,Cereal/Crop/Bean
-soybean_oil,Essential Oil/Fat
-spaghetti,Cereal/Crop/Bean
-sparkling_wine,Beverage Alcoholic
-spearmint,Sauce/Powder/Dressing
-spelt,Cereal/Crop/Bean
-spinach,Plant/Vegetable
-spirulina,Plant/Vegetable
-squab,Meat/Animal Product
+sockeye salmon,Seafood
+sorghum,Grains and Legumes
+sparkling wine,Alcoholic Drinks
+spelt,Grains and Legumes
+spirulina,Seafood
+wonton wrapper,Snacks and Dessert
+squab,Meat and Poultry
 squid,Seafood
-squirrel,Meat/Animal Product
-star_anise,Plant/Vegetable
-star_fruit,Fruit
-strawberry,Plant/Vegetable
-strawberry_jam,Sauce/Powder/Dressing
-striped_bass,Seafood
-sugar,Sauce/Powder/Dressing
-sugar_substitute,Sauce/Powder/Dressing
-summer_savory,Plant/Vegetable
-swede,Plant/Vegetable
-sweet_basil,Plant/Vegetable
-sweet_cherry,Fruit
-sweet_marjoram,Plant/Vegetable
-sweet_onion,Plant/Vegetable
-sweet_potato,Plant/Vegetable
-sweetcorn,Cereal/Crop/Bean
-sweetened_condensed_milk,Beverage
-swiss_cheese,Dairy
+squirrel,Meat and Poultry
+striped bass,Seafood
+swede,Vegetables and Herbs
+sweetcorn,Grains and Legumes
 swordfish,Seafood
-syrup,Sauce/Powder/Dressing
-tabasco_sauce,Sauce/Powder/Dressing
-tamale,Cereal/Crop/Bean
-tangerine,Plant/Vegetable
-tarragon,Plant/Vegetable
-tea,Beverage
-teff,Plant/Vegetable
-thyme,Plant/Vegetable
-tofu,Dish/End Product
-tomato,Plant/Vegetable
-tomato_paste,Sauce/Powder/Dressing
-tomato_sauce,Sauce/Powder/Dressing
-tortilla,Cereal/Crop/Bean
-tortilla_chip,Cereal/Crop/Bean
-tostada,Cereal/Crop/Bean
-trail_mix,Dish/End Product
-truffle,Fungus
+tamale,Grains and Legumes
+tangerine,Vegetables and Herbs
+tea,Vegetables and Herbs
+teff,Conditments and Seasonings
+tostada,Grains and Legumes
+trail mix,Snacks and Dessert
 turbot,Seafood
-turkey,Meat/Animal Product
-turmeric,Plant/Vegetable
-turnip,Plant/Vegetable
-unsalted_butter,Dairy
-unsweetened_cocoa_powder,Sauce/Powder/Dressing
-vanilla,Plant/Vegetable
-vanilla_extract,Plant/Vegetable
-vanilla_ice_cream,Dairy
-vegetable_broth,Plant/Vegetable
-vegetable_juice,Beverage
-vegetable_oil,Essential Oil/Fat
-vegetable_stock,Plant/Vegetable
-vermouth,Beverage Alcoholic
-vinegar,Sauce/Powder/Dressing
-vodka,Beverage Alcoholic
-waffle,Bakery/Dessert/Snack
+waffle,Snacks and Dessert
 walleye,Seafood
-walnut,Nut/Seed
-warm_water,Beverage
-wasabi,Sauce/Powder/Dressing
-water,Beverage
-water_chestnut,Nut/Seed
-watercress,Plant/Vegetable
-wheat,Cereal/Crop/Bean
+wasabi,Conditments and Seasonings
+watercress,Conditments and Seasonings
 whey,Dairy
-whipped_cream,Dairy
-whipping_cream,Dairy
-white_bread,Bakery/Dessert/Snack
-white_cabbage,Plant/Vegetable
-white_onion,Plant/Vegetable
-white_pepper,Plant/Vegetable
-white_sugar,Spice
-white_vinegar,Sauce/Powder/Dressing
-white_wine,Beverage Alcoholic
-white_wine_vinegar,Sauce/Powder/Dressing
-whole_milk,Dairy
-whole_wheat_flour,Cereal/Crop/Bean
-wild_rice,Cereal/Crop/Bean
-wine,Beverage Alcoholic
-winter_savory,Plant/Vegetable
-winter_squash,Fruit
-wonton_wrapper,Cereal/Crop/Bean
-worcestershire_sauce,Sauce/Powder/Dressing
-yam,Plant/Vegetable
-yellow_bell_pepper,Plant/Vegetable
-yellow_onion,Plant/Vegetable
-yellow_zucchini,Plant/Vegetable
-yogurt,Dairy
-zucchini,Plant/Vegetable
+yam,Vegetables and Herbs

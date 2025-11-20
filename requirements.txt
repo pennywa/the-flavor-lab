@@ -18,3 +18,6 @@ tqdm>=4.66.0      # progress bars (useful for larger datasets)
 
 # ML Classification
 sentence-transformers>=2.2.0  # for ingredient category classification
+transformers>=4.30.0  # for zero-shot classification pipeline
+torch>=2.0.0  # required by transformers
+scikit-learn>=1.3.0  # for ingredient classification model
