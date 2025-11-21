@@ -5904,7 +5904,7 @@
       "color": "#FFE66D"
     },
     "agar": {
-      "category": "Seafood",
+      "category": "Condiments and Seasonings",
       "confidence": 0.19745302200317383,
       "color": "#FFD93D"
     },
@@ -5919,7 +5919,7 @@
       "color": "#FFD93D"
     },
     "allspice": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.23658734560012817,
       "color": "#C7CEEA"
     },
@@ -5929,7 +5929,7 @@
       "color": "#FFE66D"
     },
     "amaranth": {
-      "category": "Conditments and Seasonings",
+      "category": "Grains and Legumes",
       "confidence": 0.24335448443889618,
       "color": "#C7CEEA"
     },
@@ -5939,12 +5939,12 @@
       "color": "#FFD93D"
     },
     "angelica": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2063012272119522,
       "color": "#C7CEEA"
     },
     "anise": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.1579180657863617,
       "color": "#C7CEEA"
     },
@@ -5959,7 +5959,7 @@
       "color": "#4ECDC4"
     },
     "apple_cider_vinegar": {
-      "category": "Alcoholic Drinks",
+      "category": "Condiments and Seasonings",
       "confidence": 0.31194499135017395,
       "color": "#4ECDC4"
     },
@@ -5969,7 +5969,7 @@
       "color": "#F38181"
     },
     "arrowroot": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.13165929913520813,
       "color": "#C7CEEA"
     },
@@ -6114,7 +6114,7 @@
       "color": "#FFE66D"
     },
     "bread": {
-      "category": "Snacks and Dessert",
+      "category": "Grains and Legumes",
       "confidence": 0.5311442017555237,
       "color": "#FF6B6B"
     },
@@ -6194,7 +6194,7 @@
       "color": "#FF6B6B"
     },
     "canola_oil": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.26611384749412537,
       "color": "#C7CEEA"
     },
@@ -6204,12 +6204,12 @@
       "color": "#FFE66D"
     },
     "capsicum": {
-      "category": "Conditments and Seasonings",
+      "category": "Vegetables and Herbs",
       "confidence": 0.431814581155777,
       "color": "#C7CEEA"
     },
     "cardamom": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.24332495033740997,
       "color": "#C7CEEA"
     },
@@ -6304,7 +6304,7 @@
       "color": "#F38181"
     },
     "chervil": {
-      "category": "Conditments and Seasonings",
+      "category": "Vegetables and Herbs",
       "confidence": 0.23839984834194183,
       "color": "#C7CEEA"
     },
@@ -6324,7 +6324,7 @@
       "color": "#FFE66D"
     },
     "chili": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3898831605911255,
       "color": "#C7CEEA"
     },
@@ -6349,17 +6349,17 @@
       "color": "#FF6B6B"
     },
     "chocolate_spread": {
-      "category": "Dairy",
+      "category": "Snacks and Dessert",
       "confidence": 0.3055162727832794,
       "color": "#95E1D3"
     },
     "cider": {
-      "category": "Conditments and Seasonings",
+      "category": "Alcoholic Drinks",
       "confidence": 0.3895973265171051,
       "color": "#C7CEEA"
     },
     "cinnamon": {
-      "category": "Conditments and Seasonings",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3834334909915924,
       "color": "#C7CEEA"
     },
@@ -6379,7 +6379,7 @@
       "color": "#F38181"
     },
     "clove": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2821260392665863,
       "color": "#C7CEEA"
     },
@@ -6424,12 +6424,12 @@
       "color": "#95E1D3"
     },
     "cooking_oil": {
-      "category": "Snacks and Dessert",
+      "category": "Condiments and Seasonings",
       "confidence": 0.20726926624774933,
       "color": "#FF6B6B"
     },
     "coriander": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.44850966334342957,
       "color": "#C7CEEA"
     },
@@ -6444,7 +6444,7 @@
       "color": "#FF6B6B"
     },
     "corn_oil": {
-      "category": "Grains and Legumes",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3542885482311249,
       "color": "#FFE66D"
     },
@@ -6459,7 +6459,7 @@
       "color": "#95E1D3"
     },
     "couscous": {
-      "category": "Seafood",
+      "category": "Grains and Legumes",
       "confidence": 0.3446461856365204,
       "color": "#FFD93D"
     },
@@ -6494,7 +6494,7 @@
       "color": "#FCBAD3"
     },
     "cumin": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.17379294335842133,
       "color": "#C7CEEA"
     },
@@ -6504,7 +6504,7 @@
       "color": "#FCBAD3"
     },
     "curry_leaf": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.424739807844162,
       "color": "#F38181"
     },
@@ -6524,7 +6524,7 @@
       "color": "#AA96DA"
     },
     "dill": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.12054899334907532,
       "color": "#C7CEEA"
     },
@@ -6534,7 +6534,7 @@
       "color": "#FF6B6B"
     },
     "dumpling": {
-      "category": "Seafood",
+      "category": "Grains and Legumes",
       "confidence": 0.09360945969820023,
       "color": "#FFD93D"
     },
@@ -6554,7 +6554,7 @@
       "color": "#FCBAD3"
     },
     "epazote": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.1694851666688919,
       "color": "#C7CEEA"
     },
@@ -6564,7 +6564,7 @@
       "color": "#95E1D3"
     },
     "fennel": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2559165060520172,
       "color": "#C7CEEA"
     },
@@ -6594,7 +6594,7 @@
       "color": "#FFE66D"
     },
     "fruit_juice": {
-      "category": "Fruit",
+      "category": "Snacks and Dessert",
       "confidence": 0.594916820526123,
       "color": "#F38181"
     },
@@ -6614,17 +6614,17 @@
       "color": "#FF6B6B"
     },
     "garlic": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.48072749376296997,
       "color": "#C7CEEA"
     },
     "gelatin": {
-      "category": "Snacks and Dessert",
+      "category": "Condiments and Seasonings",
       "confidence": 0.36644062399864197,
       "color": "#FF6B6B"
     },
     "ghee": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.1357620656490326,
       "color": "#C7CEEA"
     },
@@ -6709,7 +6709,7 @@
       "color": "#AA96DA"
     },
     "hamburger": {
-      "category": "Seafood",
+      "category": "Meat and Poultry",
       "confidence": 0.371675580739975,
       "color": "#FFD93D"
     },
@@ -6719,7 +6719,7 @@
       "color": "#FFE66D"
     },
     "honey": {
-      "category": "Snacks and Dessert",
+      "category": "Condiments and Seasonings",
       "confidence": 0.21448534727096558,
       "color": "#FF6B6B"
     },
@@ -6734,17 +6734,17 @@
       "color": "#FCBAD3"
     },
     "hot_dog": {
-      "category": "Conditments and Seasonings",
+      "category": "Meat and Poultry",
       "confidence": 0.26235947012901306,
       "color": "#C7CEEA"
     },
     "hummus": {
-      "category": "Vegetables and Herbs",
+      "category": "Condiments and Seasonings",
       "confidence": 0.4482419192790985,
       "color": "#FCBAD3"
     },
     "ice_cream": {
-      "category": "Dairy",
+      "category": "Snacks and Dessert",
       "confidence": 0.4535849988460541,
       "color": "#95E1D3"
     },
@@ -6784,7 +6784,7 @@
       "color": "#FCBAD3"
     },
     "kefir": {
-      "category": "Alcoholic Drinks",
+      "category": "Dairy",
       "confidence": 0.24917171895503998,
       "color": "#4ECDC4"
     },
@@ -6794,7 +6794,7 @@
       "color": "#FFD93D"
     },
     "ketchup": {
-      "category": "Snacks and Dessert",
+      "category": "Condiments and Seasonings",
       "confidence": 0.36779066920280457,
       "color": "#FF6B6B"
     },
@@ -6844,7 +6844,7 @@
       "color": "#F38181"
     },
     "lemon_verbena": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.35239407420158386,
       "color": "#C7CEEA"
     },
@@ -6879,12 +6879,12 @@
       "color": "#FFD93D"
     },
     "lovage": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2014390230178833,
       "color": "#C7CEEA"
     },
     "macadamia_nut": {
-      "category": "Fruit",
+      "category": "Grains and Legumes",
       "confidence": 0.41148868203163147,
       "color": "#F38181"
     },
@@ -6914,7 +6914,7 @@
       "color": "#F38181"
     },
     "margarine": {
-      "category": "Alcoholic Drinks",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3265412449836731,
       "color": "#4ECDC4"
     },
@@ -7079,17 +7079,17 @@
       "color": "#FCBAD3"
     },
     "orange_oil": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3756999373435974,
       "color": "#F38181"
     },
     "orange_roughy": {
-      "category": "Fruit",
+      "category": "Seafood",
       "confidence": 0.3861328065395355,
       "color": "#F38181"
     },
     "oregano": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3474477529525757,
       "color": "#C7CEEA"
     },
@@ -7099,7 +7099,7 @@
       "color": "#FFD93D"
     },
     "oyster_mushroom": {
-      "category": "Seafood",
+      "category": "Vegetables and Herbs",
       "confidence": 0.4753981828689575,
       "color": "#FFD93D"
     },
@@ -7139,7 +7139,7 @@
       "color": "#FFE66D"
     },
     "pate": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.16710707545280457,
       "color": "#C7CEEA"
     },
@@ -7169,7 +7169,7 @@
       "color": "#FF6B6B"
     },
     "peanut_oil": {
-      "category": "Grains and Legumes",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3491246700286865,
       "color": "#FFE66D"
     },
@@ -7199,7 +7199,7 @@
       "color": "#FCBAD3"
     },
     "peppermint": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.432102233171463,
       "color": "#C7CEEA"
     },
@@ -7214,7 +7214,7 @@
       "color": "#AA96DA"
     },
     "phyllo_dough": {
-      "category": "Snacks and Dessert",
+      "category": "Grains and Legumes",
       "confidence": 0.35770300030708313,
       "color": "#FF6B6B"
     },
@@ -7244,7 +7244,7 @@
       "color": "#FFE66D"
     },
     "pita_bread": {
-      "category": "Snacks and Dessert",
+      "category": "Grains and Legumes",
       "confidence": 0.42314037680625916,
       "color": "#FF6B6B"
     },
@@ -7294,7 +7294,7 @@
       "color": "#FCBAD3"
     },
     "potato_bread": {
-      "category": "Snacks and Dessert",
+      "category": "Grains and Legumes",
       "confidence": 0.5496237874031067,
       "color": "#FF6B6B"
     },
@@ -7324,7 +7324,7 @@
       "color": "#FCBAD3"
     },
     "purslane": {
-      "category": "Conditments and Seasonings",
+      "category": "Vegetables and Herbs",
       "confidence": 0.10792778432369232,
       "color": "#C7CEEA"
     },
@@ -7409,7 +7409,7 @@
       "color": "#4ECDC4"
     },
     "relish": {
-      "category": "Snacks and Dessert",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2130139172077179,
       "color": "#FF6B6B"
     },
@@ -7449,7 +7449,7 @@
       "color": "#4ECDC4"
     },
     "rosemary": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.44004711508750916,
       "color": "#C7CEEA"
     },
@@ -7464,7 +7464,7 @@
       "color": "#95E1D3"
     },
     "rye_bread": {
-      "category": "Snacks and Dessert",
+      "category": "Grains and Legumes",
       "confidence": 0.5001192092895508,
       "color": "#FF6B6B"
     },
@@ -7484,7 +7484,7 @@
       "color": "#4ECDC4"
     },
     "salad_dressing": {
-      "category": "Snacks and Dessert",
+      "category": "Condiments and Seasonings",
       "confidence": 0.4017309248447418,
       "color": "#FF6B6B"
     },
@@ -7494,7 +7494,7 @@
       "color": "#FFD93D"
     },
     "salt": {
-      "category": "Snacks and Dessert",
+      "category": "Condiments and Seasonings",
       "confidence": 0.22597447037696838,
       "color": "#FF6B6B"
     },
@@ -7559,7 +7559,7 @@
       "color": "#FFE66D"
     },
     "sorrel": {
-      "category": "Conditments and Seasonings",
+      "category": "Vegetables and Herbs",
       "confidence": 0.16580648720264435,
       "color": "#C7CEEA"
     },
@@ -7584,7 +7584,7 @@
       "color": "#FFE66D"
     },
     "soybean_oil": {
-      "category": "Grains and Legumes",
+      "category": "Condiments and Seasonings",
       "confidence": 0.34871959686279297,
       "color": "#FFE66D"
     },
@@ -7594,7 +7594,7 @@
       "color": "#4ECDC4"
     },
     "spearmint": {
-      "category": "Conditments and Seasonings",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2117069661617279,
       "color": "#C7CEEA"
     },
@@ -7629,7 +7629,7 @@
       "color": "#AA96DA"
     },
     "star_anise": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.15357030928134918,
       "color": "#F38181"
     },
@@ -7644,7 +7644,7 @@
       "color": "#F38181"
     },
     "strawberry_jam": {
-      "category": "Fruit",
+      "category": "Snacks and Dessert",
       "confidence": 0.4047209620475769,
       "color": "#F38181"
     },
@@ -7659,7 +7659,7 @@
       "color": "#FF6B6B"
     },
     "summer_savory": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2596392035484314,
       "color": "#C7CEEA"
     },
@@ -7684,7 +7684,7 @@
       "color": "#FF6B6B"
     },
     "sweet_potato": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.39618951082229614,
       "color": "#F38181"
     },
@@ -7714,12 +7714,12 @@
       "color": "#FFE66D"
     },
     "tangerine": {
-      "category": "Vegetables and Herbs",
+      "category": "Fruit",
       "confidence": 0.3569776713848114,
       "color": "#FCBAD3"
     },
     "tarragon": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.14757591485977173,
       "color": "#C7CEEA"
     },
@@ -7729,7 +7729,7 @@
       "color": "#FCBAD3"
     },
     "teff": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.1468881070613861,
       "color": "#C7CEEA"
     },
@@ -7784,17 +7784,17 @@
       "color": "#AA96DA"
     },
     "turmeric": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.29678136110305786,
       "color": "#C7CEEA"
     },
     "turnip": {
-      "category": "Conditments and Seasonings",
+      "category": "Vegetables and Herbs",
       "confidence": 0.11760122328996658,
       "color": "#C7CEEA"
     },
     "vanilla": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2906440496444702,
       "color": "#C7CEEA"
     },
@@ -7809,7 +7809,7 @@
       "color": "#4ECDC4"
     },
     "vinegar": {
-      "category": "Snacks and Dessert",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3046192228794098,
       "color": "#FF6B6B"
     },
@@ -7834,7 +7834,7 @@
       "color": "#FFE66D"
     },
     "wasabi": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.19050051271915436,
       "color": "#C7CEEA"
     },
@@ -7849,7 +7849,7 @@
       "color": "#FFE66D"
     },
     "watercress": {
-      "category": "Conditments and Seasonings",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2406391203403473,
       "color": "#C7CEEA"
     },
@@ -7864,7 +7864,7 @@
       "color": "#95E1D3"
     },
     "white_bread": {
-      "category": "Snacks and Dessert",
+      "category": "Grains and Legumes",
       "confidence": 0.5325928926467896,
       "color": "#FF6B6B"
     },
@@ -7904,7 +7904,7 @@
       "color": "#FCBAD3"
     },
     "wonton_wrapper": {
-      "category": "Snacks and Dessert",
+      "category": "Grains and Legumes",
       "confidence": 0.16394981741905212,
       "color": "#FF6B6B"
     },
@@ -7919,7 +7919,7 @@
       "color": "#FCBAD3"
     },
     "yellow_zucchini": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.37663373351097107,
       "color": "#F38181"
     },
@@ -7938,7 +7938,7 @@
     "Meat and Poultry",
     "Vegetables and Herbs",
     "Seafood",
-    "Conditments and Seasonings"
+    "Condiments and Seasonings"
   ],
   "category_colors": {
     "Snacks and Dessert": "#FF6B6B",
@@ -7949,6 +7949,6 @@
     "Meat and Poultry": "#AA96DA",
     "Vegetables and Herbs": "#FCBAD3",
     "Seafood": "#FFD93D",
-    "Conditments and Seasonings": "#C7CEEA"
+    "Condiments and Seasonings": "#C7CEEA"
   }
 }

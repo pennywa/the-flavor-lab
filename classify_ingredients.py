@@ -27,7 +27,7 @@ CATEGORIES = [
     "Meat and Poultry",
     "Vegetables and Herbs",
     "Seafood",
-    "Conditments and Seasonings"  # Note: typo in CSV ("Conditments" instead of "Condiments")
+    "Condiments and Seasonings"  # Note: typo in CSV ("Condiments" instead of "Condiments")
 ]
 
 def map_category_to_target(old_category):
@@ -56,13 +56,13 @@ def map_category_to_target(old_category):
         'Flower': 'Vegetables and Herbs',
         
         # Sauce/Powder/Dressing -> Conditments and Seasonings
-        'Sauce/Powder/Dressing': 'Conditments and Seasonings',
+        'Sauce/Powder/Dressing': 'Condiments and Seasonings',
         
         # Nut/Seed -> Grains and Legumes (or could be Vegetables and Herbs)
         'Nut/Seed': 'Grains and Legumes',
         
         # Essential Oil/Fat -> Conditments and Seasonings
-        'Essential Oil/Fat': 'Conditments and Seasonings',
+        'Essential Oil/Fat': 'Condiments and Seasonings',
         
         # Fungus -> Vegetables and Herbs
         'Fungus': 'Vegetables and Herbs',
