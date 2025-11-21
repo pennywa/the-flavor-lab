@@ -50,7 +50,6 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 
 ## 🎨 Project Philosophy
 
-Our project needs to **SLAP**:
 - **S**cientific - Rooted in real chemistry
 - **L**ogical - Makes sense to users
 - **A**mazing - Surprising flavor combinations
