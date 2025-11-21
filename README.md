@@ -25,15 +25,21 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 
 ## 🛠️ Tech Stack
 
-### Data Processing
-- **Python** (pandas, numpy, scikit-learn)
+### Frontend
+- **React**
+- **react-force-graph**
+- **Tailwind CSS**
+- **Three.js**
 
-### Data Storage
-- **MongoDB** (NoSQL) 
+### Backend
+- **Python/FastAPI** for ingredient relationships
 - **Neo4j** (Graph Database)
 
-### Web Application
-- **Streamlit** - Interactive web interface for input/output
+### Deployment
+- **Netlify** 
+
+### Data
+- **CSV/JSON** for similarity scores
 
 ## 📊 Data Source
 
