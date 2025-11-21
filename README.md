@@ -58,24 +58,8 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.8+
-- MongoDB
 
 ### Installation
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/the-flavor-lab.git
-cd the-flavor-lab
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up MongoDB
-# Start MongoDB service
-
-# Run the application
-streamlit run app.py
-```
 
 ## 🧪 How It Works
 
