@@ -6,7 +6,7 @@
 
 // Configuration from config.js
 const CONFIG_LOADED = typeof CONFIG !== 'undefined' ? CONFIG : {
-    GEMINI_API_KEY: '',
+    GEMINI_API_KEY: 'AIzaSyAvpMihPPGLrrPoQgD5U0SE28Nnc_jmypA',
     GEMINI_MODEL: 'gemini-2.5-flash'
 };
 
@@ -828,21 +828,29 @@ function getFlavorPreferences() {
  * Get dietary restrictions from dropdown
  */
 function getDietaryRestrictions() {
+    // Access the global selectedDietaryRestrictions array
+    if (typeof window !== 'undefined' && window.selectedDietaryRestrictions) {
+        return window.selectedDietaryRestrictions;
+    }
+    // Fallback: read from dropdown if it exists
     const select = document.getElementById('dietarySelect');
-    const selected = Array.from(select.selectedOptions).map(opt => opt.value);
-    return selected.filter(v => v !== '');
+    if (select) {
+        const selected = Array.from(select.selectedOptions).map(opt => opt.value);
+        return selected.filter(v => v !== '');
+    }
+    return [];
 }
 
 /**
  * Display recipes in the UI
  */
 function displayRecipes(recipes) {
-    const container = document.getElementById('recipeResults');
+    const container = document.getElementById('recipeContent');
+    if (!container) return;
     
     if (!recipes || recipes.length === 0) {
         console.error('displayRecipes called with empty or null recipes:', recipes);
         container.innerHTML = `
-            <h2>Generated Recipes</h2>
             <div class="no-recipes">
                 <p><strong>No recipes generated.</strong></p>
                 <p>Please try again or check the browser console for details.</p>
@@ -854,7 +862,6 @@ function displayRecipes(recipes) {
     console.log('Displaying', recipes.length, 'recipes');
     
     container.innerHTML = `
-        <h2>Generated Recipes</h2>
         ${recipes.map((recipe, index) => {
         // Validate recipe has required fields (only log if critical data is missing)
         if (!recipe.name && !recipe.recipe_name) {
@@ -946,16 +953,20 @@ function displayRecipes(recipes) {
                 <div class="recipe-instructions">
                     <strong>Instructions:</strong>
                     ${steps.length > 0 ? `
-                    <ol style="margin-top: 10px; padding-left: 25px; line-height: 1.8;">
-                        ${steps.map(step => `<li style="margin-bottom: 10px; padding-left: 5px; color: #555;">${step}</li>`).join('')}
+                    <ol class="recipe-step-list">
+                        ${steps.map(step => `<li>${step}</li>`).join('')}
                     </ol>
-                    ` : '<p style="margin-top: 10px; color: #666; font-style: italic;">Instructions not provided</p>'}
+                    ` : '<p class="recipe-empty-text">Instructions not provided</p>'}
                 </div>
             </div>
         </div>
         `;
     }).join('')}
     `;
+    
+    if (typeof window !== 'undefined' && typeof window.openRecipeDrawer === 'function') {
+        window.openRecipeDrawer();
+    }
 }
 
 /**
@@ -972,29 +983,54 @@ async function generateAndDisplayRecipes() {
     const flavorPreferences = getFlavorPreferences();
     const dietaryRestrictions = getDietaryRestrictions();
     
-    const container = document.getElementById('recipeResults');
+    const container = document.getElementById('recipeContent');
     
-    // Show loading state with cute domino animation
-    container.innerHTML = `
-        <h2>Generated Recipes</h2>
-        <div class="domino-loader">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div style="text-align: center; color: #5a4a42; margin-top: 20px;">
-            <p><strong>🍳 Generating recipes with AI...</strong></p>
-            <p style="font-size: 14px; opacity: 0.8;">This may take a few seconds.</p>
-        </div>
-    `;
+    if (typeof window !== 'undefined' && typeof window.openRecipeDrawer === 'function') {
+        window.openRecipeDrawer();
+    }
     
-    // Scroll to recipe results at bottom
-    const recipeResults = document.getElementById('recipeResults');
-    if (recipeResults) {
-        setTimeout(() => {
-            recipeResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+    if (container) {
+        container.innerHTML = `
+            <div class="lab-loader">
+                <div class="flask-container">
+                    <svg class="flask-svg" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4de4ff;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#00a8cc;stop-opacity:0.9" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Flask body -->
+                        <path d="M 60 50 L 60 250 Q 60 270 80 270 L 120 270 Q 140 270 140 250 L 140 50 Z" 
+                              fill="#2a2a3a" stroke="#4de4ff" stroke-width="2" opacity="0.8"/>
+                        <!-- Liquid -->
+                        <ellipse cx="100" cy="200" rx="35" ry="8" fill="url(#liquidGrad)" class="liquid-surface"/>
+                        <rect x="65" y="200" width="70" height="60" fill="url(#liquidGrad)" class="liquid-body"/>
+                        <!-- Bubbles -->
+                        <circle cx="85" cy="220" r="4" fill="#7fffd4" opacity="0.7" class="bubble bubble-1"/>
+                        <circle cx="105" cy="235" r="3" fill="#7fffd4" opacity="0.6" class="bubble bubble-2"/>
+                        <circle cx="115" cy="215" r="5" fill="#7fffd4" opacity="0.8" class="bubble bubble-3"/>
+                        <circle cx="95" cy="245" r="3.5" fill="#7fffd4" opacity="0.7" class="bubble bubble-4"/>
+                        <circle cx="75" cy="230" r="4.5" fill="#7fffd4" opacity="0.6" class="bubble bubble-5"/>
+                        <!-- Neck -->
+                        <rect x="95" y="30" width="10" height="20" fill="#2a2a3a" stroke="#4de4ff" stroke-width="2" opacity="0.8"/>
+                        <!-- Whisking motion indicator -->
+                        <path d="M 100 20 L 100 30 M 95 25 L 105 25" stroke="#4de4ff" stroke-width="2" class="whisk"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="no-recipes" style="font-style: normal;">
+                <p><strong>Generating recipes with AI…</strong></p>
+                <p>The Experimental Kitchen is assembling your tasting menu.</p>
+            </div>
+        `;
     }
     
     try {
@@ -1021,14 +1057,15 @@ async function generateAndDisplayRecipes() {
             helpText = '<p>💡 Check the browser console (F12) for more details</p>';
         }
         
-        container.innerHTML = `
-            <h2>Generated Recipes</h2>
-            <div class="no-recipes">
-                <p><strong>❌ Error generating recipes</strong></p>
-                <p><code>${errorMessage}</code></p>
-                ${helpText}
-            </div>
-        `;
+        if (container) {
+            container.innerHTML = `
+                <div class="no-recipes" style="font-style: normal;">
+                    <p><strong>❌ Error generating recipes</strong></p>
+                    <p><code>${errorMessage}</code></p>
+                    ${helpText}
+                </div>
+            `;
+        }
     }
 }
 

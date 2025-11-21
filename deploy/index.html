@@ -3,93 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Ingredient Network</title>
+    <title>The Flavor Lab</title>
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="loader">
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-            </div>
-            <div style="flex: 0 0 auto;">
+    <div class="lab-wrapper">
+        <header class="header">
+            <div class="header-orb left"></div>
+            <div class="header-content">
                 <h1>The Flavor Lab</h1>
-            <p>Discover flavor pairings and explore ingredient relationships</p>
             </div>
-            <div class="loader">
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-                <div class="mr-freeze"></div>
-            </div>
-        </div>
+            <div class="header-orb right"></div>
+        </header>
 
-        <div class="search-container">
-            <div style="display: flex; gap: 10px;">
+        <section class="lab-controls">
+            <div class="search-block">
+                <label class="eyebrow" for="searchInput">Ingredient Search</label>
+                <div class="search-bar">
                 <input 
                     type="text" 
                     id="searchInput" 
                     class="search-box" 
-                    placeholder="Search for an ingredient (e.g., garlic, tomato, cheese)..."
+                        placeholder="e.g., garlic, yuzu, cocoa nibs…" 
                     autocomplete="off"
-                    style="flex: 1;"
-                >
-                <button 
-                    id="clearButton" 
-                    style="padding: 15px 25px; background: #dc3545; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold;"
-                    onmouseover="this.style.background='#c82333'" 
-                    onmouseout="this.style.background='#dc3545'"
-                >
-                    Clear
-                </button>
+                    >
+                    <button id="clearButton" class="ghost-btn">Clear</button>
             </div>
-            <div class="filter-container">
-                <span class="filter-label">Filter by Category:</span>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            <div class="filter-row">
                 <div class="category-filter-wrapper">
-                    <div id="categoryFilter" class="category-filter">All Categories</div>
+                    <div id="categoryFilter" class="category-filter">Category: All Categories</div>
                     <div id="categoryDropdown" class="category-dropdown"></div>
                 </div>
-                <button id="backButton" class="back-button" disabled>← Back</button>
+                <div class="dietary-filter-wrapper">
+                    <div id="dietaryFilter" class="category-filter">Diet: All Diets</div>
+                    <div id="dietaryDropdown" class="category-dropdown"></div>
             </div>
-            <div id="suggestions" class="suggestions"></div>
+                <button id="backButton" class="back-button" disabled aria-label="Undo last expansion">
+                    <span>↺</span>
+                    Undo Pulse
+                </button>
         </div>
+        </section>
 
         <div class="main-content">
-            <div class="network-container">
+            <section class="network-shell">
+                <div class="panel-heading compact">
+                    <div>
+                        <p class="eyebrow">Ingredient Network</p>
+                    </div>
+                </div>
+                <div class="network-container neon-panel">
                 <div id="network"></div>
                 <button class="network-center-btn" onclick="centerNetwork()" title="Center and reset view">
                     <i class="fas fa-crosshairs"></i>
                 </button>
             </div>
+            </section>
 
-            <div class="clicked-ingredients">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                    <h2 style="margin: 0;">Explored Ingredients (max 10):</h2>
+            <section class="ingredient-list-section panel-card">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Ingredient List</p>
+                    </div>
                 </div>
                 <div id="clickedList" class="clicked-list">
-                    <div class="no-ingredients">No ingredients explored yet. Search and click to start!</div>
+                    <div class="no-ingredients">No ingredients logged yet. Search above and tap a glowing node to begin.</div>
                 </div>
-            </div>
+            </section>
 
-            <div class="recipe-section" id="recipePanel">
-                <h2>Recipe Generator</h2>
+            <section class="flavor-preferences-section panel-card" id="recipePanel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Flavor Preferences</p>
+                    </div>
+                </div>
                 <div class="recipe-controls">
-                    <div class="flavor-sliders">
+                    <div class="flavor-sliders horizontal">
                         <div class="flavor-slider-group">
                             <label>Umami</label>
                             <div class="input-range">
@@ -98,11 +96,11 @@
                                     <div class="range-slider-handle" id="umamiHandle"></div>
                                 </div>
                                 <div class="labels" id="umamiLabels" data-value="3">
-                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
-                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
-                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
-                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
-                                    <div class="icon-item"><i class="fas fa-fire"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -162,50 +160,46 @@
                                     <div class="range-slider-handle" id="saltyHandle"></div>
                                 </div>
                                 <div class="labels" id="saltyLabels" data-value="3">
-                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
-                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
-                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
-                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
-                                    <div class="icon-item"><i class="fas fa-cookie"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <label for="dietarySelect" style="font-size: 13px; font-weight: 600; color: #555; display: block; margin-bottom: 5px;">
-                            Dietary Restrictions:
-                        </label>
-                        <select id="dietarySelect" class="dietary-select" multiple size="5">
-                            <option value="pescatarian">Pescatarian</option>
-                            <option value="vegetarian">Vegetarian</option>
-                            <option value="vegan">Vegan</option>
-                            <option value="halal">Halal</option>
-                            <option value="gluten_free">Gluten Free</option>
-                        </select>
-                        <small style="font-size: 11px; color: #666; display: block; margin-top: 5px;">
-                            Click to select/deselect options
-                        </small>
                     </div>
 
                     <button class="generate-recipe-btn" onclick="window.recipeGenerator.generateAndDisplayRecipes()">
                         Generate Recipes
                     </button>
                 </div>
-            </div>
+            </section>
         </div>
+    </div>
 
-        <!-- Recipe Results Section at Bottom -->
-        <div id="recipeResults" class="recipe-results-bottom">
-            <h2>Generated Recipes</h2>
+    <div id="recipeResults" class="recipe-results-bottom" aria-live="polite">
+        <div class="recipe-drawer-header">
+            <div>
+                <p class="eyebrow">Experimental Kitchen</p>
+                <h2>Recipes from the Experimental Kitchen</h2>
+            </div>
+            <button id="closeRecipeDrawer" class="drawer-close-btn">
+                <span>×</span>
+                Close
+            </button>
+        </div>
+        <div id="recipeContent" class="recipe-content">
             <div class="no-recipes">
                 <p>Select ingredients and click "Generate Recipes" to get started!</p>
             </div>
         </div>
     </div>
+    <div id="recipeDrawerBackdrop" class="recipe-drawer-backdrop"></div>
 
-    <!-- Toast notification container -->
     <div id="toastNotification" class="toast-notification"></div>
+
+    <div id="ingredientLimitToast" class="ingredient-limit-toast" aria-live="polite"></div>
 
     <!-- Configuration (gitignored, safe for API keys) -->
     <script src="config.js"></script>
@@ -230,6 +224,16 @@
         let toastTimer = null;
         let selectedCategories = ['all']; // Track selected category filter (multi-select)
         let networkHistory = []; // Track network state history for back button
+        const MAX_CHILD_NODES = 3;
+        const MAX_TRACKED_INGREDIENTS = 10;
+
+        const recipeDrawer = document.getElementById('recipeResults');
+        const recipeDrawerBackdrop = document.getElementById('recipeDrawerBackdrop');
+        const ingredientLimitToast = document.getElementById('ingredientLimitToast');
+        const recipeDrawerCloseBtn = document.getElementById('closeRecipeDrawer');
+        let selectedDietaryRestrictions = []; // Track selected dietary restrictions
+        // Make it globally accessible for recipe generator
+        window.selectedDietaryRestrictions = selectedDietaryRestrictions;
 
         // Helper function to brighten a color for glow effect
         function brightenColor(color, amount = 0.3) {
@@ -303,6 +307,57 @@
             }, duration);
         }
 
+        function nodeMatchesActiveFilter(ingredientName) {
+            if (!ingredientName) return true;
+            if (!networkData || !networkData.categories) return true;
+            const showAll = selectedCategories.length === 0 || selectedCategories.includes('all');
+            if (showAll) return true;
+            const info = networkData.categories[ingredientName];
+            if (!info || !info.category) return false;
+            return selectedCategories.includes(info.category);
+        }
+
+        function pulseFilteredNode(nodeId) {
+            const node = nodes.get(nodeId);
+            if (!node) return;
+            nodes.update({ id: nodeId, borderWidth: 6 });
+            setTimeout(() => {
+                nodes.update({ id: nodeId, borderWidth: node.borderWidth || 2 });
+            }, 350);
+        }
+
+        function showIngredientLimitToast() {
+            if (!ingredientLimitToast) return;
+            ingredientLimitToast.textContent = 'Maximum of 10 ingredients. Remove one to add another.';
+            ingredientLimitToast.classList.add('show');
+            setTimeout(() => {
+                ingredientLimitToast.classList.remove('show');
+            }, 3000);
+        }
+
+        function openRecipeDrawer() {
+            if (recipeDrawer) {
+                recipeDrawer.classList.add('active');
+            }
+        }
+
+        function closeRecipeDrawer() {
+            if (recipeDrawer) {
+                recipeDrawer.classList.remove('active');
+            }
+        }
+
+        if (recipeDrawerCloseBtn) {
+            recipeDrawerCloseBtn.addEventListener('click', closeRecipeDrawer);
+        }
+
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeRecipeDrawer();
+            }
+        });
+
         // Load network data
         async function loadNetworkData() {
             try {
@@ -314,6 +369,9 @@
                 
                 // Populate category filter dropdown
                 setupCategoryFilter();
+                
+                // Setup dietary restrictions filter dropdown
+                setupDietaryFilter();
                 
                 // Initialize autocomplete
                 setupAutocomplete();
@@ -343,10 +401,7 @@
             const allOption = document.createElement('div');
             allOption.className = 'category-option selected';
             allOption.dataset.category = 'all';
-            allOption.innerHTML = `
-                <span class="category-checkbox checked"></span>
-                <span>All Categories</span>
-            `;
+            allOption.innerHTML = `<span>All Categories</span>`;
             allOption.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -361,10 +416,7 @@
                 const option = document.createElement('div');
                 option.className = 'category-option';
                 option.dataset.category = category;
-                option.innerHTML = `
-                    <span class="category-checkbox"></span>
-                    <span>${category}</span>
-                `;
+                option.innerHTML = `<span>${category}</span>`;
                 option.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -403,6 +455,107 @@
             });
         }
 
+        // Setup dietary restrictions filter dropdown
+        function setupDietaryFilter() {
+            const dietaryFilter = document.getElementById('dietaryFilter');
+            const dietaryDropdown = document.getElementById('dietaryDropdown');
+            if (!dietaryFilter || !dietaryDropdown) {
+                console.error('Dietary filter elements not found');
+                return;
+            }
+            
+            const dietaryOptions = [
+                { value: 'pescatarian', label: 'Pescatarian' },
+                { value: 'vegetarian', label: 'Vegetarian' },
+                { value: 'vegan', label: 'Vegan' },
+                { value: 'halal', label: 'Halal' },
+                { value: 'gluten_free', label: 'Gluten Free' }
+            ];
+            
+            // Clear existing options
+            dietaryDropdown.innerHTML = '';
+            
+            // Add dietary options
+            dietaryOptions.forEach(option => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'category-option';
+                optionElement.dataset.dietary = option.value;
+                optionElement.innerHTML = `<span>${option.label}</span>`;
+                optionElement.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleDietaryRestriction(option.value);
+                });
+                dietaryDropdown.appendChild(optionElement);
+            });
+            
+            // Toggle dropdown on filter click
+            dietaryFilter.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = dietaryDropdown.classList.contains('show');
+                // Close all other dropdowns first
+                document.querySelectorAll('.category-dropdown.show').forEach(dd => {
+                    if (dd !== dietaryDropdown) dd.classList.remove('show');
+                });
+                dietaryDropdown.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                const dietaryFilterWrapper = document.querySelector('.dietary-filter-wrapper');
+                if (!dietaryFilter.contains(e.target) && 
+                    !dietaryDropdown.contains(e.target) &&
+                    (!dietaryFilterWrapper || !dietaryFilterWrapper.contains(e.target))) {
+                    dietaryDropdown.classList.remove('show');
+                }
+            });
+        }
+
+        // Toggle dietary restriction selection
+        function toggleDietaryRestriction(restriction) {
+            const index = selectedDietaryRestrictions.indexOf(restriction);
+            if (index > -1) {
+                selectedDietaryRestrictions.splice(index, 1);
+            } else {
+                selectedDietaryRestrictions.push(restriction);
+            }
+            // Update global reference
+            window.selectedDietaryRestrictions = selectedDietaryRestrictions;
+            updateDietaryFilterUI();
+        }
+
+        // Update dietary filter UI to reflect selections
+        function updateDietaryFilterUI() {
+            const dietaryDropdown = document.getElementById('dietaryDropdown');
+            const dietaryFilter = document.getElementById('dietaryFilter');
+            
+            if (!dietaryDropdown || !dietaryFilter) return;
+            
+            // Update selection highlights
+            dietaryDropdown.querySelectorAll('.category-option').forEach(option => {
+                const restriction = option.dataset.dietary;
+                const isSelected = selectedDietaryRestrictions.includes(restriction);
+                
+                if (isSelected) {
+                    option.classList.add('selected');
+                } else {
+                    option.classList.remove('selected');
+                }
+            });
+            
+            // Update filter display text
+            if (selectedDietaryRestrictions.length === 0) {
+                dietaryFilter.textContent = 'Diet: All Diets';
+            } else if (selectedDietaryRestrictions.length === 1) {
+                const option = dietaryDropdown.querySelector(`[data-dietary="${selectedDietaryRestrictions[0]}"]`);
+                const label = option ? option.textContent.trim() : selectedDietaryRestrictions[0];
+                dietaryFilter.textContent = `Diet: ${label}`;
+            } else {
+                dietaryFilter.textContent = `Diet: ${selectedDietaryRestrictions.length} selected`;
+            }
+        }
+
         // Toggle category selection
         function toggleCategory(category) {
             console.log('toggleCategory called with:', category, 'Current selection:', selectedCategories);
@@ -427,6 +580,9 @@
                     }
                 }
             }
+            if (selectedCategories.length === 0) {
+                selectedCategories = ['all'];
+            }
             console.log('New selection:', selectedCategories);
             updateCategoryFilterUI();
             applyCategoryFilter();
@@ -437,30 +593,27 @@
             const categoryDropdown = document.getElementById('categoryDropdown');
             const categoryFilter = document.getElementById('categoryFilter');
             
-            // Update checkboxes
+            // Update selection highlights
             categoryDropdown.querySelectorAll('.category-option').forEach(option => {
                 const category = option.dataset.category;
-                const checkbox = option.querySelector('.category-checkbox');
                 const isSelected = selectedCategories.includes(category);
                 
                 if (isSelected) {
                     option.classList.add('selected');
-                    checkbox.classList.add('checked');
                 } else {
                     option.classList.remove('selected');
-                    checkbox.classList.remove('checked');
                 }
             });
             
             // Update filter display text
             if (selectedCategories.length === 0) {
-                categoryFilter.textContent = 'No categories selected';
+                categoryFilter.textContent = 'Category: All Categories';
             } else if (selectedCategories.includes('all') || selectedCategories.length === networkData.category_list.length) {
-                categoryFilter.textContent = 'All Categories';
+                categoryFilter.textContent = 'Category: All Categories';
             } else if (selectedCategories.length === 1) {
-                categoryFilter.textContent = selectedCategories[0];
+                categoryFilter.textContent = `Category: ${selectedCategories[0]}`;
             } else {
-                categoryFilter.textContent = `${selectedCategories.length} categories selected`;
+                categoryFilter.textContent = `Category: ${selectedCategories.length} selected`;
             }
         }
 
@@ -469,63 +622,57 @@
             if (!networkData || !networkData.categories) return;
             
             const allNodes = nodes.get();
+            const showAll = selectedCategories.length === 0 || selectedCategories.includes('all');
+            
             allNodes.forEach(node => {
                 const ingredientName = node.id;
                 const categoryInfo = networkData.categories[ingredientName];
-                
-                if (!categoryInfo) return;
-                
-                // Check if node matches any selected category
-                const matchesFilter = selectedCategories.includes("all") || 
-                                     selectedCategories.includes(categoryInfo.category);
+                const baseColor = categoryInfo ? categoryInfo.color || '#4de4ff' : '#4de4ff';
+                const isHighlighted = clickedIngredients.includes(ingredientName);
+                const matchesFilter = showAll || nodeMatchesActiveFilter(ingredientName);
                 
                 if (matchesFilter) {
-                    // Show node with category color - preserve category color
-                    const categoryColor = categoryInfo.color || '#95a5a6';
-                    const isHighlighted = clickedIngredients.includes(ingredientName);
                     const updateData = {
                         id: ingredientName,
                         color: {
-                            background: categoryColor, // Always preserve category color
-                            border: categoryColor,
+                            background: baseColor,
+                            border: baseColor,
                             highlight: { 
-                                background: categoryColor, 
-                                border: categoryColor 
+                                background: brightenColor(baseColor, 0.15), 
+                                border: brightenColor(baseColor, 0.3)
                             }
                         },
                         shadow: isHighlighted ? {
                             enabled: true,
-                            color: createDenseGlowColor(categoryColor), // Dense, saturated glow color
-                            size: node.size > 30 ? 110 : 80, // Extra large shadow for maximum density
+                            color: createDenseGlowColor(baseColor),
+                            size: node.size > 30 ? 120 : 90,
                             x: 0,
                             y: 0
                         } : false,
-                        borderWidth: isHighlighted ? (node.size > 30 ? 8 : 7) : 2, // Very thick border for dense glow effect
-                        size: isHighlighted ? (node.size > 30 ? 32 : 22) : node.size // Smaller when clicked to emphasize shadow
+                        borderWidth: isHighlighted ? (node.size > 30 ? 8 : 6) : 2,
+                        size: isHighlighted ? (node.size > 30 ? 34 : 26) : node.size
                     };
-                    // Preserve font stroke if it exists
                     if (node.font) {
                         updateData.font = {
                             ...node.font,
-                            strokeWidth: node.font.strokeWidth || 3,
-                            strokeColor: node.font.strokeColor || '#000000'
+                            strokeWidth: 3,
+                            strokeColor: '#000000'
                         };
                     }
                     nodes.update(updateData);
                 } else {
-                    // Hide node by making it very transparent
                     nodes.update({
                         id: ingredientName,
                         color: {
-                            background: '#e0e0e0',
-                            border: '#e0e0e0',
+                            background: 'rgba(255,255,255,0.08)',
+                            border: 'rgba(255,255,255,0.15)',
                             highlight: { 
-                                background: '#e0e0e0', 
-                                border: '#e0e0e0' 
+                                background: 'rgba(255,255,255,0.08)', 
+                                border: 'rgba(255,255,255,0.15)' 
+                            }
                             },
-                            opacity: 0.1
-                        },
-                        shadow: false
+                        shadow: false,
+                        borderWidth: 1
                     });
                 }
             });
@@ -722,6 +869,11 @@
             currentNodes.clear();
             currentGeneration = 0;
             nodeGeneration = {};
+            networkHistory = [];
+            const backBtn = document.getElementById('backButton');
+            if (backBtn) {
+                backBtn.disabled = true;
+            }
             
             // Clear all fade timers
             Object.values(nodeFadeTimers).forEach(timer => clearTimeout(timer));
@@ -764,8 +916,8 @@
             // Add clicked ingredient to list if not already there
             // Limit to 10 ingredients - prevent adding if limit reached
             if (!clickedIngredients.includes(ingredientName)) {
-                if (clickedIngredients.length >= 10) {
-                    showToast('Maximum of 10 ingredients can be explored at once. Please remove an ingredient first.');
+                if (clickedIngredients.length >= MAX_TRACKED_INGREDIENTS) {
+                    showIngredientLimitToast();
                     return;
                 }
                 clickedIngredients.push(ingredientName);
@@ -773,7 +925,7 @@
             }
 
             currentGeneration++;
-            const pairings = networkData.graph[ingredientName];
+            const pairings = (networkData.graph[ingredientName] || []).slice(0, MAX_CHILD_NODES);
 
             // Cancel any pending fade timer for this node
             if (nodeFadeTimers[ingredientName]) {
@@ -1015,28 +1167,40 @@
         // Fade out a node and its edges
         function fadeNode(nodeId) {
             const node = nodes.get(nodeId);
-            if (!node) return;
+            if (!node || clickedIngredients.includes(nodeId)) return;
 
-            // Remove edges connected to this node
+            nodes.update({
+                id: nodeId,
+                color: {
+                    background: 'rgba(255,255,255,0.05)',
+                    border: 'rgba(255,255,255,0.08)',
+                    highlight: {
+                        background: 'rgba(255,255,255,0.05)',
+                        border: 'rgba(255,255,255,0.08)'
+                    }
+                },
+                shadow: false
+            });
+
+            setTimeout(() => {
             const connectedEdges = edges.get({
                 filter: edge => edge.from === nodeId || edge.to === nodeId
             });
             
             connectedEdges.forEach(edge => {
-                // Only remove if the other node is also not a clicked ingredient
                 const otherNode = edge.from === nodeId ? edge.to : edge.from;
                 if (!clickedIngredients.includes(otherNode)) {
                     edges.remove(edge.id);
                 }
             });
 
-            // Remove node if it's not a clicked ingredient
             if (!clickedIngredients.includes(nodeId)) {
                 nodes.remove(nodeId);
                 currentNodes.delete(nodeId);
                 delete nodeGeneration[nodeId];
                 delete nodeFadeTimers[nodeId];
             }
+            }, 500);
         }
 
         // Remove ingredient from network and clicked list
@@ -1150,14 +1314,14 @@
         function updateClickedList() {
             const clickedList = document.getElementById('clickedList');
             if (clickedIngredients.length === 0) {
-                clickedList.innerHTML = '<div class="no-ingredients">No ingredients explored yet. Search and click to start!</div>';
+                clickedList.innerHTML = '<div class="no-ingredients">No ingredients logged yet. Search above and tap a glowing node to begin.</div>';
             } else {
                 clickedList.innerHTML = clickedIngredients.map((ing) => {
                     // Get category color for this ingredient
                     const categoryInfo = networkData && networkData.categories && networkData.categories[ing];
-                    const categoryColor = categoryInfo ? categoryInfo.color : '#d4b8b8'; // Fallback to default color
+                    const categoryColor = categoryInfo ? categoryInfo.color : '#4de4ff'; // Fallback to default color
                     
-                    return `<div class="clicked-item" style="background: ${categoryColor};">
+                    return `<div class="clicked-item" style="background: ${categoryColor}1a; border-color: ${categoryColor}; box-shadow: 0 0 18px ${categoryColor}55;">
                         <span class="clicked-item-text">${ing.replace(/_/g, ' ')}</span>
                         <button class="remove-btn" onclick="removeIngredient('${ing.replace(/'/g, "\\'")}')" title="Remove ingredient">×</button>
                     </div>`;
@@ -1192,6 +1356,7 @@
             
             const options = {
                 nodes: {
+                    shape: 'dot',
                     borderWidth: 2,
                     shadow: true,
                     font: {
@@ -1200,37 +1365,46 @@
                         align: 'center',
                         bold: true
                     },
-                    shapeProperties: {
-                        useBorderWithImage: true
+                    scaling: {
+                        min: 12,
+                        max: 40
                     }
                 },
                 edges: {
                     width: 2,
                     shadow: true,
+                    color: { color: 'rgba(255,255,255,0.35)', highlight: '#4de4ff' },
                     smooth: {
                         type: 'continuous',
-                        roundness: 0.5
-                    },
-                    arrows: {
-                        to: { enabled: false }
+                        roundness: 0.4
                     }
                 },
                 physics: {
                     enabled: true,
-                    stabilization: { iterations: 100 },
-                    barnesHut: {
-                        gravitationalConstant: -2000,
-                        centralGravity: 0.3,
+                    solver: 'forceAtlas2Based',
+                    stabilization: {
+                        enabled: true,
+                        iterations: 200,
+                        updateInterval: 25,
+                        fit: true
+                    },
+                    timestep: 0.5,
+                    minVelocity: 0.5,
+                    forceAtlas2Based: {
+                        gravitationalConstant: -50,
+                        centralGravity: 0.02,
+                        springConstant: 0.08,
                         springLength: 200,
-                        springConstant: 0.04,
-                        damping: 0.09
+                        damping: 0.92,
+                        avoidOverlap: 1.2
                     }
                 },
                 interaction: {
                     hover: true,
-                    tooltipDelay: 200,
+                    tooltipDelay: 150,
                     zoomView: true,
-                    dragView: true
+                    dragView: true,
+                    dragNodes: true
                 }
             };
 
@@ -1252,9 +1426,14 @@
                     if (params.nodes.length > 0) {
                         const nodeId = params.nodes[0];
                         const nodeData = nodes.get(nodeId);
-                        if (nodeData) {
-                            showIngredient(nodeId);
+                        if (!nodeData) return;
+                        const filterActive = !(selectedCategories.length === 0 || selectedCategories.includes('all'));
+                        if (filterActive && !nodeMatchesActiveFilter(nodeId)) {
+                            showToast('Ingredient hidden by category filter. Clear filters to expand it.');
+                            pulseFilteredNode(nodeId);
+                            return;
                         }
+                            showIngredient(nodeId);
                     }
                 });
 
@@ -1285,32 +1464,26 @@
             document.getElementById('clearButton').addEventListener('click', function() {
                 resetNetwork(true);
                 document.getElementById('searchInput').value = '';
+                const suggestions = document.getElementById('suggestions');
+                if (suggestions) {
+                    suggestions.style.display = 'none';
+                }
             });
         }
 
-        // Setup dietary restrictions toggle behavior
-        function setupDietaryRestrictions() {
-            const dietarySelect = document.getElementById('dietarySelect');
-            if (dietarySelect) {
-                dietarySelect.addEventListener('mousedown', function(e) {
-                    const option = e.target;
-                    if (option.tagName === 'OPTION') {
-                        e.preventDefault();
-                        option.selected = !option.selected;
-                        // Trigger change event
-                        dietarySelect.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
-                });
-            }
-        }
 
         // Initialize when page loads
         window.addEventListener('load', function() {
             loadNetworkData().then(() => {
                 initializeNetwork();
                 setupClearButton();
-                setupDietaryRestrictions();
             });
+        });
+
+        window.addEventListener('resize', function() {
+            if (network) {
+                network.redraw();
+            }
         });
 
         // Center network view
@@ -1329,6 +1502,8 @@
         window.selectIngredient = selectIngredient;
         window.removeIngredient = removeIngredientFromNetwork;
         window.centerNetwork = centerNetwork;
+        window.openRecipeDrawer = openRecipeDrawer;
+        window.closeRecipeDrawer = closeRecipeDrawer;
         
         // Make clickedIngredients available globally for recipe generator
         // This ensures the recipe generator can access the selected ingredients
