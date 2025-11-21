@@ -33,7 +33,6 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 
 ### Backend
 - **Python/FastAPI** for ingredient relationships
-- **Neo4j** (Graph Database)
 
 ### Deployment
 - **Netlify** 
