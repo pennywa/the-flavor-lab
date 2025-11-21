@@ -3,415 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Ingredient Network</title>
+    <title>The Flavor Lab</title>
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 10px;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 1600px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            display: flex;
-            flex-direction: column;
-            min-height: calc(100vh - 20px);
-        }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 30px;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .header p {
-            margin: 0;
-        }
-
-        .header h1 {
-            font-size: 2em;
-            margin-bottom: 5px;
-        }
-
-        .search-container {
-            padding: 15px 20px;
-            background: #f8f9fa;
-            border-bottom: 2px solid #e9ecef;
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .filter-container {
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .filter-label {
-            font-weight: 600;
-            color: #333;
-            font-size: 14px;
-        }
-
-        .category-filter-wrapper {
-            position: relative;
-            display: inline-block;
-            pointer-events: auto;
-            z-index: 1001;
-        }
-
-        .category-filter {
-            padding: 8px 35px 8px 15px;
-            font-size: 14px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-            outline: none;
-            transition: border-color 0.3s;
-            min-width: 200px;
-            appearance: none;
-            user-select: none;
-            pointer-events: auto;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-        }
-
-        .category-filter:focus {
-            border-color: #667eea;
-        }
-
-        .category-dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            margin-top: 5px;
-            background: white;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 1000;
-            min-width: 250px;
-            max-height: 300px;
-            overflow-y: auto;
-            display: none;
-            pointer-events: auto;
-        }
-
-        .category-dropdown.show {
-            display: block;
-        }
-
-        .category-option {
-            padding: 10px 15px;
-            cursor: pointer;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: background-color 0.2s;
-            pointer-events: auto;
-            user-select: none;
-        }
-
-        .category-option:last-child {
-            border-bottom: none;
-        }
-
-        .category-option:hover {
-            background-color: #f8f9fa;
-        }
-
-        .category-option.selected {
-            background-color: #e7f3ff;
-        }
-
-        .category-checkbox {
-            width: 18px;
-            height: 18px;
-            border: 2px solid #667eea;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .category-checkbox.checked {
-            background-color: #667eea;
-        }
-
-        .category-checkbox.checked::after {
-            content: '✓';
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .back-button {
-            padding: 10px 20px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background 0.3s;
-            margin-left: auto;
-        }
-
-        .back-button:hover {
-            background: #764ba2;
-        }
-
-        .back-button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 15px;
-            font-size: 16px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .search-box:focus {
-            border-color: #667eea;
-        }
-
-        .suggestions {
-            max-height: 200px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            border-top: none;
-            background: white;
-            display: none;
-            position: absolute;
-            top: 75px;
-            left: 20px;
-            right: 20px;
-            z-index: 1000;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .suggestion-item {
-            padding: 12px 15px;
-            cursor: pointer;
-            border-bottom: 1px solid #f0f0f0;
-            transition: background-color 0.2s;
-        }
-
-        .suggestion-item:hover {
-            background-color: #f8f9fa;
-        }
-
-        .suggestion-item:last-child {
-            border-bottom: none;
-        }
-
-        .main-content {
-            display: flex;
-            flex: 1;
-            min-height: 600px;
-            align-items: stretch;
-        }
-
-        .network-container {
-            flex: 1;
-            min-height: 600px;
-            height: 600px;
-            border-right: 2px solid #e9ecef;
-            position: relative;
-            background-color: #fafafa;
-            overflow: visible;
-        }
-
-        #network {
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            position: relative;
-        }
-
-        .clicked-ingredients {
-            width: 300px;
-            background: #f8f9fa;
-            padding: 15px;
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 600px;
-        }
-
-        .clicked-ingredients h2 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        .clicked-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            overflow-y: auto;
-            flex: 1;
-        }
-
-        .clicked-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            cursor: default;
-        }
-
-        .clicked-item-text {
-            flex: 1;
-        }
-
-        .remove-btn {
-            background: rgba(255, 255, 255, 0.3);
-            border: none;
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            margin-left: 10px;
-            transition: background 0.2s;
-        }
-
-        .remove-btn:hover {
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        .no-ingredients {
-            color: #666;
-            font-style: italic;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            font-size: 18px;
-        }
-
-        .toast-notification {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-60%);
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            font-size: 16px;
-            z-index: 10000;
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-            pointer-events: none;
-        }
-
-        .toast-notification.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🍽️ Interactive Ingredient Network</h1>
-            <p>Discover flavor pairings and explore ingredient relationships</p>
-        </div>
+    <div class="lab-wrapper">
+        <header class="header">
+            <div class="header-orb left"></div>
+            <div class="header-content">
+                <h1>The Flavor Lab</h1>
+            </div>
+            <div class="header-orb right"></div>
+        </header>
 
-        <div class="search-container">
-            <div style="display: flex; gap: 10px;">
+        <section class="lab-controls">
+            <div class="search-block">
+                <label class="eyebrow" for="searchInput">Ingredient Search</label>
+                <div class="search-bar">
                 <input 
                     type="text" 
                     id="searchInput" 
                     class="search-box" 
-                    placeholder="Search for an ingredient (e.g., garlic, tomato, cheese)..."
+                        placeholder="e.g., garlic, yuzu, cocoa nibs…" 
                     autocomplete="off"
-                    style="flex: 1;"
-                >
-                <button 
-                    id="clearButton" 
-                    style="padding: 15px 25px; background: #dc3545; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold;"
-                    onmouseover="this.style.background='#c82333'" 
-                    onmouseout="this.style.background='#dc3545'"
-                >
-                    Clear
-                </button>
+                    >
+                    <button id="clearButton" class="ghost-btn">Clear</button>
             </div>
-            <div class="filter-container">
-                <span class="filter-label">Filter by Category:</span>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            <div class="filter-row">
                 <div class="category-filter-wrapper">
-                    <div id="categoryFilter" class="category-filter">All Categories</div>
+                    <div id="categoryFilter" class="category-filter">Category: All Categories</div>
                     <div id="categoryDropdown" class="category-dropdown"></div>
                 </div>
-                <button id="backButton" class="back-button" disabled>← Back</button>
+                <div class="dietary-filter-wrapper">
+                    <div id="dietaryFilter" class="category-filter">Diet: All Diets</div>
+                    <div id="dietaryDropdown" class="category-dropdown"></div>
             </div>
-            <div id="suggestions" class="suggestions"></div>
+                <button id="backButton" class="back-button" disabled aria-label="Undo last expansion">
+                    <span>↺</span>
+                    Undo Pulse
+                </button>
         </div>
+        </section>
 
         <div class="main-content">
-            <div class="network-container">
-                <div id="network"></div>
-            </div>
-
-            <div class="clicked-ingredients">
-                <h2>Explored Ingredients (max 10):</h2>
-                <div id="clickedList" class="clicked-list">
-                    <div class="no-ingredients">No ingredients explored yet. Search and click to start!</div>
+            <section class="network-shell">
+                <div class="panel-heading compact">
+                    <div>
+                        <p class="eyebrow">Ingredient Network</p>
+                    </div>
                 </div>
+                <div class="network-container neon-panel">
+                <div id="network"></div>
+                <button class="network-center-btn" onclick="centerNetwork()" title="Center and reset view">
+                    <i class="fas fa-crosshairs"></i>
+                </button>
             </div>
+            </section>
+
+            <section class="ingredient-list-section panel-card">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Ingredient List</p>
+                    </div>
+                </div>
+                <div id="clickedList" class="clicked-list">
+                    <div class="no-ingredients">No ingredients logged yet. Search above and tap a glowing node to begin.</div>
+                </div>
+            </section>
+
+            <section class="flavor-preferences-section panel-card" id="recipePanel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Flavor Preferences</p>
+                    </div>
+                </div>
+                <div class="recipe-controls">
+                    <div class="flavor-sliders horizontal">
+                        <div class="flavor-slider-group">
+                            <label>Umami</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="umamiSlider" data-value="3">
+                                    <div class="range-slider-track" id="umamiTrack"></div>
+                                    <div class="range-slider-handle" id="umamiHandle"></div>
+                                </div>
+                                <div class="labels" id="umamiLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                    <div class="icon-item"><i class="fas fa-drumstick-bite"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flavor-slider-group">
+                            <label>Sweet</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="sweetSlider" data-value="3">
+                                    <div class="range-slider-track" id="sweetTrack"></div>
+                                    <div class="range-slider-handle" id="sweetHandle"></div>
+                                </div>
+                                <div class="labels" id="sweetLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                    <div class="icon-item"><i class="fas fa-candy-cane"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flavor-slider-group">
+                            <label>Spice</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="spiceSlider" data-value="3">
+                                    <div class="range-slider-track" id="spiceTrack"></div>
+                                    <div class="range-slider-handle" id="spiceHandle"></div>
+                                </div>
+                                <div class="labels" id="spiceLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                    <div class="icon-item"><i class="fas fa-pepper-hot"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flavor-slider-group">
+                            <label>Sour</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="sourSlider" data-value="3">
+                                    <div class="range-slider-track" id="sourTrack"></div>
+                                    <div class="range-slider-handle" id="sourHandle"></div>
+                                </div>
+                                <div class="labels" id="sourLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                    <div class="icon-item"><i class="fas fa-lemon"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flavor-slider-group">
+                            <label>Salty</label>
+                            <div class="input-range">
+                                <div class="range-slider-container" id="saltySlider" data-value="3">
+                                    <div class="range-slider-track" id="saltyTrack"></div>
+                                    <div class="range-slider-handle" id="saltyHandle"></div>
+                                </div>
+                                <div class="labels" id="saltyLabels" data-value="3">
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                    <div class="icon-item"><i class="fas fa-mortar-pestle"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="generate-recipe-btn" onclick="window.recipeGenerator.generateAndDisplayRecipes()">
+                        Generate Recipes
+                    </button>
+                </div>
+            </section>
         </div>
     </div>
 
-    <!-- Toast notification container -->
+    <div id="recipeResults" class="recipe-results-bottom" aria-live="polite">
+        <div class="recipe-drawer-header">
+            <div>
+                <p class="eyebrow">Experimental Kitchen</p>
+                <h2>Recipes from the Experimental Kitchen</h2>
+            </div>
+            <button id="closeRecipeDrawer" class="drawer-close-btn">
+                <span>×</span>
+                Close
+            </button>
+        </div>
+        <div id="recipeContent" class="recipe-content">
+            <div class="no-recipes">
+                <p>Select ingredients and click "Generate Recipes" to get started!</p>
+            </div>
+        </div>
+    </div>
+    <div id="recipeDrawerBackdrop" class="recipe-drawer-backdrop"></div>
+
     <div id="toastNotification" class="toast-notification"></div>
+
+    <div id="ingredientLimitToast" class="ingredient-limit-toast" aria-live="polite"></div>
+
+    <!-- Configuration (gitignored, safe for API keys) -->
+    <script src="config.js"></script>
+    
+    <!-- Recipe Generator Script -->
+    <script src="recipe-generator.js"></script>
+    
+    <!-- Flavor Sliders UI Controller -->
+    <script src="flavor-sliders.js"></script>
 
     <script>
         // Global variables
@@ -427,6 +224,16 @@
         let toastTimer = null;
         let selectedCategories = ['all']; // Track selected category filter (multi-select)
         let networkHistory = []; // Track network state history for back button
+        const MAX_CHILD_NODES = 3;
+        const MAX_TRACKED_INGREDIENTS = 10;
+
+        const recipeDrawer = document.getElementById('recipeResults');
+        const recipeDrawerBackdrop = document.getElementById('recipeDrawerBackdrop');
+        const ingredientLimitToast = document.getElementById('ingredientLimitToast');
+        const recipeDrawerCloseBtn = document.getElementById('closeRecipeDrawer');
+        let selectedDietaryRestrictions = []; // Track selected dietary restrictions
+        // Make it globally accessible for recipe generator
+        window.selectedDietaryRestrictions = selectedDietaryRestrictions;
 
         // Helper function to brighten a color for glow effect
         function brightenColor(color, amount = 0.3) {
@@ -500,15 +307,71 @@
             }, duration);
         }
 
+        function nodeMatchesActiveFilter(ingredientName) {
+            if (!ingredientName) return true;
+            if (!networkData || !networkData.categories) return true;
+            const showAll = selectedCategories.length === 0 || selectedCategories.includes('all');
+            if (showAll) return true;
+            const info = networkData.categories[ingredientName];
+            if (!info || !info.category) return false;
+            return selectedCategories.includes(info.category);
+        }
+
+        function pulseFilteredNode(nodeId) {
+            const node = nodes.get(nodeId);
+            if (!node) return;
+            nodes.update({ id: nodeId, borderWidth: 6 });
+            setTimeout(() => {
+                nodes.update({ id: nodeId, borderWidth: node.borderWidth || 2 });
+            }, 350);
+        }
+
+        function showIngredientLimitToast() {
+            if (!ingredientLimitToast) return;
+            ingredientLimitToast.textContent = 'Maximum of 10 ingredients. Remove one to add another.';
+            ingredientLimitToast.classList.add('show');
+            setTimeout(() => {
+                ingredientLimitToast.classList.remove('show');
+            }, 3000);
+        }
+
+        function openRecipeDrawer() {
+            if (recipeDrawer) {
+                recipeDrawer.classList.add('active');
+            }
+        }
+
+        function closeRecipeDrawer() {
+            if (recipeDrawer) {
+                recipeDrawer.classList.remove('active');
+            }
+        }
+
+        if (recipeDrawerCloseBtn) {
+            recipeDrawerCloseBtn.addEventListener('click', closeRecipeDrawer);
+        }
+
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeRecipeDrawer();
+            }
+        });
+
         // Load network data
         async function loadNetworkData() {
             try {
-                const response = await fetch('network_data_hub.json');
+                // Add cache busting to ensure fresh data
+                const response = await fetch('network_data_hub.json?v=' + new Date().getTime());
                 networkData = await response.json();
                 console.log('Network data loaded:', networkData.ingredients.length, 'ingredients');
+                console.log('Category list from JSON:', networkData.category_list);
                 
                 // Populate category filter dropdown
                 setupCategoryFilter();
+                
+                // Setup dietary restrictions filter dropdown
+                setupDietaryFilter();
                 
                 // Initialize autocomplete
                 setupAutocomplete();
@@ -523,16 +386,22 @@
         function setupCategoryFilter() {
             const categoryFilter = document.getElementById('categoryFilter');
             const categoryDropdown = document.getElementById('categoryDropdown');
-            if (!networkData || !networkData.category_list) return;
+            if (!networkData || !networkData.category_list) {
+                console.error('Network data or category_list not found');
+                return;
+            }
+            
+            // Clear existing options first
+            categoryDropdown.innerHTML = '';
+            
+            // Log categories for debugging
+            console.log('Setting up category filter with categories:', networkData.category_list);
             
             // Add "All Categories" option
             const allOption = document.createElement('div');
             allOption.className = 'category-option selected';
             allOption.dataset.category = 'all';
-            allOption.innerHTML = `
-                <span class="category-checkbox checked"></span>
-                <span>All Categories</span>
-            `;
+            allOption.innerHTML = `<span>All Categories</span>`;
             allOption.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -541,15 +410,13 @@
             });
             categoryDropdown.appendChild(allOption);
             
-            // Add category options
-            networkData.category_list.forEach(category => {
+            // Add category options - ensure we use the correct categories from JSON
+            const categories = networkData.category_list || [];
+            categories.forEach(category => {
                 const option = document.createElement('div');
                 option.className = 'category-option';
                 option.dataset.category = category;
-                option.innerHTML = `
-                    <span class="category-checkbox"></span>
-                    <span>${category}</span>
-                `;
+                option.innerHTML = `<span>${category}</span>`;
                 option.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -588,6 +455,107 @@
             });
         }
 
+        // Setup dietary restrictions filter dropdown
+        function setupDietaryFilter() {
+            const dietaryFilter = document.getElementById('dietaryFilter');
+            const dietaryDropdown = document.getElementById('dietaryDropdown');
+            if (!dietaryFilter || !dietaryDropdown) {
+                console.error('Dietary filter elements not found');
+                return;
+            }
+            
+            const dietaryOptions = [
+                { value: 'pescatarian', label: 'Pescatarian' },
+                { value: 'vegetarian', label: 'Vegetarian' },
+                { value: 'vegan', label: 'Vegan' },
+                { value: 'halal', label: 'Halal' },
+                { value: 'gluten_free', label: 'Gluten Free' }
+            ];
+            
+            // Clear existing options
+            dietaryDropdown.innerHTML = '';
+            
+            // Add dietary options
+            dietaryOptions.forEach(option => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'category-option';
+                optionElement.dataset.dietary = option.value;
+                optionElement.innerHTML = `<span>${option.label}</span>`;
+                optionElement.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleDietaryRestriction(option.value);
+                });
+                dietaryDropdown.appendChild(optionElement);
+            });
+            
+            // Toggle dropdown on filter click
+            dietaryFilter.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = dietaryDropdown.classList.contains('show');
+                // Close all other dropdowns first
+                document.querySelectorAll('.category-dropdown.show').forEach(dd => {
+                    if (dd !== dietaryDropdown) dd.classList.remove('show');
+                });
+                dietaryDropdown.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                const dietaryFilterWrapper = document.querySelector('.dietary-filter-wrapper');
+                if (!dietaryFilter.contains(e.target) && 
+                    !dietaryDropdown.contains(e.target) &&
+                    (!dietaryFilterWrapper || !dietaryFilterWrapper.contains(e.target))) {
+                    dietaryDropdown.classList.remove('show');
+                }
+            });
+        }
+
+        // Toggle dietary restriction selection
+        function toggleDietaryRestriction(restriction) {
+            const index = selectedDietaryRestrictions.indexOf(restriction);
+            if (index > -1) {
+                selectedDietaryRestrictions.splice(index, 1);
+            } else {
+                selectedDietaryRestrictions.push(restriction);
+            }
+            // Update global reference
+            window.selectedDietaryRestrictions = selectedDietaryRestrictions;
+            updateDietaryFilterUI();
+        }
+
+        // Update dietary filter UI to reflect selections
+        function updateDietaryFilterUI() {
+            const dietaryDropdown = document.getElementById('dietaryDropdown');
+            const dietaryFilter = document.getElementById('dietaryFilter');
+            
+            if (!dietaryDropdown || !dietaryFilter) return;
+            
+            // Update selection highlights
+            dietaryDropdown.querySelectorAll('.category-option').forEach(option => {
+                const restriction = option.dataset.dietary;
+                const isSelected = selectedDietaryRestrictions.includes(restriction);
+                
+                if (isSelected) {
+                    option.classList.add('selected');
+                } else {
+                    option.classList.remove('selected');
+                }
+            });
+            
+            // Update filter display text
+            if (selectedDietaryRestrictions.length === 0) {
+                dietaryFilter.textContent = 'Diet: All Diets';
+            } else if (selectedDietaryRestrictions.length === 1) {
+                const option = dietaryDropdown.querySelector(`[data-dietary="${selectedDietaryRestrictions[0]}"]`);
+                const label = option ? option.textContent.trim() : selectedDietaryRestrictions[0];
+                dietaryFilter.textContent = `Diet: ${label}`;
+            } else {
+                dietaryFilter.textContent = `Diet: ${selectedDietaryRestrictions.length} selected`;
+            }
+        }
+
         // Toggle category selection
         function toggleCategory(category) {
             console.log('toggleCategory called with:', category, 'Current selection:', selectedCategories);
@@ -612,6 +580,9 @@
                     }
                 }
             }
+            if (selectedCategories.length === 0) {
+                selectedCategories = ['all'];
+            }
             console.log('New selection:', selectedCategories);
             updateCategoryFilterUI();
             applyCategoryFilter();
@@ -622,30 +593,27 @@
             const categoryDropdown = document.getElementById('categoryDropdown');
             const categoryFilter = document.getElementById('categoryFilter');
             
-            // Update checkboxes
+            // Update selection highlights
             categoryDropdown.querySelectorAll('.category-option').forEach(option => {
                 const category = option.dataset.category;
-                const checkbox = option.querySelector('.category-checkbox');
                 const isSelected = selectedCategories.includes(category);
                 
                 if (isSelected) {
                     option.classList.add('selected');
-                    checkbox.classList.add('checked');
                 } else {
                     option.classList.remove('selected');
-                    checkbox.classList.remove('checked');
                 }
             });
             
             // Update filter display text
             if (selectedCategories.length === 0) {
-                categoryFilter.textContent = 'No categories selected';
+                categoryFilter.textContent = 'Category: All Categories';
             } else if (selectedCategories.includes('all') || selectedCategories.length === networkData.category_list.length) {
-                categoryFilter.textContent = 'All Categories';
+                categoryFilter.textContent = 'Category: All Categories';
             } else if (selectedCategories.length === 1) {
-                categoryFilter.textContent = selectedCategories[0];
+                categoryFilter.textContent = `Category: ${selectedCategories[0]}`;
             } else {
-                categoryFilter.textContent = `${selectedCategories.length} categories selected`;
+                categoryFilter.textContent = `Category: ${selectedCategories.length} selected`;
             }
         }
 
@@ -654,63 +622,57 @@
             if (!networkData || !networkData.categories) return;
             
             const allNodes = nodes.get();
+            const showAll = selectedCategories.length === 0 || selectedCategories.includes('all');
+            
             allNodes.forEach(node => {
                 const ingredientName = node.id;
                 const categoryInfo = networkData.categories[ingredientName];
-                
-                if (!categoryInfo) return;
-                
-                // Check if node matches any selected category
-                const matchesFilter = selectedCategories.includes("all") || 
-                                     selectedCategories.includes(categoryInfo.category);
+                const baseColor = categoryInfo ? categoryInfo.color || '#4de4ff' : '#4de4ff';
+                const isHighlighted = clickedIngredients.includes(ingredientName);
+                const matchesFilter = showAll || nodeMatchesActiveFilter(ingredientName);
                 
                 if (matchesFilter) {
-                    // Show node with category color - preserve category color
-                    const categoryColor = categoryInfo.color || '#95a5a6';
-                    const isHighlighted = clickedIngredients.includes(ingredientName);
                     const updateData = {
                         id: ingredientName,
                         color: {
-                            background: categoryColor, // Always preserve category color
-                            border: categoryColor,
+                            background: baseColor,
+                            border: baseColor,
                             highlight: { 
-                                background: categoryColor, 
-                                border: categoryColor 
+                                background: brightenColor(baseColor, 0.15), 
+                                border: brightenColor(baseColor, 0.3)
                             }
                         },
                         shadow: isHighlighted ? {
                             enabled: true,
-                            color: createDenseGlowColor(categoryColor), // Dense, saturated glow color
-                            size: node.size > 30 ? 110 : 80, // Extra large shadow for maximum density
+                            color: createDenseGlowColor(baseColor),
+                            size: node.size > 30 ? 120 : 90,
                             x: 0,
                             y: 0
                         } : false,
-                        borderWidth: isHighlighted ? (node.size > 30 ? 8 : 7) : 2, // Very thick border for dense glow effect
-                        size: isHighlighted ? (node.size > 30 ? 32 : 22) : node.size // Smaller when clicked to emphasize shadow
+                        borderWidth: isHighlighted ? (node.size > 30 ? 8 : 6) : 2,
+                        size: isHighlighted ? (node.size > 30 ? 34 : 26) : node.size
                     };
-                    // Preserve font stroke if it exists
                     if (node.font) {
                         updateData.font = {
                             ...node.font,
-                            strokeWidth: node.font.strokeWidth || 3,
-                            strokeColor: node.font.strokeColor || '#000000'
+                            strokeWidth: 3,
+                            strokeColor: '#000000'
                         };
                     }
                     nodes.update(updateData);
                 } else {
-                    // Hide node by making it very transparent
                     nodes.update({
                         id: ingredientName,
                         color: {
-                            background: '#e0e0e0',
-                            border: '#e0e0e0',
+                            background: 'rgba(255,255,255,0.08)',
+                            border: 'rgba(255,255,255,0.15)',
                             highlight: { 
-                                background: '#e0e0e0', 
-                                border: '#e0e0e0' 
+                                background: 'rgba(255,255,255,0.08)', 
+                                border: 'rgba(255,255,255,0.15)' 
+                            }
                             },
-                            opacity: 0.1
-                        },
-                        shadow: false
+                        shadow: false,
+                        borderWidth: 1
                     });
                 }
             });
@@ -759,7 +721,7 @@
                 const restoredNodes = previousState.nodes.map(node => {
                     const ingredientName = node.id;
                     const categoryInfo = networkData.categories && networkData.categories[ingredientName];
-                    const categoryColor = categoryInfo ? categoryInfo.color : '#667eea';
+                    const categoryColor = categoryInfo ? categoryInfo.color : '#d4b8b8';
                     const isHighlighted = previousClickedIngredients.includes(ingredientName);
                     
                     return {
@@ -856,7 +818,7 @@
 
                 if (matches.length > 0) {
                     suggestions.innerHTML = matches.map(ing => 
-                        `<div class="suggestion-item" onclick="selectIngredient('${ing.replace(/'/g, "\\'")}')">${ing}</div>`
+                        `<div class="suggestion-item" onclick="selectIngredient('${ing.replace(/'/g, "\\'")}')">${ing.replace(/_/g, ' ')}</div>`
                     ).join('');
                     suggestions.style.display = 'block';
                 } else {
@@ -907,6 +869,11 @@
             currentNodes.clear();
             currentGeneration = 0;
             nodeGeneration = {};
+            networkHistory = [];
+            const backBtn = document.getElementById('backButton');
+            if (backBtn) {
+                backBtn.disabled = true;
+            }
             
             // Clear all fade timers
             Object.values(nodeFadeTimers).forEach(timer => clearTimeout(timer));
@@ -949,8 +916,8 @@
             // Add clicked ingredient to list if not already there
             // Limit to 10 ingredients - prevent adding if limit reached
             if (!clickedIngredients.includes(ingredientName)) {
-                if (clickedIngredients.length >= 10) {
-                    showToast('Maximum of 10 ingredients can be explored at once. Please remove an ingredient first.');
+                if (clickedIngredients.length >= MAX_TRACKED_INGREDIENTS) {
+                    showIngredientLimitToast();
                     return;
                 }
                 clickedIngredients.push(ingredientName);
@@ -958,7 +925,7 @@
             }
 
             currentGeneration++;
-            const pairings = networkData.graph[ingredientName];
+            const pairings = (networkData.graph[ingredientName] || []).slice(0, MAX_CHILD_NODES);
 
             // Cancel any pending fade timer for this node
             if (nodeFadeTimers[ingredientName]) {
@@ -1200,28 +1167,40 @@
         // Fade out a node and its edges
         function fadeNode(nodeId) {
             const node = nodes.get(nodeId);
-            if (!node) return;
+            if (!node || clickedIngredients.includes(nodeId)) return;
 
-            // Remove edges connected to this node
+            nodes.update({
+                id: nodeId,
+                color: {
+                    background: 'rgba(255,255,255,0.05)',
+                    border: 'rgba(255,255,255,0.08)',
+                    highlight: {
+                        background: 'rgba(255,255,255,0.05)',
+                        border: 'rgba(255,255,255,0.08)'
+                    }
+                },
+                shadow: false
+            });
+
+            setTimeout(() => {
             const connectedEdges = edges.get({
                 filter: edge => edge.from === nodeId || edge.to === nodeId
             });
             
             connectedEdges.forEach(edge => {
-                // Only remove if the other node is also not a clicked ingredient
                 const otherNode = edge.from === nodeId ? edge.to : edge.from;
                 if (!clickedIngredients.includes(otherNode)) {
                     edges.remove(edge.id);
                 }
             });
 
-            // Remove node if it's not a clicked ingredient
             if (!clickedIngredients.includes(nodeId)) {
                 nodes.remove(nodeId);
                 currentNodes.delete(nodeId);
                 delete nodeGeneration[nodeId];
                 delete nodeFadeTimers[nodeId];
             }
+            }, 500);
         }
 
         // Remove ingredient from network and clicked list
@@ -1335,14 +1314,18 @@
         function updateClickedList() {
             const clickedList = document.getElementById('clickedList');
             if (clickedIngredients.length === 0) {
-                clickedList.innerHTML = '<div class="no-ingredients">No ingredients explored yet. Search and click to start!</div>';
+                clickedList.innerHTML = '<div class="no-ingredients">No ingredients logged yet. Search above and tap a glowing node to begin.</div>';
             } else {
-                clickedList.innerHTML = clickedIngredients.map((ing) => 
-                    `<div class="clicked-item">
+                clickedList.innerHTML = clickedIngredients.map((ing) => {
+                    // Get category color for this ingredient
+                    const categoryInfo = networkData && networkData.categories && networkData.categories[ing];
+                    const categoryColor = categoryInfo ? categoryInfo.color : '#4de4ff'; // Fallback to default color
+                    
+                    return `<div class="clicked-item" style="background: ${categoryColor}1a; border-color: ${categoryColor}; box-shadow: 0 0 18px ${categoryColor}55;">
                         <span class="clicked-item-text">${ing.replace(/_/g, ' ')}</span>
                         <button class="remove-btn" onclick="removeIngredient('${ing.replace(/'/g, "\\'")}')" title="Remove ingredient">×</button>
-                    </div>`
-                ).join('');
+                    </div>`;
+                }).join('');
             }
         }
 
@@ -1373,6 +1356,7 @@
             
             const options = {
                 nodes: {
+                    shape: 'dot',
                     borderWidth: 2,
                     shadow: true,
                     font: {
@@ -1381,37 +1365,46 @@
                         align: 'center',
                         bold: true
                     },
-                    shapeProperties: {
-                        useBorderWithImage: true
+                    scaling: {
+                        min: 12,
+                        max: 40
                     }
                 },
                 edges: {
                     width: 2,
                     shadow: true,
+                    color: { color: 'rgba(255,255,255,0.35)', highlight: '#4de4ff' },
                     smooth: {
                         type: 'continuous',
-                        roundness: 0.5
-                    },
-                    arrows: {
-                        to: { enabled: false }
+                        roundness: 0.4
                     }
                 },
                 physics: {
                     enabled: true,
-                    stabilization: { iterations: 100 },
-                    barnesHut: {
-                        gravitationalConstant: -2000,
-                        centralGravity: 0.3,
+                    solver: 'forceAtlas2Based',
+                    stabilization: {
+                        enabled: true,
+                        iterations: 200,
+                        updateInterval: 25,
+                        fit: true
+                    },
+                    timestep: 0.5,
+                    minVelocity: 0.5,
+                    forceAtlas2Based: {
+                        gravitationalConstant: -50,
+                        centralGravity: 0.02,
+                        springConstant: 0.08,
                         springLength: 200,
-                        springConstant: 0.04,
-                        damping: 0.09
+                        damping: 0.92,
+                        avoidOverlap: 1.2
                     }
                 },
                 interaction: {
                     hover: true,
-                    tooltipDelay: 200,
+                    tooltipDelay: 150,
                     zoomView: true,
-                    dragView: true
+                    dragView: true,
+                    dragNodes: true
                 }
             };
 
@@ -1433,9 +1426,14 @@
                     if (params.nodes.length > 0) {
                         const nodeId = params.nodes[0];
                         const nodeData = nodes.get(nodeId);
-                        if (nodeData) {
-                            showIngredient(nodeId);
+                        if (!nodeData) return;
+                        const filterActive = !(selectedCategories.length === 0 || selectedCategories.includes('all'));
+                        if (filterActive && !nodeMatchesActiveFilter(nodeId)) {
+                            showToast('Ingredient hidden by category filter. Clear filters to expand it.');
+                            pulseFilteredNode(nodeId);
+                            return;
                         }
+                            showIngredient(nodeId);
                     }
                 });
 
@@ -1466,8 +1464,13 @@
             document.getElementById('clearButton').addEventListener('click', function() {
                 resetNetwork(true);
                 document.getElementById('searchInput').value = '';
+                const suggestions = document.getElementById('suggestions');
+                if (suggestions) {
+                    suggestions.style.display = 'none';
+                }
             });
         }
+
 
         // Initialize when page loads
         window.addEventListener('load', function() {
@@ -1477,9 +1480,37 @@
             });
         });
 
+        window.addEventListener('resize', function() {
+            if (network) {
+                network.redraw();
+            }
+        });
+
+        // Center network view
+        function centerNetwork() {
+            if (network) {
+                network.fit({
+                    animation: {
+                        duration: 500,
+                        easingFunction: 'easeInOutQuad'
+                    }
+                });
+            }
+        }
+
         // Make functions available globally
         window.selectIngredient = selectIngredient;
         window.removeIngredient = removeIngredientFromNetwork;
+        window.centerNetwork = centerNetwork;
+        window.openRecipeDrawer = openRecipeDrawer;
+        window.closeRecipeDrawer = closeRecipeDrawer;
+        
+        // Make clickedIngredients available globally for recipe generator
+        // This ensures the recipe generator can access the selected ingredients
+        Object.defineProperty(window, 'clickedIngredients', {
+            get: function() { return clickedIngredients; },
+            configurable: true
+        });
     </script>
 </body>
 </html>

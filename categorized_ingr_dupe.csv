@@ -1,0 +1,1842 @@
+name,is_hub,category
+buttermilk,hub,Dairy
+cheese,hub,Dairy
+cream,hub,Dairy
+bran bud,no_hub,Vegetables and Herbs
+tortilla,hub,Grains and Legumes
+pizza crust,no_hub,Grains and Legumes
+milk,hub,Dairy
+corn,hub,Grains and Legumes
+7 up,no_hub,Vegetables and Herbs
+beef,hub,Meat and Poultry
+"9"" pastry pie shell",no_hub,Snacks and Dessert
+chicken,hub,Meat and Poultry
+mushroom,hub,Vegetables and Herbs
+pie crust,hub,Snacks and Dessert
+deep dish pie shell,no_hub,Snacks and Dessert
+cracker,no_hub,Snacks and Dessert
+pie shell,no_hub,Snacks and Dessert
+a.1. original sauce,no_hub,Conditments and Seasonings
+abalone,hub,Seafood
+absinthe,no_hub,Conditments and Seasonings
+absolut citron vodka,no_hub,Alcoholic Drinks
+achiote,no_hub,Vegetables and Herbs
+acini di pepe pasta,no_hub,Grains and Legumes
+acorn,hub,Grains and Legumes
+squash,no_hub,Vegetables and Herbs
+active dry yeast,no_hub,Vegetables and Herbs
+amish starter,no_hub,Vegetables and Herbs
+adobo sauce,no_hub,Snacks and Dessert
+seasoning,no_hub,Conditments and Seasonings
+advocaat,no_hub,Vegetables and Herbs
+adzuki bean,hub,Grains and Legumes
+agar,hub,Seafood
+rye flake,no_hub,Grains and Legumes
+agave,hub,Vegetables and Herbs
+pear nectar,no_hub,Fruit
+aged cheddar cheese,no_hub,Dairy
+egg white,no_hub,Meat and Poultry
+ahi,no_hub,Vegetables and Herbs
+steak,no_hub,Vegetables and Herbs
+aioli,no_hub,Vegetables and Herbs
+ajinomoto,no_hub,Conditments and Seasonings
+ajwain,no_hub,Vegetables and Herbs
+albacore tuna,hub,Seafood
+alcaparrado,no_hub,Vegetables and Herbs
+alcohol,no_hub,Vegetables and Herbs
+ale,no_hub,Vegetables and Herbs
+aleppo pepper,no_hub,Vegetables and Herbs
+alfalfa,hub,Conditments and Seasonings
+alfredo sauce,no_hub,Conditments and Seasonings
+cereal,no_hub,Grains and Legumes
+all purpose flour,no_hub,Grains and Legumes
+alligator meat,no_hub,Meat and Poultry
+allspice,hub,Conditments and Seasonings
+almond,hub,Grains and Legumes
+biscotti,no_hub,Seafood
+almond brickle chip,no_hub,Grains and Legumes
+rose essence,no_hub,Vegetables and Herbs
+pie filling,no_hub,Snacks and Dessert
+flavored oil,no_hub,Conditments and Seasonings
+flavoring,no_hub,Conditments and Seasonings
+liqueur,no_hub,Snacks and Dessert
+macaroon,no_hub,Vegetables and Herbs
+alphabet pasta,no_hub,Grains and Legumes
+alum,no_hub,Fruit
+aluminum foil,no_hub,Conditments and Seasonings
+amaranth,hub,Conditments and Seasonings
+amaretti,no_hub,Vegetables and Herbs
+amaretto,no_hub,Grains and Legumes
+amarula cream liqueur,no_hub,Dairy
+amber rum,no_hub,Alcoholic Drinks
+amchoor powder,no_hub,Conditments and Seasonings
+amchur powder,no_hub,Conditments and Seasonings
+american cheese,no_hub,Dairy
+ammonia,no_hub,Seafood
+anaheim chili,no_hub,Conditments and Seasonings
+anasazi bean,no_hub,Grains and Legumes
+ancho chili,no_hub,Conditments and Seasonings
+chilies,no_hub,Vegetables and Herbs
+anchovies packed in oil,no_hub,Conditments and Seasonings
+anchovy,hub,Seafood
+andes mints candy,no_hub,Snacks and Dessert
+andouille sausage,no_hub,Meat and Poultry
+anejo cheese,no_hub,Dairy
+coconut,hub,Fruit
+angel food cake,no_hub,Snacks and Dessert
+angelica,hub,Conditments and Seasonings
+angostura bitter,no_hub,Vegetables and Herbs
+anise,hub,Conditments and Seasonings
+anisette,no_hub,Conditments and Seasonings
+anjou pear,no_hub,Fruit
+annatto oil,no_hub,Conditments and Seasonings
+apple,hub,Fruit
+brandy,hub,Alcoholic Drinks
+butter,hub,Dairy
+vinegar,hub,Snacks and Dessert
+lemonade concentrate,no_hub,Fruit
+schnapps,no_hub,Seafood
+smoked ham,no_hub,Meat and Poultry
+applejack,no_hub,Fruit
+applesauce,no_hub,Fruit
+apricot,hub,Fruit
+preserve,no_hub,Conditments and Seasonings
+aquavit,no_hub,Fruit
+arame seaweed,no_hub,Conditments and Seasonings
+arbol chile,no_hub,Vegetables and Herbs
+arborio rice,no_hub,Grains and Legumes
+arctic char,no_hub,Seafood
+roast,no_hub,Grains and Legumes
+armagnac,no_hub,Vegetables and Herbs
+aromatic bitter,no_hub,Vegetables and Herbs
+arrowroot,hub,Conditments and Seasonings
+artichoke,hub,Vegetables and Herbs
+artisan bread,no_hub,Snacks and Dessert
+arugula,no_hub,Snacks and Dessert
+asadero cheese,no_hub,Dairy
+asafoetida powder,no_hub,Conditments and Seasonings
+ascorbic acid,no_hub,Seafood
+asiago cheese,no_hub,Dairy
+asian pear,no_hub,Fruit
+asparagus,hub,Vegetables and Herbs
+vegetable,no_hub,Vegetables and Herbs
+atkins baking mix,no_hub,Conditments and Seasonings
+au gratin potato,no_hub,Vegetables and Herbs
+au jus mix,no_hub,Snacks and Dessert
+aubergine,no_hub,Fruit
+avocado,hub,Fruit
+azuki bean,no_hub,Grains and Legumes
+baby pea,no_hub,Grains and Legumes
+calamari,no_hub,Vegetables and Herbs
+carrot,hub,Vegetables and Herbs
+pickle,no_hub,Fruit
+eggplant,hub,Vegetables and Herbs
+green,no_hub,Vegetables and Herbs
+lettuce,hub,Vegetables and Herbs
+octopus,no_hub,Seafood
+onion,hub,Vegetables and Herbs
+portabella mushroom,no_hub,Vegetables and Herbs
+potato,hub,Vegetables and Herbs
+rocket,no_hub,Vegetables and Herbs
+shrimp,hub,Seafood
+spinach,hub,Vegetables and Herbs
+sweet pea,no_hub,Vegetables and Herbs
+tomato,hub,Vegetables and Herbs
+turnip,hub,Conditments and Seasonings
+bacardi limon,no_hub,Vegetables and Herbs
+bacon,no_hub,Meat and Poultry
+backfin crab meat,no_hub,Seafood
+dripping,no_hub,Conditments and Seasonings
+bacon grease,no_hub,Meat and Poultry
+bagel,hub,Snacks and Dessert
+baguette,no_hub,Vegetables and Herbs
+baharat,no_hub,Conditments and Seasonings
+baileys irish cream,no_hub,Dairy
+bean,hub,Grains and Legumes
+tofu,hub,Grains and Legumes
+chocolate,hub,Snacks and Dessert
+unsweetened coconut,no_hub,Fruit
+baking hen,no_hub,Conditments and Seasonings
+balsamic glaze,no_hub,Conditments and Seasonings
+vinaigrette,no_hub,Vegetables and Herbs
+bamboo shoot,hub,Vegetables and Herbs
+banana,hub,Fruit
+instant oat,no_hub,Grains and Legumes
+barbecue sauce,no_hub,Conditments and Seasonings
+barbecued pork,no_hub,Meat and Poultry
+barberry,no_hub,Fruit
+barley,hub,Grains and Legumes
+bartlett pear,hub,Fruit
+basic pizza dough,no_hub,Grains and Legumes
+basil,hub,Vegetables and Herbs
+basil chiffonade,no_hub,Vegetables and Herbs
+basmati rice,hub,Grains and Legumes
+fillet,no_hub,Grains and Legumes
+batter,no_hub,Vegetables and Herbs
+bay leaf,no_hub,Vegetables and Herbs
+scallop,hub,Seafood
+bean sprout,no_hub,Grains and Legumes
+bean thread,no_hub,Grains and Legumes
+bearnaise sauce,no_hub,Conditments and Seasonings
+beau monde spice,no_hub,Conditments and Seasonings
+bechamel sauce,no_hub,Conditments and Seasonings
+bee pollen,no_hub,Seafood
+beef brisket,no_hub,Meat and Poultry
+broth,no_hub,Meat and Poultry
+beef burger,no_hub,Meat and Poultry
+beef cheek,no_hub,Meat and Poultry
+chuck,no_hub,Fruit
+consomme,no_hub,Conditments and Seasonings
+brie round,no_hub,Vegetables and Herbs
+beef flavor ramen noodle,no_hub,Meat and Poultry
+gravy,no_hub,Fruit
+beef heart,no_hub,Meat and Poultry
+beef jerky,no_hub,Meat and Poultry
+kidney bean,hub,Grains and Legumes
+beef mince,no_hub,Meat and Poultry
+sausage,hub,Meat and Poultry
+ham shank,no_hub,Meat and Poultry
+beef short rib,no_hub,Meat and Poultry
+beef shoulder,no_hub,Meat and Poultry
+sirloin,no_hub,Vegetables and Herbs
+stock,no_hub,Conditments and Seasonings
+beef tongue,no_hub,Meat and Poultry
+beefsteak tomato,no_hub,Vegetables and Herbs
+beer,hub,Alcoholic Drinks
+beeswax,no_hub,Vegetables and Herbs
+beet,no_hub,Vegetables and Herbs
+sugar,hub,Snacks and Dessert
+beetroot,hub,Vegetables and Herbs
+bel paese cheese,no_hub,Dairy
+belgian endive,no_hub,Vegetables and Herbs
+pepper,hub,Vegetables and Herbs
+benedictine,no_hub,Vegetables and Herbs
+bengal gram dal,no_hub,Fruit
+berbere,no_hub,Fruit
+bermuda onion,no_hub,Vegetables and Herbs
+berry,hub,Fruit
+besan,no_hub,Vegetables and Herbs
+mayonnaise,no_hub,Conditments and Seasonings
+betty crocker fudge brownie mix,no_hub,Snacks and Dessert
+bicarbonate of soda,no_hub,Vegetables and Herbs
+cherry,hub,Fruit
+chile,no_hub,Conditments and Seasonings
+bird seed,no_hub,Grains and Legumes
+birds eye chile,no_hub,Conditments and Seasonings
+biscuit,hub,Snacks and Dessert
+bisquick,no_hub,Meat and Poultry
+bisto,no_hub,Vegetables and Herbs
+bitter,no_hub,Vegetables and Herbs
+bittersweet chocolate,no_hub,Snacks and Dessert
+black tea,hub,Vegetables and Herbs
+garlic,hub,Conditments and Seasonings
+cardamom,hub,Conditments and Seasonings
+caviar,hub,Seafood
+coffee,hub,Snacks and Dessert
+currant,hub,Vegetables and Herbs
+decorating gel,no_hub,Conditments and Seasonings
+food coloring,no_hub,Snacks and Dessert
+black forest ham,no_hub,Meat and Poultry
+lentil,hub,Grains and Legumes
+licorice,no_hub,Grains and Legumes
+black mission fig,no_hub,Fruit
+mustard,hub,Snacks and Dessert
+peppercorn,no_hub,Vegetables and Herbs
+pudding,hub,Snacks and Dessert
+raspberry,hub,Fruit
+sesame,hub,Grains and Legumes
+soybean,hub,Grains and Legumes
+treacle,no_hub,Vegetables and Herbs
+truffle,hub,Vegetables and Herbs
+black turtle bean,no_hub,Grains and Legumes
+walnut,hub,Grains and Legumes
+blackberry,hub,Fruit
+blackening seasoning,no_hub,Conditments and Seasonings
+blackstrap molasses,no_hub,Snacks and Dessert
+mace blade,no_hub,Grains and Legumes
+blanched almond,no_hub,Grains and Legumes
+bleach,no_hub,Fruit
+bleached all purpose flour,no_hub,Grains and Legumes
+salad dressing,hub,Snacks and Dessert
+orange,hub,Fruit
+bloody mary mix,no_hub,Snacks and Dessert
+blue crab,no_hub,Seafood
+cornmeal,no_hub,Grains and Legumes
+curacao,no_hub,Vegetables and Herbs
+blueberry,hub,Fruit
+bluefish,hub,Seafood
+boboli pizza crust,no_hub,Grains and Legumes
+meatless sauce,no_hub,Conditments and Seasonings
+bocconcini,no_hub,Vegetables and Herbs
+bock beer,no_hub,Alcoholic Drinks
+boil in the bag rice,no_hub,Grains and Legumes
+boiled ham,no_hub,Meat and Poultry
+boiling onion,no_hub,Vegetables and Herbs
+bok choy,no_hub,Vegetables and Herbs
+bologna,no_hub,Grains and Legumes
+bolognese sauce,no_hub,Conditments and Seasonings
+ham,hub,Meat and Poultry
+boneless ham,no_hub,Meat and Poultry
+bonito flake,no_hub,Conditments and Seasonings
+borax,no_hub,Conditments and Seasonings
+borlotti bean,no_hub,Grains and Legumes
+bosc pear,no_hub,Fruit
+boston butt,no_hub,Vegetables and Herbs
+bottled water,no_hub,Vegetables and Herbs
+bottom round steak,no_hub,Conditments and Seasonings
+bouillon,no_hub,Snacks and Dessert
+bread cube,no_hub,Snacks and Dessert
+bouquet garni,no_hub,Vegetables and Herbs
+bourbon,no_hub,Seafood
+boursin cheese,no_hub,Dairy
+pasta,hub,Grains and Legumes
+boysenberry,hub,Fruit
+braeburn apple,no_hub,Fruit
+braggs liquid amino,no_hub,Seafood
+bratwurst,no_hub,Vegetables and Herbs
+braunschweiger sausage,no_hub,Meat and Poultry
+brazil nut,hub,Grains and Legumes
+bread,hub,Snacks and Dessert
+pie dough,no_hub,Snacks and Dessert
+flour,hub,Grains and Legumes
+bread improver,no_hub,Snacks and Dessert
+bread machine yeast,no_hub,Snacks and Dessert
+bread mix,no_hub,Snacks and Dessert
+stuffing cube,no_hub,Snacks and Dessert
+breadcrumb,no_hub,Snacks and Dessert
+breaded chicken patty,no_hub,Meat and Poultry
+breadfruit,hub,Fruit
+breadstick,no_hub,Snacks and Dessert
+breakfast cereal,hub,Grains and Legumes
+breakstone's sour cream,no_hub,Dairy
+breasts of veal,no_hub,Snacks and Dessert
+bresaola,no_hub,Snacks and Dessert
+brewed tea,no_hub,Vegetables and Herbs
+espresso,no_hub,Conditments and Seasonings
+brewer's yeast,no_hub,Vegetables and Herbs
+brick cheese,no_hub,Dairy
+brie cheese,no_hub,Dairy
+brine,no_hub,Fruit
+brinjal,no_hub,Vegetables and Herbs
+brioche roll,no_hub,Seafood
+broad bean,hub,Grains and Legumes
+noodle,no_hub,Vegetables and Herbs
+broccoli,hub,Vegetables and Herbs
+broccolini,no_hub,Vegetables and Herbs
+broiler,no_hub,Conditments and Seasonings
+brown ale,no_hub,Conditments and Seasonings
+egg substitute,no_hub,Snacks and Dessert
+brownie,no_hub,Conditments and Seasonings
+browning sauce,no_hub,Conditments and Seasonings
+brussels sprout,hub,Vegetables and Herbs
+champagne,hub,Alcoholic Drinks
+bucatini pasta,no_hub,Grains and Legumes
+buckwheat flour,no_hub,Grains and Legumes
+budweiser beer,no_hub,Alcoholic Drinks
+buffalo,hub,Meat and Poultry
+shallot,hub,Vegetables and Herbs
+bulgur,hub,Grains and Legumes
+italian plum,no_hub,Fruit
+bun,no_hub,Vegetables and Herbs
+burdock root,no_hub,Vegetables and Herbs
+burgundy wine,no_hub,Alcoholic Drinks
+burrata cheese,no_hub,Dairy
+burrito,hub,Vegetables and Herbs
+shortening,hub,Dairy
+buttercream frosting,no_hub,Dairy
+buttercup squash,no_hub,Vegetables and Herbs
+buttered bread crumb,no_hub,Snacks and Dessert
+butterfinger candy bar,no_hub,Snacks and Dessert
+butterfish,no_hub,Seafood
+butterflied leg of lamb,no_hub,Dairy
+butterhead lettuce,no_hub,Vegetables and Herbs
+butternut squash,hub,Vegetables and Herbs
+butterscotch chip,no_hub,Snacks and Dessert
+buttery cracker,no_hub,Snacks and Dessert
+cabbage,hub,Vegetables and Herbs
+coleslaw,no_hub,Vegetables and Herbs
+sauvignon blanc wine,no_hub,Alcoholic Drinks
+cabrales cheese,no_hub,Dairy
+cacao,no_hub,Grains and Legumes
+cachaca,no_hub,Vegetables and Herbs
+caciocavallo,no_hub,Seafood
+cactus piece,no_hub,Vegetables and Herbs
+crouton,no_hub,Seafood
+cajun spice,no_hub,Conditments and Seasonings
+stewed tomato,no_hub,Vegetables and Herbs
+cake,hub,Snacks and Dessert
+cake crumb,no_hub,Snacks and Dessert
+yeast,no_hub,Vegetables and Herbs
+calf liver,no_hub,Meat and Poultry
+california walnut,no_hub,Grains and Legumes
+calimyrna fig,no_hub,Fruit
+calrose rice,no_hub,Grains and Legumes
+calumet baking powder,no_hub,Conditments and Seasonings
+calvados,no_hub,Snacks and Dessert
+camembert cheese,hub,Dairy
+campanelle pasta,no_hub,Grains and Legumes
+campari,no_hub,Vegetables and Herbs
+campbell's tomato soup,no_hub,Vegetables and Herbs
+canadian bacon,no_hub,Meat and Poultry
+candied peel,no_hub,Vegetables and Herbs
+pineapple,hub,Fruit
+candlenut,no_hub,Grains and Legumes
+candy,no_hub,Snacks and Dessert
+candy sprinkle,no_hub,Snacks and Dessert
+syrup,hub,Snacks and Dessert
+canela,no_hub,Vegetables and Herbs
+canned pea,no_hub,Grains and Legumes
+chipotle chile,no_hub,Conditments and Seasonings
+corn niblets,no_hub,Grains and Legumes
+crabmeat,no_hub,Meat and Poultry
+jalapeno,hub,Vegetables and Herbs
+mandarin orange,hub,Fruit
+pimiento,no_hub,Grains and Legumes
+pumpkin,hub,Vegetables and Herbs
+sauerkraut,no_hub,Vegetables and Herbs
+cannellini,no_hub,Vegetables and Herbs
+cannelloni tube,no_hub,Vegetables and Herbs
+canning salt,no_hub,Conditments and Seasonings
+cannoli shell,no_hub,Snacks and Dessert
+canola oil,hub,Conditments and Seasonings
+cooking oil,hub,Snacks and Dessert
+cantaloupe,no_hub,Vegetables and Herbs
+cap'n crunch cereal,no_hub,Grains and Legumes
+capellini,no_hub,Vegetables and Herbs
+caper,hub,Grains and Legumes
+caperberries,no_hub,Fruit
+capers in brine,no_hub,Conditments and Seasonings
+capicola,no_hub,Conditments and Seasonings
+capon,no_hub,Conditments and Seasonings
+caponata,no_hub,Grains and Legumes
+capsicum,hub,Conditments and Seasonings
+carambola,no_hub,Vegetables and Herbs
+caramel,no_hub,Vegetables and Herbs
+caramelized onion,no_hub,Vegetables and Herbs
+caraway seed,no_hub,Grains and Legumes
+carbonated water,no_hub,Vegetables and Herbs
+cardoon,hub,Vegetables and Herbs
+caribbean jerk seasoning,no_hub,Conditments and Seasonings
+carnaroli rice,no_hub,Grains and Legumes
+carnation instant milk,no_hub,Dairy
+carob chip,no_hub,Snacks and Dessert
+carom seed,hub,Vegetables and Herbs
+carp,no_hub,Seafood
+cashew,no_hub,Grains and Legumes
+casing,no_hub,Snacks and Dessert
+cassava,hub,Vegetables and Herbs
+cassia,hub,Vegetables and Herbs
+caster,no_hub,Conditments and Seasonings
+catalina dressing,no_hub,Conditments and Seasonings
+catfish,hub,Seafood
+catsup,no_hub,Seafood
+cauliflower,hub,Vegetables and Herbs
+cavatappi pasta,no_hub,Grains and Legumes
+cavatelli,no_hub,Vegetables and Herbs
+cavenders all purpose greek seasoning,no_hub,Conditments and Seasonings
+cavolo nero,no_hub,Vegetables and Herbs
+cayenne,no_hub,Conditments and Seasonings
+cedar plank,no_hub,Vegetables and Herbs
+celeriac,no_hub,Vegetables and Herbs
+celery,hub,Vegetables and Herbs
+cellophane noodle,no_hub,Vegetables and Herbs
+center cut bacon,no_hub,Meat and Poultry
+certo,no_hub,Grains and Legumes
+chablis,no_hub,Vegetables and Herbs
+chai tea,no_hub,Vegetables and Herbs
+chai tea teabags,no_hub,Vegetables and Herbs
+challah,no_hub,Vegetables and Herbs
+chamomile flower,no_hub,Conditments and Seasonings
+champignon mushroom,no_hub,Vegetables and Herbs
+channa dal,no_hub,Vegetables and Herbs
+chanterelle mushroom,no_hub,Vegetables and Herbs
+char siu pork,no_hub,Meat and Poultry
+charcoal,no_hub,Seafood
+chard leaf,no_hub,Vegetables and Herbs
+chardonnay wine,no_hub,Alcoholic Drinks
+masala,no_hub,Vegetables and Herbs
+chayote,hub,Vegetables and Herbs
+chayotes,no_hub,Vegetables and Herbs
+soup,hub,Vegetables and Herbs
+fruit spread,no_hub,Snacks and Dessert
+cheerios toasted oat cereal,no_hub,Grains and Legumes
+curd,no_hub,Vegetables and Herbs
+tortellini,no_hub,Vegetables and Herbs
+ravioli,hub,Vegetables and Herbs
+cheese sauce,no_hub,Dairy
+ham slice,no_hub,Meat and Poultry
+cheese whiz,no_hub,Dairy
+cheesecake,no_hub,Dairy
+cheesecloth,no_hub,Dairy
+cheez whiz,no_hub,Conditments and Seasonings
+cherries in syrup,no_hub,Conditments and Seasonings
+gelatin,hub,Snacks and Dessert
+cherry heering,no_hub,Fruit
+cherrystone clam,no_hub,Seafood
+chervil,hub,Conditments and Seasonings
+chestnut,hub,Grains and Legumes
+chevre cheese,no_hub,Dairy
+chia seed,no_hub,Grains and Legumes
+chianti wine,no_hub,Alcoholic Drinks
+chicken drummettes,no_hub,Meat and Poultry
+turkey drumstick,no_hub,Meat and Poultry
+chickpea,hub,Grains and Legumes
+chicory lettuce,no_hub,Vegetables and Herbs
+chihuahua cheese,no_hub,Dairy
+chiles de arbol,no_hub,Conditments and Seasonings
+chili,hub,Conditments and Seasonings
+chili without bean,no_hub,Grains and Legumes
+chimichurri sauce,no_hub,Conditments and Seasonings
+chinese wine,no_hub,Alcoholic Drinks
+chip,no_hub,Snacks and Dessert
+chipped beef,no_hub,Meat and Poultry
+chive,hub,Vegetables and Herbs
+chive blossom,no_hub,Vegetables and Herbs
+chopped tomato,no_hub,Vegetables and Herbs
+soy chorizo,no_hub,Grains and Legumes
+chunk tuna,no_hub,Seafood
+chunky salsa,no_hub,Conditments and Seasonings
+chutney,no_hub,Conditments and Seasonings
+ciabatta,no_hub,Vegetables and Herbs
+cider,hub,Conditments and Seasonings
+cilantro,no_hub,Vegetables and Herbs
+cinnamon,hub,Conditments and Seasonings
+cipollini onion,no_hub,Vegetables and Herbs
+citric acid,no_hub,Seafood
+citron,no_hub,Vegetables and Herbs
+citrus peel,no_hub,Fruit
+citrus infused vodka,no_hub,Fruit
+clam,hub,Seafood
+clamato juice,no_hub,Conditments and Seasonings
+clams in shell,no_hub,Seafood
+clarified butter,no_hub,Dairy
+classico tomato and basil pasta sauce,no_hub,Conditments and Seasonings
+clear jel,no_hub,Vegetables and Herbs
+clementine,hub,Fruit
+clotted cream,no_hub,Dairy
+clove,hub,Conditments and Seasonings
+club soda,no_hub,Conditments and Seasonings
+coarse sugar,no_hub,Conditments and Seasonings
+coating mix,no_hub,Snacks and Dessert
+coca cola,no_hub,Snacks and Dessert
+cockle,no_hub,Seafood
+cocktail frank,no_hub,Seafood
+coco lopez,no_hub,Vegetables and Herbs
+cocoa,hub,Vegetables and Herbs
+frosting,no_hub,Snacks and Dessert
+cod,no_hub,Seafood
+coffee creamer,no_hub,Snacks and Dessert
+cognac,no_hub,Vegetables and Herbs
+cointreau liqueur,no_hub,Snacks and Dessert
+coke,no_hub,Vegetables and Herbs
+cola,no_hub,Snacks and Dessert
+cola drink,no_hub,Conditments and Seasonings
+colby,no_hub,Vegetables and Herbs
+monterey jack cheese,no_hub,Dairy
+water,hub,Vegetables and Herbs
+coleman's dry mustard,no_hub,Grains and Legumes
+collard green,no_hub,Vegetables and Herbs
+tri colored pasta,no_hub,Grains and Legumes
+marshmallow,hub,Snacks and Dessert
+comice pear,no_hub,Fruit
+compressed yeast cake,no_hub,Snacks and Dessert
+comte cheese,hub,Dairy
+conch,hub,Seafood
+concord grape,no_hub,Fruit
+french fry,no_hub,Grains and Legumes
+condiment,no_hub,Conditments and Seasonings
+confectioners' sugar,no_hub,Conditments and Seasonings
+converted rice,no_hub,Grains and Legumes
+cooked ham,no_hub,Meat and Poultry
+couscous,hub,Seafood
+macaroni,hub,Grains and Legumes
+fettuccine,no_hub,Vegetables and Herbs
+jasmine tea,no_hub,Vegetables and Herbs
+lasagna sheet,no_hub,Conditments and Seasonings
+linguine,no_hub,Seafood
+lobster,hub,Seafood
+oatmeal,no_hub,Grains and Legumes
+spaghetti,no_hub,Grains and Legumes
+cookie,no_hub,Snacks and Dessert
+cooky,no_hub,Snacks and Dessert
+cool whip,no_hub,Conditments and Seasonings
+topping mix,no_hub,Snacks and Dessert
+copha,no_hub,Vegetables and Herbs
+coriander,hub,Conditments and Seasonings
+corkscrew macaroni,no_hub,Grains and Legumes
+corn kernel,no_hub,Grains and Legumes
+muffin,no_hub,Snacks and Dessert
+margarine,hub,Alcoholic Drinks
+strip steak,no_hub,Seafood
+cornbread,hub,Snacks and Dessert
+corned beef,no_hub,Meat and Poultry
+cornflour,no_hub,Grains and Legumes
+cornichons,no_hub,Grains and Legumes
+cornish hen,no_hub,Grains and Legumes
+cornstarch,no_hub,Grains and Legumes
+corona beer,no_hub,Alcoholic Drinks
+cortland apple,no_hub,Fruit
+cotija cheese,no_hub,Dairy
+salami,no_hub,Vegetables and Herbs
+country ham,no_hub,Meat and Poultry
+sparerib,no_hub,Vegetables and Herbs
+courgette,no_hub,Vegetables and Herbs
+court bouillon,no_hub,Snacks and Dessert
+crab,hub,Seafood
+crabapple,no_hub,Fruit
+cracked ice,no_hub,Snacks and Dessert
+craisins,no_hub,Fruit
+cranberry,hub,Fruit
+crawfish,no_hub,Seafood
+crayfish,hub,Seafood
+cream cheese with chives and onion,no_hub,Dairy
+cream cheese with herb,no_hub,Dairy
+tartar sauce,no_hub,Conditments and Seasonings
+wheat,hub,Grains and Legumes
+dry sherry,no_hub,Fruit
+cream style corn,no_hub,Dairy
+creamed corn,no_hub,Grains and Legumes
+horseradish,hub,Vegetables and Herbs
+sweet creamy butter,no_hub,Dairy
+crema,no_hub,Vegetables and Herbs
+creme anglaise,no_hub,Conditments and Seasonings
+creme de banane,no_hub,Snacks and Dessert
+creme de cacao,no_hub,Snacks and Dessert
+creme de cassis,no_hub,Vegetables and Herbs
+creme de menthe,no_hub,Conditments and Seasonings
+creme fraiche,no_hub,Vegetables and Herbs
+crepe,no_hub,Vegetables and Herbs
+crescent roll,no_hub,Vegetables and Herbs
+crisco,no_hub,Seafood
+crisp bacon,no_hub,Meat and Poultry
+crispix cereal,no_hub,Grains and Legumes
+crispy rice cereal,no_hub,Grains and Legumes
+croissant,no_hub,Vegetables and Herbs
+crookneck yellow squash,no_hub,Vegetables and Herbs
+cross rib roast,no_hub,Vegetables and Herbs
+crostini,no_hub,Vegetables and Herbs
+crumpet,no_hub,Snacks and Dessert
+crunchy peanut butter,no_hub,Conditments and Seasonings
+crushed tomato,no_hub,Vegetables and Herbs
+tomatoes in puree,no_hub,Vegetables and Herbs
+crusty bread,no_hub,Snacks and Dessert
+sugar crystal,no_hub,Conditments and Seasonings
+crystallized ginger,no_hub,Vegetables and Herbs
+cuban bread,no_hub,Snacks and Dessert
+cubanelle pepper,no_hub,Vegetables and Herbs
+cubed ham,no_hub,Meat and Poultry
+cucumber,hub,Vegetables and Herbs
+culantro,no_hub,Vegetables and Herbs
+cumin,hub,Conditments and Seasonings
+cupcake,no_hub,Snacks and Dessert
+curing salt,no_hub,Conditments and Seasonings
+curry,no_hub,Vegetables and Herbs
+custard,no_hub,Snacks and Dessert
+cuttlefish,hub,Seafood
+daikon radish,no_hub,Vegetables and Herbs
+eggnog,no_hub,Meat and Poultry
+dal,no_hub,Vegetables and Herbs
+dandelion green,no_hub,Conditments and Seasonings
+danish blue cheese,no_hub,Dairy
+dark rum,no_hub,Alcoholic Drinks
+jamaican rum,no_hub,Alcoholic Drinks
+mexican beer,no_hub,Alcoholic Drinks
+molasses,hub,Snacks and Dessert
+muscovado sugar,no_hub,Conditments and Seasonings
+raisin,hub,Fruit
+seedless grape,no_hub,Fruit
+turkey,hub,Meat and Poultry
+dashi,no_hub,Vegetables and Herbs
+dashida,no_hub,Vegetables and Herbs
+date,hub,Fruit
+decorative candy,no_hub,Snacks and Dessert
+decorator sugar,no_hub,Conditments and Seasonings
+frying oil,no_hub,Conditments and Seasonings
+deer,hub,Meat and Poultry
+dehydrated onion,no_hub,Vegetables and Herbs
+deli ham,no_hub,Meat and Poultry
+delicata squash,no_hub,Vegetables and Herbs
+demerara sugar,no_hub,Conditments and Seasonings
+demi glace,no_hub,Fruit
+desiccated coconut,no_hub,Fruit
+dessert apple,no_hub,Fruit
+deviled ham,no_hub,Meat and Poultry
+dhaniya powder,no_hub,Conditments and Seasonings
+roasted pecan,no_hub,Grains and Legumes
+diced onion,no_hub,Vegetables and Herbs
+pimento,no_hub,Conditments and Seasonings
+diet cola,no_hub,Snacks and Dessert
+ginger,hub,Vegetables and Herbs
+digestive biscuit,no_hub,Snacks and Dessert
+dijonnaise mustard,no_hub,Conditments and Seasonings
+dill,hub,Conditments and Seasonings
+relish,hub,Snacks and Dessert
+dill sprig,no_hub,Vegetables and Herbs
+dinner roll,no_hub,Seafood
+dip mix,no_hub,Snacks and Dessert
+dipper,no_hub,Conditments and Seasonings
+dipping sauce,no_hub,Conditments and Seasonings
+dish detergent,no_hub,Vegetables and Herbs
+distilled water,no_hub,Vegetables and Herbs
+ditali pasta,no_hub,Grains and Legumes
+ditalini,no_hub,Vegetables and Herbs
+doritos,no_hub,Grains and Legumes
+double cream,no_hub,Dairy
+dough enhancer,no_hub,Grains and Legumes
+doughnut,no_hub,Grains and Legumes
+dove,no_hub,Meat and Poultry
+dragee,no_hub,Snacks and Dessert
+drambuie,no_hub,Fruit
+dream whip,no_hub,Snacks and Dessert
+dried fig,no_hub,Vegetables and Herbs
+dried black fungus,no_hub,Vegetables and Herbs
+fennel,hub,Conditments and Seasonings
+fenugreek leaf,no_hub,Conditments and Seasonings
+dried funghi porcini,no_hub,Vegetables and Herbs
+garbanzo bean,no_hub,Grains and Legumes
+great northern bean,no_hub,Grains and Legumes
+oregano,hub,Conditments and Seasonings
+guajillo chilies,no_hub,Conditments and Seasonings
+hibiscus tea bag,no_hub,Seafood
+lavender,no_hub,Meat and Poultry
+lemongrass,no_hub,Fruit
+marjoram,hub,Vegetables and Herbs
+new mexico pepper,no_hub,Vegetables and Herbs
+pasilla chile,no_hub,Vegetables and Herbs
+pitted date,no_hub,Fruit
+rosemary,hub,Conditments and Seasonings
+rubbed sage,no_hub,Vegetables and Herbs
+savory,no_hub,Vegetables and Herbs
+shiitake mushroom,no_hub,Vegetables and Herbs
+shredded coconut,no_hub,Fruit
+yellow bean,no_hub,Grains and Legumes
+strawberry,hub,Fruit
+summer savory,hub,Conditments and Seasonings
+sweetened coconut,no_hub,Fruit
+tarragon,hub,Conditments and Seasonings
+dry gin,no_hub,Alcoholic Drinks
+enchilada sauce,no_hub,Conditments and Seasonings
+english pea,no_hub,Vegetables and Herbs
+marsala,no_hub,Vegetables and Herbs
+parsley,hub,Vegetables and Herbs
+pectin,hub,Snacks and Dessert
+penne,no_hub,Vegetables and Herbs
+pinto bean,no_hub,Grains and Legumes
+wine,hub,Alcoholic Drinks
+unsalted nut,no_hub,Grains and Legumes
+dry sweetener,no_hub,Vegetables and Herbs
+tapioca,no_hub,Snacks and Dessert
+thyme,hub,Vegetables and Herbs
+vermouth,hub,Alcoholic Drinks
+duck,no_hub,Meat and Poultry
+duck breast,no_hub,Meat and Poultry
+duck confit,no_hub,Meat and Poultry
+duckling,no_hub,Seafood
+dulce de leche,hub,Snacks and Dessert
+dumpling,hub,Seafood
+duncan hines yellow cake mix,no_hub,Snacks and Dessert
+dungeness crab,no_hub,Seafood
+durkee onion,no_hub,Vegetables and Herbs
+durum flour,no_hub,Grains and Legumes
+dutch process cocoa,no_hub,Vegetables and Herbs
+processed cheese,no_hub,Dairy
+eagle brand condensed milk,no_hub,Dairy
+earl grey tea,no_hub,Vegetables and Herbs
+ears of corn,no_hub,Grains and Legumes
+smart balance butter spread,no_hub,Dairy
+eau de vie,no_hub,Conditments and Seasonings
+edam cheese,no_hub,Dairy
+edamame,no_hub,Grains and Legumes
+glitter,no_hub,Vegetables and Herbs
+edible silver foil,no_hub,Conditments and Seasonings
+eel,no_hub,Seafood
+egg,hub,Meat and Poultry
+roll,no_hub,Grains and Legumes
+egg wash,no_hub,Meat and Poultry
+egg yolk,no_hub,Meat and Poultry
+elderberry,hub,Fruit
+elderflower liqueur,no_hub,Conditments and Seasonings
+elephant garlic clove,no_hub,Vegetables and Herbs
+emeril's original essence,no_hub,Vegetables and Herbs
+emmenthaler cheese,no_hub,Dairy
+endive,hub,Vegetables and Herbs
+enriched flour,no_hub,Grains and Legumes
+epazote,hub,Conditments and Seasonings
+erythritol,no_hub,Seafood
+escargot,no_hub,Vegetables and Herbs
+escarole,no_hub,Vegetables and Herbs
+essential oil,no_hub,Conditments and Seasonings
+evaporated cane juice,no_hub,Dairy
+everclear alcohol,no_hub,Vegetables and Herbs
+granulated onion,no_hub,Vegetables and Herbs
+silken tofu,no_hub,Grains and Legumes
+extra large egg,no_hub,Meat and Poultry
+strong coffee,no_hub,Snacks and Dessert
+virgin olive oil,no_hub,Conditments and Seasonings
+extract,no_hub,Vegetables and Herbs
+fajita size flour tortilla,no_hub,Grains and Legumes
+family size tea bag,no_hub,Vegetables and Herbs
+farfalle pasta,no_hub,Grains and Legumes
+farina,no_hub,Fruit
+farmer cheese,no_hub,Dairy
+fast rising yeast,no_hub,Vegetables and Herbs
+fat,no_hub,Conditments and Seasonings
+yogurt,hub,Dairy
+half and half,no_hub,Conditments and Seasonings
+fat free liquid egg product,no_hub,Seafood
+low sodium tamari,no_hub,Conditments and Seasonings
+miracle whip,no_hub,Conditments and Seasonings
+pound cake,no_hub,Snacks and Dessert
+refried bean,no_hub,Grains and Legumes
+thousand island dressing,no_hub,Conditments and Seasonings
+whipped cream,no_hub,Dairy
+fava bean,no_hub,Grains and Legumes
+fermented black bean,no_hub,Grains and Legumes
+feta,no_hub,Vegetables and Herbs
+fiddlehead,no_hub,Vegetables and Herbs
+field green,no_hub,Vegetables and Herbs
+fiesta nacho cheese soup,no_hub,Dairy
+fig,hub,Fruit
+filbert,hub,Grains and Legumes
+file powder,no_hub,Conditments and Seasonings
+filet mignon,no_hub,Conditments and Seasonings
+filet of beef,no_hub,Meat and Poultry
+fillets of sole,no_hub,Seafood
+fine salt,no_hub,Conditments and Seasonings
+semolina,hub,Grains and Legumes
+fines herbes,no_hub,Vegetables and Herbs
+fingerling potato,no_hub,Vegetables and Herbs
+peach,hub,Fruit
+firm tofu,no_hub,Grains and Legumes
+fish,hub,Seafood
+fish fumet,no_hub,Seafood
+spice,no_hub,Conditments and Seasonings
+flageolet bean,no_hub,Grains and Legumes
+flaked sea salt,no_hub,Conditments and Seasonings
+flank steak,no_hub,Vegetables and Herbs
+flat bread,no_hub,Snacks and Dessert
+flax seed,no_hub,Grains and Legumes
+fleur de sel,no_hub,Snacks and Dessert
+flounder,no_hub,Conditments and Seasonings
+floury potato,no_hub,Vegetables and Herbs
+focaccia bread,no_hub,Grains and Legumes
+foie gras,no_hub,Fruit
+foil liner,no_hub,Conditments and Seasonings
+fondant,no_hub,Vegetables and Herbs
+fontina,no_hub,Vegetables and Herbs
+four cheese blend,no_hub,Dairy
+framboise liqueur,no_hub,Conditments and Seasonings
+frangelico,no_hub,Conditments and Seasonings
+frank,no_hub,Fruit
+frank's red hot sauce,no_hub,Conditments and Seasonings
+frankfurter,no_hub,Vegetables and Herbs
+free range egg,no_hub,Meat and Poultry
+french's mustard,no_hub,Conditments and Seasonings
+french haricots vert,no_hub,Fruit
+ladyfinger,no_hub,Vegetables and Herbs
+vanilla,hub,Conditments and Seasonings
+fresh fig,no_hub,Vegetables and Herbs
+galangal,no_hub,Vegetables and Herbs
+gingerroot,no_hub,Vegetables and Herbs
+mussel,no_hub,Seafood
+nutmeg,hub,Grains and Legumes
+rhubarb,hub,Vegetables and Herbs
+salmon,hub,Seafood
+sardine,no_hub,Seafood
+scallion,no_hub,Vegetables and Herbs
+sorrel,hub,Conditments and Seasonings
+spearmint,hub,Conditments and Seasonings
+turmeric,hub,Conditments and Seasonings
+zucchini,no_hub,Vegetables and Herbs
+red fresno chile,no_hub,Vegetables and Herbs
+fried rice,no_hub,Grains and Legumes
+frisee,no_hub,Conditments and Seasonings
+frito corn chip,no_hub,Snacks and Dessert
+fritos corn chip,no_hub,Snacks and Dessert
+frog's leg,no_hub,Seafood
+fromage blanc,no_hub,Vegetables and Herbs
+frosted flake,no_hub,Conditments and Seasonings
+frozen pea,no_hub,Grains and Legumes
+frozen concentrated orange juice,no_hub,Fruit
+lemonade,no_hub,Fruit
+meatball,hub,Meat and Poultry
+frozen peppers and onion,no_hub,Vegetables and Herbs
+frozen raspberries in light syrup,no_hub,Conditments and Seasonings
+frozen strawberries in syrup,no_hub,Conditments and Seasonings
+southern comfort,no_hub,Seafood
+fructose,no_hub,Vegetables and Herbs
+fruit,no_hub,Fruit
+fruit leather,no_hub,Fruit
+fryer,no_hub,Grains and Legumes
+fudge,hub,Snacks and Dessert
+shortbread,no_hub,Snacks and Dessert
+full bodied red wine,no_hub,Alcoholic Drinks
+fusilli,no_hub,Vegetables and Herbs
+persimmon,hub,Fruit
+gai lan,no_hub,Vegetables and Herbs
+galliano,no_hub,Vegetables and Herbs
+ganache,no_hub,Fruit
+garlic & herb spreadable cheese,no_hub,Dairy
+garnet yam,no_hub,Vegetables and Herbs
+gelato,no_hub,Snacks and Dessert
+gemelli pasta,no_hub,Grains and Legumes
+ghee,hub,Conditments and Seasonings
+gherkin,no_hub,Vegetables and Herbs
+ghirardelli semi sweet chocolate chip,no_hub,Snacks and Dessert
+giardiniera,no_hub,Vegetables and Herbs
+gin,hub,Alcoholic Drinks
+gingerbread,no_hub,Snacks and Dessert
+gingersnap,no_hub,Vegetables and Herbs
+ginkgo nut,hub,Grains and Legumes
+glace de viande,no_hub,Conditments and Seasonings
+glaze,no_hub,Grains and Legumes
+glue,no_hub,Seafood
+gluten,no_hub,Vegetables and Herbs
+self raising flour,no_hub,Grains and Legumes
+glutinous rice,no_hub,Grains and Legumes
+glycerin,no_hub,Fruit
+glycerine,no_hub,Fruit
+gnocchi,no_hub,Vegetables and Herbs
+goat's milk,no_hub,Dairy
+meat,hub,Meat and Poultry
+gochujang,no_hub,Fruit
+tequila,no_hub,Seafood
+golden rum,no_hub,Alcoholic Drinks
+red delicious apple,no_hub,Fruit
+golden grahams cereal,no_hub,Grains and Legumes
+goldfish cracker,no_hub,Snacks and Dessert
+goldschlager,no_hub,Vegetables and Herbs
+good seasonings italian salad dressing mix,no_hub,Conditments and Seasonings
+goose,no_hub,Meat and Poultry
+gooseberry,hub,Fruit
+gorgonzola,no_hub,Vegetables and Herbs
+gouda cheese,no_hub,Dairy
+gourd,no_hub,Vegetables and Herbs
+gourmet salad green,no_hub,Vegetables and Herbs
+graham flour,no_hub,Grains and Legumes
+grain,no_hub,Fruit
+grains of paradise,no_hub,Vegetables and Herbs
+gram flour,no_hub,Grains and Legumes
+grana padano,no_hub,Fruit
+grand marnier,no_hub,Conditments and Seasonings
+granny smith apple,no_hub,Fruit
+granola bar,no_hub,Snacks and Dessert
+splenda granular,no_hub,Fruit
+grape,hub,Fruit
+grapefruit,hub,Fruit
+grapeseed oil,no_hub,Conditments and Seasonings
+grappa,no_hub,Fruit
+gravlax,no_hub,Fruit
+gravy master,no_hub,Conditments and Seasonings
+gray salt,no_hub,Conditments and Seasonings
+greek olive,no_hub,Vegetables and Herbs
+green glazed cherry,no_hub,Fruit
+maraschino juice,no_hub,Conditments and Seasonings
+green olives in brine,no_hub,Vegetables and Herbs
+green onions with top,no_hub,Vegetables and Herbs
+green peppercorns in brine,no_hub,Vegetables and Herbs
+plantain,no_hub,Fruit
+serrano ham,no_hub,Meat and Poultry
+tomatillo,no_hub,Vegetables and Herbs
+gremolata,no_hub,Snacks and Dessert
+grenadine,no_hub,Vegetables and Herbs
+grey poupon,no_hub,Seafood
+grilled chicken,no_hub,Meat and Poultry
+grit,no_hub,Grains and Legumes
+ground aniseed,no_hub,Conditments and Seasonings
+ground elk,no_hub,Meat and Poultry
+habanero,no_hub,Vegetables and Herbs
+hazelnut,hub,Grains and Legumes
+lamb,hub,Meat and Poultry
+pork,hub,Meat and Poultry
+mace,hub,Grains and Legumes
+mixed nut,hub,Grains and Legumes
+nut,hub,Grains and Legumes
+oat,hub,Grains and Legumes
+paprika,no_hub,Vegetables and Herbs
+pecan,hub,Grains and Legumes
+sage,hub,Vegetables and Herbs
+sumac,no_hub,Grains and Legumes
+veal,no_hub,Grains and Legumes
+venison,no_hub,Conditments and Seasonings
+grouper,hub,Seafood
+gruyere,no_hub,Grains and Legumes
+guacamole,no_hub,Conditments and Seasonings
+guar gum,no_hub,Snacks and Dessert
+guava,hub,Fruit
+guinness stout,no_hub,Vegetables and Herbs
+gumbo file,no_hub,Vegetables and Herbs
+gumdrop,no_hub,Vegetables and Herbs
+gummy worm,no_hub,Conditments and Seasonings
+gyoza skin,no_hub,Vegetables and Herbs
+habaneros,no_hub,Vegetables and Herbs
+haddock,hub,Seafood
+hake,no_hub,Alcoholic Drinks
+light oil,no_hub,Conditments and Seasonings
+halibut,no_hub,Seafood
+halloumi cheese,no_hub,Dairy
+halloween oreo cooky,no_hub,Conditments and Seasonings
+ham hock,no_hub,Meat and Poultry
+hamburger,hub,Seafood
+hanger steak,no_hub,Vegetables and Herbs
+non alcoholic beer,no_hub,Alcoholic Drinks
+hard roll,no_hub,Grains and Legumes
+shelled pea,no_hub,Grains and Legumes
+hardboiled egg,no_hub,Meat and Poultry
+haricot bean,no_hub,Grains and Legumes
+harissa,no_hub,Seafood
+hass avocadoes,no_hub,Vegetables and Herbs
+hatch chile,no_hub,Vegetables and Herbs
+havarti cheese,no_hub,Dairy
+hawaiian roll,no_hub,Seafood
+iceberg lettuce,no_hub,Vegetables and Herbs
+romaine leaf,no_hub,Vegetables and Herbs
+healthy request cream of chicken soup,no_hub,Dairy
+hearts of palm,no_hub,Vegetables and Herbs
+heath candy bar,no_hub,Snacks and Dessert
+heavy cream,no_hub,Conditments and Seasonings
+heinz chili sauce,no_hub,Conditments and Seasonings
+ketchup,hub,Snacks and Dessert
+heirloom tomato,no_hub,Vegetables and Herbs
+hellmann's mayonnaise,no_hub,Conditments and Seasonings
+hemp milk,no_hub,Dairy
+hen,no_hub,Meat and Poultry
+herb,no_hub,Vegetables and Herbs
+seasoned flour,no_hub,Grains and Legumes
+herbal tea bag,no_hub,Vegetables and Herbs
+herbed goat cheese,no_hub,Dairy
+herbes de provence,no_hub,Vegetables and Herbs
+herbsaint,no_hub,Conditments and Seasonings
+herring fillet,no_hub,Seafood
+hershey's syrup,no_hub,Conditments and Seasonings
+hershey bar,no_hub,Snacks and Dessert
+hersheys cocoa powder,no_hub,Snacks and Dessert
+hickory chip,no_hub,Snacks and Dessert
+hidden valley ranch dip,no_hub,Seafood
+hing,no_hub,Snacks and Dessert
+hoagie roll,no_hub,Seafood
+hoisin sauce,no_hub,Conditments and Seasonings
+hokkien noodle,no_hub,Vegetables and Herbs
+hollandaise sauce,no_hub,Conditments and Seasonings
+homemade beef stock,no_hub,Meat and Poultry
+hominy,no_hub,Conditments and Seasonings
+homogenized milk,no_hub,Dairy
+honey,hub,Snacks and Dessert
+honey bunches of oats cereal,no_hub,Grains and Legumes
+honey nut cheerio,no_hub,Grains and Legumes
+honeydew,no_hub,Snacks and Dessert
+hop,hub,Vegetables and Herbs
+hormel chili,no_hub,Conditments and Seasonings
+hostess twinkie,no_hub,Seafood
+hot dog,hub,Conditments and Seasonings
+salsa,no_hub,Conditments and Seasonings
+hubbard squash,no_hub,Vegetables and Herbs
+huckleberry,no_hub,Fruit
+hummus,hub,Vegetables and Herbs
+hungarian paprika,no_hub,Vegetables and Herbs
+hydrogen peroxide,no_hub,Vegetables and Herbs
+i can't believe it's not butter,no_hub,Dairy
+ice,no_hub,Snacks and Dessert
+ice cream cone,hub,Snacks and Dessert
+sandwich bun,no_hub,Vegetables and Herbs
+iced tea,no_hub,Vegetables and Herbs
+icing,hub,Snacks and Dessert
+imitation vanilla,no_hub,Vegetables and Herbs
+instant cappuccino mix,no_hub,Snacks and Dessert
+instant decaffeinated coffee,no_hub,Seafood
+pistachio,hub,Grains and Legumes
+iodized salt,no_hub,Conditments and Seasonings
+irish moss,hub,Seafood
+rye whiskey,no_hub,Grains and Legumes
+jack daniels whiskey,no_hub,Seafood
+jackfruit,hub,Fruit
+jaggery,no_hub,Vegetables and Herbs
+jam,no_hub,Conditments and Seasonings
+japanese cucumber,no_hub,Vegetables and Herbs
+jar,no_hub,Vegetables and Herbs
+jarlsberg cheese,no_hub,Dairy
+jeera powder,no_hub,Conditments and Seasonings
+jelly,no_hub,Vegetables and Herbs
+jerusalem artichoke,hub,Vegetables and Herbs
+jicama,hub,Grains and Legumes
+jonagold apple,no_hub,Fruit
+jonathan apple,no_hub,Fruit
+juice,no_hub,Grains and Legumes
+jumbo egg,no_hub,Meat and Poultry
+juniper berry,no_hub,Fruit
+kabocha squash,no_hub,Vegetables and Herbs
+kaffir lime leaf,no_hub,Fruit
+kahlua,no_hub,Vegetables and Herbs
+kaiser roll,no_hub,Conditments and Seasonings
+kalamata olive,no_hub,Vegetables and Herbs
+kale,hub,Vegetables and Herbs
+kamaboko,no_hub,Grains and Legumes
+kamut flour,no_hub,Grains and Legumes
+kashmiri chili powder,no_hub,Conditments and Seasonings
+kasseri cheese,no_hub,Dairy
+kasuri methi,no_hub,Vegetables and Herbs
+katakuriko,no_hub,Vegetables and Herbs
+kefalotiri,no_hub,Vegetables and Herbs
+kefalotyri,no_hub,Meat and Poultry
+kefir,hub,Alcoholic Drinks
+kellogg's all bran cereal,no_hub,Grains and Legumes
+kelp,hub,Seafood
+ketjap manis,no_hub,Conditments and Seasonings
+lime,hub,Fruit
+khoya,no_hub,Vegetables and Herbs
+kielbasa,no_hub,Conditments and Seasonings
+kikkoman soy sauce,no_hub,Conditments and Seasonings
+kim chee,no_hub,Dairy
+king crab leg,no_hub,Seafood
+prawn,hub,Seafood
+kingfish,no_hub,Seafood
+kirsch,no_hub,Vegetables and Herbs
+kirschwasser,no_hub,Vegetables and Herbs
+kitchen twine,no_hub,Alcoholic Drinks
+kiwi,hub,Fruit
+kluski noodle,no_hub,Seafood
+knockwurst,no_hub,Conditments and Seasonings
+knudsen sour cream,no_hub,Dairy
+kohlrabi,hub,Vegetables and Herbs
+kombu,hub,Seafood
+konbu,no_hub,Vegetables and Herbs
+konnyaku,no_hub,Vegetables and Herbs
+kool aid,no_hub,Vegetables and Herbs
+korean red pepper paste,no_hub,Conditments and Seasonings
+kosher salt,no_hub,Conditments and Seasonings
+salt & freshly ground black pepper,no_hub,Conditments and Seasonings
+koshi an,no_hub,Vegetables and Herbs
+philadelphia cream cheese,no_hub,Dairy
+soy crumbles,no_hub,Grains and Legumes
+kudzu,no_hub,Vegetables and Herbs
+kumara,no_hub,Conditments and Seasonings
+kumquat,hub,Fruit
+lactose free milk,no_hub,Dairy
+lager beer,no_hub,Alcoholic Drinks
+lamb cutlet,no_hub,Meat and Poultry
+lard,no_hub,Conditments and Seasonings
+lardons,no_hub,Conditments and Seasonings
+large curd cottage cheese,no_hub,Dairy
+laughing cow cheese,no_hub,Dairy
+laurel leaf,no_hub,Vegetables and Herbs
+lavash bread,no_hub,Snacks and Dessert
+le seuer pea,no_hub,Grains and Legumes
+worcestershire sauce,no_hub,Conditments and Seasonings
+leafy green,no_hub,Vegetables and Herbs
+salt,hub,Snacks and Dessert
+stew meat,no_hub,Meat and Poultry
+stewing beef,no_hub,Meat and Poultry
+lebanese cucumber,no_hub,Vegetables and Herbs
+liquid lecithin,no_hub,Seafood
+leek,hub,Vegetables and Herbs
+lemon,hub,Fruit
+"lemon, rind of",no_hub,Fruit
+sherbet,no_hub,Conditments and Seasonings
+sorbet,no_hub,Conditments and Seasonings
+lemon supreme cake mix,no_hub,Snacks and Dessert
+lemon verbena,hub,Conditments and Seasonings
+"lemons, rind of",no_hub,Fruit
+libby's canned pumpkin,no_hub,Vegetables and Herbs
+licor 43,no_hub,Vegetables and Herbs
+lightly salted butter,no_hub,Dairy
+lillet blanc,no_hub,Conditments and Seasonings
+lima bean,hub,Grains and Legumes
+"lime, zest of",no_hub,Fruit
+lime cordial,no_hub,Fruit
+lime twist,no_hub,Fruit
+lime wedge,no_hub,Fruit
+limeade,no_hub,Fruit
+"limes, zest of",no_hub,Fruit
+limoncello,no_hub,Seafood
+lingonberry,hub,Fruit
+linguica sausage,no_hub,Meat and Poultry
+lipton onion soup mix,no_hub,Vegetables and Herbs
+lipton recipe secrets onion soup mix,no_hub,Vegetables and Herbs
+liquid,no_hub,Seafood
+liquid glucose,no_hub,Seafood
+liquid gravy browner,no_hub,Conditments and Seasonings
+liquor,no_hub,Snacks and Dessert
+olive,hub,Vegetables and Herbs
+little smokies sausage,no_hub,Meat and Poultry
+littleneck clam,no_hub,Seafood
+live blue crab,no_hub,Seafood
+liver,no_hub,Meat and Poultry
+pate,hub,Conditments and Seasonings
+liverwurst,no_hub,Meat and Poultry
+locatelli cheese,no_hub,Dairy
+loin lamb,no_hub,Meat and Poultry
+lollipop,no_hub,Vegetables and Herbs
+london broil beef,no_hub,Meat and Poultry
+long bean,no_hub,Grains and Legumes
+longhorn cheese,no_hub,Dairy
+loose tea,no_hub,Vegetables and Herbs
+lotus seed,no_hub,Conditments and Seasonings
+louisiana hot sauce,no_hub,Conditments and Seasonings
+lovage,hub,Conditments and Seasonings
+low calorie bread,no_hub,Snacks and Dessert
+low carb flour tortilla,no_hub,Grains and Legumes
+marinara sauce,no_hub,Conditments and Seasonings
+low fat mozzarella,no_hub,Dairy
+low fat ricotta,no_hub,Conditments and Seasonings
+sharp cheddar cheese,no_hub,Dairy
+small clam,no_hub,Seafood
+sour mix,no_hub,Snacks and Dessert
+soymilk,no_hub,Dairy
+low moisture part skim mozzarella cheese,no_hub,Dairy
+teriyaki sauce,no_hub,Conditments and Seasonings
+lowfat parmesan cheese,no_hub,Dairy
+lox,no_hub,Vegetables and Herbs
+lumpia skin,no_hub,Vegetables and Herbs
+lychee,no_hub,Dairy
+m & m's,no_hub,Conditments and Seasonings
+maca,no_hub,Grains and Legumes
+macadamia,no_hub,Grains and Legumes
+mache,no_hub,Grains and Legumes
+mackerel,no_hub,Seafood
+madeira wine,hub,Alcoholic Drinks
+madras curry powder,no_hub,Conditments and Seasonings
+mafalda pasta,no_hub,Grains and Legumes
+mahi mahi,no_hub,Conditments and Seasonings
+maida flour,no_hub,Grains and Legumes
+malibu rum,no_hub,Alcoholic Drinks
+malt extract,no_hub,Vegetables and Herbs
+malted milk ball,no_hub,Dairy
+maltesers,no_hub,Conditments and Seasonings
+manchego cheese,no_hub,Dairy
+mange touts pea,no_hub,Vegetables and Herbs
+mango,hub,Fruit
+manicotti,no_hub,Conditments and Seasonings
+manila clam,no_hub,Seafood
+manwich sloppy joe mix,no_hub,Conditments and Seasonings
+manzanilla olive,no_hub,Vegetables and Herbs
+maple bacon,no_hub,Meat and Poultry
+marbled rye bread,no_hub,Snacks and Dessert
+margarita mix,no_hub,Conditments and Seasonings
+marinade,no_hub,Fruit
+marinated mushroom,no_hub,Vegetables and Herbs
+marmalade,no_hub,Snacks and Dessert
+marmite,no_hub,Conditments and Seasonings
+marrow,no_hub,Meat and Poultry
+mars bar,no_hub,Snacks and Dessert
+marzipan,hub,Snacks and Dessert
+masa corn flour,no_hub,Grains and Legumes
+masa harina,no_hub,Seafood
+mascarpone,no_hub,Seafood
+mashed banana,no_hub,Fruit
+masoor dal,no_hub,Vegetables and Herbs
+matcha green tea powder,no_hub,Conditments and Seasonings
+mature cheddar cheese,no_hub,Dairy
+matzo,no_hub,Conditments and Seasonings
+matzo farfel,no_hub,Conditments and Seasonings
+matzoh,no_hub,Conditments and Seasonings
+maytag blue cheese,no_hub,Dairy
+mccormick's montreal brand steak seasoning,no_hub,Conditments and Seasonings
+mccormick grill seasoning,no_hub,Conditments and Seasonings
+meal,no_hub,Meat and Poultry
+meat tenderizer,no_hub,Meat and Poultry
+meatloaf,hub,Meat and Poultry
+medium noodle,no_hub,Vegetables and Herbs
+melba toast,no_hub,Grains and Legumes
+melon,hub,Fruit
+meringue,hub,Snacks and Dessert
+merlot,no_hub,Vegetables and Herbs
+mesclun,no_hub,Seafood
+mesquite powder,no_hub,Conditments and Seasonings
+methi leaf,no_hub,Vegetables and Herbs
+mexicorn,no_hub,Grains and Legumes
+meyer's dark rum,no_hub,Alcoholic Drinks
+meyer lemon,no_hub,Fruit
+mezcal,no_hub,Vegetables and Herbs
+microwave popcorn,no_hub,Snacks and Dessert
+mild cheese,no_hub,Dairy
+milky way bar,no_hub,Snacks and Dessert
+millet,hub,Grains and Legumes
+milo,no_hub,Grains and Legumes
+minced beef,no_hub,Meat and Poultry
+mincemeat,no_hub,Meat and Poultry
+mineral water,no_hub,Vegetables and Herbs
+minestrone soup,no_hub,Conditments and Seasonings
+miniature bagel,no_hub,Snacks and Dessert
+mint,hub,Snacks and Dessert
+minute rice,no_hub,Grains and Legumes
+mirepoix,no_hub,Conditments and Seasonings
+mirin,no_hub,Vegetables and Herbs
+mirlitons,no_hub,Conditments and Seasonings
+miso,hub,Grains and Legumes
+mitsuba,no_hub,Vegetables and Herbs
+mixed baby lettuces and spring green,no_hub,Vegetables and Herbs
+mizithra cheese,no_hub,Dairy
+mizuna,no_hub,Vegetables and Herbs
+mochi rice,no_hub,Grains and Legumes
+mochiko sweet rice flour,no_hub,Grains and Legumes
+mole,no_hub,Seafood
+monkfish fillet,no_hub,Seafood
+montrachet,no_hub,Vegetables and Herbs
+morel,no_hub,Vegetables and Herbs
+mortadella,no_hub,Vegetables and Herbs
+morton lite salt,no_hub,Conditments and Seasonings
+mostaccioli pasta,no_hub,Grains and Legumes
+mountain dew soda,no_hub,Meat and Poultry
+string,no_hub,Snacks and Dessert
+msg,no_hub,Vegetables and Herbs
+muenster cheese,no_hub,Dairy
+muesli,no_hub,Vegetables and Herbs
+mulberry,hub,Fruit
+multi grain bread,no_hub,Snacks and Dessert
+multigrain bread,hub,Snacks and Dessert
+mung dal,no_hub,Grains and Legumes
+muscat wine,no_hub,Alcoholic Drinks
+mutton,hub,Meat and Poultry
+naan bread,no_hub,Snacks and Dessert
+nabisco triscuits,no_hub,Seafood
+nacho chip,no_hub,Snacks and Dessert
+nam pla,no_hub,Fruit
+natural bran,no_hub,Alcoholic Drinks
+navy bean,no_hub,Grains and Legumes
+nectarine,no_hub,Fruit
+nestle toll house baking cocoa,no_hub,Vegetables and Herbs
+nestle toll house premier white morsel,no_hub,Conditments and Seasonings
+nicoise olive,no_hub,Vegetables and Herbs
+nigella seed,hub,Grains and Legumes
+no salt added corn,no_hub,Conditments and Seasonings
+peanut,hub,Grains and Legumes
+powdered milk,no_hub,Dairy
+non hydrogenated margarine,no_hub,Conditments and Seasonings
+nonfat milk,no_hub,Dairy
+nonpareil,no_hub,Vegetables and Herbs
+nonstick cooking spray,no_hub,Snacks and Dessert
+nopales,no_hub,Vegetables and Herbs
+nori,no_hub,Seafood
+nuoc nam,no_hub,Conditments and Seasonings
+nutella,no_hub,Grains and Legumes
+nutmeats,no_hub,Grains and Legumes
+nutritional yeast,no_hub,Grains and Legumes
+o'brien potato,no_hub,Vegetables and Herbs
+oaxaca cheese,no_hub,Dairy
+oil,no_hub,Conditments and Seasonings
+oil cured olive,no_hub,Conditments and Seasonings
+okara,no_hub,Conditments and Seasonings
+okonomiyaki sauce,no_hub,Conditments and Seasonings
+okra,hub,Vegetables and Herbs
+old cheddar cheese,no_hub,Dairy
+old fashioned oat,no_hub,Grains and Legumes
+oleo,no_hub,Seafood
+"orange, rind of",no_hub,Fruit
+orange section,no_hub,Fruit
+"oranges, zest of",no_hub,Fruit
+orecchiette,no_hub,Vegetables and Herbs
+organic whole wheat flour,no_hub,Grains and Legumes
+orgeat syrup,no_hub,Conditments and Seasonings
+oriental sesame oil,no_hub,Conditments and Seasonings
+other pasta,no_hub,Grains and Legumes
+ouzo,no_hub,Vegetables and Herbs
+ovaltine,no_hub,Vegetables and Herbs
+oxtail,no_hub,Seafood
+oyster,hub,Seafood
+picante salsa,no_hub,Conditments and Seasonings
+pak choi,no_hub,Vegetables and Herbs
+pale ale,no_hub,Vegetables and Herbs
+palm oil,no_hub,Conditments and Seasonings
+pamelas ultimate baking and pancake mix,no_hub,Conditments and Seasonings
+pan juice,no_hub,Grains and Legumes
+panang curry paste,no_hub,Conditments and Seasonings
+pancake,hub,Snacks and Dessert
+pancetta,no_hub,Fruit
+panch phoron,no_hub,Seafood
+pandan leaf,no_hub,Vegetables and Herbs
+paneer cheese,no_hub,Dairy
+panela cheese,no_hub,Dairy
+panettone,no_hub,Grains and Legumes
+panir,no_hub,Conditments and Seasonings
+papaya,hub,Fruit
+paper,no_hub,Vegetables and Herbs
+pappadams,no_hub,Vegetables and Herbs
+pappardelle pasta,no_hub,Grains and Legumes
+paraffin wax,no_hub,Vegetables and Herbs
+parboiled rice,no_hub,Grains and Legumes
+parchment paper,no_hub,Vegetables and Herbs
+parma ham,no_hub,Meat and Poultry
+parmesan rind,no_hub,Vegetables and Herbs
+romano bean,no_hub,Grains and Legumes
+parmigiano,no_hub,Vegetables and Herbs
+parsnip,hub,Vegetables and Herbs
+part skim ricotta cheese,no_hub,Dairy
+passata,no_hub,Vegetables and Herbs
+passion fruit,hub,Fruit
+pasteurized liquid egg white,no_hub,Meat and Poultry
+pastina,no_hub,Snacks and Dessert
+pastis,no_hub,Snacks and Dessert
+pastrami,no_hub,Snacks and Dessert
+single cream,no_hub,Dairy
+pate brisee,no_hub,Conditments and Seasonings
+patis,no_hub,Conditments and Seasonings
+patty shell,no_hub,Snacks and Dessert
+pattypan squash,no_hub,Vegetables and Herbs
+pawpaw,hub,Vegetables and Herbs
+pea,hub,Vegetables and Herbs
+pea shoot,no_hub,Vegetables and Herbs
+pea tendril,no_hub,Vegetables and Herbs
+peach halves in syrup,no_hub,Conditments and Seasonings
+peach slices in heavy syrup,no_hub,Conditments and Seasonings
+peaches in juice,no_hub,Fruit
+peanut brittle,no_hub,Grains and Legumes
+pear,hub,Fruit
+vodka,hub,Alcoholic Drinks
+pears in heavy syrup,no_hub,Conditments and Seasonings
+red pearl onion,no_hub,Vegetables and Herbs
+peasant bread,no_hub,Snacks and Dessert
+pecorino cheese,no_hub,Dairy
+peking duck,no_hub,Meat and Poultry
+pen,no_hub,Vegetables and Herbs
+penne rigate,no_hub,Vegetables and Herbs
+pepitas,no_hub,Fruit
+peppadew pepper,no_hub,Vegetables and Herbs
+pepperidge farm stuffing,no_hub,Snacks and Dessert
+peppermint,hub,Conditments and Seasonings
+pepperoncini pepper,no_hub,Vegetables and Herbs
+pepperoni,no_hub,Vegetables and Herbs
+pepsi,no_hub,Vegetables and Herbs
+perch,no_hub,Seafood
+perciatelli,no_hub,Seafood
+peri peri,no_hub,Vegetables and Herbs
+pernod,no_hub,Vegetables and Herbs
+pesto sauce,no_hub,Conditments and Seasonings
+pet milk,no_hub,Dairy
+pheasant,hub,Meat and Poultry
+phyllo dough,hub,Snacks and Dessert
+pickapeppa sauce,no_hub,Conditments and Seasonings
+pickled beet,no_hub,Vegetables and Herbs
+pickling lime,no_hub,Fruit
+pico de gallo,no_hub,Snacks and Dessert
+pie pastry,no_hub,Snacks and Dessert
+pie plate,no_hub,Snacks and Dessert
+pierogies,no_hub,Snacks and Dessert
+pig,no_hub,Meat and Poultry
+pig's foot,no_hub,Meat and Poultry
+pigeon,no_hub,Meat and Poultry
+pignoli nut,no_hub,Grains and Legumes
+pignolis,no_hub,Vegetables and Herbs
+pigs tail,no_hub,Seafood
+pike,no_hub,Seafood
+refrigerated biscuit,no_hub,Snacks and Dessert
+pillsbury sugar cookie dough,no_hub,Conditments and Seasonings
+piloncillo,no_hub,Seafood
+pilsner beer,no_hub,Alcoholic Drinks
+pimms,no_hub,Fruit
+pina colada nonalcoholic drink mix,no_hub,Seafood
+pine nut,no_hub,Grains and Legumes
+pink bean,no_hub,Grains and Legumes
+pinot grigio wine,no_hub,Alcoholic Drinks
+pinot noir wine,no_hub,Alcoholic Drinks
+pippin apple,no_hub,Fruit
+piquillo pepper,no_hub,Vegetables and Herbs
+piri piri,no_hub,Vegetables and Herbs
+pirouette cooky,no_hub,Seafood
+pisco,no_hub,Seafood
+pita chip,no_hub,Snacks and Dessert
+pita pocket,no_hub,Snacks and Dessert
+plain flour,no_hub,Grains and Legumes
+planters pecan,no_hub,Grains and Legumes
+plastic cup,no_hub,Seafood
+plum,hub,Fruit
+pluots,no_hub,Fruit
+poblano chile,no_hub,Vegetables and Herbs
+pocketless pita,no_hub,Vegetables and Herbs
+polenta,no_hub,Grains and Legumes
+pomegranate,hub,Fruit
+pomelo fruit,no_hub,Fruit
+pommery mustard,no_hub,Conditments and Seasonings
+ponzu sauce,no_hub,Conditments and Seasonings
+popcorn,hub,Snacks and Dessert
+popped corn,no_hub,Grains and Legumes
+poppy seed,hub,Grains and Legumes
+pork fatback,no_hub,Meat and Poultry
+pork loin chops with bone,no_hub,Meat and Poultry
+pork spare rib rack,no_hub,Meat and Poultry
+porridge oat,no_hub,Grains and Legumes
+port wine,hub,Alcoholic Drinks
+porter,no_hub,Conditments and Seasonings
+porterhouse steak,no_hub,Conditments and Seasonings
+portuguese roll,no_hub,Conditments and Seasonings
+posole,no_hub,Seafood
+poultry,no_hub,Vegetables and Herbs
+poundcake,no_hub,Snacks and Dessert
+praline,no_hub,Seafood
+premade puff pastry,no_hub,Snacks and Dessert
+prepared custard,no_hub,Snacks and Dessert
+preserved lemon,no_hub,Fruit
+pretzel,no_hub,Conditments and Seasonings
+prickly pear,hub,Fruit
+prime rib roast,no_hub,Vegetables and Herbs
+prosciutto,no_hub,Vegetables and Herbs
+prosecco,no_hub,Vegetables and Herbs
+whey protein,no_hub,Dairy
+provolone cheese,hub,Dairy
+prune,no_hub,Vegetables and Herbs
+psyllium,no_hub,Vegetables and Herbs
+puff pastry,no_hub,Snacks and Dessert
+puff pastry sheet,no_hub,Snacks and Dessert
+puffed rice cereal,no_hub,Grains and Legumes
+pumpernickel bread,no_hub,Snacks and Dessert
+puree,no_hub,Conditments and Seasonings
+purple plum,no_hub,Fruit
+purslane,hub,Conditments and Seasonings
+quahog,no_hub,Meat and Poultry
+quail,hub,Meat and Poultry
+quaker oat,no_hub,Grains and Legumes
+quark,no_hub,Vegetables and Herbs
+quatre epices,no_hub,Conditments and Seasonings
+queso blanco,no_hub,Fruit
+queso fresco,no_hub,Seafood
+quick oat,no_hub,Grains and Legumes
+quince,hub,Fruit
+quinoa,hub,Grains and Legumes
+rabbit,hub,Meat and Poultry
+rack of lamb,no_hub,Meat and Poultry
+racks of lamb,no_hub,Meat and Poultry
+radiatore,no_hub,Vegetables and Herbs
+radicchio,no_hub,Vegetables and Herbs
+radish,hub,Vegetables and Herbs
+rainbow trout,hub,Seafood
+raita,no_hub,Vegetables and Herbs
+ramp,no_hub,Fruit
+ranch dip,no_hub,Seafood
+rapeseed oil,no_hub,Conditments and Seasonings
+rapini,hub,Vegetables and Herbs
+ras el hanout spice mix,no_hub,Conditments and Seasonings
+rice,hub,Grains and Legumes
+wild rice,hub,Grains and Legumes
+razor clam,no_hub,Seafood
+ready made pie crust,no_hub,Snacks and Dessert
+realemon juice,no_hub,Conditments and Seasonings
+recipe pizza dough,no_hub,Grains and Legumes
+red bull energy drink,no_hub,Vegetables and Herbs
+red hot sauce,no_hub,Conditments and Seasonings
+red jell o,no_hub,Vegetables and Herbs
+red leicester cheese,no_hub,Dairy
+red snapper,no_hub,Seafood
+red velvet cake mix,no_hub,Snacks and Dessert
+reduced fat milk,no_hub,Dairy
+reese's piece,no_hub,Dairy
+refined flour,no_hub,Grains and Legumes
+remoulade sauce,no_hub,Snacks and Dessert
+rennet,no_hub,Vegetables and Herbs
+reserved juice,no_hub,Conditments and Seasonings
+reynolds wrap foil,no_hub,Conditments and Seasonings
+rhodes frozen roll,no_hub,Snacks and Dessert
+rib,no_hub,Vegetables and Herbs
+ribbon,no_hub,Vegetables and Herbs
+rice bubble,no_hub,Grains and Legumes
+rice krispies,no_hub,Grains and Legumes
+stick,no_hub,Vegetables and Herbs
+vermicelli,no_hub,Vegetables and Herbs
+ricotta salata,no_hub,Vegetables and Herbs
+riesling wine,no_hub,Alcoholic Drinks
+rigatoni pasta,no_hub,Grains and Legumes
+rindless bacon,no_hub,Meat and Poultry
+risotto rice,no_hub,Grains and Legumes
+sunflower oil,no_hub,Conditments and Seasonings
+roasting bag,no_hub,Snacks and Dessert
+robin hood nutri flour blend,no_hub,Grains and Legumes
+robiola cheese,no_hub,Dairy
+rock salt,no_hub,Conditments and Seasonings
+rockfish fillet,no_hub,Seafood
+rolled oat,no_hub,Grains and Legumes
+rolling pin,no_hub,Seafood
+rom,no_hub,Vegetables and Herbs
+romesco sauce,no_hub,Conditments and Seasonings
+root beer,no_hub,Alcoholic Drinks
+roquefort cheese,hub,Dairy
+rose,hub,Vegetables and Herbs
+rose's lime juice,no_hub,Fruit
+rose petal,no_hub,Vegetables and Herbs
+rose scented geranium leaf,no_hub,Vegetables and Herbs
+rotel,no_hub,Vegetables and Herbs
+rotelle pasta,no_hub,Grains and Legumes
+rotini noodle,no_hub,Vegetables and Herbs
+rotisserie cooked chicken,no_hub,Meat and Poultry
+sourdough roll,no_hub,Grains and Legumes
+roux,no_hub,Seafood
+royal icing,no_hub,Snacks and Dessert
+rubbing alcohol,no_hub,Conditments and Seasonings
+ruby port,no_hub,Conditments and Seasonings
+rum,hub,Alcoholic Drinks
+runner bean,no_hub,Grains and Legumes
+russet potato,no_hub,Vegetables and Herbs
+rutabaga,hub,Dairy
+rye meal,no_hub,Grains and Legumes
+safflower oil,no_hub,Conditments and Seasonings
+saffron,hub,Grains and Legumes
+sago,no_hub,Conditments and Seasonings
+sake,hub,Alcoholic Drinks
+salad oil,no_hub,Conditments and Seasonings
+salsa fresca,no_hub,Conditments and Seasonings
+salsify,no_hub,Vegetables and Herbs
+salted nut,no_hub,Grains and Legumes
+saltine,no_hub,Snacks and Dessert
+saltpeter,no_hub,Conditments and Seasonings
+sambal oelek,no_hub,Vegetables and Herbs
+sambhar powder,no_hub,Conditments and Seasonings
+san marzano tomato,no_hub,Vegetables and Herbs
+sansho,no_hub,Vegetables and Herbs
+sardines in oil,no_hub,Conditments and Seasonings
+sashimi grade tuna,no_hub,Seafood
+saskatoon berry,hub,Fruit
+satay sauce,no_hub,Conditments and Seasonings
+sauterne,no_hub,Vegetables and Herbs
+sauternes wine,no_hub,Alcoholic Drinks
+sazon goya,no_hub,Vegetables and Herbs
+scalloped potatoes mix,no_hub,Vegetables and Herbs
+scampi,no_hub,Vegetables and Herbs
+schmaltz,no_hub,Snacks and Dessert
+scone,no_hub,Seafood
+scotch,no_hub,Alcoholic Drinks
+scrod fish,no_hub,Seafood
+sea bass,no_hub,Seafood
+sea bream,no_hub,Seafood
+seafood,no_hub,Seafood
+season salt,no_hub,Conditments and Seasonings
+seed,no_hub,Grains and Legumes
+watermelon,no_hub,Vegetables and Herbs
+seitan,no_hub,Vegetables and Herbs
+seltzer water,no_hub,Vegetables and Herbs
+semisweet chocolate,no_hub,Snacks and Dessert
+serranos,no_hub,Fruit
+sev,no_hub,Vegetables and Herbs
+seville orange,no_hub,Fruit
+sevruga caviar,no_hub,Seafood
+shad,no_hub,Seafood
+shaoxing wine,no_hub,Alcoholic Drinks
+shark steak,no_hub,Seafood
+shichimi togarashi,no_hub,Vegetables and Herbs
+shin beef,no_hub,Meat and Poultry
+shirataki noodle,no_hub,Vegetables and Herbs
+shiraz wine,no_hub,Alcoholic Drinks
+shiro miso,no_hub,Conditments and Seasonings
+shiso,no_hub,Vegetables and Herbs
+shoe peg corn,no_hub,Grains and Legumes
+shoestring potato,no_hub,Vegetables and Herbs
+shortcake,no_hub,Snacks and Dessert
+shortcrust pastry,no_hub,Snacks and Dessert
+shortcut bacon,no_hub,Meat and Poultry
+shoyu,no_hub,Vegetables and Herbs
+shreddies cereal,no_hub,Grains and Legumes
+sicilian olive,no_hub,Vegetables and Herbs
+sifted flour,no_hub,Grains and Legumes
+silver beet,no_hub,Vegetables and Herbs
+simple syrup,no_hub,Conditments and Seasonings
+simply potatoes shredded hash brown,no_hub,Vegetables and Herbs
+simply potatoes traditional mashed potato,no_hub,Vegetables and Herbs
+skate,no_hub,Fruit
+skewer,no_hub,Vegetables and Herbs
+skim milk powder,no_hub,Dairy
+skinless chicken,no_hub,Meat and Poultry
+skirt steak,no_hub,Vegetables and Herbs
+sliced apple,no_hub,Fruit
+slivered almond,no_hub,Grains and Legumes
+sloe gin,no_hub,Alcoholic Drinks
+smarties candy,no_hub,Snacks and Dessert
+smelt,hub,Seafood
+smithfield ham,no_hub,Meat and Poultry
+streaky bacon,no_hub,Meat and Poultry
+smoked whitefish,no_hub,Seafood
+smooth cashew butter,no_hub,Dairy
+snail,hub,Seafood
+snap pea,no_hub,Grains and Legumes
+snickers candy bar,no_hub,Snacks and Dessert
+snow,no_hub,Vegetables and Herbs
+sockeye salmon,hub,Seafood
+sofrito sauce,no_hub,Conditments and Seasonings
+soft tofu,no_hub,Grains and Legumes
+sole,no_hub,Seafood
+solid white tuna,no_hub,Seafood
+tuna packed in oil,no_hub,Conditments and Seasonings
+soppressata,no_hub,Conditments and Seasonings
+sopressata,no_hub,Conditments and Seasonings
+sorghum,hub,Grains and Legumes
+southwest seasoning,no_hub,Conditments and Seasonings
+soy oil,no_hub,Conditments and Seasonings
+soya milk,no_hub,Dairy
+spaetzle noodle,no_hub,Vegetables and Herbs
+spaghettini,no_hub,Vegetables and Herbs
+spam,no_hub,Grains and Legumes
+spanish rice,no_hub,Grains and Legumes
+sparkling wine,hub,Alcoholic Drinks
+special k cereal,no_hub,Grains and Legumes
+speck,no_hub,Grains and Legumes
+spelt,hub,Grains and Legumes
+spiced rum,no_hub,Alcoholic Drinks
+spicy hot v8,no_hub,Conditments and Seasonings
+spiral shaped pasta,no_hub,Grains and Legumes
+spirulina,hub,Seafood
+splenda brown sugar blend,no_hub,Conditments and Seasonings
+split pea,no_hub,Grains and Legumes
+sponge cake,no_hub,Snacks and Dessert
+spray bottle,no_hub,Seafood
+spring roll,no_hub,Seafood
+wonton wrapper,hub,Snacks and Dessert
+sprite,no_hub,Vegetables and Herbs
+squab,hub,Meat and Poultry
+squid,hub,Seafood
+squirrel,hub,Meat and Poultry
+sriracha sauce,no_hub,Conditments and Seasonings
+stale bread,no_hub,Snacks and Dessert
+standing rib roast,no_hub,Vegetables and Herbs
+starch,no_hub,Grains and Legumes
+steamer clam,no_hub,Seafood
+steel cut oat,no_hub,Grains and Legumes
+stevia,no_hub,Seafood
+sticky rice,no_hub,Grains and Legumes
+stilton cheese,no_hub,Dairy
+stir fry beef,no_hub,Meat and Poultry
+stone ground whole wheat flour,no_hub,Grains and Legumes
+stout beer,no_hub,Alcoholic Drinks
+striped bass,hub,Seafood
+stuffed olive,no_hub,Vegetables and Herbs
+sturgeon fillet,no_hub,Seafood
+submarine roll,no_hub,Fruit
+sucanat,no_hub,Fruit
+suckling pig,no_hub,Seafood
+suet,no_hub,Vegetables and Herbs
+sultana,no_hub,Fruit
+sumaq,no_hub,Vegetables and Herbs
+superfine sugar,no_hub,Conditments and Seasonings
+sure jell,no_hub,Conditments and Seasonings
+surimi,no_hub,Fruit
+sushi rice,no_hub,Grains and Legumes
+swanson chicken broth,no_hub,Meat and Poultry
+swede,hub,Vegetables and Herbs
+sweetbread,no_hub,Snacks and Dessert
+sweetcorn,hub,Grains and Legumes
+swordfish,hub,Seafood
+szechuan sauce,no_hub,Conditments and Seasonings
+szechwan pepper,no_hub,Vegetables and Herbs
+tabasco sauce,no_hub,Conditments and Seasonings
+taco bell home originals thick 'n chunky salsa,no_hub,Conditments and Seasonings
+taco chip,no_hub,Snacks and Dessert
+tagliatelle pasta noodle,no_hub,Grains and Legumes
+tahini,no_hub,Vegetables and Herbs
+taleggio,no_hub,Vegetables and Herbs
+tamale,hub,Grains and Legumes
+tamari,no_hub,Fruit
+tamarind pod,no_hub,Fruit
+tandoori paste,no_hub,Conditments and Seasonings
+tangerine,hub,Vegetables and Herbs
+tapenade,no_hub,Vegetables and Herbs
+tarama,no_hub,Conditments and Seasonings
+taro root,no_hub,Vegetables and Herbs
+tart crust,no_hub,Grains and Legumes
+tartaric,no_hub,Vegetables and Herbs
+tasso,no_hub,Vegetables and Herbs
+tasty cheese,no_hub,Dairy
+tater tot,no_hub,Vegetables and Herbs
+tatsoi,no_hub,Vegetables and Herbs
+tawny port,no_hub,Conditments and Seasonings
+tea,hub,Vegetables and Herbs
+teff,hub,Conditments and Seasonings
+tempeh,no_hub,Vegetables and Herbs
+tempura flour,no_hub,Grains and Legumes
+tender quick,no_hub,Meat and Poultry
+tenderloin,no_hub,Meat and Poultry
+tex mex cheese,no_hub,Dairy
+texas pete,no_hub,Grains and Legumes
+thai fish sauce,no_hub,Conditments and Seasonings
+thick bread,no_hub,Snacks and Dessert
+thickened cream,no_hub,Dairy
+thin soy sauce,no_hub,Grains and Legumes
+tia maria,no_hub,Vegetables and Herbs
+tiger sauce,no_hub,Conditments and Seasonings
+tilapia fillet,no_hub,Seafood
+tiny pea,no_hub,Grains and Legumes
+toast,no_hub,Grains and Legumes
+toasted almond,no_hub,Grains and Legumes
+tobiko,no_hub,Vegetables and Herbs
+toblerone chocolate bar,no_hub,Snacks and Dessert
+toffee piece,no_hub,Snacks and Dessert
+tofutti sour cream,no_hub,Dairy
+tom yum paste,no_hub,Conditments and Seasonings
+tonic water,no_hub,Vegetables and Herbs
+tonkatsu sauce,no_hub,Conditments and Seasonings
+tony chachere's seasoning,no_hub,Conditments and Seasonings
+toor dal,no_hub,Vegetables and Herbs
+toothpick,no_hub,Vegetables and Herbs
+tostada,hub,Grains and Legumes
+trail mix,hub,Snacks and Dessert
+tripe,no_hub,Seafood
+triple sec,no_hub,Conditments and Seasonings
+trout,no_hub,Seafood
+truvia,no_hub,Seafood
+tubetti,no_hub,Fruit
+tuna,no_hub,Seafood
+turbinado sugar,no_hub,Conditments and Seasonings
+turbot,hub,Seafood
+turkey carcass,no_hub,Meat and Poultry
+turkey gizzard,no_hub,Meat and Poultry
+turkish bread,no_hub,Snacks and Dessert
+tzatziki,no_hub,Vegetables and Herbs
+umeboshi,no_hub,Vegetables and Herbs
+unblanched whole almond,no_hub,Grains and Legumes
+unbleached cane sugar,no_hub,Conditments and Seasonings
+uncooked rice,no_hub,Grains and Legumes
+unflavored gelatin,no_hub,Conditments and Seasonings
+unpopped popcorn,no_hub,Snacks and Dessert
+unrefined sugar,no_hub,Conditments and Seasonings
+unseasoned breadcrumb,no_hub,Snacks and Dessert
+unsifted flour,no_hub,Grains and Legumes
+unsmoked bacon,no_hub,Meat and Poultry
+unsulphured molasses,no_hub,Snacks and Dessert
+urad dal,no_hub,Vegetables and Herbs
+valencia orange,no_hub,Fruit
+veal knuckle,no_hub,Fruit
+veal medallion,no_hub,Vegetables and Herbs
+veal reduction,no_hub,Vegetables and Herbs
+veal scallopini,no_hub,Seafood
+veg all,no_hub,Vegetables and Herbs
+vegan sugar,no_hub,Conditments and Seasonings
+vegan egg replacer powder,no_hub,Conditments and Seasonings
+vegemite,no_hub,Vegetables and Herbs
+vegetarian broth,no_hub,Vegetables and Herbs
+veggie burger,no_hub,Vegetables and Herbs
+velveeta cheese,no_hub,Dairy
+verjuice,no_hub,Conditments and Seasonings
+verjus,no_hub,Conditments and Seasonings
+vidalia onion,no_hub,Vegetables and Herbs
+vin santo,no_hub,Vegetables and Herbs
+violet,no_hub,Vegetables and Herbs
+vitamin e,no_hub,Vegetables and Herbs
+wafer,no_hub,Vegetables and Herbs
+waffle,hub,Snacks and Dessert
+walla walla onion,no_hub,Vegetables and Herbs
+walleye,hub,Seafood
+walleyed pike fillet,no_hub,Seafood
+wasabi,hub,Conditments and Seasonings
+watercress,hub,Conditments and Seasonings
+wesson oil,no_hub,Conditments and Seasonings
+wheat flakes cereal,no_hub,Grains and Legumes
+wheatberries,no_hub,Grains and Legumes
+whey,hub,Dairy
+white fleshed fish,no_hub,Seafood
+white shoepeg corn,no_hub,Conditments and Seasonings
+zinfandel,no_hub,Conditments and Seasonings
+wholemeal self rising flour,no_hub,Grains and Legumes
+wildflower honey,no_hub,Conditments and Seasonings
+winter melon,no_hub,Fruit
+wishbone italian dressing,no_hub,Conditments and Seasonings
+wondra flour,no_hub,Grains and Legumes
+wonton,no_hub,Snacks and Dessert
+wood chip,no_hub,Snacks and Dessert
+wooden popsicle stick,no_hub,Vegetables and Herbs
+wooden stick,no_hub,Vegetables and Herbs
+wrap,no_hub,Vegetables and Herbs
+xanthan gum,no_hub,Snacks and Dessert
+yacon syrup,no_hub,Conditments and Seasonings
+yakisoba noodle,no_hub,Conditments and Seasonings
+yam,hub,Vegetables and Herbs
+yamaimo,no_hub,Vegetables and Herbs
+yellowfin tuna steak,no_hub,Seafood
+yoghurt,no_hub,Vegetables and Herbs
+your favorite dressing,no_hub,Conditments and Seasonings
+yucca root,no_hub,Vegetables and Herbs
+yuzu,no_hub,Vegetables and Herbs
+za'atar spice mix,no_hub,Conditments and Seasonings
+ziploc bag,no_hub,Vegetables and Herbs

@@ -181,35 +181,6 @@ print(f"✓ File size: {file_size_kb:.1f} KB")
 print(f"✓ Updated: {timestamp}")
 print(f"{'='*60}")
 
-'''# Copy interactive_network.html to deploy folder
-html_source = "interactive_network.html"
-html_dest = os.path.join(deploy_dir, "interactive_network.html")
-html_index_dest = os.path.join(deploy_dir, "index.html")
 
-# Try to copy from root, or use existing deploy version if root doesn't exist
-if os.path.exists(html_source):
-    shutil.copy2(html_source, html_dest)
-    shutil.copy2(html_source, html_index_dest)
-    html_size = os.path.getsize(html_dest) / 1024
-    print(f"✓ Copied {html_source} to deploy folder")
-    print(f"  → {html_dest} ({html_size:.1f} KB)")
-    print(f"  → {html_index_dest} ({html_size:.1f} KB)")
-    print(f"  → Updated: {timestamp}")
-elif os.path.exists(html_dest):
-    # If root doesn't exist but deploy version does, update index.html to match
-    shutil.copy2(html_dest, html_index_dest)
-    html_size = os.path.getsize(html_dest) / 1024
-    print(f"✓ Using existing HTML in deploy folder")
-    print(f"  → {html_dest} ({html_size:.1f} KB)")
-    print(f"  → {html_index_dest} ({html_size:.1f} KB) - synced")
-    print(f"  → Updated: {timestamp}")
-else:
-    print(f"⚠ {html_source} not found in root or deploy directory")
-    print(f"  (Please ensure HTML file exists for deployment)")
-
-print(f"{'='*60}")
-print(f"\nDeploy folder ready for GitHub push and Netlify deployment!")
-print(f"Sample hub ingredients: {all_ingredients[:10]}")
-print(f"{'='*60}\n")'''
 
 

@@ -5894,24 +5894,24 @@
       "color": "#FFD93D"
     },
     "acorn": {
-      "category": "Seafood",
+      "category": "Grains and Legumes",
       "confidence": 0.20254118740558624,
-      "color": "#FFD93D"
+      "color": "#FFE66D"
     },
     "adzuki_bean": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.20489536225795746,
       "color": "#FFE66D"
     },
     "agar": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Condiments and Seasonings",
       "confidence": 0.19745302200317383,
-      "color": "#FFE66D"
+      "color": "#FFD93D"
     },
     "agave": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Vegetables and Herbs",
       "confidence": 0.22544336318969727,
-      "color": "#FFE66D"
+      "color": "#FCBAD3"
     },
     "albacore_tuna": {
       "category": "Seafood",
@@ -5919,19 +5919,19 @@
       "color": "#FFD93D"
     },
     "allspice": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Condiments and Seasonings",
       "confidence": 0.23658734560012817,
-      "color": "#FF6B6B"
+      "color": "#C7CEEA"
     },
     "almond": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.4768856465816498,
       "color": "#FFE66D"
     },
     "amaranth": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.24335448443889618,
-      "color": "#FFE66D"
+      "color": "#C7CEEA"
     },
     "anchovy": {
       "category": "Seafood",
@@ -5939,14 +5939,14 @@
       "color": "#FFD93D"
     },
     "angelica": {
-      "category": "Beverage Alcoholic",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2063012272119522,
-      "color": "#4ECDC4"
+      "color": "#C7CEEA"
     },
     "anise": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.1579180657863617,
-      "color": "#F38181"
+      "color": "#C7CEEA"
     },
     "apple": {
       "category": "Fruit",
@@ -5954,12 +5954,12 @@
       "color": "#F38181"
     },
     "apple_brandy": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.553865373134613,
       "color": "#4ECDC4"
     },
     "apple_cider_vinegar": {
-      "category": "Beverage Alcoholic",
+      "category": "Condiments and Seasonings",
       "confidence": 0.31194499135017395,
       "color": "#4ECDC4"
     },
@@ -5969,19 +5969,19 @@
       "color": "#F38181"
     },
     "arrowroot": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.13165929913520813,
-      "color": "#F38181"
+      "color": "#C7CEEA"
     },
     "artichoke": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3207662105560303,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "asparagus": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.45609334111213684,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "avocado": {
       "category": "Fruit",
@@ -5989,14 +5989,14 @@
       "color": "#F38181"
     },
     "bagel": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Snacks and Dessert",
       "confidence": 0.3112403452396393,
-      "color": "#FFE66D"
+      "color": "#FF6B6B"
     },
     "bamboo_shoot": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.19977544248104095,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "banana": {
       "category": "Fruit",
@@ -6004,7 +6004,7 @@
       "color": "#F38181"
     },
     "barley": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.5331966280937195,
       "color": "#FFE66D"
     },
@@ -6014,34 +6014,34 @@
       "color": "#F38181"
     },
     "basil": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3330686390399933,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "basmati_rice": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.43010449409484863,
       "color": "#FFE66D"
     },
     "bean": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.43945276737213135,
       "color": "#FFE66D"
     },
     "beef": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.5728750228881836,
       "color": "#AA96DA"
     },
     "beer": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.39621585607528687,
       "color": "#4ECDC4"
     },
     "beetroot": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3011201024055481,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "berry": {
       "category": "Fruit",
@@ -6049,7 +6049,7 @@
       "color": "#F38181"
     },
     "biscuit": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.473011314868927,
       "color": "#FF6B6B"
     },
@@ -6059,7 +6059,7 @@
       "color": "#F38181"
     },
     "black_eyed_pea": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.3882715106010437,
       "color": "#FFE66D"
     },
@@ -6069,12 +6069,12 @@
       "color": "#F38181"
     },
     "black_tea": {
-      "category": "Beverage Alcoholic",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3066394627094269,
-      "color": "#4ECDC4"
+      "color": "#FCBAD3"
     },
     "black_walnut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.4751392900943756,
       "color": "#FFE66D"
     },
@@ -6099,64 +6099,64 @@
       "color": "#FFD93D"
     },
     "boysenberry": {
-      "category": "Plant/Vegetable",
+      "category": "Fruit",
       "confidence": 0.2732582092285156,
-      "color": "#A8E6CF"
+      "color": "#F38181"
     },
     "brandy": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.4943162202835083,
       "color": "#4ECDC4"
     },
     "brazil_nut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.40686535835266113,
       "color": "#FFE66D"
     },
     "bread": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.5311442017555237,
       "color": "#FF6B6B"
     },
     "breadfruit": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Fruit",
       "confidence": 0.5322867035865784,
-      "color": "#FF6B6B"
+      "color": "#F38181"
     },
     "breakfast_cereal": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.5142533779144287,
-      "color": "#FF6B6B"
+      "color": "#FFE66D"
     },
     "broad_bean": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.3877130448818207,
       "color": "#FFE66D"
     },
     "broccoli": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.5679330825805664,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "brussels_sprout": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.36764296889305115,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "buffalo": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.34931328892707825,
       "color": "#AA96DA"
     },
     "bulgur": {
-      "category": "Dairy",
+      "category": "Grains and Legumes",
       "confidence": 0.31064000725746155,
-      "color": "#95E1D3"
+      "color": "#FFE66D"
     },
     "burrito": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Vegetables and Herbs",
       "confidence": 0.29109346866607666,
-      "color": "#FF6B6B"
+      "color": "#FCBAD3"
     },
     "butter": {
       "category": "Dairy",
@@ -6169,17 +6169,17 @@
       "color": "#95E1D3"
     },
     "butternut_squash": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.4087880253791809,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "cabbage": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.49056577682495117,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "cake": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.316072016954422,
       "color": "#FF6B6B"
     },
@@ -6189,59 +6189,59 @@
       "color": "#95E1D3"
     },
     "candy_bar": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.40802285075187683,
       "color": "#FF6B6B"
     },
     "canola_oil": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.26611384749412537,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "caper": {
-      "category": "Seafood",
+      "category": "Grains and Legumes",
       "confidence": 0.13851307332515717,
-      "color": "#FFD93D"
+      "color": "#FFE66D"
     },
     "capsicum": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.431814581155777,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "cardamom": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.24332495033740997,
-      "color": "#F38181"
+      "color": "#C7CEEA"
     },
     "cardoon": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2504006326198578,
-      "color": "#FF6B6B"
+      "color": "#FCBAD3"
     },
     "carom_seed": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.34331560134887695,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "carrot": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.40158578753471375,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "cashew_nut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.41463223099708557,
       "color": "#FFE66D"
     },
     "cassava": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.42116332054138184,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "cassia": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2110590785741806,
-      "color": "#FFE66D"
+      "color": "#FCBAD3"
     },
     "catfish": {
       "category": "Seafood",
@@ -6249,9 +6249,9 @@
       "color": "#FFD93D"
     },
     "cauliflower": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.44755032658576965,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "caviar": {
       "category": "Seafood",
@@ -6259,19 +6259,19 @@
       "color": "#FFD93D"
     },
     "celery": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2976359724998474,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "champagne": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.4057181477546692,
       "color": "#4ECDC4"
     },
     "chayote": {
-      "category": "Dairy",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3343413770198822,
-      "color": "#95E1D3"
+      "color": "#FCBAD3"
     },
     "cheddar_cheese": {
       "category": "Dairy",
@@ -6289,14 +6289,14 @@
       "color": "#F38181"
     },
     "cherry_brandy": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.5176600813865662,
       "color": "#4ECDC4"
     },
     "cherry_pepper": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.4428940713405609,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "cherry_tomato": {
       "category": "Fruit",
@@ -6304,64 +6304,64 @@
       "color": "#F38181"
     },
     "chervil": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Vegetables and Herbs",
       "confidence": 0.23839984834194183,
-      "color": "#FF6B6B"
+      "color": "#C7CEEA"
     },
     "chestnut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.285491406917572,
       "color": "#FFE66D"
     },
     "chicken": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.46319475769996643,
       "color": "#AA96DA"
     },
     "chickpea": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.38269728422164917,
       "color": "#FFE66D"
     },
     "chili": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3898831605911255,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "chinese_cabbage": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.5174801349639893,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "chinese_mustard": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.36051708459854126,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "chive": {
-      "category": "Meat/Animal Product",
+      "category": "Vegetables and Herbs",
       "confidence": 0.27228182554244995,
-      "color": "#AA96DA"
+      "color": "#FCBAD3"
     },
     "chocolate": {
-      "category": "Fruit",
+      "category": "Snacks and Dessert",
       "confidence": 0.3788166344165802,
-      "color": "#F38181"
+      "color": "#FF6B6B"
     },
     "chocolate_spread": {
-      "category": "Dairy",
+      "category": "Snacks and Dessert",
       "confidence": 0.3055162727832794,
       "color": "#95E1D3"
     },
     "cider": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.3895973265171051,
-      "color": "#4ECDC4"
+      "color": "#C7CEEA"
     },
     "cinnamon": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3834334909915924,
-      "color": "#FF6B6B"
+      "color": "#C7CEEA"
     },
     "citrus_fruit": {
       "category": "Fruit",
@@ -6379,22 +6379,22 @@
       "color": "#F38181"
     },
     "clove": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2821260392665863,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "cocoa": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Vegetables and Herbs",
       "confidence": 0.37829312682151794,
-      "color": "#FF6B6B"
+      "color": "#FCBAD3"
     },
     "cocoa_butter": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.42590007185935974,
       "color": "#FF6B6B"
     },
     "cocoa_powder": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.36899715662002563,
       "color": "#FF6B6B"
     },
@@ -6404,9 +6404,9 @@
       "color": "#F38181"
     },
     "coffee": {
-      "category": "Beverage Alcoholic",
+      "category": "Snacks and Dessert",
       "confidence": 0.2925408184528351,
-      "color": "#4ECDC4"
+      "color": "#FF6B6B"
     },
     "comte_cheese": {
       "category": "Dairy",
@@ -6424,32 +6424,32 @@
       "color": "#95E1D3"
     },
     "cooking_oil": {
-      "category": "Dairy",
+      "category": "Condiments and Seasonings",
       "confidence": 0.20726926624774933,
-      "color": "#95E1D3"
+      "color": "#FF6B6B"
     },
     "coriander": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.44850966334342957,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "corn": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.5095213055610657,
       "color": "#FFE66D"
     },
     "corn_chip": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.4058378040790558,
       "color": "#FF6B6B"
     },
     "corn_oil": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3542885482311249,
       "color": "#FFE66D"
     },
     "cornbread": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.6239091753959656,
       "color": "#FF6B6B"
     },
@@ -6459,9 +6459,9 @@
       "color": "#95E1D3"
     },
     "couscous": {
-      "category": "Dairy",
+      "category": "Grains and Legumes",
       "confidence": 0.3446461856365204,
-      "color": "#95E1D3"
+      "color": "#FFD93D"
     },
     "crab": {
       "category": "Seafood",
@@ -6469,9 +6469,9 @@
       "color": "#FFD93D"
     },
     "cranberry": {
-      "category": "Plant/Vegetable",
+      "category": "Fruit",
       "confidence": 0.3784390687942505,
-      "color": "#A8E6CF"
+      "color": "#F38181"
     },
     "crayfish": {
       "category": "Seafood",
@@ -6489,22 +6489,22 @@
       "color": "#95E1D3"
     },
     "cucumber": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.40630394220352173,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "cumin": {
-      "category": "Dairy",
+      "category": "Condiments and Seasonings",
       "confidence": 0.17379294335842133,
-      "color": "#95E1D3"
+      "color": "#C7CEEA"
     },
     "currant": {
-      "category": "Beverage Alcoholic",
+      "category": "Vegetables and Herbs",
       "confidence": 0.25682830810546875,
-      "color": "#4ECDC4"
+      "color": "#FCBAD3"
     },
     "curry_leaf": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.424739807844162,
       "color": "#F38181"
     },
@@ -6519,44 +6519,44 @@
       "color": "#F38181"
     },
     "deer": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.34371936321258545,
       "color": "#AA96DA"
     },
     "dill": {
-      "category": "Meat/Animal Product",
+      "category": "Condiments and Seasonings",
       "confidence": 0.12054899334907532,
-      "color": "#AA96DA"
+      "color": "#C7CEEA"
     },
     "dulce_de_leche": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.18887630105018616,
       "color": "#FF6B6B"
     },
     "dumpling": {
-      "category": "Seafood",
+      "category": "Grains and Legumes",
       "confidence": 0.09360945969820023,
       "color": "#FFD93D"
     },
     "egg": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Meat and Poultry",
       "confidence": 0.31742459535598755,
-      "color": "#FF6B6B"
+      "color": "#AA96DA"
     },
     "eggplant": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.34896722435951233,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "endive": {
-      "category": "Beverage Alcoholic",
+      "category": "Vegetables and Herbs",
       "confidence": 0.22495801746845245,
-      "color": "#4ECDC4"
+      "color": "#FCBAD3"
     },
     "epazote": {
-      "category": "Dairy",
+      "category": "Condiments and Seasonings",
       "confidence": 0.1694851666688919,
-      "color": "#95E1D3"
+      "color": "#C7CEEA"
     },
     "evaporated_milk": {
       "category": "Dairy",
@@ -6564,9 +6564,9 @@
       "color": "#95E1D3"
     },
     "fennel": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2559165060520172,
-      "color": "#FF6B6B"
+      "color": "#C7CEEA"
     },
     "feta_cheese": {
       "category": "Dairy",
@@ -6579,9 +6579,9 @@
       "color": "#F38181"
     },
     "filbert": {
-      "category": "Dairy",
+      "category": "Grains and Legumes",
       "confidence": 0.1367412656545639,
-      "color": "#95E1D3"
+      "color": "#FFE66D"
     },
     "fish": {
       "category": "Seafood",
@@ -6589,12 +6589,12 @@
       "color": "#FFD93D"
     },
     "flour": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.4167938828468323,
-      "color": "#FF6B6B"
+      "color": "#FFE66D"
     },
     "fruit_juice": {
-      "category": "Fruit",
+      "category": "Snacks and Dessert",
       "confidence": 0.594916820526123,
       "color": "#F38181"
     },
@@ -6609,37 +6609,37 @@
       "color": "#F38181"
     },
     "fudge": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.4439522325992584,
       "color": "#FF6B6B"
     },
     "garlic": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.48072749376296997,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "gelatin": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Condiments and Seasonings",
       "confidence": 0.36644062399864197,
       "color": "#FF6B6B"
     },
     "ghee": {
-      "category": "Seafood",
+      "category": "Condiments and Seasonings",
       "confidence": 0.1357620656490326,
-      "color": "#FFD93D"
+      "color": "#C7CEEA"
     },
     "gin": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.3897738456726074,
       "color": "#4ECDC4"
     },
     "ginger": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.28081440925598145,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "ginkgo_nut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.3817455470561981,
       "color": "#FFE66D"
     },
@@ -6649,9 +6649,9 @@
       "color": "#95E1D3"
     },
     "gooseberry": {
-      "category": "Plant/Vegetable",
+      "category": "Fruit",
       "confidence": 0.38235563039779663,
-      "color": "#A8E6CF"
+      "color": "#F38181"
     },
     "grape": {
       "category": "Fruit",
@@ -6664,14 +6664,14 @@
       "color": "#F38181"
     },
     "green_bean": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.44567662477493286,
       "color": "#FFE66D"
     },
     "green_bell_pepper": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.39205411076545715,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "green_tea": {
       "category": "Fruit",
@@ -6699,107 +6699,107 @@
       "color": "#F38181"
     },
     "haddock": {
-      "category": "Beverage Alcoholic",
+      "category": "Seafood",
       "confidence": 0.13667260110378265,
-      "color": "#4ECDC4"
+      "color": "#FFD93D"
     },
     "ham": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.4429926574230194,
       "color": "#AA96DA"
     },
     "hamburger": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.371675580739975,
-      "color": "#AA96DA"
+      "color": "#FFD93D"
     },
     "hazelnut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.4541130065917969,
       "color": "#FFE66D"
     },
     "honey": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.21448534727096558,
-      "color": "#F38181"
+      "color": "#FF6B6B"
     },
     "hop": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.18928438425064087,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "horseradish": {
-      "category": "Meat/Animal Product",
+      "category": "Vegetables and Herbs",
       "confidence": 0.25855591893196106,
-      "color": "#AA96DA"
+      "color": "#FCBAD3"
     },
     "hot_dog": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.26235947012901306,
-      "color": "#AA96DA"
+      "color": "#C7CEEA"
     },
     "hummus": {
-      "category": "Meat/Animal Product",
+      "category": "Condiments and Seasonings",
       "confidence": 0.4482419192790985,
-      "color": "#AA96DA"
+      "color": "#FCBAD3"
     },
     "ice_cream": {
-      "category": "Dairy",
+      "category": "Snacks and Dessert",
       "confidence": 0.4535849988460541,
       "color": "#95E1D3"
     },
     "ice_cream_cone": {
-      "category": "Dairy",
+      "category": "Snacks and Dessert",
       "confidence": 0.4226253628730774,
-      "color": "#95E1D3"
+      "color": "#FF6B6B"
     },
     "icing": {
-      "category": "Dairy",
+      "category": "Snacks and Dessert",
       "confidence": 0.2549205720424652,
-      "color": "#95E1D3"
+      "color": "#FF6B6B"
     },
     "irish_moss": {
-      "category": "Beverage Alcoholic",
+      "category": "Seafood",
       "confidence": 0.27494633197784424,
-      "color": "#4ECDC4"
+      "color": "#FFD93D"
     },
     "jalapeno": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.4392837882041931,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "jerusalem_artichoke": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.22603678703308105,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "jicama": {
-      "category": "Meat/Animal Product",
+      "category": "Grains and Legumes",
       "confidence": 0.19206908345222473,
-      "color": "#AA96DA"
+      "color": "#FFE66D"
     },
     "kale": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.19669249653816223,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "kefir": {
-      "category": "Beverage Alcoholic",
+      "category": "Dairy",
       "confidence": 0.24917171895503998,
       "color": "#4ECDC4"
     },
     "kelp": {
-      "category": "Beverage Alcoholic",
+      "category": "Seafood",
       "confidence": 0.23587200045585632,
-      "color": "#4ECDC4"
+      "color": "#FFD93D"
     },
     "ketchup": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Condiments and Seasonings",
       "confidence": 0.36779066920280457,
       "color": "#FF6B6B"
     },
     "kidney_bean": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.3967410624027252,
       "color": "#FFE66D"
     },
@@ -6809,14 +6809,14 @@
       "color": "#F38181"
     },
     "kohlrabi": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2046756148338318,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "kombu": {
-      "category": "Fruit",
+      "category": "Seafood",
       "confidence": 0.1317806839942932,
-      "color": "#F38181"
+      "color": "#FFD93D"
     },
     "kumquat": {
       "category": "Fruit",
@@ -6824,14 +6824,14 @@
       "color": "#F38181"
     },
     "lamb": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.47039809823036194,
       "color": "#AA96DA"
     },
     "leek": {
-      "category": "Seafood",
+      "category": "Vegetables and Herbs",
       "confidence": 0.18446339666843414,
-      "color": "#FFD93D"
+      "color": "#FCBAD3"
     },
     "lemon": {
       "category": "Fruit",
@@ -6844,22 +6844,22 @@
       "color": "#F38181"
     },
     "lemon_verbena": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.35239407420158386,
-      "color": "#F38181"
+      "color": "#C7CEEA"
     },
     "lentil": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.2942654490470886,
       "color": "#FFE66D"
     },
     "lettuce": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.36072471737861633,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "lima_bean": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.4207887351512909,
       "color": "#FFE66D"
     },
@@ -6869,9 +6869,9 @@
       "color": "#F38181"
     },
     "lingonberry": {
-      "category": "Plant/Vegetable",
+      "category": "Fruit",
       "confidence": 0.35398685932159424,
-      "color": "#A8E6CF"
+      "color": "#F38181"
     },
     "lobster": {
       "category": "Seafood",
@@ -6879,27 +6879,27 @@
       "color": "#FFD93D"
     },
     "lovage": {
-      "category": "Dairy",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2014390230178833,
-      "color": "#95E1D3"
+      "color": "#C7CEEA"
     },
     "macadamia_nut": {
-      "category": "Fruit",
+      "category": "Grains and Legumes",
       "confidence": 0.41148868203163147,
       "color": "#F38181"
     },
     "macaroni": {
-      "category": "Dairy",
+      "category": "Grains and Legumes",
       "confidence": 0.31647753715515137,
-      "color": "#95E1D3"
+      "color": "#FFE66D"
     },
     "mace": {
-      "category": "Beverage Alcoholic",
+      "category": "Grains and Legumes",
       "confidence": 0.23223543167114258,
-      "color": "#4ECDC4"
+      "color": "#FFE66D"
     },
     "madeira_wine": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.4393923282623291,
       "color": "#4ECDC4"
     },
@@ -6914,37 +6914,37 @@
       "color": "#F38181"
     },
     "margarine": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3265412449836731,
-      "color": "#FF6B6B"
+      "color": "#4ECDC4"
     },
     "marjoram": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.14879512786865234,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "marshmallow": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.48078349232673645,
       "color": "#FF6B6B"
     },
     "marzipan": {
-      "category": "Plant/Vegetable",
+      "category": "Snacks and Dessert",
       "confidence": 0.16394737362861633,
-      "color": "#A8E6CF"
+      "color": "#FF6B6B"
     },
     "meat": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.6100389361381531,
       "color": "#AA96DA"
     },
     "meatball": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.49785035848617554,
       "color": "#AA96DA"
     },
     "meatloaf": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.4090426564216614,
       "color": "#AA96DA"
     },
@@ -6954,14 +6954,14 @@
       "color": "#F38181"
     },
     "meringue": {
-      "category": "Seafood",
+      "category": "Snacks and Dessert",
       "confidence": 0.17893171310424805,
-      "color": "#FFD93D"
+      "color": "#FF6B6B"
     },
     "mexican_oregano": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3253888189792633,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "milk": {
       "category": "Dairy",
@@ -6969,29 +6969,29 @@
       "color": "#95E1D3"
     },
     "millet": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.3669116497039795,
       "color": "#FFE66D"
     },
     "mint": {
-      "category": "Plant/Vegetable",
+      "category": "Snacks and Dessert",
       "confidence": 0.23022881150245667,
-      "color": "#A8E6CF"
+      "color": "#FF6B6B"
     },
     "miso": {
-      "category": "Fruit",
+      "category": "Grains and Legumes",
       "confidence": 0.13454583287239075,
-      "color": "#F38181"
+      "color": "#FFE66D"
     },
     "mixed_nut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.3799862861633301,
       "color": "#FFE66D"
     },
     "molasses": {
-      "category": "Beverage Alcoholic",
+      "category": "Snacks and Dessert",
       "confidence": 0.31579118967056274,
-      "color": "#4ECDC4"
+      "color": "#FF6B6B"
     },
     "mozzarella_cheese": {
       "category": "Dairy",
@@ -7004,69 +7004,69 @@
       "color": "#F38181"
     },
     "multigrain_bread": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.37530115246772766,
       "color": "#FF6B6B"
     },
     "mung_bean": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.4133528470993042,
       "color": "#FFE66D"
     },
     "mushroom": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.31691670417785645,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "mustard": {
-      "category": "Plant/Vegetable",
+      "category": "Snacks and Dessert",
       "confidence": 0.3072350025177002,
-      "color": "#A8E6CF"
+      "color": "#FF6B6B"
     },
     "mustard_oil": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.33815738558769226,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "mutton": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.25581613183021545,
       "color": "#AA96DA"
     },
     "nigella_seed": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.37086546421051025,
       "color": "#FFE66D"
     },
     "nut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.35287827253341675,
       "color": "#FFE66D"
     },
     "nutmeg": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.33782845735549927,
       "color": "#FFE66D"
     },
     "oat": {
-      "category": "Meat/Animal Product",
+      "category": "Grains and Legumes",
       "confidence": 0.3225383162498474,
-      "color": "#AA96DA"
+      "color": "#FFE66D"
     },
     "okra": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.17209096252918243,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "olive": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.32970061898231506,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "onion": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.37158316373825073,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "orange": {
       "category": "Fruit",
@@ -7074,24 +7074,24 @@
       "color": "#F38181"
     },
     "orange_bell_pepper": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.44119712710380554,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "orange_oil": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3756999373435974,
       "color": "#F38181"
     },
     "orange_roughy": {
-      "category": "Fruit",
+      "category": "Seafood",
       "confidence": 0.3861328065395355,
       "color": "#F38181"
     },
     "oregano": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3474477529525757,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "oyster": {
       "category": "Seafood",
@@ -7099,12 +7099,12 @@
       "color": "#FFD93D"
     },
     "oyster_mushroom": {
-      "category": "Seafood",
+      "category": "Vegetables and Herbs",
       "confidence": 0.4753981828689575,
       "color": "#FFD93D"
     },
     "pancake": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.41147568821907043,
       "color": "#FF6B6B"
     },
@@ -7119,14 +7119,14 @@
       "color": "#95E1D3"
     },
     "parsley": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.5449864268302917,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "parsnip": {
-      "category": "Dairy",
+      "category": "Vegetables and Herbs",
       "confidence": 0.20122042298316956,
-      "color": "#95E1D3"
+      "color": "#FCBAD3"
     },
     "passion_fruit": {
       "category": "Fruit",
@@ -7134,24 +7134,24 @@
       "color": "#F38181"
     },
     "pasta": {
-      "category": "Dairy",
+      "category": "Grains and Legumes",
       "confidence": 0.3719801604747772,
-      "color": "#95E1D3"
+      "color": "#FFE66D"
     },
     "pate": {
-      "category": "Beverage Alcoholic",
+      "category": "Condiments and Seasonings",
       "confidence": 0.16710707545280457,
-      "color": "#4ECDC4"
+      "color": "#C7CEEA"
     },
     "pawpaw": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.19125771522521973,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "pea": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Vegetables and Herbs",
       "confidence": 0.37311887741088867,
-      "color": "#FFE66D"
+      "color": "#FCBAD3"
     },
     "peach": {
       "category": "Fruit",
@@ -7159,17 +7159,17 @@
       "color": "#F38181"
     },
     "peanut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.3600451350212097,
       "color": "#FFE66D"
     },
     "peanut_butter": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.4151546359062195,
       "color": "#FF6B6B"
     },
     "peanut_oil": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3491246700286865,
       "color": "#FFE66D"
     },
@@ -7179,52 +7179,52 @@
       "color": "#F38181"
     },
     "pear_brandy": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.495906800031662,
       "color": "#4ECDC4"
     },
     "pecan": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.34850263595581055,
       "color": "#FFE66D"
     },
     "pectin": {
-      "category": "Fruit",
+      "category": "Snacks and Dessert",
       "confidence": 0.3653932809829712,
-      "color": "#F38181"
+      "color": "#FF6B6B"
     },
     "pepper": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.4450012445449829,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "peppermint": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.432102233171463,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "persimmon": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Fruit",
       "confidence": 0.3088618218898773,
-      "color": "#FFE66D"
+      "color": "#F38181"
     },
     "pheasant": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.27423450350761414,
       "color": "#AA96DA"
     },
     "phyllo_dough": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.35770300030708313,
       "color": "#FF6B6B"
     },
     "pie_crust": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.3753548860549927,
       "color": "#FF6B6B"
     },
     "pigeon_pea": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.40498021245002747,
       "color": "#FFE66D"
     },
@@ -7239,12 +7239,12 @@
       "color": "#FFD93D"
     },
     "pistachio": {
-      "category": "Fruit",
+      "category": "Grains and Legumes",
       "confidence": 0.3269343674182892,
-      "color": "#F38181"
+      "color": "#FFE66D"
     },
     "pita_bread": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.42314037680625916,
       "color": "#FF6B6B"
     },
@@ -7254,47 +7254,47 @@
       "color": "#F38181"
     },
     "plum_brandy": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.5359337329864502,
       "color": "#4ECDC4"
     },
     "plum_wine": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.4932255744934082,
       "color": "#4ECDC4"
     },
     "pomegranate": {
-      "category": "Plant/Vegetable",
+      "category": "Fruit",
       "confidence": 0.2945668697357178,
-      "color": "#A8E6CF"
+      "color": "#F38181"
     },
     "popcorn": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.46008795499801636,
       "color": "#FF6B6B"
     },
     "poppy_seed": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.3552338182926178,
-      "color": "#FF6B6B"
+      "color": "#FFE66D"
     },
     "pork": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.5190731287002563,
       "color": "#AA96DA"
     },
     "port_wine": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.49104270339012146,
       "color": "#4ECDC4"
     },
     "potato": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.35050395131111145,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "potato_bread": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.5496237874031067,
       "color": "#FF6B6B"
     },
@@ -7314,44 +7314,44 @@
       "color": "#95E1D3"
     },
     "pudding": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.44230425357818604,
       "color": "#FF6B6B"
     },
     "pumpkin": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3687496483325958,
-      "color": "#FF6B6B"
+      "color": "#FCBAD3"
     },
     "purslane": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.10792778432369232,
-      "color": "#F38181"
+      "color": "#C7CEEA"
     },
     "quail": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.31255772709846497,
       "color": "#AA96DA"
     },
     "quince": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Fruit",
       "confidence": 0.19205178320407867,
-      "color": "#FFE66D"
+      "color": "#F38181"
     },
     "quinoa": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.26005303859710693,
       "color": "#FFE66D"
     },
     "rabbit": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.3379824161529541,
       "color": "#AA96DA"
     },
     "radish": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.18008314073085785,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "rainbow_trout": {
       "category": "Seafood",
@@ -7364,14 +7364,14 @@
       "color": "#F38181"
     },
     "raisin_bread": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.4690459966659546,
       "color": "#FF6B6B"
     },
     "rapini": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.19687369465827942,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "raspberry": {
       "category": "Fruit",
@@ -7379,14 +7379,14 @@
       "color": "#F38181"
     },
     "ravioli": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2357855886220932,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "red_bell_pepper": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.40545931458473206,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "red_currant": {
       "category": "Fruit",
@@ -7399,32 +7399,32 @@
       "color": "#F38181"
     },
     "red_rice": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.41650131344795227,
       "color": "#FFE66D"
     },
     "red_wine": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.4963024854660034,
       "color": "#4ECDC4"
     },
     "relish": {
-      "category": "Seafood",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2130139172077179,
-      "color": "#FFD93D"
+      "color": "#FF6B6B"
     },
     "rhubarb": {
-      "category": "Seafood",
+      "category": "Vegetables and Herbs",
       "confidence": 0.26141873002052307,
-      "color": "#FFD93D"
+      "color": "#FCBAD3"
     },
     "rice": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.4734649658203125,
       "color": "#FFE66D"
     },
     "rice_cake": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.38752344250679016,
       "color": "#FF6B6B"
     },
@@ -7444,49 +7444,49 @@
       "color": "#95E1D3"
     },
     "rose_wine": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.47660502791404724,
       "color": "#4ECDC4"
     },
     "rosemary": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.44004711508750916,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "rum": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.4349117577075958,
       "color": "#4ECDC4"
     },
     "rutabaga": {
-      "category": "Fruit",
+      "category": "Dairy",
       "confidence": 0.11428070813417435,
-      "color": "#F38181"
+      "color": "#95E1D3"
     },
     "rye_bread": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.5001192092895508,
       "color": "#FF6B6B"
     },
     "saffron": {
-      "category": "Plant/Vegetable",
+      "category": "Grains and Legumes",
       "confidence": 0.24488672614097595,
-      "color": "#A8E6CF"
+      "color": "#FFE66D"
     },
     "sage": {
-      "category": "Beverage Alcoholic",
+      "category": "Vegetables and Herbs",
       "confidence": 0.14761245250701904,
-      "color": "#4ECDC4"
+      "color": "#FCBAD3"
     },
     "sake": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.22499579191207886,
       "color": "#4ECDC4"
     },
     "salad_dressing": {
-      "category": "Plant/Vegetable",
+      "category": "Condiments and Seasonings",
       "confidence": 0.4017309248447418,
-      "color": "#A8E6CF"
+      "color": "#FF6B6B"
     },
     "salmon": {
       "category": "Seafood",
@@ -7494,12 +7494,12 @@
       "color": "#FFD93D"
     },
     "salt": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.22597447037696838,
-      "color": "#F38181"
+      "color": "#FF6B6B"
     },
     "sausage": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.5296225547790527,
       "color": "#AA96DA"
     },
@@ -7509,24 +7509,24 @@
       "color": "#FFD93D"
     },
     "scotch_whisky": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.5550035834312439,
       "color": "#4ECDC4"
     },
     "semolina": {
-      "category": "Plant/Vegetable",
+      "category": "Grains and Legumes",
       "confidence": 0.2196219265460968,
-      "color": "#A8E6CF"
+      "color": "#FFE66D"
     },
     "sesame": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.42495667934417725,
       "color": "#FFE66D"
     },
     "shallot": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.11651956290006638,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "shortening": {
       "category": "Dairy",
@@ -7539,9 +7539,9 @@
       "color": "#FFD93D"
     },
     "smelt": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Seafood",
       "confidence": 0.22875820100307465,
-      "color": "#FF6B6B"
+      "color": "#FFD93D"
     },
     "snail": {
       "category": "Seafood",
@@ -7554,19 +7554,19 @@
       "color": "#FFD93D"
     },
     "sorghum": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.4818038046360016,
       "color": "#FFE66D"
     },
     "sorrel": {
-      "category": "Dairy",
+      "category": "Vegetables and Herbs",
       "confidence": 0.16580648720264435,
-      "color": "#95E1D3"
+      "color": "#C7CEEA"
     },
     "soup": {
-      "category": "Meat/Animal Product",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2859213352203369,
-      "color": "#AA96DA"
+      "color": "#FCBAD3"
     },
     "sour_cherry": {
       "category": "Fruit",
@@ -7579,44 +7579,44 @@
       "color": "#95E1D3"
     },
     "soybean": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.5164902210235596,
       "color": "#FFE66D"
     },
     "soybean_oil": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Condiments and Seasonings",
       "confidence": 0.34871959686279297,
       "color": "#FFE66D"
     },
     "sparkling_wine": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.5475949048995972,
       "color": "#4ECDC4"
     },
     "spearmint": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2117069661617279,
-      "color": "#A8E6CF"
+      "color": "#C7CEEA"
     },
     "spelt": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.20644396543502808,
-      "color": "#FF6B6B"
+      "color": "#FFE66D"
     },
     "spinach": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.45486533641815186,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "spirulina": {
-      "category": "Dairy",
+      "category": "Seafood",
       "confidence": 0.31236618757247925,
-      "color": "#95E1D3"
+      "color": "#FFD93D"
     },
     "squab": {
-      "category": "Fruit",
+      "category": "Meat and Poultry",
       "confidence": 0.24725498259067535,
-      "color": "#F38181"
+      "color": "#AA96DA"
     },
     "squid": {
       "category": "Seafood",
@@ -7624,12 +7624,12 @@
       "color": "#FFD93D"
     },
     "squirrel": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.28228649497032166,
       "color": "#AA96DA"
     },
     "star_anise": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.15357030928134918,
       "color": "#F38181"
     },
@@ -7644,7 +7644,7 @@
       "color": "#F38181"
     },
     "strawberry_jam": {
-      "category": "Fruit",
+      "category": "Snacks and Dessert",
       "confidence": 0.4047209620475769,
       "color": "#F38181"
     },
@@ -7654,24 +7654,24 @@
       "color": "#FFD93D"
     },
     "sugar": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.38628342747688293,
       "color": "#FF6B6B"
     },
     "summer_savory": {
-      "category": "Meat/Animal Product",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2596392035484314,
-      "color": "#AA96DA"
+      "color": "#C7CEEA"
     },
     "swede": {
-      "category": "Dairy",
+      "category": "Vegetables and Herbs",
       "confidence": 0.18665052950382233,
-      "color": "#95E1D3"
+      "color": "#FCBAD3"
     },
     "sweet_basil": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3338915705680847,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "sweet_cherry": {
       "category": "Fruit",
@@ -7679,19 +7679,19 @@
       "color": "#F38181"
     },
     "sweet_marjoram": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.19468699395656586,
       "color": "#FF6B6B"
     },
     "sweet_potato": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.39618951082229614,
       "color": "#F38181"
     },
     "sweetcorn": {
-      "category": "Beverage Alcoholic",
+      "category": "Grains and Legumes",
       "confidence": 0.3326158821582794,
-      "color": "#4ECDC4"
+      "color": "#FFE66D"
     },
     "swiss_cheese": {
       "category": "Dairy",
@@ -7704,74 +7704,74 @@
       "color": "#FFD93D"
     },
     "syrup": {
-      "category": "Beverage Alcoholic",
+      "category": "Snacks and Dessert",
       "confidence": 0.3681015968322754,
-      "color": "#4ECDC4"
+      "color": "#FF6B6B"
     },
     "tamale": {
-      "category": "Beverage Alcoholic",
+      "category": "Grains and Legumes",
       "confidence": 0.17313098907470703,
-      "color": "#4ECDC4"
+      "color": "#FFE66D"
     },
     "tangerine": {
       "category": "Fruit",
       "confidence": 0.3569776713848114,
-      "color": "#F38181"
+      "color": "#FCBAD3"
     },
     "tarragon": {
-      "category": "Beverage Alcoholic",
+      "category": "Condiments and Seasonings",
       "confidence": 0.14757591485977173,
-      "color": "#4ECDC4"
+      "color": "#C7CEEA"
     },
     "tea": {
-      "category": "Beverage Alcoholic",
+      "category": "Vegetables and Herbs",
       "confidence": 0.292312890291214,
-      "color": "#4ECDC4"
+      "color": "#FCBAD3"
     },
     "teff": {
-      "category": "Beverage Alcoholic",
+      "category": "Condiments and Seasonings",
       "confidence": 0.1468881070613861,
-      "color": "#4ECDC4"
+      "color": "#C7CEEA"
     },
     "thyme": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Vegetables and Herbs",
       "confidence": 0.16535593569278717,
-      "color": "#FFE66D"
+      "color": "#FCBAD3"
     },
     "tofu": {
-      "category": "Dairy",
+      "category": "Grains and Legumes",
       "confidence": 0.22368572652339935,
-      "color": "#95E1D3"
+      "color": "#FFE66D"
     },
     "tomato": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.3878856301307678,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "tortilla": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.32796603441238403,
       "color": "#FFE66D"
     },
     "tortilla_chip": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.326257586479187,
       "color": "#FF6B6B"
     },
     "tostada": {
-      "category": "Dairy",
+      "category": "Grains and Legumes",
       "confidence": 0.10752788931131363,
-      "color": "#95E1D3"
+      "color": "#FFE66D"
     },
     "trail_mix": {
-      "category": "Fruit",
+      "category": "Snacks and Dessert",
       "confidence": 0.1982763260602951,
-      "color": "#F38181"
+      "color": "#FF6B6B"
     },
     "truffle": {
-      "category": "Dairy",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2473158836364746,
-      "color": "#95E1D3"
+      "color": "#FCBAD3"
     },
     "turbot": {
       "category": "Seafood",
@@ -7779,82 +7779,82 @@
       "color": "#FFD93D"
     },
     "turkey": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.4513871967792511,
       "color": "#AA96DA"
     },
     "turmeric": {
-      "category": "Fruit",
+      "category": "Condiments and Seasonings",
       "confidence": 0.29678136110305786,
-      "color": "#F38181"
+      "color": "#C7CEEA"
     },
     "turnip": {
-      "category": "Beverage Alcoholic",
+      "category": "Vegetables and Herbs",
       "confidence": 0.11760122328996658,
-      "color": "#4ECDC4"
+      "color": "#C7CEEA"
     },
     "vanilla": {
-      "category": "Dairy",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2906440496444702,
-      "color": "#95E1D3"
+      "color": "#C7CEEA"
     },
     "vegetable_juice": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.5245756506919861,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "vermouth": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.49925896525382996,
       "color": "#4ECDC4"
     },
     "vinegar": {
-      "category": "Beverage Alcoholic",
+      "category": "Condiments and Seasonings",
       "confidence": 0.3046192228794098,
-      "color": "#4ECDC4"
+      "color": "#FF6B6B"
     },
     "vodka": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.4859057068824768,
       "color": "#4ECDC4"
     },
     "waffle": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Snacks and Dessert",
       "confidence": 0.3443096876144409,
       "color": "#FF6B6B"
     },
     "walleye": {
-      "category": "Meat/Animal Product",
+      "category": "Seafood",
       "confidence": 0.19245308637619019,
-      "color": "#AA96DA"
+      "color": "#FFD93D"
     },
     "walnut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.45661839842796326,
       "color": "#FFE66D"
     },
     "wasabi": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Condiments and Seasonings",
       "confidence": 0.19050051271915436,
-      "color": "#FFE66D"
+      "color": "#C7CEEA"
     },
     "water": {
-      "category": "Beverage Alcoholic",
+      "category": "Vegetables and Herbs",
       "confidence": 0.2409532070159912,
-      "color": "#4ECDC4"
+      "color": "#FCBAD3"
     },
     "water_chestnut": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.276207834482193,
       "color": "#FFE66D"
     },
     "watercress": {
-      "category": "Beverage Alcoholic",
+      "category": "Condiments and Seasonings",
       "confidence": 0.2406391203403473,
-      "color": "#4ECDC4"
+      "color": "#C7CEEA"
     },
     "wheat": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.5796992778778076,
       "color": "#FFE66D"
     },
@@ -7864,62 +7864,62 @@
       "color": "#95E1D3"
     },
     "white_bread": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.5325928926467896,
       "color": "#FF6B6B"
     },
     "white_cabbage": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.5118104219436646,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "white_pepper": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.4342837929725647,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "white_wine": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.47146865725517273,
       "color": "#4ECDC4"
     },
     "wild_rice": {
-      "category": "Cereal/Crop/Bean",
+      "category": "Grains and Legumes",
       "confidence": 0.46845942735671997,
       "color": "#FFE66D"
     },
     "wine": {
-      "category": "Beverage Alcoholic",
+      "category": "Alcoholic Drinks",
       "confidence": 0.5429031848907471,
       "color": "#4ECDC4"
     },
     "winter_savory": {
-      "category": "Meat/Animal Product",
+      "category": "Meat and Poultry",
       "confidence": 0.28706255555152893,
       "color": "#AA96DA"
     },
     "winter_squash": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.34298673272132874,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "wonton_wrapper": {
-      "category": "Bakery/Dessert/Snack",
+      "category": "Grains and Legumes",
       "confidence": 0.16394981741905212,
       "color": "#FF6B6B"
     },
     "yam": {
-      "category": "Beverage Alcoholic",
+      "category": "Vegetables and Herbs",
       "confidence": 0.18799082934856415,
-      "color": "#4ECDC4"
+      "color": "#FCBAD3"
     },
     "yellow_bell_pepper": {
-      "category": "Plant/Vegetable",
+      "category": "Vegetables and Herbs",
       "confidence": 0.37457919120788574,
-      "color": "#A8E6CF"
+      "color": "#FCBAD3"
     },
     "yellow_zucchini": {
-      "category": "Fruit",
+      "category": "Vegetables and Herbs",
       "confidence": 0.37663373351097107,
       "color": "#F38181"
     },
@@ -7930,23 +7930,25 @@
     }
   },
   "category_list": [
-    "Bakery/Dessert/Snack",
-    "Beverage Alcoholic",
-    "Cereal/Crop/Bean",
+    "Snacks and Dessert",
+    "Alcoholic Drinks",
+    "Grains and Legumes",
     "Dairy",
     "Fruit",
-    "Meat/Animal Product",
-    "Plant/Vegetable",
-    "Seafood"
+    "Meat and Poultry",
+    "Vegetables and Herbs",
+    "Seafood",
+    "Condiments and Seasonings"
   ],
   "category_colors": {
-    "Bakery/Dessert/Snack": "#FF6B6B",
-    "Beverage Alcoholic": "#4ECDC4",
-    "Cereal/Crop/Bean": "#FFE66D",
+    "Snacks and Dessert": "#FF6B6B",
+    "Alcoholic Drinks": "#4ECDC4",
+    "Grains and Legumes": "#FFE66D",
     "Dairy": "#95E1D3",
     "Fruit": "#F38181",
-    "Meat/Animal Product": "#AA96DA",
-    "Plant/Vegetable": "#A8E6CF",
-    "Seafood": "#FFD93D"
+    "Meat and Poultry": "#AA96DA",
+    "Vegetables and Herbs": "#FCBAD3",
+    "Seafood": "#FFD93D",
+    "Condiments and Seasonings": "#C7CEEA"
   }
 }
