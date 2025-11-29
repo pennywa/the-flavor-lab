@@ -2,12 +2,10 @@
 .env
 .env.local
 .env.*.local
-
 # API Keys and Secrets
 config.js
 *.key
 *.secret
-
 # Python
 __pycache__/
 *.py[cod]
@@ -18,25 +16,19 @@ env/
 venv/
 ENV/
 .venv
-
 # Jupyter Notebook
 .ipynb_checkpoints
-
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-
 # OS
 .DS_Store
 Thumbs.db
-
 # Logs
 *.log
-
 # Node (if you add any)
 node_modules/
 npm-debug.log*
-
