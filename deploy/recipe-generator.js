@@ -365,6 +365,43 @@ async function fetchRecipeImage(recipeName, ingredients, recipeIndex = 0) {
 }
 
 /**
+ * Get flavor preferences from sliders
+ * Returns values on a 1-5 scale (3 is neutral/standard)
+ */
+function getFlavorPreferences() {
+    const getValue = (sliderId) => {
+        const slider = document.getElementById(sliderId);
+        // Ensure the data-value attribute is used, or default to 3
+        return parseInt(slider?.getAttribute('data-value') || '3'); 
+    };
+    
+    return {
+        umami: getValue('umamiSlider'),
+        sweet: getValue('sweetSlider'),
+        spice: getValue('spiceSlider'),
+        sour: getValue('sourSlider'),
+        salty: getValue('saltySlider')
+    };
+}
+
+/**
+ * Get dietary restrictions from dropdown
+ */
+function getDietaryRestrictions() {
+    // Access the global selectedDietaryRestrictions array
+    if (typeof window !== 'undefined' && window.selectedDietaryRestrictions) {
+        return window.selectedDietaryRestrictions;
+    }
+    // Fallback: read from dropdown if it exists
+    const select = document.getElementById('dietarySelect');
+    if (select) {
+        const selected = Array.from(select.selectedOptions).map(opt => opt.value);
+        return selected.filter(v => v !== '');
+    }
+    return [];
+}
+
+/**
  * Display recipes in the UI
  */
 async function displayRecipes(recipes) {
