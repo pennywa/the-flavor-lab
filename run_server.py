@@ -3,6 +3,15 @@ Simple HTTP server to run the interactive network visualization.
 Run this script and open http://localhost:8000/index.html in your browser.
 """
 
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv() 
+
+# Access the API key
+API_KEY = os.environ.get("GEMINI_API_KEY")
+
 import http.server
 import socketserver
 import webbrowser
