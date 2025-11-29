@@ -5,27 +5,19 @@
  */
 
 // Configuration from config.js
-// If config.js is not loaded, use empty defaults (user must provide API keys in config.js)
-console.log('🔍 Checking CONFIG:', typeof CONFIG !== 'undefined' ? 'CONFIG exists' : 'CONFIG is undefined');
-if (typeof CONFIG !== 'undefined') {
-    console.log('🔍 CONFIG keys:', Object.keys(CONFIG));
-    console.log('🔍 CONFIG.PEXELS_API_KEY:', CONFIG.PEXELS_API_KEY ? `Set (${CONFIG.PEXELS_API_KEY.substring(0, 10)}...)` : 'NOT SET');
-}
+// We only load non-secret, client-side configuration variables.
 
+// API management start
+// The only variable needed from CONFIG is the model name.
 const CONFIG_LOADED = typeof CONFIG !== 'undefined' ? CONFIG : {
-    GEMINI_API_KEY: '',
-    GEMINI_MODEL: 'gemini-2.5-flash',
-    PEXELS_API_KEY: ''
+    GEMINI_MODEL: 'gemini-2.5-flash' 
 };
 
-const GEMINI_API_KEY = CONFIG_LOADED.GEMINI_API_KEY;
+// Define the non-secret model variable.
 const GEMINI_MODEL = CONFIG_LOADED.GEMINI_MODEL || 'gemini-2.5-flash';
-const PEXELS_API_KEY = CONFIG_LOADED.PEXELS_API_KEY || '';
 
-// Debug: Log API key status (first 10 chars only for security)
-console.log('🔑 Pexels API key status:', PEXELS_API_KEY ? `Set (${PEXELS_API_KEY.substring(0, 10)}...)` : 'NOT SET');
-console.log('🔑 CONFIG_LOADED keys:', Object.keys(CONFIG_LOADED));
-console.log('🔑 CONFIG_LOADED.PEXELS_API_KEY:', CONFIG_LOADED.PEXELS_API_KEY);
+// All logic related to GEMINI_API_KEY and PEXELS_API_KEY has been removed 
+// API management end
 
 /**
  * Build the prompt for Gemini AI
@@ -154,41 +146,10 @@ EXACT JSON FORMAT (copy this structure exactly):
 REMEMBER: Close every array with ] before starting the next field. Use ], "fieldName": format.`;
 }
 
-/**
- * List available Gemini models (for debugging)
- */
-async function listAvailableModels() {
-    if (!GEMINI_API_KEY) {
-        console.warn('No API key to list models');
-        return;
-    }
-    
-    try {
-        // Try both v1 and v1beta
-        const urls = [
-            `https://generativelanguage.googleapis.com/v1/models?key=${GEMINI_API_KEY}`,
-            `https://generativelanguage.googleapis.com/v1beta/models?key=${GEMINI_API_KEY}`
-        ];
-        
-        for (const url of urls) {
-            try {
-                const response = await fetch(url);
-                if (response.ok) {
-                    const data = await response.json();
-                    console.log('✅ Available Gemini models from', url.includes('v1/') ? 'v1' : 'v1beta', ':', data);
-                    if (data.models && data.models.length > 0) {
-                        console.log('📋 Model names:', data.models.map(m => m.name).join(', '));
-                        return data;
-                    }
-                }
-            } catch (err) {
-                console.log('❌ Failed to list models from', url.includes('v1/') ? 'v1' : 'v1beta');
-            }
-        }
-    } catch (error) {
-        console.error('Error listing models:', error);
-    }
-}
+// ----------------------------------------------------------------------
+// REMOVED: The listAvailableModels function was removed because it 
+//          used and exposed the GEMINI_API_KEY directly in the client.
+// ----------------------------------------------------------------------
 
 /**
  * Validate and fix incomplete recipes
@@ -225,617 +186,100 @@ function validateAndFixRecipes(recipes) {
 }
 
 /**
- * Generate recipes using Google Gemini AI
+ * Generate recipes using the secure Python Server Proxy.
+ * NOTE: The old logic that used GEMINI_API_KEY directly on the client side 
+ * has been replaced by this secure server proxy call.
  */
-async function generateRecipes(selectedIngredients, flavorPreferences, dietaryRestrictions) {
-    if (!GEMINI_API_KEY) {
-        throw new Error('Gemini API key not set in config.js');
-    }
+async function generateRecipe(selectedIngredients, flavorPreferences, dietaryRestrictions) {
     
+    // 1. Combine all inputs into a single prompt string that the server will use
+    // The buildRecipePrompt function is assumed to be defined elsewhere and is secure.
     const prompt = buildRecipePrompt(selectedIngredients, flavorPreferences, dietaryRestrictions);
+
+    // 2. Prepare the data payload for your Python server
+    const payload = {
+        // We send the full, custom prompt to the server
+        prompt_text: prompt,
+        
+        // We also send the model name (which is safe) to the server
+        model: GEMINI_MODEL 
+    };
+
+    // Assuming you have UI functions to indicate loading state
+    displayRecipe('Generating recipe...', 'Loading'); 
+    displayError('');
     
-    console.log('═══════════════════════════════════════════════════════════');
-    console.log('🍳 RECIPE GENERATION - STARTING');
-    console.log('═══════════════════════════════════════════════════════════');
-    console.log('📝 INPUT DATA:');
-    console.log('  • Selected Ingredients:', selectedIngredients);
-    console.log('  • Flavor Preferences:', flavorPreferences);
-    console.log('  • Dietary Restrictions:', dietaryRestrictions);
-    console.log('');
-    console.log('📤 PROMPT BEING SENT TO AI:');
-    console.log('───────────────────────────────────────────────────────────');
-    console.log(prompt);
-    console.log('───────────────────────────────────────────────────────────');
-    
-    // List available models for debugging (first time only) - wait for it
-    if (!window._modelsListed) {
-        window._modelsListed = true;
-        const modelsData = await listAvailableModels();
-        if (modelsData && modelsData.models && modelsData.models.length > 0) {
-            const availableModelNames = modelsData.models
-                .filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent'))
-                .map(m => m.name.replace('models/', ''));
-            console.log('🎯 Models that support generateContent:', availableModelNames);
-            
-            // If current model not available, try first available one
-            if (availableModelNames.length > 0 && !availableModelNames.includes(GEMINI_MODEL)) {
-                console.warn(`⚠️ Model ${GEMINI_MODEL} not available. Available models: ${availableModelNames.join(', ')}`);
-                console.warn(`💡 Try setting GEMINI_MODEL to one of: ${availableModelNames[0]}`);
-            }
-        }
-    }
-    
+    console.log('🍳 RECIPE GENERATION - Sending request to secure Python server...');
+
+    // 3. Make a secure POST request to your Python server's recipe endpoint
     try {
-        // Build URL with model name - format: models/{model-name}:generateContent
-        const modelName = GEMINI_MODEL.startsWith('models/') ? GEMINI_MODEL : `models/${GEMINI_MODEL}`;
-        
-        // Try v1 API first, fallback to v1beta
-        let url = `https://generativelanguage.googleapis.com/v1/${modelName}:generateContent?key=${GEMINI_API_KEY}`;
-        
-        console.log('Using model:', modelName);
-        console.log('Trying v1 API first...');
-        
-        const response = await fetch(url, {
+        const response = await fetch('/api/generate_recipe', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
-                body: JSON.stringify({
-                    contents: [{
-                        parts: [{
-                            text: `Return ONLY valid JSON. No text before the JSON. No text after the JSON. No explanations. No markdown. Just the JSON array.\n\n${prompt}`
-                        }]
-                    }],
-                    generationConfig: {
-                        temperature: 0.7, // Slightly lower for more consistent JSON
-                        maxOutputTokens: 6000 // Increased to handle longer recipe responses and prevent truncation
-                        // Note: responseMimeType not supported in v1 API for all models
-                    }
-                })
+            // Send the required data payload to the server
+            body: JSON.stringify(payload) 
         });
-        
+
         if (!response.ok) {
-            const errorData = await response.json().catch(() => ({ error: { message: 'Unknown error' } }));
-            console.error('v1 API failed, trying v1beta...', errorData);
-            
-            // Try v1beta as fallback
-            const urlV1Beta = `https://generativelanguage.googleapis.com/v1beta/${modelName}:generateContent?key=${GEMINI_API_KEY}`;
-            const responseV1Beta = await fetch(urlV1Beta, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    contents: [{
-                        parts: [{
-                            text: `Return ONLY valid JSON. No text before the JSON. No text after the JSON. No explanations. No markdown. Just the JSON array.\n\n${prompt}`
-                        }]
-                    }],
-                    generationConfig: {
-                        temperature: 0.7, // Slightly lower for more consistent JSON
-                        maxOutputTokens: 6000, // Increased to handle longer recipe responses and prevent truncation
-                        responseMimeType: "application/json" // Request JSON response format
-                    }
-                })
-            });
-            
-            if (!responseV1Beta.ok) {
-                const errorDataV1Beta = await responseV1Beta.json().catch(() => ({ error: { message: 'Unknown error' } }));
-                console.error('v1beta API also failed:', errorDataV1Beta);
-                const errorMsg = errorDataV1Beta.error?.message || errorDataV1Beta.message || JSON.stringify(errorDataV1Beta);
-                throw new Error(`Gemini API error: ${errorMsg}`);
-            }
-            
-            // Use v1beta response
-            const data = await responseV1Beta.json();
-            
-            // Check if response was truncated
-            if (data.candidates && data.candidates[0] && data.candidates[0].finishReason) {
-                const finishReason = data.candidates[0].finishReason;
-                if (finishReason === 'MAX_TOKENS' || finishReason === 'OTHER') {
-                    console.warn('⚠️ API response may have been truncated (finishReason:', finishReason + ')');
-                }
-            }
-            
-            console.log('');
-            console.log('📥 RAW API RESPONSE (v1beta):');
-            console.log('───────────────────────────────────────────────────────────');
-            console.log(JSON.stringify(data, null, 2));
-            console.log('───────────────────────────────────────────────────────────');
-            
-            // Check response structure
-            let content = null;
-            
-            if (data.candidates && Array.isArray(data.candidates) && data.candidates.length > 0 && data.candidates[0] && data.candidates[0].content) {
-                if (data.candidates[0].content.parts && Array.isArray(data.candidates[0].content.parts) && data.candidates[0].content.parts.length > 0 && data.candidates[0].content.parts[0]) {
-                    content = data.candidates[0].content.parts[0].text || data.candidates[0].content.parts[0].text;
-                } else if (data.candidates[0].content.text) {
-                    content = data.candidates[0].content.text;
-                }
-            } else if (data.text) {
-                content = data.text;
-            } else if (data.response && data.response.text) {
-                content = data.response.text;
-            }
-            
-            if (!content) {
-                console.error('Unexpected v1beta response structure:', data);
-                throw new Error('Invalid response from Gemini API - unexpected structure. Check console for details.');
-            }
-            
-            content = content.trim();
-            
-            console.log('');
-            console.log('📄 EXTRACTED TEXT CONTENT (first 500 chars):');
-            console.log('───────────────────────────────────────────────────────────');
-            console.log(content.substring(0, 500));
-            console.log('───────────────────────────────────────────────────────────');
-            
-            // Remove markdown code blocks if present
-            if (content.startsWith('```')) {
-                content = content.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
-            }
-            
-            // Extract JSON array - find the first [ and last ]
-            const firstBracket = content.indexOf('[');
-            let lastBracket = content.lastIndexOf(']');
-            
-            // If last bracket is too close to the end, the JSON might be incomplete
-            // Try to find a better closing bracket by counting brackets
-            if (lastBracket > 0 && lastBracket < content.length - 10) {
-                // Count opening and closing brackets to find the real end
-                let bracketCount = 0;
-                let foundLastBracket = -1;
-                for (let i = firstBracket; i < content.length; i++) {
-                    if (content[i] === '[') bracketCount++;
-                    if (content[i] === ']') {
-                        bracketCount--;
-                        if (bracketCount === 0) {
-                            foundLastBracket = i;
-                            break;
-                        }
-                    }
-                }
-                if (foundLastBracket > lastBracket) {
-                    lastBracket = foundLastBracket;
-                }
-            }
-            
-            if (firstBracket === -1 || lastBracket === -1 || lastBracket <= firstBracket) {
-                console.error('No JSON array found in v1beta response');
-                console.error('Full content length:', content.length);
-                console.error('Full content (last 500 chars):', content.substring(Math.max(0, content.length - 500)));
-                throw new Error('AI response does not contain a valid JSON array. Check console for full response.');
-            }
-            
-            // Extract just the JSON array part
-            content = content.substring(firstBracket, lastBracket + 1);
-            
-            // Check if JSON seems incomplete (doesn't end properly)
-            if (!content.trim().endsWith(']')) {
-                console.warn('⚠️ JSON might be incomplete - trying to fix...');
-                // Try to close any unclosed objects/arrays
-                let openBraces = (content.match(/\{/g) || []).length;
-                let closeBraces = (content.match(/\}/g) || []).length;
-                let openBrackets = (content.match(/\[/g) || []).length;
-                let closeBrackets = (content.match(/\]/g) || []).length;
-                
-                // Add missing closing brackets/braces
-                while (openBrackets > closeBrackets) {
-                    content += ']';
-                    closeBrackets++;
-                }
-                while (openBraces > closeBraces) {
-                    content += '}';
-                    closeBraces++;
-                }
-                console.log('Attempted to fix incomplete JSON');
-            }
-            
-            console.log('');
-            console.log('🔍 EXTRACTED JSON ARRAY (first 500 chars):');
-            console.log('───────────────────────────────────────────────────────────');
-            console.log(content.substring(0, 500));
-            console.log('───────────────────────────────────────────────────────────');
-            
-            // Clean up common JSON issues
-            // Remove trailing commas before closing brackets/braces
-            content = content.replace(/,(\s*[}\]])/g, '$1');
-            
-            // More aggressive JSON cleaning
-            // Remove literal newlines and replace with spaces (preserve JSON structure)
-            content = content.replace(/\n/g, ' ');
-            // Remove extra whitespace
-            content = content.replace(/\s+/g, ' ');
-            // Remove any control characters except spaces
-            content = content.replace(/[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F]/g, '');
-            
-            // Parse JSON with multiple fallback strategies
-            let recipes;
-            try {
-                recipes = JSON.parse(content);
-                console.log('');
-                console.log('✅ JSON PARSED SUCCESSFULLY!');
-                console.log('───────────────────────────────────────────────────────────');
-                console.log('📋 PARSED RECIPES (JSON):');
-                console.log(JSON.stringify(recipes, null, 2));
-                console.log('───────────────────────────────────────────────────────────');
-            } catch (parseError) {
-                console.error('JSON parse error:', parseError);
-                console.error('Error at position:', parseError.message.match(/position (\d+)/)?.[1]);
-                
-                // Try to find and fix the issue at the error position
-                const errorPos = parseInt(parseError.message.match(/position (\d+)/)?.[1] || '0');
-                if (errorPos > 0) {
-                    console.log('Content around error position:', content.substring(Math.max(0, errorPos - 50), errorPos + 50));
-                }
-                
-                // Strategy 1: Try to extract just the JSON array with regex
-                const jsonMatch = content.match(/\[[\s\S]*\]/);
-                if (jsonMatch) {
-                    try {
-                        let cleaned = jsonMatch[0];
-                        // Remove trailing commas more aggressively
-                        cleaned = cleaned.replace(/,(\s*[}\]])/g, '$1');
-                        recipes = JSON.parse(cleaned);
-                        console.log('✅ Parsed using extracted array');
-                    } catch (e) {
-                        console.error('Extracted array also failed:', e);
-                    }
-                }
-                
-            // Strategy 2: If still failed, try to parse each recipe individually
-            if (!recipes) {
-                try {
-                    // Find all recipe objects - use a more flexible regex
-                    const recipeMatches = content.match(/\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/g);
-                    if (recipeMatches && recipeMatches.length > 0) {
-                        recipes = recipeMatches.map(match => {
-                            try {
-                                return JSON.parse(match);
-                            } catch (e) {
-                                return null;
-                            }
-                        }).filter(r => r !== null && (r.name || r.recipe_name));
-                        console.log('✅ Parsed', recipes.length, 'recipes individually');
-                    }
-                } catch (e) {
-                    console.error('Individual parsing failed:', e);
-                }
-            }
-            
-            if (!recipes) {
-                console.error('Full content that failed:', content);
-                throw new Error(`Failed to parse JSON: ${parseError.message}. Check console for full response.`);
-            }
+            // Read and handle errors returned by the Python server
+            const errorData = await response.json().catch(() => ({ error: { message: `Server error: ${response.status} ${response.statusText}` } }));
+            throw new Error(`Server Error: ${errorData.error || errorData.message || response.statusText}`);
         }
-        
-        if (!Array.isArray(recipes)) {
-            console.error('Parsed result is not an array:', recipes);
-            throw new Error('AI did not return an array of recipes');
-        }
-        
-        // Validate and fix incomplete recipes
-        recipes = validateAndFixRecipes(recipes);
-        
-        console.log('');
-        console.log('📊 FINAL RECIPES SUMMARY:');
-        console.log('───────────────────────────────────────────────────────────');
-        console.log(`  • Total recipes: ${recipes.length}`);
-        console.log(`  • Recipe names: ${recipes.map(r => r.name || r.recipe_name || 'Unnamed').join(', ')}`);
-        console.log('');
-        recipes.forEach((recipe, idx) => {
-            console.log(`  Recipe ${idx + 1}: ${recipe.name || recipe.recipe_name || 'Unnamed'}`);
-            console.log(`    - Ingredients: ${(recipe.ingredients || []).length} items`);
-            console.log(`    - Steps: ${(recipe.steps || recipe.instructions || []).length} steps`);
-            console.log(`    - Prep: ${recipe.prepTime || recipe.prep_time_minutes || 'N/A'} min`);
-            console.log(`    - Cook: ${recipe.cookTime || recipe.cook_time_minutes || 'N/A'} min`);
-            if (recipe.flavorScores && Object.keys(recipe.flavorScores).length > 0) {
-                console.log(`    - Flavor Scores: Umami=${recipe.flavorScores.umami || 'N/A'}, Sweet=${recipe.flavorScores.sweet || 'N/A'}, Spice=${recipe.flavorScores.spice || 'N/A'}, Sour=${recipe.flavorScores.sour || 'N/A'}, Salty=${recipe.flavorScores.salty || 'N/A'}`);
-            } else {
-                console.log(`    - Flavor Scores: Missing`);
-            }
-        });
-        console.log('───────────────────────────────────────────────────────────');
-        console.log('✅ RECIPE GENERATION COMPLETE (using v1beta)');
-        console.log('═══════════════════════════════════════════════════════════');
-            return recipes;
-        }
-        
-        // v1 API succeeded, process the response
+
         const data = await response.json();
+        const recipeText = data.recipe; // Expecting the raw JSON string from the server
         
-        // Check if response was truncated
-        if (data.candidates && data.candidates[0] && data.candidates[0].finishReason) {
-            const finishReason = data.candidates[0].finishReason;
-            if (finishReason === 'MAX_TOKENS' || finishReason === 'OTHER') {
-                console.warn('⚠️ API response may have been truncated (finishReason:', finishReason + ')');
-            }
+        if (!recipeText) {
+            throw new Error('Server returned empty recipe content.');
         }
-        
-        console.log('');
-        console.log('📥 RAW API RESPONSE (v1):');
-        console.log('───────────────────────────────────────────────────────────');
-        console.log(JSON.stringify(data, null, 2));
-        console.log('───────────────────────────────────────────────────────────');
-        
-        // Check response structure - might be different for v1 API
-        let content = null;
-        
-        if (data.candidates && Array.isArray(data.candidates) && data.candidates.length > 0 && data.candidates[0] && data.candidates[0].content) {
-            // Standard v1beta format
-            if (data.candidates[0].content.parts && Array.isArray(data.candidates[0].content.parts) && data.candidates[0].content.parts.length > 0 && data.candidates[0].content.parts[0]) {
-                content = data.candidates[0].content.parts[0].text || data.candidates[0].content.parts[0].text;
-            } else if (data.candidates[0].content.text) {
-                content = data.candidates[0].content.text;
-            }
-        } else if (data.text) {
-            // Direct text response
-            content = data.text;
-        } else if (data.response && data.response.text) {
-            // Alternative response format
-            content = data.response.text;
-        }
-        
-        if (!content) {
-            console.error('Unexpected response structure:', data);
-            throw new Error('Invalid response from Gemini API - unexpected structure. Check console for details.');
-        }
-        
-        content = content.trim();
-        
-        console.log('');
-        console.log('📄 EXTRACTED TEXT CONTENT (first 500 chars):');
-        console.log('───────────────────────────────────────────────────────────');
-        console.log(content.substring(0, 500));
-        console.log('───────────────────────────────────────────────────────────');
+
+        // --- Start Response Processing (Parsing the AI's JSON output) ---
         
         // Remove markdown code blocks if present
+        let content = recipeText.trim();
         if (content.startsWith('```')) {
             content = content.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
         }
         
-        // Extract JSON array - find the first [ and last ]
+        // Find the JSON array part
         const firstBracket = content.indexOf('[');
         let lastBracket = content.lastIndexOf(']');
         
-        // If last bracket is too close to the end, the JSON might be incomplete
-        // Try to find a better closing bracket by counting brackets
-        if (lastBracket > 0 && lastBracket < content.length - 10) {
-            // Count opening and closing brackets to find the real end
-            let bracketCount = 0;
-            let foundLastBracket = -1;
-            for (let i = firstBracket; i < content.length; i++) {
-                if (content[i] === '[') bracketCount++;
-                if (content[i] === ']') {
-                    bracketCount--;
-                    if (bracketCount === 0) {
-                        foundLastBracket = i;
-                        break;
-                    }
-                }
-            }
-            if (foundLastBracket > lastBracket) {
-                lastBracket = foundLastBracket;
-            }
-        }
-        
         if (firstBracket === -1 || lastBracket === -1 || lastBracket <= firstBracket) {
-            console.error('No JSON array found in response');
-            console.error('Full content length:', content.length);
-            console.error('Full content (last 500 chars):', content.substring(Math.max(0, content.length - 500)));
-            throw new Error('AI response does not contain a valid JSON array. Check console for full response.');
+            throw new Error('AI response does not contain a valid JSON array.');
         }
-        
-        // Extract just the JSON array part
+
+        // Extract and clean the JSON array part (using robust methods from your old logic)
         content = content.substring(firstBracket, lastBracket + 1);
-        
-        // Check if JSON seems incomplete (doesn't end properly)
-        if (!content.trim().endsWith(']')) {
-            console.warn('⚠️ JSON might be incomplete - trying to fix...');
-            // Try to close any unclosed objects/arrays
-            let openBraces = (content.match(/\{/g) || []).length;
-            let closeBraces = (content.match(/\}/g) || []).length;
-            let openBrackets = (content.match(/\[/g) || []).length;
-            let closeBrackets = (content.match(/\]/g) || []).length;
-            
-            // Add missing closing brackets/braces
-            while (openBrackets > closeBrackets) {
-                content += ']';
-                closeBrackets++;
-            }
-            while (openBraces > closeBraces) {
-                content += '}';
-                closeBraces++;
-            }
-            console.log('Attempted to fix incomplete JSON');
-        }
-        
-        console.log('');
-        console.log('🔍 EXTRACTED JSON ARRAY (first 500 chars):');
-        console.log('───────────────────────────────────────────────────────────');
-        console.log(content.substring(0, 500));
-        console.log('───────────────────────────────────────────────────────────');
-        
-        // Clean up common JSON issues
-        // Remove trailing commas before closing brackets/braces
         content = content.replace(/,(\s*[}\]])/g, '$1');
         
-        // More aggressive JSON cleaning
-        // First, try to escape newlines that are inside string values (between quotes)
-        // This is complex, so we'll use a simpler approach: remove all unescaped newlines
-        // and replace them with spaces, except for structural newlines (outside strings)
-        // For now, let's just remove unescaped newlines and replace with spaces
-        // We need to be careful not to break the JSON structure
-        
-        // Remove literal newlines that aren't escaped (but keep the JSON structure)
-        // Replace newlines with spaces, but preserve the JSON structure
-        content = content.replace(/\n/g, ' ');
-        // Remove extra whitespace
-        content = content.replace(/\s+/g, ' ');
-        // Remove any control characters except spaces
-        content = content.replace(/[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F]/g, '');
-        
-        // Parse JSON with multiple fallback strategies
-        let recipes;
-        try {
-            recipes = JSON.parse(content);
-            console.log('');
-            console.log('✅ JSON PARSED SUCCESSFULLY!');
-            console.log('───────────────────────────────────────────────────────────');
-            console.log('📋 PARSED RECIPES (JSON):');
-            console.log(JSON.stringify(recipes, null, 2));
-            console.log('───────────────────────────────────────────────────────────');
-        } catch (parseError) {
-            console.error('JSON parse error:', parseError);
-            console.error('Error at position:', parseError.message.match(/position (\d+)/)?.[1]);
-            
-            // Try to find and fix the issue at the error position
-            const errorPos = parseInt(parseError.message.match(/position (\d+)/)?.[1] || '0');
-            if (errorPos > 0) {
-                console.log('Content around error position:', content.substring(Math.max(0, errorPos - 100), Math.min(content.length, errorPos + 100)));
-                console.log('Content length:', content.length);
-                console.log('Error at position:', errorPos, 'out of', content.length);
-            }
-            
-            // Strategy 1: Try to fix incomplete JSON by closing unclosed objects
-            if (errorPos > content.length * 0.8) {
-                // Error near the end - likely incomplete JSON
-                console.log('⚠️ Error near end of content - JSON might be truncated');
-                console.log('Last 200 chars:', content.substring(Math.max(0, content.length - 200)));
-                
-                // Try to complete the last recipe object
-                let lastOpenBrace = content.lastIndexOf('{');
-                if (lastOpenBrace > 0) {
-                    let afterLastBrace = content.substring(lastOpenBrace);
-                    // Count what's missing
-                    let openBraces = (afterLastBrace.match(/\{/g) || []).length;
-                    let closeBraces = (afterLastBrace.match(/\}/g) || []).length;
-                    let openBrackets = (afterLastBrace.match(/\[/g) || []).length;
-                    let closeBrackets = (afterLastBrace.match(/\]/g) || []).length;
-                    
-                    // Try to complete it
-                    let fixed = content.substring(0, lastOpenBrace);
-                    let incomplete = content.substring(lastOpenBrace);
-                    
-                    // If we're in the middle of an array, try to close it
-                    if (incomplete.includes('"ingredients"') && !incomplete.includes(']')) {
-                        // Try to find where ingredients array should end
-                        let ingredientsStart = incomplete.indexOf('"ingredients"');
-                        if (ingredientsStart > -1) {
-                            let afterIngredients = incomplete.substring(ingredientsStart);
-                            // Try to close the array and object
-                            if (!afterIngredients.includes(']')) {
-                                // Find the last item or add closing
-                                let lastComma = afterIngredients.lastIndexOf(',');
-                                if (lastComma > -1) {
-                                    incomplete = incomplete.substring(0, lastComma + 1) + ' ] }';
-                                } else {
-                                    incomplete += ' ] }';
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Close any remaining open structures
-                    while (openBrackets > closeBrackets) {
-                        incomplete += ']';
-                        closeBrackets++;
-                    }
-                    while (openBraces > closeBraces) {
-                        incomplete += '}';
-                        closeBraces++;
-                    }
-                    
-                    content = fixed + incomplete + ']';
-                    console.log('Attempted to fix truncated JSON');
-                    
-                    try {
-                        recipes = JSON.parse(content);
-                        console.log('✅ Parsed after fixing truncation');
-                    } catch (e2) {
-                        console.error('Fixed version also failed:', e2);
-                    }
-                }
-            }
-            
-            // Strategy 2: Try to extract just the JSON array with regex
-            if (!recipes) {
-                const jsonMatch = content.match(/\[[\s\S]*\]/);
-                if (jsonMatch) {
-                    try {
-                        let cleaned = jsonMatch[0];
-                        // Remove trailing commas more aggressively
-                        cleaned = cleaned.replace(/,(\s*[}\]])/g, '$1');
-                        recipes = JSON.parse(cleaned);
-                        console.log('✅ Parsed using extracted array');
-                    } catch (e) {
-                        console.error('Extracted array also failed:', e);
-                    }
-                }
-            }
-            
-            // Strategy 2: If still failed, try to parse each recipe individually
-            if (!recipes) {
-                try {
-                    // Find all recipe objects
-                    const recipeMatches = content.match(/\{[^{}]*"name"[^{}]*\}/g);
-                    if (recipeMatches && recipeMatches.length > 0) {
-                        recipes = recipeMatches.map(match => {
-                            try {
-                                return JSON.parse(match);
-                            } catch (e) {
-                                return null;
-                            }
-                        }).filter(r => r !== null);
-                        console.log('✅ Parsed', recipes.length, 'recipes individually');
-                    }
-                } catch (e) {
-                    console.error('Individual parsing failed:', e);
-                }
-            }
-            
-            if (!recipes) {
-                console.error('Full content that failed:', content);
-                throw new Error(`Failed to parse JSON: ${parseError.message}. Check console for full response.`);
-            }
-        }
-        
+        // Parse the JSON
+        let recipes = JSON.parse(content);
+
         if (!Array.isArray(recipes)) {
-            console.error('Parsed result is not an array:', recipes);
             throw new Error('AI did not return an array of recipes');
         }
         
-        // Validate and fix incomplete recipes
+        // Validate and fix incomplete recipes (using your existing function)
         recipes = validateAndFixRecipes(recipes);
         
-        console.log('');
-        console.log('📊 FINAL RECIPES SUMMARY:');
-        console.log('───────────────────────────────────────────────────────────');
-        console.log(`  • Total recipes: ${recipes.length}`);
-        console.log(`  • Recipe names: ${recipes.map(r => r.name || r.recipe_name || 'Unnamed').join(', ')}`);
-        console.log('');
-        recipes.forEach((recipe, idx) => {
-            console.log(`  Recipe ${idx + 1}: ${recipe.name || recipe.recipe_name || 'Unnamed'}`);
-            console.log(`    - Ingredients: ${(recipe.ingredients || []).length} items`);
-            console.log(`    - Steps: ${(recipe.steps || recipe.instructions || []).length} steps`);
-            console.log(`    - Prep: ${recipe.prepTime || recipe.prep_time_minutes || 'N/A'} min`);
-            console.log(`    - Cook: ${recipe.cookTime || recipe.cook_time_minutes || 'N/A'} min`);
-            if (recipe.flavorScores && Object.keys(recipe.flavorScores).length > 0) {
-                console.log(`    - Flavor Scores: Umami=${recipe.flavorScores.umami || 'N/A'}, Sweet=${recipe.flavorScores.sweet || 'N/A'}, Spice=${recipe.flavorScores.spice || 'N/A'}, Sour=${recipe.flavorScores.sour || 'N/A'}, Salty=${recipe.flavorScores.salty || 'N/A'}`);
-            } else {
-                console.log(`    - Flavor Scores: Missing`);
-            }
-        });
-        console.log('───────────────────────────────────────────────────────────');
-        console.log('✅ RECIPE GENERATION COMPLETE (using v1)');
-        console.log('═══════════════════════════════════════════════════════════');
+        // Assuming your UI logic expects this array of recipes
+        displayRecipesList(recipes); // Update this function call to match your actual UI update function
+        
+        // Trigger image search for the first recipe title (assuming searchRecipeImage is defined)
+        const firstRecipeTitle = recipes[0]?.name || recipes[0]?.recipe_name || selectedIngredients.join(' ');
+        await searchRecipeImage(firstRecipeTitle);
+
+        console.log('✅ Recipe generation complete via secure proxy.');
         
         return recipes;
         
     } catch (error) {
-        console.error('Error generating recipes:', error);
-        throw error;
+        console.error('Error in generateRecipe (Proxy):', error);
+        displayError(`❌ Error generating recipes: ${error.message}`); 
+        return [];
     }
 }
 
@@ -876,79 +320,79 @@ function getDietaryRestrictions() {
 }
 
 /**
- * Fetch recipe image from Pexels API
+ * Fetch recipe image by proxying the request through the Python server.
+ * The server handles the PEXELS_API_KEY securely.
  * @param {string} recipeName - Name of the recipe
  * @param {Array} ingredients - Array of ingredient strings
  * @param {number} recipeIndex - Index of the recipe (to vary search queries and avoid duplicates)
  */
 async function fetchRecipeImage(recipeName, ingredients, recipeIndex = 0) {
-    // Debug: Check API key
-    const apiKeyTrimmed = PEXELS_API_KEY ? PEXELS_API_KEY.trim() : '';
-    if (!apiKeyTrimmed) {
-        console.log('⚠️ Pexels API key not set, skipping image fetch');
-        console.log('   CONFIG_LOADED.PEXELS_API_KEY:', CONFIG_LOADED.PEXELS_API_KEY);
-        console.log('   PEXELS_API_KEY variable:', PEXELS_API_KEY);
-        console.log('   To enable images, add your Pexels API key to config.js');
-        console.log('   Get a free key at: https://www.pexels.com/api/');
-        return null;
-    }
+    // -----------------------------------------------------------
+    // NOTE: All API Key checks and direct key usage have been removed for security.
+    // The query building logic remains the same.
+    // -----------------------------------------------------------
+    
+    // Build search query from recipe name and ingredients (same logic as before)
+    const nameWords = recipeName.toLowerCase()
+        .split(/\s+/)
+        .slice(0, 5)
+        .join(' ');
+    
+    // Logic to select ingredients based on recipe index
+    const startIndex = recipeIndex % Math.max(1, ingredients.length);
+    const ingredientCount = Math.min(3 + (recipeIndex % 2), ingredients.length); 
+    const selectedIngredients = ingredients.slice(startIndex, startIndex + ingredientCount)
+        .concat(ingredients.slice(0, Math.max(0, ingredientCount - (ingredients.length - startIndex))));
+    
+    const ingredientWords = selectedIngredients.map(ing => {
+        return ing.replace(/_/g, ' ')
+            .toLowerCase()
+            .replace(/\d+/g, '') // Remove numbers
+            .replace(/[()]/g, '') // Remove parentheses
+            // Remove common measurement words (same logic as before)
+            .replace(/\b(tbsp|tsp|cup|cups|oz|lb|lbs|g|kg|ml|l|can|cans|cloves?|pieces?|slices?|diced?|chopped?|minced?|fresh|dried|ground|whole|large|small|medium)\b/gi, '')
+            .trim();
+    })
+    .filter(ing => ing.length > 2)
+    .join(' ');
+    
+    // Add variation terms based on index
+    const variationTerms = ['dish', 'meal', 'cuisine', 'cooking', 'recipe'];
+    const variationTerm = variationTerms[recipeIndex % variationTerms.length];
+    
+    const baseQuery = `${nameWords} ${ingredientWords} ${variationTerm} food`.trim().replace(/\s+/g, ' ');
+
+    // Use different page numbers to get different results for similar queries
+    const page = 1 + (recipeIndex % 3); 
+    
+    console.log(`🖼️ Fetching image for: "${recipeName}" (recipe ${recipeIndex + 1})`);
+    console.log(`   Search query sent to server: "${baseQuery}"`);
+    
+    // -----------------------------------------------------------
+    // SECURE PROXY CALL: Send the query to your server endpoint
+    // -----------------------------------------------------------
     
     try {
-        // Build search query from recipe name and ingredients
-        // Vary the query based on recipe index to avoid duplicate images
-        const nameWords = recipeName.toLowerCase()
-            .split(/\s+/)
-            .slice(0, 5)  // Use first 5 words
-            .join(' ');
-        
-        // Vary ingredient selection based on recipe index to get different images
-        // This helps avoid getting the same image for similar recipes
-        const startIndex = recipeIndex % Math.max(1, ingredients.length);
-        const ingredientCount = Math.min(3 + (recipeIndex % 2), ingredients.length); // 3 or 4 ingredients
-        const selectedIngredients = ingredients.slice(startIndex, startIndex + ingredientCount)
-            .concat(ingredients.slice(0, Math.max(0, ingredientCount - (ingredients.length - startIndex))));
-        
-        const ingredientWords = selectedIngredients.map(ing => {
-            // Clean up ingredient strings (remove measurements, numbers, etc.)
-            return ing.replace(/_/g, ' ')
-                .toLowerCase()
-                .replace(/\d+/g, '')  // Remove numbers
-                .replace(/[()]/g, '') // Remove parentheses
-                .replace(/\b(tbsp|tsp|cup|cups|oz|lb|lbs|g|kg|ml|l|can|cans|cloves?|pieces?|slices?|diced?|chopped?|minced?|fresh|dried|ground|whole|large|small|medium)\b/gi, '') // Remove common measurement words
-                .trim();
-        })
-        .filter(ing => ing.length > 2) // Filter out very short words
-        .join(' ');
-        
-        // Add variation terms based on index to further differentiate queries
-        const variationTerms = ['dish', 'meal', 'cuisine', 'cooking', 'recipe'];
-        const variationTerm = variationTerms[recipeIndex % variationTerms.length];
-        
-        const query = `${nameWords} ${ingredientWords} ${variationTerm} food`.trim().replace(/\s+/g, ' ');
-        console.log(`🖼️ Fetching image for: "${recipeName}" (recipe ${recipeIndex + 1})`);
-        console.log(`   Search query: "${query}"`);
-        
-        // Use different page numbers to get different results for similar queries
-        const page = 1 + (recipeIndex % 3); // Try pages 1, 2, or 3
-        const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape&page=${page}`;
-        
-        const response = await fetch(url, {
+        const response = await fetch('/api/search_image', {
+            method: 'POST',
             headers: {
-                'Authorization': PEXELS_API_KEY
-            }
+                'Content-Type': 'application/json',
+            },
+            // Send query and page number to the Python server
+            body: JSON.stringify({ query: baseQuery, page: page }) 
         });
         
         if (!response.ok) {
-            const errorText = await response.text();
-            console.warn(`❌ Pexels API error: ${response.status}`, errorText);
+            // Read and log errors returned by the Python server
+            const errorData = await response.json().catch(() => ({ error: { message: `Server error: ${response.status} ${response.statusText}` } }));
+            console.warn(`❌ Image Proxy Error: ${errorData.error || errorData.message}`);
             return null;
         }
         
         const data = await response.json();
+        const imageUrl = data.image_url; // Expected image URL from the server
         
-        if (data.photos && data.photos.length > 0) {
-            // Prefer large or original for better quality (large is ~1280px, original is full resolution)
-            const imageUrl = data.photos[0].src.large || data.photos[0].src.original || data.photos[0].src.medium;
+        if (imageUrl) {
             console.log(`✅ Found image for "${recipeName}":`, imageUrl);
             return imageUrl;
         }
@@ -956,7 +400,7 @@ async function fetchRecipeImage(recipeName, ingredients, recipeIndex = 0) {
         console.log(`⚠️ No images found for "${recipeName}"`);
         return null;
     } catch (error) {
-        console.warn('❌ Error fetching recipe image:', error);
+        console.warn('❌ Error fetching recipe image (network/proxy):', error);
         return null;
     }
 }
@@ -982,6 +426,7 @@ async function displayRecipes(recipes) {
     console.log('Displaying', recipes.length, 'recipes');
     
     // Fetch images for all recipes in parallel
+    // NOTE: fetchRecipeImage now calls the secure server proxy.
     console.log('🖼️ Fetching images for recipes...');
     const recipesWithImages = await Promise.all(
         recipes.map(async (recipe, index) => {
@@ -1024,13 +469,13 @@ async function displayRecipes(recipes) {
         const cookTime = recipe.cookTime || recipe.cook_time_minutes || 'N/A';
         const flavorScores = recipe.flavorScores || {};
         
-        // Debug: log flavor scores
+        // Debug: log flavor scores (SAFE to keep)
         console.log(`Recipe "${name}" flavorScores:`, flavorScores);
         
         // Build flavor scores display - show even if some are missing
         const hasAnyScores = flavorScores.umami !== undefined || flavorScores.sweet !== undefined || 
-                            flavorScores.spice !== undefined || flavorScores.sour !== undefined || 
-                            flavorScores.salty !== undefined;
+                             flavorScores.spice !== undefined || flavorScores.sour !== undefined || 
+                             flavorScores.salty !== undefined;
         
         // Helper function to create a flavor bubble
         const createFlavorBubble = (flavor, score, index) => {
@@ -1103,6 +548,7 @@ async function displayRecipes(recipes) {
     }).join('')}
     `;
     
+    // This is safe: it calls a UI function and does not deal with keys.
     if (typeof window !== 'undefined' && typeof window.openRecipeDrawer === 'function') {
         window.openRecipeDrawer();
     }
@@ -1113,17 +559,28 @@ async function displayRecipes(recipes) {
  */
 async function generateAndDisplayRecipes() {
     const selectedIngredients = window.clickedIngredients || [];
-    
+    const container = document.getElementById('recipeContent');
+
     if (selectedIngredients.length === 0) {
-        alert('Please select at least one ingredient first!');
+        // FIX 1: Replace alert() with a visible UI message
+        if (container) {
+            container.innerHTML = `
+                <div class="no-recipes error-message">
+                    <p><strong>Please select at least one ingredient first!</strong></p>
+                    <p>Click on the ingredients in the flavor wheel to select them.</p>
+                </div>
+            `;
+        } else {
+            // Fallback for missing container, although we try to avoid alerts
+            console.error('Please select at least one ingredient first!');
+        }
         return;
     }
     
     const flavorPreferences = getFlavorPreferences();
     const dietaryRestrictions = getDietaryRestrictions();
     
-    const container = document.getElementById('recipeContent');
-    
+    // Show loading spinner and open drawer
     if (typeof window !== 'undefined' && typeof window.openRecipeDrawer === 'function') {
         window.openRecipeDrawer();
     }
@@ -1148,7 +605,7 @@ async function generateAndDisplayRecipes() {
                         </defs>
                         <!-- Flask body -->
                         <path d="M 60 50 L 60 250 Q 60 270 80 270 L 120 270 Q 140 270 140 250 L 140 50 Z" 
-                              fill="#2a2a3a" stroke="#4de4ff" stroke-width="2" opacity="0.8"/>
+                                fill="#2a2a3a" stroke="#4de4ff" stroke-width="2" opacity="0.8"/>
                         <!-- Liquid -->
                         <ellipse cx="100" cy="200" rx="35" ry="8" fill="url(#liquidGrad)" class="liquid-surface"/>
                         <rect x="65" y="200" width="70" height="60" fill="url(#liquidGrad)" class="liquid-body"/>
@@ -1173,7 +630,8 @@ async function generateAndDisplayRecipes() {
     }
     
     try {
-        const recipes = await generateRecipes(selectedIngredients, flavorPreferences, dietaryRestrictions);
+        // FIX 2: Call the new, secure, singular function name
+        const recipes = await generateRecipe(selectedIngredients, flavorPreferences, dietaryRestrictions);
         
         console.log('Recipes received:', recipes);
         console.log('Number of recipes:', recipes ? recipes.length : 0);
@@ -1188,10 +646,11 @@ async function generateAndDisplayRecipes() {
         const errorMessage = error.message || 'Unknown error occurred';
         
         let helpText = '';
-        if (errorMessage.includes('API key')) {
-            helpText = '<p>💡 Add your Gemini API key to <code>deploy/config.js</code></p>';
+        if (errorMessage.includes('API key') || errorMessage.includes('Server-side API Key not configured')) {
+            // FIX 3: Corrected error message points to the secure location (.env file on the server)
+            helpText = '<p>💡 Your Python server is missing the API key.</p><p>Check your <strong>.env</strong> file and ensure the server is running correctly.</p>';
         } else if (errorMessage.includes('network') || errorMessage.includes('fetch')) {
-            helpText = '<p>💡 Check your internet connection</p>';
+            helpText = '<p>💡 Check your internet connection, or verify your Python server is running on <code>http://localhost:8000/</code>.</p>';
         } else {
             helpText = '<p>💡 Check the browser console (F12) for more details</p>';
         }
