@@ -187,8 +187,7 @@ function validateAndFixRecipes(recipes) {
 
 /**
  * Generate recipes using the secure Python Server Proxy.
- * NOTE: The old logic that used GEMINI_API_KEY directly on the client side 
- * has been replaced by this secure server proxy call.
+ * NOTE: This function's sole job is to call the server and return the parsed recipe array.
  */
 async function generateRecipe(selectedIngredients, flavorPreferences, dietaryRestrictions) {
     
@@ -205,9 +204,7 @@ async function generateRecipe(selectedIngredients, flavorPreferences, dietaryRes
         model: GEMINI_MODEL 
     };
 
-    // Assuming you have UI functions to indicate loading state
-    displayRecipe('Generating recipe...', 'Loading'); 
-    displayError('');
+    // --- REMOVED UI CALLS: displayRecipe('Generating recipe...', 'Loading'); displayError(''); ---
     
     console.log('🍳 RECIPE GENERATION - Sending request to secure Python server...');
 
@@ -225,6 +222,7 @@ async function generateRecipe(selectedIngredients, flavorPreferences, dietaryRes
         if (!response.ok) {
             // Read and handle errors returned by the Python server
             const errorData = await response.json().catch(() => ({ error: { message: `Server error: ${response.status} ${response.statusText}` } }));
+            // Re-throw the error so the main orchestrator (generateAndDisplayRecipes) handles the display
             throw new Error(`Server Error: ${errorData.error || errorData.message || response.statusText}`);
         }
 
@@ -265,58 +263,19 @@ async function generateRecipe(selectedIngredients, flavorPreferences, dietaryRes
         // Validate and fix incomplete recipes (using your existing function)
         recipes = validateAndFixRecipes(recipes);
         
-        // Assuming your UI logic expects this array of recipes
-        displayRecipesList(recipes); // Update this function call to match your actual UI update function
-        
-        // Trigger image search for the first recipe title (assuming searchRecipeImage is defined)
-        const firstRecipeTitle = recipes[0]?.name || recipes[0]?.recipe_name || selectedIngredients.join(' ');
-        await searchRecipeImage(firstRecipeTitle);
+        // --- REMOVED: displayRecipesList(recipes); ---
+        // --- REMOVED: await searchRecipeImage(firstRecipeTitle); ---
 
         console.log('✅ Recipe generation complete via secure proxy.');
         
+        // Return the recipes to the main orchestrator function
         return recipes;
         
     } catch (error) {
+        // Log the detailed error but re-throw it so the main orchestrator handles the display
         console.error('Error in generateRecipe (Proxy):', error);
-        displayError(`❌ Error generating recipes: ${error.message}`); 
-        return [];
+        throw error; // Re-throw the error
     }
-}
-
-/**
- * Get flavor preferences from sliders
- * Returns values on a 1-5 scale (3 is neutral/standard)
- */
-function getFlavorPreferences() {
-    const getValue = (sliderId) => {
-        const slider = document.getElementById(sliderId);
-        return parseInt(slider?.getAttribute('data-value') || '3');
-    };
-    
-    return {
-        umami: getValue('umamiSlider'),
-        sweet: getValue('sweetSlider'),
-        spice: getValue('spiceSlider'),
-        sour: getValue('sourSlider'),
-        salty: getValue('saltySlider')
-    };
-}
-
-/**
- * Get dietary restrictions from dropdown
- */
-function getDietaryRestrictions() {
-    // Access the global selectedDietaryRestrictions array
-    if (typeof window !== 'undefined' && window.selectedDietaryRestrictions) {
-        return window.selectedDietaryRestrictions;
-    }
-    // Fallback: read from dropdown if it exists
-    const select = document.getElementById('dietarySelect');
-    if (select) {
-        const selected = Array.from(select.selectedOptions).map(opt => opt.value);
-        return selected.filter(v => v !== '');
-    }
-    return [];
 }
 
 /**
