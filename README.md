@@ -25,15 +25,20 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 
 ## 🛠️ Tech Stack
 
-### Data Processing
-- **Python** (pandas, numpy, scikit-learn)
+### Frontend
+- **React**
+- **react-force-graph**
+- **Tailwind CSS**
+- **Three.js**
 
-### Data Storage
-- **MongoDB** (NoSQL) 
-- **Neo4j** (Graph Database)
+### Backend
+- **Python/FastAPI** for ingredient relationships
 
-### Web Application
-- **Streamlit** - Interactive web interface for input/output
+### Deployment
+- **Netlify** 
+
+### Data
+- **CSV/JSON** for similarity scores
 
 ## 📊 Data Source
 
@@ -45,7 +50,6 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 
 ## 🎨 Project Philosophy
 
-Our project needs to **SLAP**:
 - **S**cientific - Rooted in real chemistry
 - **L**ogical - Makes sense to users
 - **A**mazing - Surprising flavor combinations
@@ -54,24 +58,8 @@ Our project needs to **SLAP**:
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.8+
-- MongoDB
 
 ### Installation
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/the-flavor-lab.git
-cd the-flavor-lab
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up MongoDB
-# Start MongoDB service
-
-# Run the application
-streamlit run app.py
-```
 
 ## 🧪 How It Works
 
