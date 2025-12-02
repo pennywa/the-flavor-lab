@@ -174,13 +174,20 @@
                         </div>
                     </div>
 
-                    <button class="generate-recipe-btn" onclick="window.recipeGenerator.generateAndDisplayRecipes()">
-                        Generate Recipes
-                    </button>
+                    <div style="display: flex; justify-content: center; width: 100%;">
+                        <button class="generate-recipe-btn" onclick="window.recipeGenerator.generateAndDisplayRecipes()">
+                            Generate Recipes
+                        </button>
+                    </div>
                 </div>
             </section>
         </div>
     </div>
+
+    <!-- View Recipes button - positioned in corner -->
+    <button id="openRecipeDrawer" class="open-recipe-drawer-btn" style="display: none;">
+        View Recipes
+    </button>
 
     <div id="recipeResults" class="recipe-results-bottom" aria-live="polite">
         <div class="recipe-drawer-header">
@@ -359,18 +366,38 @@
         function openRecipeDrawer() {
             if (recipeDrawer) {
                 recipeDrawer.classList.add('active');
+                // Hide the reopen button when drawer is open
+                const openBtn = document.getElementById('openRecipeDrawer');
+                if (openBtn) {
+                    openBtn.style.display = 'none';
+                }
             }
         }
 
         function closeRecipeDrawer() {
             if (recipeDrawer) {
                 recipeDrawer.classList.remove('active');
+                // Show the reopen button when drawer is closed (only if recipes exist)
+                const recipeContent = document.getElementById('recipeContent');
+                const hasRecipes = recipeContent && recipeContent.querySelector('.recipe-card');
+                const openBtn = document.getElementById('openRecipeDrawer');
+                if (openBtn && hasRecipes) {
+                    openBtn.style.display = 'inline-block';
+                }
             }
         }
 
         if (recipeDrawerCloseBtn) {
             recipeDrawerCloseBtn.addEventListener('click', closeRecipeDrawer);
         }
+
+        const openRecipeDrawerBtn = document.getElementById('openRecipeDrawer');
+        if (openRecipeDrawerBtn) {
+            openRecipeDrawerBtn.addEventListener('click', openRecipeDrawer);
+        }
+
+        // Make openRecipeDrawer available globally for recipe generator
+        window.openRecipeDrawer = openRecipeDrawer;
 
 
         document.addEventListener('keydown', (event) => {

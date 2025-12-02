@@ -5,13 +5,27 @@
  */
 
 // Configuration from config.js
+// If config.js is not loaded, use empty defaults (user must provide API keys in config.js)
+console.log('🔍 Checking CONFIG:', typeof CONFIG !== 'undefined' ? 'CONFIG exists' : 'CONFIG is undefined');
+if (typeof CONFIG !== 'undefined') {
+    console.log('🔍 CONFIG keys:', Object.keys(CONFIG));
+    console.log('🔍 CONFIG.PEXELS_API_KEY:', CONFIG.PEXELS_API_KEY ? `Set (${CONFIG.PEXELS_API_KEY.substring(0, 10)}...)` : 'NOT SET');
+}
+
 const CONFIG_LOADED = typeof CONFIG !== 'undefined' ? CONFIG : {
-    GEMINI_API_KEY: 'AIzaSyC9__5UXUVDj6BU6y2Kg3ic65nCuQNgXyU',
-    GEMINI_MODEL: 'gemini-2.5-flash'
+    GEMINI_API_KEY: '',
+    GEMINI_MODEL: 'gemini-2.5-flash',
+    PEXELS_API_KEY: ''
 };
 
 const GEMINI_API_KEY = CONFIG_LOADED.GEMINI_API_KEY;
 const GEMINI_MODEL = CONFIG_LOADED.GEMINI_MODEL || 'gemini-2.5-flash';
+const PEXELS_API_KEY = CONFIG_LOADED.PEXELS_API_KEY || '';
+
+// Debug: Log API key status (first 10 chars only for security)
+console.log('🔑 Pexels API key status:', PEXELS_API_KEY ? `Set (${PEXELS_API_KEY.substring(0, 10)}...)` : 'NOT SET');
+console.log('🔑 CONFIG_LOADED keys:', Object.keys(CONFIG_LOADED));
+console.log('🔑 CONFIG_LOADED.PEXELS_API_KEY:', CONFIG_LOADED.PEXELS_API_KEY);
 
 /**
  * Build the prompt for Gemini AI
@@ -26,7 +40,13 @@ function buildRecipePrompt(selectedIngredients, flavorPreferences, dietaryRestri
     
     return `Return ONLY a JSON array. No text before. No text after. No explanations. No markdown. Just the JSON array starting with [ and ending with ].
 
-CRITICAL: Generate EXACTLY 5 COMPLETE recipes. Each recipe MUST be fully complete with ALL fields (name, ingredients, steps, prepTime, cookTime, flavorScores). Do not truncate or cut off any recipe.
+CRITICAL JSON STRUCTURE RULES:
+1. Every array MUST be properly closed with ]
+2. Every object MUST be properly closed with }
+3. After closing an array, use a comma before the next field: ], "fieldName":
+4. Field names must be exact: "ingredients", "steps", "prepTime", "cookTime", "flavorScores", "name"
+5. Do NOT write any text between closing an array and starting the next field
+6. Generate EXACTLY 4 COMPLETE recipes with ALL fields
 
 Each recipe MUST include ALL ingredients: ${ingredientsList}
 ${dietaryText}
@@ -45,12 +65,20 @@ IMPORTANT: For each recipe, include a "flavorScores" field that rates how well t
 - 4 = High/strong in this flavor
 - 5 = Very high/very strong in this flavor
 
-JSON format:
+EXACT JSON FORMAT (copy this structure exactly):
 [
   {
     "name": "Recipe Name",
-    "ingredients": ["${selectedIngredients[0] || 'ingredient1'}", "other"],
-    "steps": ["Step 1", "Step 2"],
+    "ingredients": [
+      "ingredient 1",
+      "ingredient 2",
+      "ingredient 3"
+    ],
+    "steps": [
+      "Step 1 description",
+      "Step 2 description",
+      "Step 3 description"
+    ],
     "prepTime": 15,
     "cookTime": 20,
     "flavorScores": {
@@ -62,9 +90,15 @@ JSON format:
     }
   },
   {
-    "name": "Recipe Name",
-    "ingredients": ["${selectedIngredients[0] || 'ingredient1'}", "other"],
-    "steps": ["Step 1", "Step 2"],
+    "name": "Recipe Name 2",
+    "ingredients": [
+      "ingredient 1",
+      "ingredient 2"
+    ],
+    "steps": [
+      "Step 1",
+      "Step 2"
+    ],
     "prepTime": 15,
     "cookTime": 20,
     "flavorScores": {
@@ -76,9 +110,15 @@ JSON format:
     }
   },
   {
-    "name": "Recipe Name",
-    "ingredients": ["${selectedIngredients[0] || 'ingredient1'}", "other"],
-    "steps": ["Step 1", "Step 2"],
+    "name": "Recipe Name 3",
+    "ingredients": [
+      "ingredient 1",
+      "ingredient 2"
+    ],
+    "steps": [
+      "Step 1",
+      "Step 2"
+    ],
     "prepTime": 15,
     "cookTime": 20,
     "flavorScores": {
@@ -90,9 +130,15 @@ JSON format:
     }
   },
   {
-    "name": "Recipe Name",
-    "ingredients": ["${selectedIngredients[0] || 'ingredient1'}", "other"],
-    "steps": ["Step 1", "Step 2"],
+    "name": "Recipe Name 4",
+    "ingredients": [
+      "ingredient 1",
+      "ingredient 2"
+    ],
+    "steps": [
+      "Step 1",
+      "Step 2"
+    ],
     "prepTime": 15,
     "cookTime": 20,
     "flavorScores": {
@@ -103,21 +149,9 @@ JSON format:
       "salty": 3
     }
   },
-  {
-    "name": "Recipe Name",
-    "ingredients": ["${selectedIngredients[0] || 'ingredient1'}", "other"],
-    "steps": ["Step 1", "Step 2"],
-    "prepTime": 15,
-    "cookTime": 20,
-    "flavorScores": {
-      "umami": 3,
-      "sweet": 3,
-      "spice": 2,
-      "sour": 2,
-      "salty": 4
-    }
-  }
-]`;
+]
+
+REMEMBER: Close every array with ] before starting the next field. Use ], "fieldName": format.`;
 }
 
 /**
@@ -842,9 +876,95 @@ function getDietaryRestrictions() {
 }
 
 /**
+ * Fetch recipe image from Pexels API
+ * @param {string} recipeName - Name of the recipe
+ * @param {Array} ingredients - Array of ingredient strings
+ * @param {number} recipeIndex - Index of the recipe (to vary search queries and avoid duplicates)
+ */
+async function fetchRecipeImage(recipeName, ingredients, recipeIndex = 0) {
+    // Debug: Check API key
+    const apiKeyTrimmed = PEXELS_API_KEY ? PEXELS_API_KEY.trim() : '';
+    if (!apiKeyTrimmed) {
+        console.log('⚠️ Pexels API key not set, skipping image fetch');
+        console.log('   CONFIG_LOADED.PEXELS_API_KEY:', CONFIG_LOADED.PEXELS_API_KEY);
+        console.log('   PEXELS_API_KEY variable:', PEXELS_API_KEY);
+        console.log('   To enable images, add your Pexels API key to config.js');
+        console.log('   Get a free key at: https://www.pexels.com/api/');
+        return null;
+    }
+    
+    try {
+        // Build search query from recipe name and ingredients
+        // Vary the query based on recipe index to avoid duplicate images
+        const nameWords = recipeName.toLowerCase()
+            .split(/\s+/)
+            .slice(0, 5)  // Use first 5 words
+            .join(' ');
+        
+        // Vary ingredient selection based on recipe index to get different images
+        // This helps avoid getting the same image for similar recipes
+        const startIndex = recipeIndex % Math.max(1, ingredients.length);
+        const ingredientCount = Math.min(3 + (recipeIndex % 2), ingredients.length); // 3 or 4 ingredients
+        const selectedIngredients = ingredients.slice(startIndex, startIndex + ingredientCount)
+            .concat(ingredients.slice(0, Math.max(0, ingredientCount - (ingredients.length - startIndex))));
+        
+        const ingredientWords = selectedIngredients.map(ing => {
+            // Clean up ingredient strings (remove measurements, numbers, etc.)
+            return ing.replace(/_/g, ' ')
+                .toLowerCase()
+                .replace(/\d+/g, '')  // Remove numbers
+                .replace(/[()]/g, '') // Remove parentheses
+                .replace(/\b(tbsp|tsp|cup|cups|oz|lb|lbs|g|kg|ml|l|can|cans|cloves?|pieces?|slices?|diced?|chopped?|minced?|fresh|dried|ground|whole|large|small|medium)\b/gi, '') // Remove common measurement words
+                .trim();
+        })
+        .filter(ing => ing.length > 2) // Filter out very short words
+        .join(' ');
+        
+        // Add variation terms based on index to further differentiate queries
+        const variationTerms = ['dish', 'meal', 'cuisine', 'cooking', 'recipe'];
+        const variationTerm = variationTerms[recipeIndex % variationTerms.length];
+        
+        const query = `${nameWords} ${ingredientWords} ${variationTerm} food`.trim().replace(/\s+/g, ' ');
+        console.log(`🖼️ Fetching image for: "${recipeName}" (recipe ${recipeIndex + 1})`);
+        console.log(`   Search query: "${query}"`);
+        
+        // Use different page numbers to get different results for similar queries
+        const page = 1 + (recipeIndex % 3); // Try pages 1, 2, or 3
+        const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape&page=${page}`;
+        
+        const response = await fetch(url, {
+            headers: {
+                'Authorization': PEXELS_API_KEY
+            }
+        });
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.warn(`❌ Pexels API error: ${response.status}`, errorText);
+            return null;
+        }
+        
+        const data = await response.json();
+        
+        if (data.photos && data.photos.length > 0) {
+            // Prefer large or original for better quality (large is ~1280px, original is full resolution)
+            const imageUrl = data.photos[0].src.large || data.photos[0].src.original || data.photos[0].src.medium;
+            console.log(`✅ Found image for "${recipeName}":`, imageUrl);
+            return imageUrl;
+        }
+        
+        console.log(`⚠️ No images found for "${recipeName}"`);
+        return null;
+    } catch (error) {
+        console.warn('❌ Error fetching recipe image:', error);
+        return null;
+    }
+}
+
+/**
  * Display recipes in the UI
  */
-function displayRecipes(recipes) {
+async function displayRecipes(recipes) {
     const container = document.getElementById('recipeContent');
     if (!container) return;
     
@@ -861,8 +981,24 @@ function displayRecipes(recipes) {
     
     console.log('Displaying', recipes.length, 'recipes');
     
+    // Fetch images for all recipes in parallel
+    console.log('🖼️ Fetching images for recipes...');
+    const recipesWithImages = await Promise.all(
+        recipes.map(async (recipe, index) => {
+            const imageUrl = await fetchRecipeImage(
+                recipe.name || recipe.recipe_name || '',
+                recipe.ingredients || [],
+                index  // Pass index to make each query unique
+            );
+            return { ...recipe, imageUrl };
+        })
+    );
+    
+    const imagesFound = recipesWithImages.filter(r => r.imageUrl).length;
+    console.log(`📸 Images fetched: ${imagesFound}/${recipes.length} recipes have images`);
+    
     container.innerHTML = `
-        ${recipes.map((recipe, index) => {
+        ${recipesWithImages.map((recipe, index) => {
         // Validate recipe has required fields (only log if critical data is missing)
         if (!recipe.name && !recipe.recipe_name) {
             console.warn(`Recipe ${index} missing name`);
@@ -936,15 +1072,18 @@ function displayRecipes(recipes) {
         
         return `
         <div class="recipe-card">
+            ${recipe.imageUrl ? `
+            <div class="recipe-image-container">
+                <img src="${recipe.imageUrl}" alt="${name}" class="recipe-image" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            ` : ''}
             <div class="recipe-header">
                 <h3>${name}</h3>
             </div>
             <div class="recipe-details">
-                <div class="recipe-time-with-bubbles">
-                    <div class="recipe-time">
-                        <span>⏱️ ${prepTime} min prep</span>
-                        <span>🔥 ${cookTime} min cook</span>
-                    </div>
+                <div class="recipe-time">
+                    <span>⏱️ ${prepTime} min prep</span>
+                    <span>🔥 ${cookTime} min cook</span>
                     ${flavorBubblesDisplay ? `<div class="flavor-bubbles-inline">${flavorBubblesDisplay}</div>` : ''}
                 </div>
                 <div class="recipe-ingredients">
@@ -1043,7 +1182,7 @@ async function generateAndDisplayRecipes() {
             throw new Error('No recipes were generated. Please try again with different ingredients or preferences.');
         }
         
-        displayRecipes(recipes);
+        await displayRecipes(recipes);
     } catch (error) {
         console.error('Error:', error);
         const errorMessage = error.message || 'Unknown error occurred';

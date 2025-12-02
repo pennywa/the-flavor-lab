@@ -47,11 +47,17 @@ Create a `config.js` file in the `deploy` folder with:
 ```javascript
 const CONFIG = {
     GEMINI_API_KEY: 'your-api-key-here',
-    GEMINI_MODEL: 'gemini-2.5-flash'
+    GEMINI_MODEL: 'gemini-2.5-flash',
+    PEXELS_API_KEY: 'your-pexels-api-key-here' // Optional - for recipe images
 };
 ```
 
-Replace `'your-api-key-here'` with your actual Gemini API key.
+**Required:**
+- Replace `'your-api-key-here'` with your actual Gemini API key (get it from [Google AI Studio](https://makersuite.google.com/app/apikey))
+
+**Optional:**
+- Replace `'your-pexels-api-key-here'` with your Pexels API key (get free key from [Pexels API](https://www.pexels.com/api/))
+- If not provided, recipes will still work but won't have images
 
 ## Notes
 
