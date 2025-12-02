@@ -6,7 +6,7 @@
 
 // Configuration from config.js
 const CONFIG_LOADED = typeof CONFIG !== 'undefined' ? CONFIG : {
-    GEMINI_API_KEY: 'AIzaSyAvpMihPPGLrrPoQgD5U0SE28Nnc_jmypA',
+    GEMINI_API_KEY: 'AIzaSyC9__5UXUVDj6BU6y2Kg3ic65nCuQNgXyU',
     GEMINI_MODEL: 'gemini-2.5-flash'
 };
 

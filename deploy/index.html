@@ -51,6 +51,10 @@
                     <span>↺</span>
                     Undo Pulse
                 </button>
+                <button id="open3DGraphBtn" class="ghost-btn" aria-label="Open 3D Flavor Graph">
+                    <i class="fas fa-cube"></i>
+                    <span>3D Flavor Graph</span>
+                </button>
         </div>
         </section>
 
@@ -197,6 +201,19 @@
     </div>
     <div id="recipeDrawerBackdrop" class="recipe-drawer-backdrop"></div>
 
+    <!-- Popout Modal: 3D Graph View -->
+    <div id="3d-graph-overlay" class="graph-popout-overlay"></div>
+    <div id="3d-graph-popout" class="graph-popout">
+        <div class="graph-popout-header" style="display: none;">
+            <h2>3D Flavor Graph</h2>
+            <button id="close3DGraphBtn" class="ghost-btn graph-popout-close" aria-label="Close 3D Graph" style="display: none;">
+                <i class="fas fa-times"></i>
+                <span>Close</span>
+            </button>
+        </div>
+        <div id="flavor-3d-graph-container" class="flavor-3d-graph-container"></div>
+    </div>
+
     <div id="toastNotification" class="toast-notification"></div>
 
     <div id="ingredientLimitToast" class="ingredient-limit-toast" aria-live="polite"></div>
@@ -209,6 +226,10 @@
     
     <!-- Flavor Sliders UI Controller -->
     <script src="flavor-sliders.js"></script>
+    
+    <!-- 3D Force Graph Library -->
+    <script src="https://cdn.jsdelivr.net/npm/3d-force-graph"></script>
+    <script type="module" src="flavor-3d-graph.js"></script>
 
     <script>
         // Global variables
