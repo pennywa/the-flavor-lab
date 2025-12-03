@@ -12,26 +12,6 @@ import requests # Needed for Pexels API
 # Load environment variables from .env file
 load_dotenv() 
 
-# Load variables from .env file (must be called before accessing the key)
-load_dotenv()
-
-# The client will automatically find the key set in the environment
-# by load_dotenv()
-try:
-    client = genai.Client()
-except Exception as e:
-    print(f"Error initializing client: {e}")
-    print("Ensure GEMINI_API_KEY is set in your .env file.")
-    exit()
-    
-# Example API Call
-response = client.models.generate_content(
-    model="gemini-2.5-flash",
-    contents="Write a team mission statement for The Flavor Lab."
-)
-
-print(response.text)
-
 # Access the API keys globally
 API_KEY = os.environ.get("GEMINI_API_KEY")
 PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY")
