@@ -1,0 +1,16 @@
+[build]
+  # Publish the deploy folder
+  publish = "deploy"
+  # No build command needed for static site
+  # functions = "netlify/functions"
+
+[build.environment]
+  # Node version for serverless functions
+  NODE_VERSION = "18"
+
+[[redirects]]
+  # Redirect all requests to index.html for SPA routing
+  from = "/*"
+  to = "/index.html"
+  status = 200
+

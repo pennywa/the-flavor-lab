@@ -47,9 +47,13 @@
                     <div id="dietaryFilter" class="category-filter">Diet: All Diets</div>
                     <div id="dietaryDropdown" class="category-dropdown"></div>
             </div>
-                <button id="backButton" class="back-button" disabled aria-label="Undo last expansion">
+                <button id="backButton" class="back-button" diturabled aria-label="Undo last expansion">
                     <span>↺</span>
                     Undo Pulse
+                </button>
+                <button id="open3DGraphBtn" class="ghost-btn" aria-label="Open 3D Flavor Graph">
+                    <i class="fas fa-cube"></i>
+                    <span>3D Flavor Graph</span>
                 </button>
         </div>
         </section>
@@ -170,13 +174,20 @@
                         </div>
                     </div>
 
-                    <button class="generate-recipe-btn" onclick="window.recipeGenerator.generateAndDisplayRecipes()">
-                        Generate Recipes
-                    </button>
+                    <div style="display: flex; justify-content: center; width: 100%;">
+                        <button class="generate-recipe-btn" onclick="window.recipeGenerator.generateAndDisplayRecipes()">
+                            Generate Recipes
+                        </button>
+                    </div>
                 </div>
             </section>
         </div>
     </div>
+
+    <!-- View Recipes button - positioned in corner -->
+    <button id="openRecipeDrawer" class="open-recipe-drawer-btn" style="display: none;">
+        View Recipes
+    </button>
 
     <div id="recipeResults" class="recipe-results-bottom" aria-live="polite">
         <div class="recipe-drawer-header">
@@ -197,18 +208,35 @@
     </div>
     <div id="recipeDrawerBackdrop" class="recipe-drawer-backdrop"></div>
 
+    <!-- Popout Modal: 3D Graph View -->
+    <div id="3d-graph-overlay" class="graph-popout-overlay"></div>
+    <div id="3d-graph-popout" class="graph-popout">
+        <div class="graph-popout-header" style="display: none;">
+            <h2>3D Flavor Graph</h2>
+            <button id="close3DGraphBtn" class="ghost-btn graph-popout-close" aria-label="Close 3D Graph" style="display: none;">
+                <i class="fas fa-times"></i>
+                <span>Close</span>
+            </button>
+        </div>
+        <div id="flavor-3d-graph-container" class="flavor-3d-graph-container"></div>
+    </div>
+
     <div id="toastNotification" class="toast-notification"></div>
 
     <div id="ingredientLimitToast" class="ingredient-limit-toast" aria-live="polite"></div>
 
     <!-- Configuration (gitignored, safe for API keys) -->
-    <script src="config.js"></script>
+    <script src="config.js?v=2"></script>
     
     <!-- Recipe Generator Script -->
     <script src="recipe-generator.js"></script>
     
     <!-- Flavor Sliders UI Controller -->
     <script src="flavor-sliders.js"></script>
+    
+    <!-- 3D Force Graph Library -->
+    <script src="https://cdn.jsdelivr.net/npm/3d-force-graph"></script>
+    <script type="module" src="flavor-3d-graph.js"></script>
 
     <script>
         // Global variables
@@ -255,7 +283,7 @@
             }).join('');
         }
 
-        // Helper function to create a dense, saturated glow color with high opacity
+        // Helper function to create a dense, osaturated glow color with high opacity
         function createDenseGlowColor(color, opacity = 0.95) {
             // First brighten significantly, then add saturation for density
             const hex = color.replace('#', '');
@@ -265,7 +293,7 @@
             
             // Brighten to near-white but maintain color character for density
             const brightness = 0.0; // Very bright
-            const saturation = 30; // Add some saturation back for density
+            const saturation = 0.3; // Add some saturation back for density (normalized 0-1)
             
             const newR = Math.min(255, Math.floor(r + (255 - r) * brightness));
             const newG = Math.min(255, Math.floor(g + (255 - g) * brightness));
@@ -328,7 +356,7 @@
 
         function showIngredientLimitToast() {
             if (!ingredientLimitToast) return;
-            ingredientLimitToast.textContent = 'Maximum of 10 ingredients. Remove one to add another.';
+            ingredientLimitToast.textContent = 'Maximum of 10 ingredients reached. Remove one to add another.';
             ingredientLimitToast.classList.add('show');
             setTimeout(() => {
                 ingredientLimitToast.classList.remove('show');
@@ -338,18 +366,38 @@
         function openRecipeDrawer() {
             if (recipeDrawer) {
                 recipeDrawer.classList.add('active');
+                // Hide the reopen button when drawer is open
+                const openBtn = document.getElementById('openRecipeDrawer');
+                if (openBtn) {
+                    openBtn.style.display = 'none';
+                }
             }
         }
 
         function closeRecipeDrawer() {
             if (recipeDrawer) {
                 recipeDrawer.classList.remove('active');
+                // Show the reopen button when drawer is closed (only if recipes exist)
+                const recipeContent = document.getElementById('recipeContent');
+                const hasRecipes = recipeContent && recipeContent.querySelector('.recipe-card');
+                const openBtn = document.getElementById('openRecipeDrawer');
+                if (openBtn && hasRecipes) {
+                    openBtn.style.display = 'inline-block';
+                }
             }
         }
 
         if (recipeDrawerCloseBtn) {
             recipeDrawerCloseBtn.addEventListener('click', closeRecipeDrawer);
         }
+
+        const openRecipeDrawerBtn = document.getElementById('openRecipeDrawer');
+        if (openRecipeDrawerBtn) {
+            openRecipeDrawerBtn.addEventListener('click', openRecipeDrawer);
+        }
+
+        // Make openRecipeDrawer available globally for recipe generator
+        window.openRecipeDrawer = openRecipeDrawer;
 
 
         document.addEventListener('keydown', (event) => {

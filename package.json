@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "3d-force-graph": "^1.79.0"
+  },
+  "scripts": {
+    "generate-config": "node generate-config.js"
+  }
+}

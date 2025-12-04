@@ -4,7 +4,6 @@
 .env.*.local
 
 # API Keys and Secrets
-config.js
 *.key
 *.secret
 
