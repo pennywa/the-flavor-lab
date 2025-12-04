@@ -47,7 +47,7 @@
                     <div id="dietaryFilter" class="category-filter">Diet: All Diets</div>
                     <div id="dietaryDropdown" class="category-dropdown"></div>
             </div>
-                <button id="backButton" class="back-button" disabled aria-label="Undo last expansion">
+                <button id="backButton" class="back-button" diturabled aria-label="Undo last expansion">
                     <span>↺</span>
                     Undo Pulse
                 </button>
@@ -283,7 +283,7 @@
             }).join('');
         }
 
-        // Helper function to create a dense, saturated glow color with high opacity
+        // Helper function to create a dense, osaturated glow color with high opacity
         function createDenseGlowColor(color, opacity = 0.95) {
             // First brighten significantly, then add saturation for density
             const hex = color.replace('#', '');
@@ -293,7 +293,7 @@
             
             // Brighten to near-white but maintain color character for density
             const brightness = 0.0; // Very bright
-            const saturation = 30; // Add some saturation back for density
+            const saturation = 0.3; // Add some saturation back for density (normalized 0-1)
             
             const newR = Math.min(255, Math.floor(r + (255 - r) * brightness));
             const newG = Math.min(255, Math.floor(g + (255 - g) * brightness));
@@ -356,7 +356,7 @@
 
         function showIngredientLimitToast() {
             if (!ingredientLimitToast) return;
-            ingredientLimitToast.textContent = 'Maximum of 10 ingredients. Remove one to add another.';
+            ingredientLimitToast.textContent = 'Maximum of 10 ingredients reached. Remove one to add another.';
             ingredientLimitToast.classList.add('show');
             setTimeout(() => {
                 ingredientLimitToast.classList.remove('show');
