@@ -98,7 +98,7 @@ async function initializeGraph() {
             .linkWidth(1)
             .linkDirectionalParticles(2)
             .linkDirectionalParticleWidth(2)
-            .linkDirectionalParticleSpeed(0.01)
+            .linkDirectionalParticleSpeed(0.005)
             .onNodeClick(node => {
                 console.log('Clicked node:', node);
             })
@@ -106,7 +106,7 @@ async function initializeGraph() {
         
         // Add bloom effect
         const bloomPass = new UnrealBloomPass();
-        bloomPass.strength = 1.5;
+        bloomPass.strength = 2;
         bloomPass.radius = 1;
         bloomPass.threshold = 0.6;
         

@@ -5,27 +5,57 @@
  */
 
 // Configuration from config.js
-// If config.js is not loaded, use empty defaults (user must provide API keys in config.js)
-console.log('🔍 Checking CONFIG:', typeof CONFIG !== 'undefined' ? 'CONFIG exists' : 'CONFIG is undefined');
-if (typeof CONFIG !== 'undefined') {
-    console.log('🔍 CONFIG keys:', Object.keys(CONFIG));
-    console.log('🔍 CONFIG.PEXELS_API_KEY:', CONFIG.PEXELS_API_KEY ? `Set (${CONFIG.PEXELS_API_KEY.substring(0, 10)}...)` : 'NOT SET');
-}
+// Config is loaded asynchronously from server endpoint /api/config
+// Wait for config to load before using API keys
 
-const CONFIG_LOADED = typeof CONFIG !== 'undefined' ? CONFIG : {
+let CONFIG_LOADED = typeof CONFIG !== 'undefined' ? CONFIG : {
     GEMINI_API_KEY: '',
     GEMINI_MODEL: 'gemini-2.5-flash',
     PEXELS_API_KEY: ''
 };
 
-const GEMINI_API_KEY = CONFIG_LOADED.GEMINI_API_KEY;
-const GEMINI_MODEL = CONFIG_LOADED.GEMINI_MODEL || 'gemini-2.5-flash';
-const PEXELS_API_KEY = CONFIG_LOADED.PEXELS_API_KEY || '';
+// Function to get API keys (waits for config to load if needed)
+async function getConfig() {
+    // If loadConfig function exists, wait for it to complete
+    if (typeof loadConfig === 'function') {
+        try {
+            await loadConfig();
+            // Update CONFIG_LOADED with fresh values
+            CONFIG_LOADED = CONFIG;
+        } catch (error) {
+            console.warn('⚠️  Config not loaded from server, using defaults');
+        }
+    }
+    return CONFIG_LOADED;
+}
 
-// Debug: Log API key status (first 10 chars only for security)
-console.log('🔑 Pexels API key status:', PEXELS_API_KEY ? `Set (${PEXELS_API_KEY.substring(0, 10)}...)` : 'NOT SET');
-console.log('🔑 CONFIG_LOADED keys:', Object.keys(CONFIG_LOADED));
-console.log('🔑 CONFIG_LOADED.PEXELS_API_KEY:', CONFIG_LOADED.PEXELS_API_KEY);
+// Get API keys (will be updated when config loads)
+let GEMINI_API_KEY = CONFIG_LOADED.GEMINI_API_KEY;
+let GEMINI_MODEL = CONFIG_LOADED.GEMINI_MODEL || 'gemini-2.5-flash';
+let PEXELS_API_KEY = CONFIG_LOADED.PEXELS_API_KEY || '';
+
+// Update keys when config loads
+if (typeof loadConfig === 'function') {
+    loadConfig().then(() => {
+        CONFIG_LOADED = CONFIG;
+        GEMINI_API_KEY = CONFIG.GEMINI_API_KEY;
+        GEMINI_MODEL = CONFIG.GEMINI_MODEL || 'gemini-2.5-flash';
+        PEXELS_API_KEY = CONFIG.PEXELS_API_KEY || '';
+        
+        console.log('🔑 API keys updated after server load');
+        console.log('🔑 Gemini API key status:', GEMINI_API_KEY ? `Set (${GEMINI_API_KEY.substring(0, 10)}...)` : 'NOT SET');
+        console.log('🔑 Pexels API key status:', PEXELS_API_KEY ? `Set (${PEXELS_API_KEY.substring(0, 10)}...)` : 'NOT SET');
+        console.log('🔑 Using Gemini model:', GEMINI_MODEL);
+    }).catch(() => {
+        console.warn('⚠️  Using default (empty) API keys');
+    });
+} else {
+    // Fallback if loadConfig doesn't exist
+    console.log('🔍 CONFIG loaded directly (not from server)');
+    console.log('🔑 Gemini API key status:', GEMINI_API_KEY ? `Set (${GEMINI_API_KEY.substring(0, 10)}...)` : 'NOT SET');
+    console.log('🔑 Pexels API key status:', PEXELS_API_KEY ? `Set (${PEXELS_API_KEY.substring(0, 10)}...)` : 'NOT SET');
+    console.log('🔑 Using Gemini model:', GEMINI_MODEL);
+}
 
 /**
  * Build the prompt for Gemini AI
@@ -158,7 +188,11 @@ REMEMBER: Close every array with ] before starting the next field. Use ], "field
  * List available Gemini models (for debugging)
  */
 async function listAvailableModels() {
-    if (!GEMINI_API_KEY) {
+    // Ensure config is loaded
+    await getConfig();
+    const currentGeminiKey = CONFIG_LOADED.GEMINI_API_KEY || GEMINI_API_KEY;
+    
+    if (!currentGeminiKey) {
         console.warn('No API key to list models');
         return;
     }
@@ -166,8 +200,8 @@ async function listAvailableModels() {
     try {
         // Try both v1 and v1beta
         const urls = [
-            `https://generativelanguage.googleapis.com/v1/models?key=${GEMINI_API_KEY}`,
-            `https://generativelanguage.googleapis.com/v1beta/models?key=${GEMINI_API_KEY}`
+            `https://generativelanguage.googleapis.com/v1/models?key=${currentGeminiKey}`,
+            `https://generativelanguage.googleapis.com/v1beta/models?key=${currentGeminiKey}`
         ];
         
         for (const url of urls) {
@@ -228,9 +262,26 @@ function validateAndFixRecipes(recipes) {
  * Generate recipes using Google Gemini AI
  */
 async function generateRecipes(selectedIngredients, flavorPreferences, dietaryRestrictions) {
-    if (!GEMINI_API_KEY) {
-        throw new Error('Gemini API key not set in config.js');
+    // Ensure config is loaded before using API keys
+    await getConfig();
+    
+    // Update keys from CONFIG_LOADED (in case they were loaded asynchronously)
+    const currentGeminiKey = CONFIG_LOADED.GEMINI_API_KEY || GEMINI_API_KEY;
+    const currentGeminiModel = CONFIG_LOADED.GEMINI_MODEL || GEMINI_MODEL;
+    const currentPexelsKey = CONFIG_LOADED.PEXELS_API_KEY || PEXELS_API_KEY;
+    
+    if (!currentGeminiKey || currentGeminiKey.trim() === '') {
+        throw new Error('Gemini API key not set. Please ensure .env file exists with GEMINI_API_KEY and the server is running.');
     }
+    
+    // Validate API key format (should start with AIzaSy)
+    const trimmedKey = currentGeminiKey.trim();
+    if (!trimmedKey.startsWith('AIzaSy')) {
+        console.warn('⚠️ API key format looks incorrect. Gemini API keys typically start with "AIzaSy"');
+    }
+    
+    console.log('🔑 Using Gemini API key (first 15 chars):', trimmedKey.substring(0, 15) + '...');
+    console.log('🔑 API key length:', trimmedKey.length);
     
     const prompt = buildRecipePrompt(selectedIngredients, flavorPreferences, dietaryRestrictions);
     
@@ -258,8 +309,8 @@ async function generateRecipes(selectedIngredients, flavorPreferences, dietaryRe
             console.log('🎯 Models that support generateContent:', availableModelNames);
             
             // If current model not available, try first available one
-            if (availableModelNames.length > 0 && !availableModelNames.includes(GEMINI_MODEL)) {
-                console.warn(`⚠️ Model ${GEMINI_MODEL} not available. Available models: ${availableModelNames.join(', ')}`);
+            if (availableModelNames.length > 0 && !availableModelNames.includes(currentGeminiModel)) {
+                console.warn(`⚠️ Model ${currentGeminiModel} not available. Available models: ${availableModelNames.join(', ')}`);
                 console.warn(`💡 Try setting GEMINI_MODEL to one of: ${availableModelNames[0]}`);
             }
         }
@@ -267,10 +318,10 @@ async function generateRecipes(selectedIngredients, flavorPreferences, dietaryRe
     
     try {
         // Build URL with model name - format: models/{model-name}:generateContent
-        const modelName = GEMINI_MODEL.startsWith('models/') ? GEMINI_MODEL : `models/${GEMINI_MODEL}`;
+        const modelName = currentGeminiModel.startsWith('models/') ? currentGeminiModel : `models/${currentGeminiModel}`;
         
         // Try v1 API first, fallback to v1beta
-        let url = `https://generativelanguage.googleapis.com/v1/${modelName}:generateContent?key=${GEMINI_API_KEY}`;
+        let url = `https://generativelanguage.googleapis.com/v1/${modelName}:generateContent?key=${currentGeminiKey}`;
         
         console.log('Using model:', modelName);
         console.log('Trying v1 API first...');
@@ -297,9 +348,11 @@ async function generateRecipes(selectedIngredients, flavorPreferences, dietaryRe
         if (!response.ok) {
             const errorData = await response.json().catch(() => ({ error: { message: 'Unknown error' } }));
             console.error('v1 API failed, trying v1beta...', errorData);
+            console.error('Response status:', response.status);
+            console.error('Response statusText:', response.statusText);
             
             // Try v1beta as fallback
-            const urlV1Beta = `https://generativelanguage.googleapis.com/v1beta/${modelName}:generateContent?key=${GEMINI_API_KEY}`;
+            const urlV1Beta = `https://generativelanguage.googleapis.com/v1beta/${modelName}:generateContent?key=${currentGeminiKey}`;
             const responseV1Beta = await fetch(urlV1Beta, {
                 method: 'POST',
                 headers: {
@@ -322,7 +375,16 @@ async function generateRecipes(selectedIngredients, flavorPreferences, dietaryRe
             if (!responseV1Beta.ok) {
                 const errorDataV1Beta = await responseV1Beta.json().catch(() => ({ error: { message: 'Unknown error' } }));
                 console.error('v1beta API also failed:', errorDataV1Beta);
+                console.error('Response status:', responseV1Beta.status);
+                console.error('Response statusText:', responseV1Beta.statusText);
+                
                 const errorMsg = errorDataV1Beta.error?.message || errorDataV1Beta.message || JSON.stringify(errorDataV1Beta);
+                
+                // Provide helpful error messages
+                if (errorMsg.includes('API key') || errorMsg.includes('expired') || errorMsg.includes('invalid')) {
+                    throw new Error(`Gemini API key error: ${errorMsg}\n\n💡 Please check:\n1. Your API key is correct in deploy/config.js\n2. The API key is not expired\n3. The API key has proper permissions\n4. Get a new key at: https://aistudio.google.com/apikey`);
+                }
+                
                 throw new Error(`Gemini API error: ${errorMsg}`);
             }
             
@@ -882,13 +944,16 @@ function getDietaryRestrictions() {
  * @param {number} recipeIndex - Index of the recipe (to vary search queries and avoid duplicates)
  */
 async function fetchRecipeImage(recipeName, ingredients, recipeIndex = 0) {
+    // Ensure config is loaded
+    await getConfig();
+    const currentPexelsKey = CONFIG_LOADED.PEXELS_API_KEY || PEXELS_API_KEY || '';
+    
     // Debug: Check API key
-    const apiKeyTrimmed = PEXELS_API_KEY ? PEXELS_API_KEY.trim() : '';
+    const apiKeyTrimmed = currentPexelsKey.trim();
     if (!apiKeyTrimmed) {
         console.log('⚠️ Pexels API key not set, skipping image fetch');
         console.log('   CONFIG_LOADED.PEXELS_API_KEY:', CONFIG_LOADED.PEXELS_API_KEY);
-        console.log('   PEXELS_API_KEY variable:', PEXELS_API_KEY);
-        console.log('   To enable images, add your Pexels API key to config.js');
+        console.log('   To enable images, add your Pexels API key to .env file');
         console.log('   Get a free key at: https://www.pexels.com/api/');
         return null;
     }
@@ -934,7 +999,7 @@ async function fetchRecipeImage(recipeName, ingredients, recipeIndex = 0) {
         
         const response = await fetch(url, {
             headers: {
-                'Authorization': PEXELS_API_KEY
+                'Authorization': currentPexelsKey
             }
         });
         
@@ -1131,38 +1196,8 @@ async function generateAndDisplayRecipes() {
     if (container) {
         container.innerHTML = `
             <div class="lab-loader">
-                <div class="flask-container">
-                    <svg class="flask-svg" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" style="stop-color:#4de4ff;stop-opacity:0.8" />
-                                <stop offset="100%" style="stop-color:#00a8cc;stop-opacity:0.9" />
-                            </linearGradient>
-                            <filter id="glow">
-                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                                <feMerge>
-                                    <feMergeNode in="coloredBlur"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                        </defs>
-                        <!-- Flask body -->
-                        <path d="M 60 50 L 60 250 Q 60 270 80 270 L 120 270 Q 140 270 140 250 L 140 50 Z" 
-                              fill="#2a2a3a" stroke="#4de4ff" stroke-width="2" opacity="0.8"/>
-                        <!-- Liquid -->
-                        <ellipse cx="100" cy="200" rx="35" ry="8" fill="url(#liquidGrad)" class="liquid-surface"/>
-                        <rect x="65" y="200" width="70" height="60" fill="url(#liquidGrad)" class="liquid-body"/>
-                        <!-- Bubbles -->
-                        <circle cx="85" cy="220" r="4" fill="#7fffd4" opacity="0.7" class="bubble bubble-1"/>
-                        <circle cx="105" cy="235" r="3" fill="#7fffd4" opacity="0.6" class="bubble bubble-2"/>
-                        <circle cx="115" cy="215" r="5" fill="#7fffd4" opacity="0.8" class="bubble bubble-3"/>
-                        <circle cx="95" cy="245" r="3.5" fill="#7fffd4" opacity="0.7" class="bubble bubble-4"/>
-                        <circle cx="75" cy="230" r="4.5" fill="#7fffd4" opacity="0.6" class="bubble bubble-5"/>
-                        <!-- Neck -->
-                        <rect x="95" y="30" width="10" height="20" fill="#2a2a3a" stroke="#4de4ff" stroke-width="2" opacity="0.8"/>
-                        <!-- Whisking motion indicator -->
-                        <path d="M 100 20 L 100 30 M 95 25 L 105 25" stroke="#4de4ff" stroke-width="2" class="whisk"/>
-                    </svg>
+                <div class="food-loading-container">
+                    <img src="fruits.gif" alt="Loading recipes..." class="food-loading-gif" />
                 </div>
             </div>
             <div class="no-recipes" style="font-style: normal;">
