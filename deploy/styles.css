@@ -998,6 +998,12 @@ h1, h2, h3 {
     flex-wrap: wrap;
 }
 
+.recipe-time i {
+    margin-right: 6px;
+    color: var(--accent-cyan);
+    opacity: 0.8;
+}
+
 .recipe-ingredients,
 .recipe-instructions {
     background: rgba(255, 255, 255, 0.02);

@@ -26,7 +26,7 @@ CRITICAL JSON STRUCTURE RULES:
 3. After closing an array, use a comma before the next field: ], "fieldName":
 4. Field names must be exact: "ingredients", "steps", "prepTime", "cookTime", "flavorScores", "name"
 5. Do NOT write any text between closing an array and starting the next field
-6. Generate EXACTLY 4 COMPLETE recipes with ALL fields
+6. Generate EXACTLY 3 COMPLETE recipes with ALL fields
 
 Each recipe MUST include ALL ingredients: ${ingredientsList}
 ${dietaryText}
@@ -106,26 +106,6 @@ EXACT JSON FORMAT (copy this structure exactly):
       "sweet": 3,
       "spice": 5,
       "sour": 2,
-      "salty": 3
-    }
-  },
-  {
-    "name": "Recipe Name 4",
-    "ingredients": [
-      "ingredient 1",
-      "ingredient 2"
-    ],
-    "steps": [
-      "Step 1",
-      "Step 2"
-    ],
-    "prepTime": 15,
-    "cookTime": 20,
-    "flavorScores": {
-      "umami": 2,
-      "sweet": 3,
-      "spice": 2,
-      "sour": 4,
       "salty": 3
     }
   },
@@ -562,8 +542,8 @@ async function displayRecipes(recipes) {
             </div>
             <div class="recipe-details">
                 <div class="recipe-time">
-                    <span>⏱️ ${prepTime} min prep</span>
-                    <span>🔥 ${cookTime} min cook</span>
+                    <span><i class="fas fa-clock"></i> ${prepTime} min prep</span>
+                    <span><i class="fas fa-fire"></i> ${cookTime} min cook</span>
                     ${flavorBubblesDisplay ? `<div class="flavor-bubbles-inline">${flavorBubblesDisplay}</div>` : ''}
                 </div>
                 <div class="recipe-ingredients">
