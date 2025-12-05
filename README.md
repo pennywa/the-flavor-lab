@@ -26,13 +26,24 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React**
-- **react-force-graph**
-- **Tailwind CSS**
-- **Three.js**
-
+- **Vanilla JS**
+- **vis-network**
+  
 ### Backend
-- **Python/FastAPI** for ingredient relationships
+- **Python**
+- **Pandas**
+- **Numpy**
+- **Scikit-Learn**
+- **Matplotlib**
+- **Sentence-transformers**
+- **PyTorch**
+- **Networkx**
+- **Jupyterlab**
+- **Seaborn**
+
+### Deployment
+- **OpenAI**
+- **Pexels**
 
 ### Deployment
 - **Netlify** 
@@ -56,10 +67,6 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 - **P**ractical - Actually useful in the kitchen
 
 ## 🚀 Getting Started
-
-### Prerequisites
-
-### Installation
 
 ## 🧪 How It Works
 
