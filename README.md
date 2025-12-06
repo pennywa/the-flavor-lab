@@ -3,8 +3,9 @@
 > **The Science of Pairing: Discover Your Next Great Recipe**
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red.svg)](https://streamlit.io)
-[![MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-green.svg)](https://mongodb.com)
+[![OpenAI](https://img.shields.io/badge/OpenAI-API-412991.svg?style=flat&logo=openai)](https://openai.com)
+[![Vanilla JS](https://img.shields.io/badge/JavaScript-Vanilla%20JS-F7DF1E.svg?style=flat&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Netlify](https://img.shields.io/badge/Netlify-Deployment-00C7B7.svg?style=flat&logo=netlify)](https://netlify.com)
 
 ---
 
