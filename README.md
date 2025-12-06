@@ -60,14 +60,14 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 - Visualize as a graph
 - Scientific backing for flavor pairings
 
+- Scientific Paper on FlavorGraph Dataset: https://www.nature.com/articles/s41598-020-79422-8
+
 ## 🎨 Project Philosophy
 
 - **S**cientific - Rooted in real chemistry
 - **L**ogical - Makes sense to users
 - **A**mazing - Surprising flavor combinations
 - **P**ractical - Actually useful in the kitchen
-
-## 🚀 Getting Started
 
 ## 🧪 How It Works
 
