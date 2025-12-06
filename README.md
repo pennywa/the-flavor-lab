@@ -42,7 +42,7 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 - **Jupyterlab**
 - **Seaborn**
 
-### Deployment
+### APIs
 - **OpenAI**
 - **Pexels**
 
