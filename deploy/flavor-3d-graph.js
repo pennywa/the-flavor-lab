@@ -73,7 +73,11 @@ async function initializeGraph() {
         
         // Create graph instance
         graphInstance = ForceGraph3D()
-            .nodeLabel('name')
+            .nodeLabel(node => {
+                // Remove underscores from ingredient names
+                const name = node.name || node.id || '';
+                return name.replace(/_/g, ' ');
+            })
             .nodeVal(node => {
                 // Set node size to 40
                 return 40;
