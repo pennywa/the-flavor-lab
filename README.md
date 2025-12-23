@@ -93,5 +93,5 @@ It's the essential tool for chefs, mixologists, and ambitious home cooks who wan
 ---
 
 **Ready to revolutionize your cooking? Start experimenting with flavors! 🧪👨‍🍳**
-Webapp: https://theflavorlab.netlify.app/
-To run locally: python run_server.py
+- Webapp: https://theflavorlab.netlify.app/
+- To run locally: python run_server.py
